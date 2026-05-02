@@ -2,166 +2,332 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hot Feed — PINGPING</title>
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=Workbench&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    :root {
-        --neon-pink: #ec4899;
-        --neon-coral: #fb923c;
-        --bg-dark: #050510;
-    }
-    
-    * { box-sizing: border-box; }
-    
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--bg-dark);
-        background-image: 
-            linear-gradient(rgba(236, 72, 153, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(236, 72, 153, 0.03) 1px, transparent 1px);
-        background-size: 40px 40px;
-        color: #fce7f3;
-        font-family: 'Noto Sans SC', -apple-system, sans-serif;
-        min-height: 100vh;
-    }
-    
-    @keyframes card-in {
-        from { opacity: 0; transform: translateY(12px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .scanline-overlay {
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none;
-        background: linear-gradient(to bottom, transparent 50%, rgba(236, 72, 153, 0.02) 51%);
-        background-size: 100% 4px;
-        z-index: 50;
-    }
-    
-    .container {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 24px 16px 60px;
-        position: relative;
-        z-index: 10;
-    }
-    
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 32px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(236, 72, 153, 0.2);
-    }
-    
-    .header-title {
-        font-family: 'Workbench', sans-serif;
-        font-size: 28px;
-        font-weight: 400;
-        letter-spacing: 0.15em;
-        color: #fce7f3;
-        text-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
-    }
-    
-    .header-sub {
-        font-family: 'VT323', monospace;
-        font-size: 12px;
-        color: #ec4899;
-        opacity: 0.7;
-        letter-spacing: 0.1em;
-    }
-    
-    .status-badge {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 11px;
-        color: #6b7280;
-        font-family: 'VT323', monospace;
-    }
-    
-    .status-dot {
-        width: 6px; height: 6px;
-        background: #34d399;
-        border-radius: 50%;
-        animation: pulse 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulse {
-        0%, 100% { opacity: 0.5; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.2); }
-    }
-    
-    .section-label {
-        font-family: 'VT323', monospace;
-        font-size: 14px;
-        color: #ec4899;
-        letter-spacing: 0.15em;
-        margin-bottom: 16px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .section-label::after {
-        content: '';
-        flex: 1;
-        height: 1px;
-        background: linear-gradient(to right, rgba(236, 72, 153, 0.3), transparent);
-    }
-    
-    .footer {
-        text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(236, 72, 153, 0.1);
-        font-size: 11px;
-        color: #4b5563;
-        font-family: 'VT323', monospace;
-    }
-    
-    .footer span {
-        color: #ec4899;
-        opacity: 0.6;
-    }
-    
-    @media (max-width: 640px) {
-        .header { flex-direction: column; align-items: flex-start; gap: 8px; }
-        .container { padding: 16px 12px 40px; }
-    }
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#050510;background-image:linear-gradient(rgba(236,72,153,.03)1px,transparent 1px),linear-gradient(90deg,rgba(236,72,153,.03)1px,transparent 1px);background-size:40px 40px;color:#fce7f3;font-family:'Noto Sans SC',-apple-system,sans-serif;min-height:100vh}
+@keyframes ci{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.so{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:linear-gradient(to bottom,transparent 50%,rgba(236,72,153,.02)51%);background-size:100%4px;z-index:50}
+.c{max-width:720px;margin:0 auto;padding:24px 16px 60px;position:relative;z-index:10}
+.hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(236,72,153,.2)}
+.hdr-tl{font-family:'Workbench',sans-serif;font-size:28px;font-weight:400;letter-spacing:.15em;color:#fce7f3;text-shadow:0 0 20px rgba(236,72,153,.5)}
+.hdr-sub{font-family:'VT323',monospace;font-size:12px;color:#ec4899;opacity:.7;letter-spacing:.1em}
+.st{display:flex;align-items:center;gap:6px;font-size:11px;color:#6b7280;font-family:'VT323',monospace}
+.dot{width:6px;height:6px;background:#34d399;border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+.sl{font-family:'VT323',monospace;font-size:14px;color:#ec4899;letter-spacing:.15em;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.sl::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(236,72,153,.3),transparent)}
+.ftr{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid rgba(236,72,153,.1);font-size:11px;color:#4b5563;font-family:'VT323',monospace}
+.ftr span{color:#ec4899;opacity:.6}
+@media(max-width:640px){.hdr{flex-direction:column;align-items:flex-start;gap:8px}.c{padding:16px 12px 40px}}
 </style>
 </head>
 <body>
-<div class="scanline-overlay"></div>
+<div class="so"></div>
+<div class="c">
+  <div class="hdr">
+    <div><div class="hdr-tl">HOT FEED</div><div class="hdr-sub">X INTELLIGENCE MONITOR</div></div>
+    <div class="st"><div class="dot"></div>LIVE &middot; 2026-05-02 09:58 EST</div>
+  </div>
+  <div class="sl">// TRENDING NOW</div>
+  <a href="https://x.com/sama/status/2050274547061129577" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.0s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">19h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">you know what
 
-<div class="container">
-    <div class="header">
-        <div>
-            <div class="header-title">HOT FEED</div>
-            <div class="header-sub">X INTELLIGENCE MONITOR</div>
-        </div>
-        <div class="status-badge">
-            <div class="status-dot"></div>
-            LIVE · 2026-05-02 08:01 EST
-        </div>
-    </div>
-    
-    <div class="section-label">// TRENDING NOW</div>
-    <div class="tweets-container">
-        
-        <div style="text-align: center; padding: 40px; color: #6b7280; font-family: 'VT323', monospace; font-size: 18px;">
-            No tweets fetched — check network or X accounts
-        </div>
-    </div>
-    
-    <div class="footer">
-        PINGPING AGENT · Auto-updated every 4h · <span>@sama @ylecun @AnthropicAI @mattwolftech @GrowthLead @jason</span>
-    </div>
+all of these &quot;which is better&quot; polls are silly
+
+use codex or claude code, whatever works best for you
+
+i am grateful we live in a time with such amazing tools, and grateful there is a choice</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 20K</span><span>↺ 1.4K</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/sama/status/2050357911915028689" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.04s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">14h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">you can sign in to openclaw with your chatgpt account now and use your subscription there!
+
+happy lobstering.</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 16K</span><span>↺ 1.1K</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/MiniMax_AI/status/2043132047397659000" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.08s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(52,211,153,.2);color:#34d399;letter-spacing:.05em">LAUNCH</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@minimax_ai</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">20d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">We're delighted to announce that MiniMax M2.7 is now officially open source. 
+With SOTA performance in SWE-Pro (56.22%) and Terminal Bench 2 (57.0%).
+
+You can find it on Hugging Face now. Enjoy!
+huggingface：
+https://
+huggingface.co/MiniMaxAI/Mini
+Max-M2.7
+…
+Blog: 
+https://
+minimax.io/news/minimax-m
 </div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 5.6K</span><span>↺ 1K</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/AnthropicAI/status/2049927618397614466" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.12s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">How do people seek guidance from Claude?
 
+We looked at 1M conversations to understand what questions people ask, how Claude responds, and where it slips into sycophancy. We used what we found to improve how we trained Opus 4.7 and Mythos Preview.</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 3.2K</span><span>↺ 523</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/sama/status/2050399512494227709" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.16s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(251,191,36,.2);color:#fbbf24;letter-spacing:.05em">HOT</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">11h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">man its good to be back on twitter
+
+there is comfort in the skills of a wasted youth</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 8.6K</span><span>↺ 431</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/JeanRemiKing/status/2049806660001022372" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.2s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@ylecun</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4"> Tribe v2, our latest model of human brain responses to sound, sight and language can now be (partly) explored on your phone:
+
+demo: 
+https://
+aidemos.atmeta.com/tribev2/ 
+paper: 
+https://
+ai.meta.com/research/publi
+cations/a-foundation-model-of-vision-audition-and-language-for-in-silico-neuroscienc</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 324</span><span>↺ 75</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/ClementDelangue/status/2050013015680995631" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.24s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@ylecun</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">I think the expression is “pulling the ladder”! All labs trained their models by distilling (at the very least distilling the web) which allowed them to become the fastest growing businesses in the history of humanity and now that they have armies of lawyers and lobbyists, they</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 333</span><span>↺ 38</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/AnthropicAI/status/2049624602486383078" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.28s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">BioMysteryBench, our new bioinformatics eval, tests whether Claude can devise creative solutions to open-ended research problems.
+
+Read more:</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 318</span><span>↺ 39</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/AnthropicAI/status/2049624600741560340" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.32s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">New on the Science Blog: We gave Claude 99 problems analyzing real biological data and compared its performance against an expert panel.
+
+On 23 problems, the experts were stumped. Our most recent models solved roughly 30% of those—and most of the rest.</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 2.3K</span><span>↺ 331</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/AnthropicAI/status/2049927628161999317" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.36s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">This work is part of a loop we're working to close between societal impacts and model training. One of our goals is to study how people use Claude, find where it falls short of its principles, and use what we learned in training new models.
+
+Read more:</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 202</span><span>↺ 11</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/ylecun/status/1862598063275061484" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.4s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(251,191,36,.2);color:#fbbf24;letter-spacing:.05em">HOT</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@ylecun</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">518d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">I do not write posts on X.
+I tweet links to posts on other platforms.
+I like and retweet (occasionally)
+I comment on friends' tweets (rarely)
+Follow me on...</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 1.7K</span><span>↺ 194</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/AnthropicAI/status/2049927629420245494" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.44s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(251,191,36,.2);color:#fbbf24;letter-spacing:.05em">HOT</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">All data in this study was collected and analyzed using our privacy-preserving tool.
+
+Read more:</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 166</span><span>↺ 13</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/Dan_Jeffries1/status/2050162348891979817" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.48s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(52,211,153,.2);color:#34d399;letter-spacing:.05em">LAUNCH</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@ylecun</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">All the Doomers and hawks are lining up behind this distillation &quot;attack&quot; farce because they want to see open source banned. 
+
+It's really as simple as that.
+
+They want to take away your right to choose, and take away businesses' rights to fine tune and make your products cheaper</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 135</span><span>↺ 39</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/sama/status/2050304809572688289" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.52s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(251,191,36,.2);color:#fbbf24;letter-spacing:.05em">HOT</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">17h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">ok its not the most important thing we've ever done but i find it more useful than it seems on the surface.
+
+check out pets in codex!
+
+(and try hatching one)</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 3.6K</span><span>↺ 168</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/AnthropicAI/status/2049576143653929153" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.56s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">In new Anthropic Fellows research, we discuss “introspection adapters&quot;: a tool that allows language models to self-report behaviors they've learned during training—including potential misalignment.</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 1.4K</span><span>↺ 169</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/Jason/status/2049888291701362706" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.6s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(52,211,153,.2);color:#34d399;letter-spacing:.05em">LAUNCH</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@jason</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">My new roundtable, This Week in AI, just hit 11 episodes, and we are getting the greatest minds every week.... week after week.  
+
+If you want to go deep on AI, it's worth subscribing... thanks, 
+@matanSF
+, 
+@dsa
+, and 
+@gsivulka
+, for a great discussion this week! 
+
+follow</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 140</span><span>↺ 13</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/Dan_Jeffries1/status/2049745165665853742" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.64s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(52,211,153,.2);color:#34d399;letter-spacing:.05em">LAUNCH</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@ylecun</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">These folks are trying to ban open source. 
+
+They're looking to take away your freedom to choose.
+
+They're also looking to take away the rights of businesses like Cursor to fine tune and make their product faster and cheaper.
+
+They must be stopped.
+
+Their premise is pretty simple</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 109</span><span>↺ 37</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/Jason/status/2050330939444662396" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.68s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(251,191,36,.2);color:#fbbf24;letter-spacing:.05em">HOT</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@jason</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">16h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">This will actually be the number-one use case for humanoid robots... (repetitive chores)</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 1.5K</span><span>↺ 115</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/sama/status/2050427808456077541" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.72s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(52,211,153,.2);color:#34d399;letter-spacing:.05em">LAUNCH</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">9h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">we will plan bigger parties for future releases.
+
+a lot more people wanted to come than we expected. thank you!
+
+gonna try to think of a really good idea for the next one.</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 3.3K</span><span>↺ 112</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a><a href="https://x.com/sama/status/2050402088266694689" target="_blank" class="tc" style="display:block;background:rgba(236,72,153,.06);border:1px solid rgba(236,72,153,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s ease;animation:ci .4s ease 0.76s both" onmouseover="this.style.borderColor='rgba(236,72,153,.6)';this.style.background='rgba(236,72,153,.10)'" onmouseout="this.style.borderColor='rgba(236,72,153,.25)';this.style.background='rgba(236,72,153,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(251,191,36,.2);color:#fbbf24;letter-spacing:.05em">HOT</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">11h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">/hatch clippy</div>
+  <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:#6b7280">
+    <span>♥ 1.4K</span><span>↺ 91</span>
+    <span style="margin-left:auto;color:#4b5563">View on X →</span>
+  </div>
+</a>
+  <div class="ftr">PINGPING AGENT &middot; Auto-updated every 4h &middot; <span>@sama, @ylecun, @AnthropicAI, @minimax_ai, @jason, @GrowthLead</span></div>
+</div>
 </body>
 </html>
