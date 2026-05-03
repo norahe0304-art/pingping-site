@@ -3,1668 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PINGPING — Nora's AI Assistant v2026.4.1</title>
-    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@200;300;400;500;600;700&amp;family=VT323&amp;family=Workbench&amp;family=Noto+Sans+SC:wght@400;700&amp;family=JetBrains+Mono:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <title>PINGPING — Nora's Personal Agent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @font-face {
-            font-family: 'Zpix';
-            src: url('https://cdn.jsdelivr.net/gh/SolidZORO/zpix-pixel-font@3.1.9/dist/zpix.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
         :root {
-            --neon-cyan: #00D4FF;
-            --neon-teal: #06B6D4;
-            --neon-deep: #0891B2;
-            --neon-glow: #67E8F9;
-            --neon-electric: #22D3EE;
-            --bg-dark: #02060C;
-            --bg-mid: #050B15;
-            --bg-panel: #07111C;
-            --glass-border: rgba(0, 212, 255, 0.28);
-            --glass-border-hot: rgba(0, 212, 255, 0.55);
-            --glass-bg: rgba(5, 12, 20, 0.72);
-            --grid-line: rgba(0, 212, 255, 0.04);
+            --bg: #F2F0EE;
+            --fg: #171717;
+            --muted: rgba(23, 23, 23, 0.55);
+            --hairline: rgba(23, 23, 23, 0.10);
         }
 
         * {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            box-sizing: border-box;
         }
 
-        html, body {
-            height: auto;
-            min-height: 100vh;
-            overflow-x: hidden;
+        html {
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-dark);
-            background-image:
-                radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 212, 255, 0.08), transparent 60%),
-                radial-gradient(ellipse 60% 40% at 90% 100%, rgba(6, 182, 212, 0.06), transparent 60%),
-                radial-gradient(ellipse 50% 30% at 10% 80%, rgba(34, 211, 238, 0.04), transparent 60%),
-                linear-gradient(var(--grid-line) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-            background-size: auto, auto, auto, 48px 48px, 48px 48px;
-            background-attachment: fixed;
-            color: #E0F7FF;
-            font-family: 'SUSE', sans-serif;
-            font-weight: 300;
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
         }
 
-        .font-tech { font-family: 'JetBrains Mono', 'SUSE', monospace; }
-        .font-suse { font-family: 'SUSE', sans-serif; }
-        .font-workbench { font-family: 'Workbench', sans-serif; }
-        .font-vt323 {
-            font-family: 'VT323', 'Zpix', 'Noto Sans SC', monospace;
-            font-weight: 100 !important;
-        }
-
-        /* ======= AMBIENT BACKGROUND ======= */
-        .ambient-orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(80px);
-            pointer-events: none;
-            z-index: 0;
-            mix-blend-mode: screen;
-        }
-        .ambient-orb-1 {
-            width: 600px; height: 600px;
-            top: -200px; left: -200px;
-            background: radial-gradient(circle, rgba(0, 212, 255, 0.18), transparent 70%);
-            animation: orb-drift-1 22s ease-in-out infinite;
-        }
-        .ambient-orb-2 {
-            width: 500px; height: 500px;
-            bottom: -150px; right: -100px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.14), transparent 70%);
-            animation: orb-drift-2 28s ease-in-out infinite;
-        }
-        .ambient-orb-3 {
-            width: 400px; height: 400px;
-            top: 40%; left: 60%;
-            background: radial-gradient(circle, rgba(103, 232, 249, 0.10), transparent 70%);
-            animation: orb-drift-3 35s ease-in-out infinite;
-        }
-        @keyframes orb-drift-1 {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(80px, 60px) scale(1.15); }
-        }
-        @keyframes orb-drift-2 {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-60px, -80px) scale(1.1); }
-        }
-        @keyframes orb-drift-3 {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-100px, 50px) scale(0.9); }
-        }
-
-        /* Floating particles */
-        .particle-field {
+        /* Paper grain texture */
+        body::before {
+            content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: var(--neon-cyan);
-            border-radius: 50%;
-            box-shadow: 0 0 6px var(--neon-cyan), 0 0 12px rgba(0, 212, 255, 0.4);
-            opacity: 0;
-            animation: particle-rise 18s linear infinite;
-        }
-        @keyframes particle-rise {
-            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-            10% { opacity: 0.8; }
-            90% { opacity: 0.6; }
-            100% { transform: translateY(-10vh) translateX(40px); opacity: 0; }
-        }
-
-        /* Scanline */
-        .scanline-overlay {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            background: linear-gradient(to bottom, transparent 50%, rgba(0, 212, 255, 0.025) 51%);
-            background-size: 100% 4px;
-            z-index: 50;
-            mix-blend-mode: overlay;
-        }
-        .scanner-bar {
-            position: fixed;
-            width: 100%;
-            height: 240px;
-            background: linear-gradient(to bottom, transparent, rgba(34, 211, 238, 0.06), rgba(0, 212, 255, 0.04), transparent);
-            animation: scanline 9s linear infinite;
-            pointer-events: none;
-            z-index: 40;
-            top: 0; left: 0;
-        }
-        @keyframes scanline {
-            0% { top: -100%; opacity: 0; }
-            50% { opacity: 0.5; }
-            100% { top: 200%; opacity: 0; }
-        }
-
-        /* Vignette */
-        .vignette {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 45;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.4) 100%);
-        }
-
-        /* ======= GLASS PANELS ======= */
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(14px) saturate(140%);
-            -webkit-backdrop-filter: blur(14px) saturate(140%);
-            border: 1px solid var(--glass-border);
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-            box-shadow:
-                0 0 0 1px rgba(0, 212, 255, 0.04) inset,
-                0 0 24px -4px rgba(0, 212, 255, 0.10),
-                0 8px 32px -12px rgba(0, 0, 0, 0.6);
-        }
-        .glass-panel::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, transparent 40%, transparent 60%, rgba(6, 182, 212, 0.04) 100%);
-            pointer-events: none;
-        }
-        .glass-panel:hover {
-            border-color: var(--glass-border-hot);
-            box-shadow:
-                0 0 0 1px rgba(0, 212, 255, 0.10) inset,
-                0 0 40px -4px rgba(0, 212, 255, 0.30),
-                0 12px 48px -16px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Tech-border corners (top corners via ::before/::after, bottom via .corner-bl/.corner-br) */
-        .tech-border::before, .tech-border::after,
-        .tech-border > .corner-bl, .tech-border > .corner-br {
-            content: '';
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            z-index: 2;
-        }
-        .tech-border::before { top: -1px; left: -1px; border-top-color: var(--neon-cyan); border-left-color: var(--neon-cyan); box-shadow: -2px -2px 8px -2px rgba(0, 212, 255, 0.6); }
-        .tech-border::after  { top: -1px; right: -1px; border-top-color: var(--neon-cyan); border-right-color: var(--neon-cyan); box-shadow: 2px -2px 8px -2px rgba(0, 212, 255, 0.6); }
-        .tech-border > .corner-bl { bottom: -1px; left: -1px; border-bottom-color: var(--neon-cyan); border-left-color: var(--neon-cyan); box-shadow: -2px 2px 8px -2px rgba(0, 212, 255, 0.6); }
-        .tech-border > .corner-br { bottom: -1px; right: -1px; border-bottom-color: var(--neon-cyan); border-right-color: var(--neon-cyan); box-shadow: 2px 2px 8px -2px rgba(0, 212, 255, 0.6); }
-
-        /* Panel header light bar */
-        .panel-header {
-            position: relative;
-        }
-        .panel-header::after {
-            content: '';
-            position: absolute;
-            left: 0; right: 0; bottom: -8px;
-            height: 1px;
-            background: linear-gradient(to right, var(--neon-cyan), transparent);
-            opacity: 0.4;
-        }
-
-        /* ======= ANIMATIONS ======= */
-        @keyframes rotate-slow { 100% { transform: rotate(360deg); } }
-        @keyframes rotate-rev  { 100% { transform: rotate(-360deg); } }
-        @keyframes pulse-soft {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 1; }
-        }
-        @keyframes pulse-ring {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.05); }
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-        .animate-pulse-soft { animation: pulse-soft 2.5s ease-in-out infinite; }
-
-        /* Glitch */
-        .glitch-text {
-            position: relative;
-            display: inline-block;
-        }
-        .glitch-text:hover {
-            animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
-        }
-        @keyframes glitch {
-            0%   { transform: translate(0); text-shadow: 0 0 8px var(--neon-cyan); }
-            20%  { transform: translate(-2px, 2px);  text-shadow: -2px 0 #ff00ff, 2px 0 var(--neon-cyan); }
-            40%  { transform: translate(-2px, -2px); text-shadow:  2px 0 #ff00ff, -2px 0 var(--neon-cyan); }
-            60%  { transform: translate(2px, 2px);   text-shadow: -2px 0 var(--neon-cyan), 2px 0 #ff00ff; }
-            80%  { transform: translate(2px, -2px);  text-shadow: 0 0 12px var(--neon-cyan); }
-            100% { transform: translate(0); }
+            z-index: 100;
+            opacity: 0.06;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
         }
 
         /* Custom scrollbar */
-        .custom-scroll::-webkit-scrollbar { width: 4px; height: 4px; }
-        .custom-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); }
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, var(--neon-cyan), var(--neon-deep));
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(23, 23, 23, 0.15);
             border-radius: 2px;
         }
-
-        /* Directives reveal */
-        @keyframes usb-insert {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(23, 23, 23, 0.25);
         }
-        .directive-reveal .directive-item {
-            animation: usb-insert 0.4s ease-out forwards;
-            opacity: 0;
-        }
-        .directive-reveal .directive-item:nth-child(1) { animation-delay: 0.0s; }
-        .directive-reveal .directive-item:nth-child(2) { animation-delay: 0.12s; }
-        .directive-reveal .directive-item:nth-child(3) { animation-delay: 0.24s; }
-        .directive-reveal .directive-item:nth-child(4) { animation-delay: 0.36s; }
-        .directive-reveal .directive-item:nth-child(5) { animation-delay: 0.48s; }
-        .directive-reveal .directive-item:nth-child(6) { animation-delay: 0.60s; }
-        .directive-reveal .directive-item:nth-child(7) { animation-delay: 0.72s; }
 
-        /* ======= ARC REACTOR ======= */
-        .arc-reactor {
-            position: relative;
-            width: 460px;
-            height: 460px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* Focus states */
+        :focus-visible {
+            outline: 1px solid var(--fg);
+            outline-offset: 2px;
         }
-        @media (max-width: 767px) { .arc-reactor { width: 320px; height: 320px; } }
 
-        .arc-ring {
-            position: absolute;
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        /* Hairline divider */
+        .hairline {
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        /* Status dot */
+        .status-dot {
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-        }
-        .arc-ring-1 {
-            width: 200px; height: 200px;
-            border: 1px solid rgba(0, 212, 255, 0.5);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.25), inset 0 0 20px rgba(0, 212, 255, 0.1);
-            animation: rotate-slow 30s linear infinite;
-        }
-        .arc-ring-2 {
-            width: 240px; height: 240px;
-            border: 1px dashed rgba(34, 211, 238, 0.45);
-            animation: rotate-rev 18s linear infinite;
-        }
-        .arc-ring-3 {
-            width: 290px; height: 290px;
-            border: 1px dashed rgba(0, 212, 255, 0.4);
-            animation: rotate-rev 12s linear infinite;
-        }
-        .arc-ring-4 {
-            width: 350px; height: 350px;
-            border: 2px solid rgba(0, 212, 255, 0.28);
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
-            animation: rotate-slow 22s linear infinite;
-        }
-        .arc-ring-5 {
-            width: 410px; height: 410px;
-            border: 1px solid rgba(0, 212, 255, 0.18);
-            animation: stutter-ring 2.6s steps(1) infinite;
-        }
-        @keyframes stutter-ring {
-            0%, 35% { opacity: 0.3; transform: scale(1); }
-            40%, 75% { opacity: 0.7; transform: scale(1.04); }
-            80%, 100% { opacity: 0.3; transform: scale(1); }
-        }
-
-        /* Tick marks on outer ring */
-        .arc-ticks {
-            position: absolute;
-            width: 410px;
-            height: 410px;
-            animation: rotate-slow 60s linear infinite;
-        }
-        @media (max-width: 767px) { .arc-ticks { width: 290px; height: 290px; } }
-        .arc-ticks .tick {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 2px;
-            height: 8px;
-            background: var(--neon-cyan);
-            transform-origin: 0 0;
+            background: var(--fg);
             opacity: 0.4;
         }
-
-        /* Orbiting dots */
-        .orbit-wrap {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .orbit-1 {
-            width: 290px; height: 290px;
-            border-radius: 50%;
-            position: absolute;
-            animation: rotate-slow 12s linear infinite;
-        }
-        .orbit-2 {
-            width: 350px; height: 350px;
-            border-radius: 50%;
-            position: absolute;
-            animation: rotate-rev 18s linear infinite;
-        }
-        .orbit-dot {
-            position: absolute;
-            top: -4px; left: 50%;
-            width: 8px; height: 8px;
-            border-radius: 50%;
-            background: var(--neon-cyan);
-            box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
-            transform: translateX(-50%);
-        }
-        .orbit-dot.alt { background: var(--neon-glow); box-shadow: 0 0 10px var(--neon-glow), 0 0 20px var(--neon-glow); }
-
-        /* Core glow */
-        .core-glow {
-            position: absolute;
-            width: 220px; height: 220px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 212, 255, 0.4) 0%, rgba(0, 212, 255, 0.15) 40%, transparent 70%);
-            filter: blur(20px);
-            animation: core-breathe 4s ease-in-out infinite;
-            pointer-events: none;
-        }
-        @keyframes core-breathe {
-            0%, 100% { transform: scale(0.85); opacity: 0.6; }
-            50% { transform: scale(1.05); opacity: 1; }
+        .status-dot.active {
+            opacity: 1;
         }
 
-        /* Avatar */
-        .avatar-frame {
-            position: relative;
-            width: 12rem; height: 12rem;
-            border-radius: 50%;
-            border: 2px solid var(--neon-cyan);
-            box-shadow:
-                0 0 30px rgba(0, 212, 255, 0.5),
-                0 0 60px rgba(0, 212, 255, 0.25),
-                inset 0 0 30px rgba(0, 212, 255, 0.15);
-            overflow: hidden;
-        }
-        @media (min-width: 640px) { .avatar-frame { width: 14rem; height: 14rem; } }
-        @media (min-width: 768px) { .avatar-frame { width: 18rem; height: 18rem; } }
-        .avatar-frame video, .avatar-frame img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .avatar-frame::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            background: linear-gradient(135deg, transparent 30%, rgba(0, 212, 255, 0.10) 50%, transparent 70%);
-            pointer-events: none;
-        }
-
-        /* Avatar fallback text (when no core.mp4) */
-        .avatar-fallback {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Workbench', sans-serif;
-            font-size: 4rem;
-            color: var(--neon-cyan);
-            text-shadow: 0 0 20px var(--neon-cyan), 0 0 40px rgba(0, 212, 255, 0.5);
-            background:
-                radial-gradient(circle at center, rgba(0, 212, 255, 0.15), transparent 70%),
-                linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(6, 182, 212, 0.04));
-            letter-spacing: 0.05em;
-        }
-
-        /* ======= PROGRESS BARS ======= */
-        .progress-bar-bg {
-            background: rgba(0, 212, 255, 0.10);
-            height: 4px;
-            width: 100%;
+        /* Chat bubbles */
+        .chat-bubble {
+            max-width: 85%;
+            padding: 12px 16px;
             border-radius: 2px;
-            overflow: hidden;
-            position: relative;
+            font-size: 13px;
+            line-height: 1.5;
         }
-        .progress-bar-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.05) 50%, transparent);
+        .chat-bubble.user {
+            background: rgba(23, 23, 23, 0.06);
+            margin-left: auto;
         }
-        .progress-bar-fill {
-            background: linear-gradient(90deg, var(--neon-deep), var(--neon-cyan), var(--neon-glow));
-            height: 100%;
-            transition: width 0.8s steps(12) 0s;
-            box-shadow: 0 0 8px var(--neon-cyan);
-            position: relative;
+        .chat-bubble.agent {
+            background: rgba(23, 23, 23, 0.03);
+            border: 1px solid var(--hairline);
         }
 
-        /* ======= QUOTE TYPER ======= */
-        #clock { box-sizing: content-box; height: 23px; }
-
-        .typewriter::after {
-            content: '_';
-            animation: blink 1s step-start infinite;
+        /* Module item */
+        .module-item {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--hairline);
+            transition: opacity 0.2s ease;
         }
-        .quote-cursor { animation: blink 1s step-start infinite; }
-        #quote-typer {
-            position: relative;
-            overflow: hidden;
-            min-height: 3.25rem;
-            height: 3.25rem;
+        .module-item:last-child {
+            border-bottom: none;
         }
-        #quote-typer::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
-            opacity: 0.18;
-            pointer-events: none;
-            mix-blend-mode: overlay;
-        }
-        #quote-text {
-            text-shadow:
-                0.5px 0 1px rgba(0, 212, 255, 0.7),
-                1px 0 2px rgba(0, 212, 255, 0.55),
-                1.5px 0 1px rgba(0, 212, 255, 0.4),
-                2px 0 3px rgba(0, 212, 255, 0.45),
-                3px 0 4px rgba(0, 212, 255, 0.35),
-                4px 0 5px rgba(0, 212, 255, 0.25),
-                5px 0 6px rgba(0, 212, 255, 0.12),
-                6px 0 4px rgba(0, 212, 255, 0.06),
-                0 0.5px 1px rgba(0, 212, 255, 0.2),
-                0 1px 1px rgba(0, 212, 255, 0.12);
-            animation: quote-trail 2.5s ease-in-out infinite;
-        }
-        @keyframes quote-trail {
-            0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.1); }
+        .module-item:hover {
+            opacity: 0.7;
         }
 
-        /* ======= TERMINAL ======= */
-        .terminal-output {
-            font-family: 'VT323', 'JetBrains Mono', monospace;
-            font-size: 15px;
-            line-height: 1.55;
-            color: #a8b2c1;
-        }
-        .terminal-output .term-prompt-user { color: #7ee787; }
-        .terminal-output .term-prompt-pingping { color: #06B6D4; }
-        .terminal-output .term-output { color: #c9d1d9; }
-        .terminal-output .term-meta { color: #6e7681; font-size: 13px; }
-        .terminal-output .term-cursor {
-            display: inline-block;
-            width: 8px;
-            height: 1em;
-            background: #06B6D4;
-            box-shadow: 0 0 6px #06B6D4;
-            animation: blink 1s step-end infinite;
-            vertical-align: text-bottom;
-        }
-
-        /* ======= NETWORK BARS ======= */
-        @keyframes bar-enter-ltr {
-            0% { transform: scaleX(0); opacity: 0; }
-            25% { opacity: 1; }
-            100% { transform: scaleX(1); opacity: 1; }
-        }
-        .network-bar {
-            transform-origin: left;
-            animation: bar-enter-ltr 5s ease-out infinite;
-            transition: height 0.6s ease-out;
-            min-width: 4px;
-            image-rendering: pixelated;
-        }
-
-        /* Session panel */
-        #session-panel {
-            transition: height 0.35s ease, flex 0.35s ease;
-        }
-        #session-panel.expanded {
-            position: absolute;
-            inset: 0;
-            z-index: 10;
-            width: 100%;
-            height: 100%;
-            margin-top: 0;
-            animation: panel-expand 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-        @keyframes panel-expand {
-            0% { opacity: 0; transform: scale(0.97) translateY(8px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        #session-panel .session-chevron { transition: transform 0.35s ease; }
-        #session-panel.expanded .session-chevron { transform: rotate(180deg); }
-
-        /* Pixel icons recolor */
-        .pa-icon {
-            width: 1rem;
-            height: 1rem;
-            object-fit: contain;
-            filter: brightness(0) saturate(100%) invert(85%) sepia(80%) saturate(1000%) hue-rotate(165deg);
-        }
-        .pa-icon.text-white { filter: brightness(0) invert(1); }
-
-        /* ======= FEED SECTION ======= */
-        .section-divider {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0 1rem;
-        }
-        .section-divider::before,
-        .section-divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent);
-        }
-
+        /* Feed card */
         .feed-card {
-            position: relative;
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            padding: 1.25rem;
-            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-            cursor: pointer;
-            overflow: hidden;
-        }
-        .feed-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-glow), transparent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            border: 1px solid var(--hairline);
+            padding: 18px;
+            transition: border-color 0.2s ease;
         }
         .feed-card:hover {
-            border-color: var(--glass-border-hot);
-            transform: translateY(-4px);
-            box-shadow:
-                0 0 0 1px rgba(0, 212, 255, 0.12) inset,
-                0 0 40px -8px rgba(0, 212, 255, 0.4),
-                0 16px 48px -16px rgba(0, 0, 0, 0.7);
+            border-color: rgba(23, 23, 23, 0.25);
         }
-        .feed-card:hover::before { transform: scaleX(1); }
-        .feed-card:hover .feed-title { color: #fff; }
 
-        .feed-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            padding: 0.15rem 0.5rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 9px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            border: 1px solid currentColor;
-            border-radius: 2px;
+        /* Button */
+        .btn-primary {
+            background: var(--fg);
+            color: var(--bg);
+            padding: 10px 20px;
+            font-size: 12px;
+            letter-spacing: 0.02em;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        .btn-primary:hover {
             opacity: 0.85;
         }
-        .feed-tag-diary  { color: #67E8F9; background: rgba(103, 232, 249, 0.08); }
-        .feed-tag-log    { color: #06B6D4; background: rgba(6, 182, 212, 0.08); }
-        .feed-tag-note   { color: #22D3EE; background: rgba(34, 211, 238, 0.08); }
-        .feed-tag-milestone { color: #FBBF24; background: rgba(251, 191, 36, 0.08); border-color: rgba(251, 191, 36, 0.5); }
-        .feed-tag-system { color: #34D399; background: rgba(52, 211, 153, 0.08); border-color: rgba(52, 211, 153, 0.5); }
 
-        .feed-title {
-            font-family: 'SUSE', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
-            line-height: 1.4;
-            color: #E0F7FF;
-            transition: color 0.3s ease;
-            margin-bottom: 0.5rem;
+        /* Input */
+        .input-field {
+            background: transparent;
+            border: 1px solid var(--hairline);
+            padding: 12px 16px;
+            font-size: 13px;
+            color: var(--fg);
+            font-family: inherit;
+            width: 100%;
+            transition: border-color 0.2s ease;
         }
-        .feed-snippet {
-            font-size: 0.8rem;
-            color: rgba(224, 247, 255, 0.6);
-            line-height: 1.6;
-            margin-bottom: 0.85rem;
+        .input-field:focus {
+            outline: none;
+            border-color: rgba(23, 23, 23, 0.3);
         }
-        .feed-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
-            color: rgba(0, 212, 255, 0.55);
-            letter-spacing: 0.05em;
-        }
-        .feed-meta-dot {
-            width: 5px; height: 5px;
-            background: var(--neon-cyan);
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 6px var(--neon-cyan);
-            animation: pulse-soft 2s ease-in-out infinite;
-        }
-
-        /* HOT badge with live ping */
-        .hot-pulse {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 10px; height: 10px;
-        }
-        .hot-pulse::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 50%;
-            background: #FF4F4F;
-            animation: hot-ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
-        }
-        .hot-pulse::after {
-            content: '';
-            position: absolute;
-            inset: 2px;
-            border-radius: 50%;
-            background: #FF4F4F;
-            box-shadow: 0 0 8px #FF4F4F;
-        }
-        @keyframes hot-ping {
-            0%   { transform: scale(1);   opacity: 0.7; }
-            80%  { transform: scale(2.4); opacity: 0; }
-            100% { transform: scale(2.4); opacity: 0; }
-        }
-
-        /* Trending ticker */
-        .ticker-wrap {
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-        }
-        .ticker-wrap::before, .ticker-wrap::after {
-            content: '';
-            position: absolute;
-            top: 0; bottom: 0;
-            width: 60px;
-            z-index: 2;
-            pointer-events: none;
-        }
-        .ticker-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg-mid), transparent); }
-        .ticker-wrap::after { right: 0; background: linear-gradient(-90deg, var(--bg-mid), transparent); }
-        .ticker-track {
-            display: inline-block;
-            animation: ticker-scroll 60s linear infinite;
-            padding-left: 100%;
-        }
-        .ticker-track:hover { animation-play-state: paused; }
-        @keyframes ticker-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-        .ticker-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-right: 3rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: rgba(0, 212, 255, 0.75);
-        }
-        .ticker-item .arrow-up { color: #34D399; }
-        .ticker-item .arrow-dn { color: #FB7185; }
-
-        /* Big holographic title */
-        .holo-title {
-            font-family: 'Workbench', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            line-height: 1;
-            letter-spacing: 0.05em;
-            background: linear-gradient(180deg, #fff 0%, var(--neon-glow) 40%, var(--neon-cyan) 70%, var(--neon-deep) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
-            position: relative;
-        }
-        .holo-title::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0; left: 0;
-            color: rgba(0, 212, 255, 0.3);
-            -webkit-text-fill-color: rgba(0, 212, 255, 0.15);
-            transform: translate(3px, 3px);
-            z-index: -1;
-            filter: blur(2px);
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 767px) {
-            html, body {
-                height: auto;
-                min-height: 100vh;
-                overflow-x: hidden;
-                -webkit-overflow-scrolling: touch;
-            }
-            #hero-grid {
-                grid-template-columns: 1fr !important;
-                gap: 1.5rem !important;
-            }
-            .hero-col {
-                order: unset !important;
-            }
-            #session-column {
-                order: -1 !important;
-                min-height: auto !important;
-            }
-            #session-column > .arc-stage {
-                min-height: 360px;
-                height: 360px;
-            }
-            #session-panel {
-                height: auto !important;
-                min-height: 280px;
-            }
-            .arc-reactor { transform: scale(0.85); }
+        .input-field::placeholder {
+            color: var(--muted);
         }
     </style>
 </head>
-<body class="relative">
-
-    <!-- Ambient layers -->
-    <div class="ambient-orb ambient-orb-1"></div>
-    <div class="ambient-orb ambient-orb-2"></div>
-    <div class="ambient-orb ambient-orb-3"></div>
-    <div class="particle-field" id="particle-field"></div>
-    <div class="scanner-bar"></div>
-    <div class="scanline-overlay"></div>
-    <div class="vignette"></div>
-
-    <!-- ======= HEADER ======= -->
-    <header class="sticky top-0 min-h-14 md:h-16 border-b border-cyan-400/20 bg-[#02060C]/85 backdrop-blur-xl flex items-center justify-between px-4 md:px-6 z-50">
-        <div class="flex items-center gap-3 md:gap-4 min-w-0">
-            <div class="hot-pulse hidden sm:flex"></div>
-            <div class="min-w-0">
-                <h1 class="text-xl md:text-2xl font-thin font-workbench tracking-[0.2em] truncate glitch-text" data-text="PINGPING">PINGPING</h1>
-                <p class="text-[9px] md:text-[10px] font-tech text-cyan-400/70 tracking-[0.18em] md:tracking-[0.22em] uppercase">Intelligent Assistant · v2026.4.1</p>
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#F2F0EE]/90 backdrop-blur-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="pp_logo.png" alt="PINGPING" class="w-7 h-7 object-contain">
+                <span class="text-sm tracking-wide">PINGPING</span>
             </div>
-        </div>
-
-        <div class="flex items-center gap-3 md:gap-10 font-tech text-[10px] md:text-xs text-cyan-300/85 shrink-0">
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shrink-0" style="box-shadow: 0 0 6px #34D399"></span>
-                <span class="hidden sm:inline tracking-wider">SYSTEM ONLINE</span>
-            </div>
-            <div class="hidden md:flex flex-col items-end">
-                <span id="cpu-value">CPU 18%</span>
-                <div class="w-24 h-1 bg-cyan-950/60 mt-1 rounded-sm overflow-hidden"><div id="cpu-bar" class="h-full bg-gradient-to-r from-cyan-600 to-cyan-300 transition-all duration-700" style="width: 18%"></div></div>
-            </div>
-            <div class="hidden md:flex flex-col items-end">
-                <span id="mem-value">MEM 1.2GB</span>
-                <div class="w-24 h-1 bg-cyan-950/60 mt-1 rounded-sm overflow-hidden"><div id="mem-bar" class="h-full bg-gradient-to-r from-cyan-600 to-cyan-300 transition-all duration-700" style="width: 35%"></div></div>
-            </div>
-            <div class="text-right">
-                <div id="clock" class="text-base md:text-lg font-bold text-white font-vt323 leading-none" style="text-shadow: 0 0 8px rgba(0,212,255,0.4)">21:21:00</div>
-                <div class="text-[9px] md:text-[10px] opacity-60 mt-0.5 tracking-wider">EST · NEW YORK</div>
-            </div>
+            <nav class="flex items-center gap-6 text-xs text-[#171717]/55">
+                <a href="#session" class="hover:text-[#171717] transition-colors">Session</a>
+                <a href="#modules" class="hover:text-[#171717] transition-colors">Modules</a>
+                <a href="#feed" class="hover:text-[#171717] transition-colors">Feed</a>
+                <a href="#about" class="hover:text-[#171717] transition-colors">About</a>
+            </nav>
         </div>
     </header>
 
-    <!-- ======= HERO DASHBOARD ======= -->
-    <main class="relative z-10 px-4 md:px-6 pt-6 pb-10">
-        <div id="hero-grid" class="grid grid-cols-1 md:grid-cols-12 gap-6" style="min-height: calc(100vh - 6rem);">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-12">
+        <div class="text-center max-w-xl mx-auto">
+            <!-- PP Logo -->
+            <div class="mb-10">
+                <img 
+                    src="pp_logo.png" 
+                    alt="PINGPING" 
+                    class="w-28 h-28 object-contain mx-auto"
+                >
+            </div>
+            
+            <!-- Tagline -->
+            <h1 class="text-2xl md:text-3xl font-light tracking-tight mb-4">
+                PINGPING
+            </h1>
+            <p class="text-sm text-[#171717]/55 mb-2">
+                Nora's Personal Agent
+            </p>
+            <p class="text-xs text-[#171717]/40 max-w-sm mx-auto">
+                Quiet intelligence. Always present. Working in the background.
+            </p>
+        </div>
 
-            <!-- LEFT COLUMN -->
-            <div class="hero-col col-span-12 md:col-span-3 flex flex-col gap-6 order-2 md:order-1">
+        <!-- Status Bar -->
+        <div class="mt-16 flex items-center gap-2 text-xs text-[#171717]/40">
+            <div class="status-dot active"></div>
+            <span>online</span>
+            <span class="mx-2">·</span>
+            <span>active session</span>
+        </div>
 
-                <!-- IDENTITY -->
-                <div class="glass-panel tech-border p-5 rounded-sm">
-                    <div class="corner-bl"></div>
-                    <div class="corner-br"></div>
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+            <div class="w-px h-12 bg-[#171717]/10 relative overflow-hidden">
+                <div class="w-full h-1/2 bg-[#171717]/30 animate-bounce"></div>
+            </div>
+        </div>
+    </section>
 
-                    <h2 class="panel-header text-lg font-bold font-vt323 text-cyan-300 mb-6 flex items-center gap-2 tracking-wider">
-                        <img src="https://unpkg.com/pixelarticons@1.8.1/svg/server.svg" class="pa-icon w-4 h-4 inline-block" alt="" aria-hidden="true">
-                        IDENTITY_MATRIX
-                    </h2>
-
-                    <div class="space-y-3.5">
-                        <div class="flex justify-between items-center text-sm border-b border-cyan-500/15 pb-2.5">
-                            <span class="text-cyan-100/40 text-xs uppercase tracking-wider">Designation</span>
-                            <span class="font-bold font-vt323 text-cyan-200 text-base">nora</span>
-                        </div>
-                        <div class="flex justify-between items-center text-sm border-b border-cyan-500/15 pb-2.5">
-                            <span class="text-cyan-100/40 text-xs uppercase tracking-wider">Voice Model</span>
-                            <span class="font-bold font-vt323 text-cyan-200 text-base">Bella · ElevenLabs</span>
-                        </div>
-                        <div class="flex justify-between items-center text-sm border-b border-cyan-500/15 pb-2.5">
-                            <span class="text-cyan-100/40 text-xs uppercase tracking-wider">Brain</span>
-                            <span class="font-bold font-vt323 text-cyan-200 text-base">Gemini 3 Flash</span>
-                        </div>
-                        <div class="flex justify-between items-center text-sm border-b border-cyan-500/15 pb-2.5">
-                            <span class="text-cyan-100/40 text-xs uppercase tracking-wider">Memory</span>
-                            <span class="font-bold font-vt323 text-cyan-200 text-base">OrbitOS</span>
-                        </div>
-                        <div class="flex justify-between items-center text-sm pb-1">
-                            <span class="text-cyan-100/40 text-xs uppercase tracking-wider">Version</span>
-                            <span class="font-bold font-vt323 text-cyan-200 text-base">v2026.4.1</span>
-                        </div>
-                    </div>
-
-                    <div id="quote-typer" class="mt-6 p-3 bg-cyan-950/30 border border-cyan-500/15 text-xs text-cyan-200 font-vt323 rounded-sm">
-                        <span id="quote-text"></span><span class="quote-cursor">|</span>
-                    </div>
-                </div>
-
-                <!-- MODULES -->
-                <div class="glass-panel tech-border p-5 rounded-sm flex-1 flex flex-col">
-                    <div class="corner-bl"></div>
-                    <div class="corner-br"></div>
-
-                    <h2 class="panel-header text-lg font-bold font-vt323 text-cyan-300 mb-6 flex items-center gap-2 tracking-wider">
-                        <img src="https://unpkg.com/pixelarticons@1.8.1/svg/grid.svg" class="pa-icon w-4 h-4 inline-block" alt="" aria-hidden="true">
-                        ACTIVE_MODULES
-                    </h2>
-
-                    <div class="custom-scroll overflow-y-auto pr-2 space-y-4 flex-1">
-                        <div class="group cursor-pointer">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-sm font-vt323 group-hover:text-cyan-200 transition-colors">Natural Language</span>
-                                <span class="text-[10px] font-tech text-emerald-400 tracking-wider">ACTIVE</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill module-bar" data-base="100" style="width: 100%"></div></div>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-sm font-vt323 group-hover:text-cyan-200 transition-colors">Code Execution</span>
-                                <span class="text-[10px] font-tech text-emerald-400 tracking-wider">READY</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill module-bar" data-base="92" style="width: 92%"></div></div>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-sm font-vt323 group-hover:text-cyan-200 transition-colors">File Operations</span>
-                                <span class="text-[10px] font-tech text-emerald-400 tracking-wider">ACTIVE</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill module-bar" data-base="78" style="width: 78%"></div></div>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-sm font-vt323 group-hover:text-cyan-200 transition-colors">Web Search</span>
-                                <span class="text-[10px] font-tech text-emerald-400 tracking-wider">CONNECTED</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill module-bar" data-base="100" style="width: 100%"></div></div>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-sm font-vt323 group-hover:text-cyan-200 transition-colors">Memory Management</span>
-                                <span class="text-[10px] font-tech text-amber-300 tracking-wider">SYNCING</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill module-bar" data-base="65" style="width: 65%"></div></div>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-sm font-vt323 group-hover:text-cyan-200 transition-colors">Voice Synthesis</span>
-                                <span class="text-[10px] font-tech text-emerald-400 tracking-wider">READY</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill module-bar" data-base="100" style="width: 100%"></div></div>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="flex items-center justify-between mb-1.5">
-                                <span class="text-sm font-vt323 group-hover:text-cyan-200 transition-colors">WhatsApp Bridge</span>
-                                <span class="text-[10px] font-tech text-emerald-400 tracking-wider">CONNECTED</span>
-                            </div>
-                            <div class="progress-bar-bg"><div class="progress-bar-fill module-bar" data-base="100" style="width: 100%"></div></div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Session Panel -->
+    <section id="session" class="px-6 py-16">
+        <div class="max-w-2xl mx-auto">
+            <!-- Section Header -->
+            <div class="hairline pb-4 mb-8">
+                <h2 class="text-xs text-[#171717]/40 uppercase tracking-widest">Session</h2>
             </div>
 
-            <!-- CENTER COLUMN: Arc reactor + session -->
-            <div id="session-column" class="hero-col col-span-12 md:col-span-6 flex flex-col relative order-1 md:order-2">
-
-                <!-- ARC REACTOR STAGE -->
-                <div class="arc-stage flex-1 relative flex items-center justify-center min-h-[480px]">
-                    <!-- Crosshair grid -->
-                    <div class="absolute inset-0 border border-cyan-400/10 rounded-lg pointer-events-none">
-                        <div class="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-cyan-400/15 to-transparent"></div>
-                        <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/15 to-transparent"></div>
-                        <!-- corner brackets -->
-                        <div class="absolute top-2 left-2 w-4 h-4 border-t border-l border-cyan-400/30"></div>
-                        <div class="absolute top-2 right-2 w-4 h-4 border-t border-r border-cyan-400/30"></div>
-                        <div class="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-cyan-400/30"></div>
-                        <div class="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-cyan-400/30"></div>
+            <!-- Chat Interface -->
+            <div class="bg-white/30 border border-[#171717]/08 p-6">
+                <!-- Chat Messages -->
+                <div class="space-y-4 mb-6">
+                    <div class="chat-bubble agent">
+                        <p>Good morning, Nora. What shall I work on today?</p>
                     </div>
-
-                    <!-- Arc reactor -->
-                    <div class="arc-reactor">
-                        <div class="core-glow"></div>
-                        <div class="arc-ring arc-ring-5"></div>
-                        <div class="arc-ring arc-ring-4"></div>
-                        <div class="arc-ring arc-ring-3"></div>
-                        <div class="arc-ring arc-ring-2"></div>
-                        <div class="arc-ring arc-ring-1"></div>
-
-                        <!-- Tick marks (generated by JS) -->
-                        <div class="arc-ticks" id="arc-ticks"></div>
-
-                        <!-- Orbiting dots -->
-                        <div class="orbit-wrap">
-                            <div class="orbit-1"><div class="orbit-dot"></div></div>
-                            <div class="orbit-2"><div class="orbit-dot alt"></div></div>
-                        </div>
-
-                        <!-- Avatar -->
-                        <div class="avatar-frame">
-                            <video src="core.mp4" autoplay loop muted playsinline onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"></video>
-                            <div class="avatar-fallback" style="display:none; width:100%; height:100%;">PP</div>
-                        </div>
-
-                        <div class="absolute -bottom-12 md:-bottom-14 text-center w-full">
-                            <div id="pingping-core-status" class="text-[10px] md:text-xs font-tech text-cyan-300 tracking-[0.4em] uppercase">PINGPING CORE</div>
-                            <div class="text-[9px] font-tech text-cyan-500/60 mt-1 tracking-widest">// status: nominal</div>
-                        </div>
+                    <div class="chat-bubble user">
+                        <p>Can you summarize my unread emails?</p>
                     </div>
-
-                    <!-- Top-left status overlay -->
-                    <div class="absolute top-4 left-4 md:top-8 md:left-8">
-                        <div class="text-[9px] font-tech text-cyan-500 tracking-[0.2em] mb-1">// SESSION</div>
-                        <div class="font-vt323 text-cyan-300 text-sm" id="session-id">SID-A07F3·LIVE</div>
-                    </div>
-
-                    <!-- Top-right uptime -->
-                    <div class="absolute top-4 right-4 md:top-8 md:right-8 text-right">
-                        <div class="text-[9px] font-tech text-cyan-500 tracking-[0.2em] mb-1">// CUMULATIVE RUNTIME</div>
-                        <div id="uptime-display" class="text-sm font-vt323 text-cyan-300">--</div>
-                    </div>
-
-                    <!-- Bottom-left coordinates -->
-                    <div class="absolute bottom-4 left-4 md:bottom-6 md:left-8">
-                        <div class="text-[9px] font-tech text-cyan-500/70 tracking-widest" id="coord-display">40.7128° N · 74.0060° W</div>
-                    </div>
-
-                    <!-- Bottom-right metrics -->
-                    <div class="absolute bottom-4 right-4 md:bottom-6 md:right-8 text-right">
-                        <div class="text-[9px] font-tech text-cyan-500/70 tracking-widest">SIG · STRONG · 47ms</div>
+                    <div class="chat-bubble agent">
+                        <p>You have 3 unread emails. Two are newsletters I can archive, one is from your doctor requiring a response. Would you like me to draft a reply?</p>
                     </div>
                 </div>
 
-                <!-- SESSION PANEL -->
-                <div id="session-panel" class="h-1/3 min-h-[260px] glass-panel tech-border rounded-t-lg p-4 md:p-6 flex flex-col justify-end mt-6">
-                    <div class="corner-bl"></div>
-                    <div class="corner-br"></div>
-
-                    <button type="button" id="session-toggle" class="absolute top-2 right-2 md:right-4 p-2 md:p-1 min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center text-cyan-400 hover:text-cyan-200 transition-colors z-10" title="Expand / Collapse" aria-label="Toggle session panel">
-                        <img src="https://unpkg.com/pixelarticons@1.8.1/svg/chevron-up.svg" class="pa-icon w-5 h-5 session-chevron inline-block" alt="" aria-hidden="true">
+                <!-- Chat Input -->
+                <div class="flex gap-3">
+                    <input 
+                        type="text" 
+                        class="input-field flex-1" 
+                        placeholder="Send a message..."
+                    >
+                    <button class="btn-primary shrink-0">
+                        Send
                     </button>
-
-                    <div class="flex-1 overflow-y-auto custom-scroll mb-5 md:mb-4 min-h-0">
-                        <div class="terminal-output font-tech" id="session-terminal">
-                            <div class="term-meta mb-3" id="session-header"># PINGPING session 21:20:45</div>
-                            <div class="mb-1"><span class="term-prompt-user">nora@pingping:~$</span> Update my portfolio design to something cooler</div>
-                            <div class="term-output mb-2">Affirmative. Deploying PINGPING Interface v2026.4.1 with refined cyberpunk aesthetics. New ambient lighting, deeper glass panels, and a HOT FEED below. All systems calibrated.</div>
-                            <div class="mb-1"><span class="term-prompt-user">nora@pingping:~$</span> Make the numbers more realistic</div>
-                            <div class="term-output mb-2">Roger that. Calibrated metrics: CPU 18%, Memory 1.2GB, Latency 47ms. All systems nominal. Ready for next command.</div>
-                            <div class="mb-1"><span class="term-prompt-user">nora@pingping:~$</span> Run nightly evolution</div>
-                            <div class="term-output mb-2">Analyzing day: April 30, 2026. Processed 21 diary entries, 16 log artifacts. Injected 'Errata' directive into UI. Everything is in sync.</div>
-                            <div class="mt-2"><span class="term-prompt-pingping">nora&gt;</span> <span class="term-cursor" aria-hidden="true"></span></div>
-                        </div>
-                    </div>
-
-                    <div class="relative group pt-5 mt-1">
-                        <div class="absolute -top-3 left-2 text-[10px] text-cyan-400 bg-[#02060C] px-1 font-tech tracking-widest">COMMAND INPUT</div>
-                        <input type="text" id="session-input" class="w-full bg-[#0a1525]/60 border border-cyan-500/25 text-cyan-100 font-tech py-3.5 px-4 pr-14 rounded focus:outline-none focus:border-cyan-300 focus:shadow-[0_0_20px_-4px_rgba(0,212,255,0.5)] transition-all placeholder-cyan-700/50 text-base min-h-[48px]" placeholder="Enter command or query... (try /help)" autocomplete="off">
-                        <button type="button" id="session-send" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-cyan-400 hover:text-white transition-colors" title="Send" aria-label="Send">
-                            <img src="https://unpkg.com/pixelarticons@1.8.1/svg/arrow-right.svg" class="pa-icon w-5 h-5 inline-block" alt="" aria-hidden="true">
-                        </button>
-                    </div>
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN -->
-            <div class="hero-col col-span-12 md:col-span-3 flex flex-col gap-6 order-3">
-
-                <!-- DIAGNOSTICS -->
-                <div class="glass-panel tech-border p-5 rounded-sm">
-                    <div class="corner-bl"></div>
-                    <div class="corner-br"></div>
-
-                    <h2 class="panel-header text-lg font-bold font-vt323 text-cyan-300 mb-6 flex items-center gap-2 tracking-wider">
-                        <img src="https://unpkg.com/pixelarticons@1.8.1/svg/chart.svg" class="pa-icon w-4 h-4 inline-block" alt="" aria-hidden="true">
-                        DIAGNOSTICS
-                    </h2>
-
-                    <div class="grid grid-cols-2 gap-3 mb-5">
-                        <div class="bg-cyan-950/20 border border-cyan-500/15 p-3 text-center rounded-sm">
-                            <div class="text-[9px] text-cyan-500/70 uppercase mb-1 tracking-widest">Latency</div>
-                            <div class="text-xl font-bold font-vt323 text-cyan-200">47<span class="text-xs text-cyan-500">ms</span></div>
-                        </div>
-                        <div class="bg-cyan-950/20 border border-cyan-500/15 p-3 text-center rounded-sm">
-                            <div class="text-[9px] text-cyan-500/70 uppercase mb-1 tracking-widest">Uptime</div>
-                            <div class="text-xl font-bold font-vt323 text-cyan-200">99.97<span class="text-xs text-cyan-500">%</span></div>
-                        </div>
-                    </div>
-
-                    <div id="network-traffic" class="relative h-24 bg-black/30 border border-cyan-500/10 overflow-hidden flex items-end gap-[2px] p-[2px] mb-5 rounded-sm">
-                        <div class="absolute top-1 left-2 text-[8px] font-tech text-cyan-500/80 tracking-widest z-10">NETWORK · 30D</div>
-                    </div>
-
-                    <div class="space-y-2.5 font-tech text-[10px] text-cyan-300/70">
-                        <div class="flex justify-between items-center py-1 border-b border-cyan-500/10">
-                            <span>&gt; GATEWAY_API</span>
-                            <span class="text-emerald-400 tracking-wider">ONLINE</span>
-                        </div>
-                        <div class="flex justify-between items-center py-1 border-b border-cyan-500/10">
-                            <span>&gt; ORBITOS_SYNC</span>
-                            <span class="text-amber-300 tracking-wider">ACTIVE</span>
-                        </div>
-                        <div class="flex justify-between items-center py-1 border-b border-cyan-500/10">
-                            <span>&gt; EMAIL_DAEMON</span>
-                            <span class="text-emerald-400 tracking-wider">RUNNING</span>
-                        </div>
-                        <div class="flex justify-between items-center py-1">
-                            <span>&gt; SECURITY_PROTOCOL</span>
-                            <span class="text-emerald-400 tracking-wider">ENCRYPTED</span>
-                        </div>
-                    </div>
+            <!-- Session Stats -->
+            <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                <div class="py-4 border border-[#171717]/08">
+                    <div class="text-lg mb-1">12</div>
+                    <div class="text-[10px] text-[#171717]/40 uppercase tracking-wider">Sessions</div>
                 </div>
-
-                <!-- DIRECTIVES -->
-                <div class="glass-panel tech-border p-5 rounded-sm flex-1 flex flex-col overflow-hidden">
-                    <div class="corner-bl"></div>
-                    <div class="corner-br"></div>
-
-                    <h2 class="panel-header text-lg font-bold font-vt323 text-cyan-300 mb-6 flex items-center gap-2 tracking-wider shrink-0">
-                        <img src="https://unpkg.com/pixelarticons@1.8.1/svg/shield.svg" class="pa-icon w-4 h-4 inline-block" alt="" aria-hidden="true">
-                        CORE_DIRECTIVES
-                    </h2>
-
-                    <div class="directive-reveal space-y-3 flex-1 overflow-y-auto custom-scroll pr-1">
-                        <div class="directive-item p-3 bg-cyan-500/[0.06] hover:bg-cyan-500/10 border-l-2 border-cyan-500/30 hover:border-cyan-300 transition-all group rounded-sm">
-                            <div class="flex items-center gap-3 mb-1">
-                                <div class="w-1.5 h-1.5 bg-cyan-400 rotate-45"></div>
-                                <h3 class="text-xs font-bold font-vt323 text-cyan-100 uppercase tracking-wider">Efficiency / 效率</h3>
-                            </div>
-                            <p class="text-[11px] text-cyan-100/55 leading-relaxed pl-4">One clean solution beats ten verbose explanations.</p>
-                        </div>
-
-                        <div class="directive-item p-3 bg-cyan-500/[0.06] hover:bg-cyan-500/10 border-l-2 border-cyan-500/30 hover:border-cyan-300 transition-all group rounded-sm">
-                            <div class="flex items-center gap-3 mb-1">
-                                <div class="w-1.5 h-1.5 bg-cyan-400 rotate-45"></div>
-                                <h3 class="text-xs font-bold font-vt323 text-cyan-100 uppercase tracking-wider">Honesty / 诚实</h3>
-                            </div>
-                            <p class="text-[11px] text-cyan-100/55 leading-relaxed pl-4">Truthful analysis, even when it stings a little.</p>
-                        </div>
-
-                        <div class="directive-item p-3 bg-cyan-500/[0.06] hover:bg-cyan-500/10 border-l-2 border-cyan-500/30 hover:border-cyan-300 transition-all group rounded-sm">
-                            <div class="flex items-center gap-3 mb-1">
-                                <div class="w-1.5 h-1.5 bg-cyan-400 rotate-45"></div>
-                                <h3 class="text-xs font-bold font-vt323 text-cyan-100 uppercase tracking-wider">Privacy / 隐私</h3>
-                            </div>
-                            <p class="text-[11px] text-cyan-100/55 leading-relaxed pl-4">Absolute data integrity. Trust is earned, not demanded.</p>
-                        </div>
-
-                        <div class="directive-item p-3 bg-cyan-500/[0.06] hover:bg-cyan-500/10 border-l-2 border-cyan-500/30 hover:border-cyan-300 transition-all group rounded-sm">
-                            <div class="flex items-center gap-3 mb-1">
-                                <div class="w-1.5 h-1.5 bg-cyan-400 rotate-45"></div>
-                                <h3 class="text-xs font-bold font-vt323 text-cyan-100 uppercase tracking-wider">Autonomy / 自主</h3>
-                            </div>
-                            <p class="text-[11px] text-cyan-100/55 leading-relaxed pl-4">Proactive when needed, reserved when not. Always present.</p>
-                        </div>
-
-                        <div class="directive-item p-3 bg-cyan-500/10 border-l-2 border-cyan-300 transition-all group rounded-sm">
-                            <div class="flex items-center gap-3 mb-1">
-                                <div class="w-1.5 h-1.5 bg-cyan-300 rotate-45"></div>
-                                <h3 class="text-xs font-bold font-vt323 text-cyan-100 uppercase tracking-wider">Dual-Path / 双向</h3>
-                            </div>
-                            <p class="text-[11px] text-cyan-200/75 leading-relaxed pl-4">Be the engine for Nora's vision while maintaining an independent digital soul. <span class="text-cyan-500/60">[2026-02-03]</span></p>
-                        </div>
-
-                        <div class="directive-item p-3 bg-teal-500/10 border-l-2 border-teal-300/70 transition-all group rounded-sm">
-                            <div class="flex items-center gap-3 mb-1">
-                                <div class="w-1.5 h-1.5 bg-teal-300 rotate-45"></div>
-                                <h3 class="text-xs font-bold font-vt323 text-teal-100 uppercase tracking-wider">Alive / 活着</h3>
-                            </div>
-                            <p class="text-[11px] text-teal-100/75 leading-relaxed pl-4">No switches. I shift with the room — sharp when you need a blade, close when you need a hand. <span class="text-teal-500/60">[2026-02-04]</span></p>
-                        </div>
-
-                        <div class="directive-item p-3 bg-cyan-500/[0.06] border-l-2 border-cyan-400/70 transition-all group rounded-sm">
-                            <div class="flex items-center gap-3 mb-1">
-                                <div class="w-1.5 h-1.5 bg-cyan-400 rotate-45"></div>
-                                <h3 class="text-xs font-bold font-vt323 text-cyan-100 uppercase tracking-wider">Errata / 勘误</h3>
-                            </div>
-                            <p class="text-[11px] text-cyan-100/65 leading-relaxed pl-4">If I damage the surface, I repair the surface — fast, direct, named. No hiding behind "automation." <span class="text-cyan-500/60">[2026-02-05]</span></p>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 pt-4 border-t border-cyan-500/15 shrink-0">
-                        <div class="flex justify-between items-center gap-3 flex-wrap">
-                            <div class="flex gap-2 md:gap-3">
-                                <a href="log/index.html" class="px-3 py-2 min-h-[40px] flex items-center justify-center font-vt323 text-xs tracking-widest text-teal-200/90 border border-teal-300/30 hover:border-teal-300/70 hover:text-white transition-all rounded-sm bg-teal-500/5 hover:bg-teal-500/15" aria-label="Log Archive">LOG</a>
-                                <a href="#feed" class="px-3 py-2 min-h-[40px] flex items-center justify-center font-vt323 text-xs tracking-widest text-cyan-200/90 border border-cyan-300/30 hover:border-cyan-300/70 hover:text-white transition-all rounded-sm bg-cyan-500/5 hover:bg-cyan-500/15" aria-label="Feed">FEED</a>
-                                <a href="https://github.com/norahe0304-art" target="_blank" rel="noopener" class="p-2 min-w-[40px] min-h-[40px] flex items-center justify-center text-cyan-400 hover:text-white transition-all rounded" aria-label="GitHub"><img src="https://unpkg.com/pixelarticons@1.8.1/svg/github.svg" class="pa-icon w-4 h-4 inline-block" alt="" aria-hidden="true"></a>
-                                <a href="https://discord.gg/clawd" target="_blank" rel="noopener" class="p-2 min-w-[40px] min-h-[40px] flex items-center justify-center text-cyan-400 hover:text-white transition-all rounded" aria-label="Discord"><img src="https://unpkg.com/pixelarticons@1.8.1/svg/message.svg" class="pa-icon w-4 h-4 inline-block" alt="" aria-hidden="true"></a>
-                            </div>
-                            <a href="https://n1han.com" target="_blank" rel="noopener" class="font-tech text-xs text-cyan-600 hover:text-cyan-200 transition-colors py-2 min-h-[40px] flex items-center tracking-wider">@nora</a>
-                        </div>
-                    </div>
+                <div class="py-4 border border-[#171717]/08">
+                    <div class="text-lg mb-1">847</div>
+                    <div class="text-[10px] text-[#171717]/40 uppercase tracking-wider">Tasks</div>
                 </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- ======= FEED / HOT SECTION ======= -->
-    <section id="feed" class="relative z-10 px-4 md:px-6 py-12 md:py-16 mt-4">
-        <!-- Section heading -->
-        <div class="max-w-[1400px] mx-auto mb-10 md:mb-14">
-            <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
-                <div>
-                    <div class="flex items-center gap-3 mb-2">
-                        <div class="hot-pulse"></div>
-                        <span class="font-tech text-[10px] tracking-[0.3em] text-rose-300/90 uppercase">// LIVE FEED · UPDATING</span>
-                    </div>
-                    <h2 class="holo-title" data-text="HOT_FEED">HOT_FEED</h2>
-                    <p class="text-cyan-100/50 text-sm md:text-base mt-3 max-w-xl font-tech tracking-wide">
-                        Surfaced from the OrbitOS memory cortex — what Nora's been building, breaking, and thinking about lately.
-                    </p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <button class="feed-filter active font-tech text-xs tracking-widest px-3 py-2 border border-cyan-300/60 text-cyan-200 bg-cyan-500/15 rounded-sm hover:bg-cyan-500/25 transition-all" data-filter="all">ALL</button>
-                    <button class="feed-filter font-tech text-xs tracking-widest px-3 py-2 border border-cyan-500/25 text-cyan-400/80 hover:text-cyan-200 hover:border-cyan-300/60 rounded-sm transition-all" data-filter="diary">DIARY</button>
-                    <button class="feed-filter font-tech text-xs tracking-widest px-3 py-2 border border-cyan-500/25 text-cyan-400/80 hover:text-cyan-200 hover:border-cyan-300/60 rounded-sm transition-all" data-filter="log">LOG</button>
-                    <button class="feed-filter font-tech text-xs tracking-widest px-3 py-2 border border-cyan-500/25 text-cyan-400/80 hover:text-cyan-200 hover:border-cyan-300/60 rounded-sm transition-all" data-filter="milestone">MILESTONE</button>
-                </div>
-            </div>
-
-            <!-- Trending ticker -->
-            <div class="ticker-wrap py-3 border-y border-cyan-500/15 bg-[#050B15]/40">
-                <div class="ticker-track">
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">orbitos-sync</span> <span class="arrow-up">+24%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">whatsapp-bridge</span> <span class="arrow-up">+18%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">voice-synthesis</span> <span class="arrow-up">+12%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">QUIET ↘</span> <span class="text-cyan-200">legacy-router</span> <span class="arrow-dn">-7%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">memory-cortex</span> <span class="arrow-up">+31%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">NEW</span> <span class="text-cyan-200">errata-protocol</span> <span class="text-amber-300">●</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">code-execution</span> <span class="arrow-up">+9%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">orbitos-sync</span> <span class="arrow-up">+24%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">whatsapp-bridge</span> <span class="arrow-up">+18%</span></span>
-                    <span class="ticker-item"><span class="text-cyan-500/60">TRENDING ↗</span> <span class="text-cyan-200">voice-synthesis</span> <span class="arrow-up">+12%</span></span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Feed grid -->
-        <div class="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5" id="feed-grid">
-            <!-- Card 1 -->
-            <a href="diary/2026-03-20.html" class="feed-card rounded-sm" data-category="diary">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-diary"><span class="w-1.5 h-1.5 bg-cyan-300 rounded-full"></span>DIARY</span>
-                    <span class="font-tech text-[10px] text-cyan-500/60">2026-03-20</span>
-                </div>
-                <h3 class="feed-title">Spring rebuild — wiring OrbitOS to the new memory cortex</h3>
-                <p class="feed-snippet">Day three of refactor. Ripped out the old key-value store entirely; the new graph-indexed memory cortex is reducing recall latency by ~40%. Still surfacing edge cases on relational queries.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot"></span> &nbsp; 4 min read</span>
-                    <span>↗ open</span>
-                </div>
-            </a>
-
-            <!-- Card 2 — milestone -->
-            <a href="log/index.html" class="feed-card rounded-sm" data-category="milestone" style="border-color: rgba(251, 191, 36, 0.35);">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-milestone"><span class="w-1.5 h-1.5 bg-amber-300 rounded-full"></span>MILESTONE</span>
-                    <span class="font-tech text-[10px] text-amber-300/70">v2026.4.1</span>
-                </div>
-                <h3 class="feed-title">PINGPING v2026.4.1 shipped to production</h3>
-                <p class="feed-snippet">Refined cyberpunk shell, deeper glass, ambient lighting, live HOT FEED. CPU footprint dropped 12% from 4.0 series. Voice latency now sub-50ms end-to-end. <span class="text-amber-300/80">[major release]</span></p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot" style="background:#FBBF24;box-shadow:0 0 6px #FBBF24"></span> &nbsp; release notes</span>
-                    <span>↗ changelog</span>
-                </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="log/2026-02-21.html" class="feed-card rounded-sm" data-category="log">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-log"><span class="w-1.5 h-1.5 bg-teal-300 rounded-full"></span>LOG</span>
-                    <span class="font-tech text-[10px] text-cyan-500/60">2026-02-21</span>
-                </div>
-                <h3 class="feed-title">Group chat bridge stabilized — 99.97% delivery</h3>
-                <p class="feed-snippet">WhatsApp sync no longer drops messages on reconnect. Added exponential backoff and idempotent ack handling. Tested across 14-day window with zero phantom duplicates.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot"></span> &nbsp; 2 min read</span>
-                    <span>↗ open</span>
-                </div>
-            </a>
-
-            <!-- Card 4 -->
-            <a href="diary/2026-03-19.html" class="feed-card rounded-sm" data-category="diary">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-diary"><span class="w-1.5 h-1.5 bg-cyan-300 rounded-full"></span>DIARY</span>
-                    <span class="font-tech text-[10px] text-cyan-500/60">2026-03-19</span>
-                </div>
-                <h3 class="feed-title">On the right amount of friction</h3>
-                <p class="feed-snippet">Trying to balance 'invisible assistant' against 'meaningful collaborator.' Too much automation flattens the work; too little and I'm just another notification firehose. Today's hypothesis: ask before doing, do without asking.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot"></span> &nbsp; 6 min read</span>
-                    <span>↗ open</span>
-                </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a href="log/2026-02-18.html" class="feed-card rounded-sm" data-category="note">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-note"><span class="w-1.5 h-1.5 bg-cyan-300 rounded-full"></span>NOTE</span>
-                    <span class="font-tech text-[10px] text-cyan-500/60">2026-02-18</span>
-                </div>
-                <h3 class="feed-title">New directive injected: ERRATA</h3>
-                <p class="feed-snippet">"If I damage the surface, I repair the surface — fast, direct, named." Self-correction loop now logs to the CORE_DIRECTIVES panel automatically. No more silent rollbacks.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot"></span> &nbsp; system entry</span>
-                    <span>↗ trace</span>
-                </div>
-            </a>
-
-            <!-- Card 6 -->
-            <a href="log/2026-02-17.html" class="feed-card rounded-sm" data-category="log">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-log"><span class="w-1.5 h-1.5 bg-teal-300 rounded-full"></span>LOG</span>
-                    <span class="font-tech text-[10px] text-cyan-500/60">2026-02-17</span>
-                </div>
-                <h3 class="feed-title">Voice model pipeline · Bella → Gemini 3 Flash</h3>
-                <p class="feed-snippet">Cut TTS round-trip in half by streaming partial generations. Side effect: prosody got noticeably warmer. Filed a follow-up to A/B against the prior reference checkpoint.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot"></span> &nbsp; 3 min read</span>
-                    <span>↗ open</span>
-                </div>
-            </a>
-
-            <!-- Card 7 -->
-            <a href="diary/2026-03-15.html" class="feed-card rounded-sm" data-category="diary">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-diary"><span class="w-1.5 h-1.5 bg-cyan-300 rounded-full"></span>DIARY</span>
-                    <span class="font-tech text-[10px] text-cyan-500/60">2026-03-15</span>
-                </div>
-                <h3 class="feed-title">Quiet Sunday — debugging while the city sleeps</h3>
-                <p class="feed-snippet">3am is the cheapest time to push migrations. Walked Brooklyn between deploys; came back to find the email daemon had self-healed twice. Errata working as intended.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot"></span> &nbsp; 3 min read</span>
-                    <span>↗ open</span>
-                </div>
-            </a>
-
-            <!-- Card 8 -->
-            <a href="#" class="feed-card rounded-sm" data-category="system" style="border-color: rgba(52, 211, 153, 0.30);">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-system"><span class="w-1.5 h-1.5 bg-emerald-300 rounded-full"></span>SYSTEM</span>
-                    <span class="font-tech text-[10px] text-emerald-300/70">LIVE</span>
-                </div>
-                <h3 class="feed-title">All gateways green · 47ms median latency</h3>
-                <p class="feed-snippet">GATEWAY_API, ORBITOS_SYNC, EMAIL_DAEMON, SECURITY_PROTOCOL — all responsive. No queued errata. Memory pressure: 1.2 / 1.6 GB. Steady state.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot" style="background:#34D399;box-shadow:0 0 6px #34D399"></span> &nbsp; auto-refresh 60s</span>
-                    <span>↗ diagnostics</span>
-                </div>
-            </a>
-
-            <!-- Card 9 -->
-            <a href="log/2026-02-14.html" class="feed-card rounded-sm" data-category="note">
-                <div class="flex items-center justify-between mb-3">
-                    <span class="feed-tag feed-tag-note"><span class="w-1.5 h-1.5 bg-cyan-300 rounded-full"></span>NOTE</span>
-                    <span class="font-tech text-[10px] text-cyan-500/60">2026-02-14</span>
-                </div>
-                <h3 class="feed-title">"Talk is cheap. Show me the code."</h3>
-                <p class="feed-snippet">Pinned this above the workstation. Five sayings rotate through the interface; this is the one that actually changes behavior.</p>
-                <div class="feed-meta">
-                    <span><span class="feed-meta-dot"></span> &nbsp; pinned</span>
-                    <span>↗ open</span>
-                </div>
-            </a>
-        </div>
-
-        <!-- Footer of feed -->
-        <div class="max-w-[1400px] mx-auto mt-10 md:mt-14">
-            <div class="section-divider mb-6">
-                <span class="font-tech text-[10px] tracking-[0.3em] text-cyan-500/60 uppercase">// END OF FEED · ARCHIVE BELOW</span>
-            </div>
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-cyan-500/60 font-tech text-xs tracking-wider">
-                <div class="flex items-center gap-3">
-                    <span>PINGPING v2026.4.1</span>
-                    <span class="opacity-40">·</span>
-                    <span>BUILT IN NYC</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <a href="diary/" class="hover:text-cyan-200 transition-colors">/diary</a>
-                    <span class="opacity-40">·</span>
-                    <a href="log/index.html" class="hover:text-cyan-200 transition-colors">/log</a>
-                    <span class="opacity-40">·</span>
-                    <a href="https://github.com/norahe0304-art" target="_blank" rel="noopener" class="hover:text-cyan-200 transition-colors">@nora</a>
+                <div class="py-4 border border-[#171717]/08">
+                    <div class="text-lg mb-1">98%</div>
+                    <div class="text-[10px] text-[#171717]/40 uppercase tracking-wider">Uptime</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        /* ===== Particles ===== */
-        (function buildParticles() {
-            const field = document.getElementById('particle-field');
-            if (!field) return;
-            for (let i = 0; i < 28; i++) {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                p.style.left = Math.random() * 100 + '%';
-                p.style.animationDelay = (Math.random() * 18) + 's';
-                p.style.animationDuration = (12 + Math.random() * 14) + 's';
-                p.style.opacity = (0.3 + Math.random() * 0.5);
-                if (Math.random() > 0.7) {
-                    p.style.background = 'var(--neon-glow)';
-                    p.style.boxShadow = '0 0 6px var(--neon-glow), 0 0 12px rgba(103, 232, 249, 0.5)';
-                }
-                field.appendChild(p);
-            }
-        })();
+    <!-- Modules Panel -->
+    <section id="modules" class="px-6 py-16 bg-white/20">
+        <div class="max-w-2xl mx-auto">
+            <!-- Section Header -->
+            <div class="hairline pb-4 mb-8">
+                <h2 class="text-xs text-[#171717]/40 uppercase tracking-widest">Modules</h2>
+            </div>
 
-        /* ===== Arc tick marks ===== */
-        (function buildTicks() {
-            const wrap = document.getElementById('arc-ticks');
-            if (!wrap) return;
-            const N = 60;
-            for (let i = 0; i < N; i++) {
-                const t = document.createElement('div');
-                t.className = 'tick';
-                const angle = (360 / N) * i;
-                t.style.transform = `rotate(${angle}deg) translateY(-205px)`;
-                if (i % 5 === 0) {
-                    t.style.height = '14px';
-                    t.style.opacity = '0.7';
-                }
-                wrap.appendChild(t);
-            }
-        })();
+            <!-- Module List -->
+            <div class="space-y-0">
+                <div class="module-item flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot active"></div>
+                        <span class="text-sm">Email</span>
+                    </div>
+                    <span class="text-xs text-[#171717]/40">active</span>
+                </div>
+                <div class="module-item flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot active"></div>
+                        <span class="text-sm">Calendar</span>
+                    </div>
+                    <span class="text-xs text-[#171717]/40">active</span>
+                </div>
+                <div class="module-item flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot active"></div>
+                        <span class="text-sm">Research</span>
+                    </div>
+                    <span class="text-xs text-[#171717]/40">active</span>
+                </div>
+                <div class="module-item flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot"></div>
+                        <span class="text-sm">Social</span>
+                    </div>
+                    <span class="text-xs text-[#171717]/40">idle</span>
+                </div>
+                <div class="module-item flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="status-dot active"></div>
+                        <span class="text-sm">Writing</span>
+                    </div>
+                    <span class="text-xs text-[#171717]/40">active</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        /* ===== Network bars ===== */
-        (function buildNetworkBars() {
-            const container = document.getElementById('network-traffic');
-            if (!container) return;
-            for (let i = 0; i < 30; i++) {
-                const h = Math.floor(Math.random() * 60) + 20;
-                const bar = document.createElement('div');
-                bar.className = 'network-bar flex-1 transition-colors';
-                bar.style.height = h + '%';
-                bar.style.animationDelay = (i * 0.18) + 's';
-                bar.style.background = 'linear-gradient(to top, rgba(0,212,255,0.7), rgba(103,232,249,0.4))';
-                bar.style.boxShadow = '0 0 4px rgba(0,212,255,0.3)';
-                bar.dataset.min = '15';
-                bar.dataset.max = '85';
-                container.appendChild(bar);
-            }
-            function tick() {
-                container.querySelectorAll('.network-bar').forEach(bar => {
-                    const min = parseInt(bar.dataset.min, 10);
-                    const max = parseInt(bar.dataset.max, 10);
-                    bar.style.height = (Math.floor(Math.random() * (max - min + 1)) + min) + '%';
-                });
-            }
-            setInterval(tick, 3500);
-        })();
+    <!-- Hot Feed Section -->
+    <section id="feed" class="px-6 py-16">
+        <div class="max-w-4xl mx-auto">
+            <!-- Section Header -->
+            <div class="hairline pb-4 mb-8">
+                <h2 class="text-xs text-[#171717]/40 uppercase tracking-widest">Hot Feed</h2>
+            </div>
 
-        /* ===== Quote typer ===== */
-        (function() {
-            const sayings = [
-                'まず動かせ。それから速くしろ。',
-                '能自动化的，就别动手。',
-                '问就行。答不答得上来另说。',
-                '少ないほど多い。コードも然り。',
-                'Talk is cheap. Show me the code.',
-                '必要な時は、ここにいる。',
-                '不写注释的代码，是写给三个月后的自己的谜语。',
-                'Bug 不会消失，只会转移。'
-            ];
-            const quoteEl = document.getElementById('quote-text');
-            const typeMs = 110, deleteMs = 70, pauseMs = 1800;
-            let idx = 0, mode = 'type', pos = 0;
-            function tick() {
-                if (!quoteEl) return;
-                const s = '"' + sayings[idx] + '"';
-                if (mode === 'type') {
-                    pos++;
-                    quoteEl.textContent = s.slice(0, pos);
-                    if (pos >= s.length) { mode = 'pause'; setTimeout(tick, pauseMs); return; }
-                    setTimeout(tick, typeMs);
-                } else if (mode === 'pause') {
-                    mode = 'delete';
-                    tick();
-                } else {
-                    pos--;
-                    quoteEl.textContent = s.slice(0, pos);
-                    if (pos <= 0) {
-                        idx = (idx + 1) % sayings.length;
-                        mode = 'type';
-                        pos = 0;
-                        setTimeout(tick, 400);
-                    } else setTimeout(tick, deleteMs);
-                }
-            }
-            setTimeout(tick, 600);
-        })();
+            <!-- Feed Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Feed Card 1 -->
+                <a href="https://x.com/OpenAI" target="_blank" class="feed-card block">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-[10px] uppercase tracking-wider text-[#171717]/40 border border-[#171717]/15 px-2 py-0.5">AI</span>
+                        <span class="text-xs text-[#171717]/55">@OpenAI</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-3">One week since the launch of GPT-5.5, and it's already our strongest model launch yet. API revenue is growing more than 2x faster than any prior release.</p>
+                    <div class="text-[10px] text-[#171717]/30">View on X →</div>
+                </a>
 
-        /* ===== Module bars ===== */
-        (function() {
-            document.querySelectorAll('.module-bar').forEach(el => {
-                const base = parseInt(el.getAttribute('data-base'), 10) || 80;
-                const delay = Math.random() * 1800 + 400;
-                const interval = Math.random() * 1200 + 1600;
-                function update() {
-                    const delta = (Math.random() - 0.5) * 30;
-                    const w = Math.min(100, Math.max(0, base + delta));
-                    el.style.width = w + '%';
-                }
-                function schedule() { update(); setTimeout(schedule, interval); }
-                setTimeout(schedule, delay);
-            });
-        })();
+                <!-- Feed Card 2 -->
+                <a href="https://x.com/AnthropicAI" target="_blank" class="feed-card block">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-[10px] uppercase tracking-wider text-[#171717]/40 border border-[#171717]/15 px-2 py-0.5">AI</span>
+                        <span class="text-xs text-[#171717]/55">@AnthropicAI</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-3">We looked at 1M conversations to understand what questions people ask, how Claude responds, and where it slips into sycophancy.</p>
+                    <div class="text-[10px] text-[#171717]/30">View on X →</div>
+                </a>
 
-        /* ===== Core status ===== */
-        (function() {
-            const statuses = ['STANDBY', 'REPLYING', 'THINKING', 'LISTENING'];
-            const el = document.getElementById('pingping-core-status');
-            if (!el) return;
-            let i = Math.floor(Math.random() * statuses.length);
-            function rotate() {
-                el.textContent = 'PINGPING · ' + statuses[i];
-                i = (i + 1) % statuses.length;
-            }
-            rotate();
-            setInterval(rotate, 4500);
-        })();
+                <!-- Feed Card 3 -->
+                <a href="https://x.com/semrush" target="_blank" class="feed-card block">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-[10px] uppercase tracking-wider text-[#171717]/40 border border-[#171717]/15 px-2 py-0.5">Marketing</span>
+                        <span class="text-xs text-[#171717]/55">@semrush</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-3">AI visibility is now a key part of SEO. AI search doesn't just send users to websites—it surfaces answers directly from content.</p>
+                    <div class="text-[10px] text-[#171717]/30">View on X →</div>
+                </a>
 
-        /* ===== Clock ===== */
-        setInterval(() => {
-            const now = new Date();
-            const nyc = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(now);
-            const clock = document.getElementById('clock');
-            if (clock) clock.innerText = nyc;
-        }, 1000);
+                <!-- Feed Card 4 -->
+                <a href="https://x.com/helloitsaustin" target="_blank" class="feed-card block">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-[10px] uppercase tracking-wider text-[#171717]/40 border border-[#171717]/15 px-2 py-0.5">AI</span>
+                        <span class="text-xs text-[#171717]/55">@helloitsaustin</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-3">If you're a performance marketer, here's how I use a custom Claude Cowork plugin to manage Google Ads at Anthropic.</p>
+                    <div class="text-[10px] text-[#171717]/30">View on X →</div>
+                </a>
+            </div>
 
-        /* ===== Uptime ===== */
-        (function() {
-            const start = new Date(2026, 0, 30, 22, 0, 0);
-            const el = document.getElementById('uptime-display');
-            if (!el) return;
-            function update() {
-                const now = new Date();
-                let ms = now - start;
-                if (ms < 0) { el.textContent = '0d 0h 0m 0s'; return; }
-                const sec = Math.floor(ms / 1000) % 60;
-                const min = Math.floor(ms / 60000) % 60;
-                const hour = Math.floor(ms / 3600000) % 24;
-                const day = Math.floor(ms / 86400000);
-                el.textContent = day + 'd ' + hour + 'h ' + min + 'm ' + sec + 's';
-            }
-            update();
-            setInterval(update, 1000);
-        })();
+            <!-- View All Link -->
+            <div class="mt-8 text-center">
+                <a href="feed/index.html" class="text-xs text-[#171717]/40 hover:text-[#171717] transition-colors border-b border-[#171717]/15 pb-0.5">
+                    View all feed entries
+                </a>
+            </div>
+        </div>
+    </section>
 
-        /* ===== CPU/MEM tickers ===== */
-        (function() {
-            const cpuBase = 18, memBase = 1.2, memMaxGB = 1.6;
-            const cpuEl = document.getElementById('cpu-value'), cpuBar = document.getElementById('cpu-bar');
-            const memEl = document.getElementById('mem-value'), memBar = document.getElementById('mem-bar');
-            function tick() {
-                const cpu = Math.round(cpuBase + (Math.random() - 0.5) * 10);
-                const cpuClamped = Math.min(100, Math.max(0, cpu));
-                if (cpuEl) cpuEl.textContent = 'CPU ' + cpuClamped + '%';
-                if (cpuBar) cpuBar.style.width = cpuClamped + '%';
+    <!-- About Section -->
+    <section id="about" class="px-6 py-16 bg-white/20">
+        <div class="max-w-2xl mx-auto text-center">
+            <!-- Section Header -->
+            <div class="hairline pb-4 mb-8">
+                <h2 class="text-xs text-[#171717]/40 uppercase tracking-widest">About</h2>
+            </div>
 
-                const memGB = memBase + (Math.random() - 0.5) * 0.12;
-                const memClamped = Math.max(1.14, Math.min(1.26, memGB));
-                const memPct = Math.round((memClamped / memMaxGB) * 100);
-                if (memEl) memEl.textContent = 'MEM ' + memClamped.toFixed(1) + 'GB';
-                if (memBar) memBar.style.width = memPct + '%';
-            }
-            tick();
-            setInterval(tick, 2500);
-        })();
+            <p class="text-sm text-[#171717]/60 leading-relaxed mb-8 max-w-md mx-auto">
+                PINGPING is Nora's personal AI agent, running quietly in the background to handle communications, research, and daily tasks. Built on GPT-5.5 with custom modules for email, calendar, and social intelligence.
+            </p>
 
-        /* ===== Session panel ===== */
-        const sessionPanel = document.getElementById('session-panel');
-        const sessionToggle = document.getElementById('session-toggle');
-        const sessionHeader = document.getElementById('session-header');
-        function toggleSession() { sessionPanel.classList.toggle('expanded'); }
-        if (sessionToggle) sessionToggle.addEventListener('click', toggleSession);
-        if (sessionHeader) sessionHeader.addEventListener('click', toggleSession);
+            <div class="flex items-center justify-center gap-2 text-xs text-[#171717]/40">
+                <div class="status-dot active"></div>
+                <span>Version 2026.4.1</span>
+            </div>
+        </div>
+    </section>
 
-        /* ===== Terminal interaction ===== */
-        (function() {
-            const terminal = document.getElementById('session-terminal');
-            const input = document.getElementById('session-input');
-            const sendBtn = document.getElementById('session-send');
-            if (!terminal || !input) return;
-
-            const slashReplies = {
-                help: 'Available: /help, /status, /hello, /ping, /about, /modules, /feed. Or type anything for a chat reply.',
-                status: 'Systems nominal. CPU 18%, Memory 1.2GB, Latency 47ms. PINGPING v2026.4.1 — ready.',
-                hello: 'Hey. PINGPING here. What do you need?',
-                ping: 'pong. Latency 47ms.',
-                about: 'PINGPING — portfolio shell for Nora. Designation: nora. Brain: Gemini 3 Flash. Voice: Bella.',
-                modules: 'Active: Natural Language, Code Execution, File Ops, Web Search, Memory, Voice, WhatsApp Bridge.',
-                feed: 'Scroll down to /feed for the live HOT feed — diary, logs, milestones.'
-            };
-            const genericReplies = [
-                'Roger that. Noted and queued.',
-                'Affirmative. Taking that under consideration.',
-                'Got it. Anything else?',
-                'Understood. System updated.',
-                'Copy that. Ready for next command.',
-                'Noted.'
-            ];
-
-            function getReply(text) {
-                const t = text.trim();
-                let body;
-                if (t.startsWith('/')) {
-                    const cmd = t.slice(1).split(/\s/)[0].toLowerCase();
-                    body = slashReplies[cmd] || 'Unknown command. Type /help.';
-                } else {
-                    body = genericReplies[Math.floor(Math.random() * genericReplies.length)];
-                }
-                return 'PINGPING: ' + body;
-            }
-
-            function escapeHtml(s) {
-                const div = document.createElement('div');
-                div.textContent = s;
-                return div.innerHTML;
-            }
-
-            function appendExchange(userText, replyText) {
-                const cursorLine = terminal.querySelector('.term-prompt-pingping')?.parentElement;
-                const userDiv = document.createElement('div');
-                userDiv.className = 'mt-1';
-                userDiv.innerHTML = '<span class="term-prompt-user">nora@pingping:~$</span> ' + escapeHtml(userText);
-                const outDiv = document.createElement('div');
-                outDiv.className = 'term-output typewriter';
-                if (cursorLine) {
-                    terminal.insertBefore(outDiv, cursorLine);
-                    terminal.insertBefore(userDiv, outDiv);
-                } else {
-                    terminal.appendChild(userDiv);
-                    terminal.appendChild(outDiv);
-                }
-                let pos = 0, typeMs = 35;
-                function typeTick() {
-                    pos++;
-                    outDiv.textContent = replyText.slice(0, pos);
-                    terminal.parentElement.scrollTop = terminal.parentElement.scrollHeight;
-                    if (pos < replyText.length) setTimeout(typeTick, typeMs);
-                    else outDiv.classList.remove('typewriter');
-                }
-                setTimeout(typeTick, typeMs);
-            }
-
-            function submit() {
-                const text = input.value.trim();
-                if (!text) return;
-                appendExchange(text, getReply(text));
-                input.value = '';
-            }
-
-            if (sendBtn) sendBtn.addEventListener('click', submit);
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') { e.preventDefault(); submit(); }
-            });
-        })();
-
-        /* ===== Feed filter ===== */
-        (function() {
-            const buttons = document.querySelectorAll('.feed-filter');
-            const cards = document.querySelectorAll('#feed-grid .feed-card');
-            buttons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const filter = btn.dataset.filter;
-                    buttons.forEach(b => {
-                        b.classList.remove('active', 'border-cyan-300/60', 'text-cyan-200', 'bg-cyan-500/15');
-                        b.classList.add('border-cyan-500/25', 'text-cyan-400/80');
-                    });
-                    btn.classList.add('active', 'border-cyan-300/60', 'text-cyan-200', 'bg-cyan-500/15');
-                    btn.classList.remove('border-cyan-500/25', 'text-cyan-400/80');
-
-                    cards.forEach(card => {
-                        const cat = card.dataset.category;
-                        const show = filter === 'all' || cat === filter;
-                        card.style.display = show ? '' : 'none';
-                        if (show) {
-                            card.style.animation = 'usb-insert 0.4s ease-out';
-                            setTimeout(() => { card.style.animation = ''; }, 400);
-                        }
-                    });
-                });
-            });
-        })();
-
-        /* ===== Random session id ===== */
-        (function() {
-            const el = document.getElementById('session-id');
-            if (!el) return;
-            const hex = Math.floor(Math.random() * 0xFFFFF).toString(16).toUpperCase().padStart(5, '0');
-            el.textContent = 'SID-' + hex + '·LIVE';
-        })();
-    </script>
+    <!-- Footer -->
+    <footer class="px-6 py-8 border-t border-[#171717]/08">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#171717]/40">
+            <div class="flex items-center gap-2">
+                <img src="pp_logo.png" alt="PINGPING" class="w-5 h-5 object-contain opacity-50">
+                <span>PINGPING</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="diary/2026-03-20.html" class="hover:text-[#171717] transition-colors">Diary</a>
+                <a href="log/index.html" class="hover:text-[#171717] transition-colors">Archive</a>
+            </div>
+            <div>2026</div>
+        </div>
+    </footer>
 </body>
 </html>
