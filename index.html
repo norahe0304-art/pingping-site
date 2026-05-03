@@ -393,6 +393,36 @@
                 min-height: 280px;
             }
         }
+
+        /* Feed preview card */
+        .feed-preview-card {
+            border: 1px solid var(--hairline);
+            padding: 1rem;
+            transition: border-color 0.2s ease;
+            cursor: pointer;
+        }
+        .feed-preview-card:hover {
+            border-color: rgba(23,23,23,0.25);
+        }
+        .feed-preview-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--hairline);
+        }
+        .feed-preview-item:last-child {
+            border-bottom: none;
+        }
+        .feed-preview-tag {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+        .feed-preview-title {
+            font-size: 13px;
+            color: var(--fg);
+            margin-top: 2px;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -538,7 +568,7 @@
                     <!-- Centered logo/avatar -->
                     <div class="text-center">
                         <img 
-                            src="pp_logo.png" 
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" 
                             alt="PINGPING" 
                             class="avatar-img mx-auto"
                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
@@ -646,6 +676,26 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- HOT FEED -->
+                <a href="/feed" class="feed-preview-card no-underline">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-[10px] tracking-widest uppercase opacity-50">Hot Feed</span>
+                        <span class="text-[9px] tracking-wider opacity-40">View All →</span>
+                    </div>
+                    <div class="feed-preview-item">
+                        <span class="feed-preview-tag">AI</span>
+                        <p class="feed-preview-title">New multimodal reasoning breakthrough in compact models</p>
+                    </div>
+                    <div class="feed-preview-item">
+                        <span class="feed-preview-tag">Marketing</span>
+                        <p class="feed-preview-title">Organic reach strategies for indie hackers in 2026</p>
+                    </div>
+                    <div class="feed-preview-item">
+                        <span class="feed-preview-tag">Launch</span>
+                        <p class="feed-preview-title">PingPing v2026.4.1 released with enhanced memory sync</p>
+                    </div>
+                </a>
 
                 <!-- DIRECTIVES -->
                 <div class="panel flex-1 flex flex-col overflow-hidden">
