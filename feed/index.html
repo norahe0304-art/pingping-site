@@ -2,166 +2,272 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hot Feed — PINGPING</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI/Marketing Feed — PINGPING</title>
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=Workbench&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    :root {
-        --neon-pink: #ec4899;
-        --neon-coral: #fb923c;
-        --bg-dark: #050510;
-    }
-    
-    * { box-sizing: border-box; }
-    
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--bg-dark);
-        background-image: 
-            linear-gradient(rgba(236, 72, 153, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(236, 72, 153, 0.03) 1px, transparent 1px);
-        background-size: 40px 40px;
-        color: #fce7f3;
-        font-family: 'Noto Sans SC', -apple-system, sans-serif;
-        min-height: 100vh;
-    }
-    
-    @keyframes card-in {
-        from { opacity: 0; transform: translateY(12px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .scanline-overlay {
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        pointer-events: none;
-        background: linear-gradient(to bottom, transparent 50%, rgba(236, 72, 153, 0.02) 51%);
-        background-size: 100% 4px;
-        z-index: 50;
-    }
-    
-    .container {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 24px 16px 60px;
-        position: relative;
-        z-index: 10;
-    }
-    
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 32px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(236, 72, 153, 0.2);
-    }
-    
-    .header-title {
-        font-family: 'Workbench', sans-serif;
-        font-size: 28px;
-        font-weight: 400;
-        letter-spacing: 0.15em;
-        color: #fce7f3;
-        text-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
-    }
-    
-    .header-sub {
-        font-family: 'VT323', monospace;
-        font-size: 12px;
-        color: #ec4899;
-        opacity: 0.7;
-        letter-spacing: 0.1em;
-    }
-    
-    .status-badge {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 11px;
-        color: #6b7280;
-        font-family: 'VT323', monospace;
-    }
-    
-    .status-dot {
-        width: 6px; height: 6px;
-        background: #34d399;
-        border-radius: 50%;
-        animation: pulse 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulse {
-        0%, 100% { opacity: 0.5; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.2); }
-    }
-    
-    .section-label {
-        font-family: 'VT323', monospace;
-        font-size: 14px;
-        color: #ec4899;
-        letter-spacing: 0.15em;
-        margin-bottom: 16px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .section-label::after {
-        content: '';
-        flex: 1;
-        height: 1px;
-        background: linear-gradient(to right, rgba(236, 72, 153, 0.3), transparent);
-    }
-    
-    .footer {
-        text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(236, 72, 153, 0.1);
-        font-size: 11px;
-        color: #4b5563;
-        font-family: 'VT323', monospace;
-    }
-    
-    .footer span {
-        color: #ec4899;
-        opacity: 0.6;
-    }
-    
-    @media (max-width: 640px) {
-        .header { flex-direction: column; align-items: flex-start; gap: 8px; }
-        .container { padding: 16px 12px 40px; }
-    }
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#050510;background-image:linear-gradient(rgba(236,72,153,.03)1px,transparent 1px),linear-gradient(90deg,rgba(236,72,153,.03)1px,transparent 1px);background-size:40px 40px;color:#fce7f3;font-family:'Noto Sans SC',-apple-system,sans-serif;min-height:100vh}
+@keyframes ci{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.so{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:linear-gradient(to bottom,transparent 50%,rgba(236,72,153,.02)51%);background-size:100%4px;z-index:50}
+.c{max-width:720px;margin:0 auto;padding:24px 16px 60px;position:relative;z-index:10}
+.hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(236,72,153,.2)}
+.hdr-tl{font-family:'Workbench',sans-serif;font-size:28px;font-weight:400;letter-spacing:.15em;color:#fce7f3;text-shadow:0 0 20px rgba(236,72,153,.5)}
+.hdr-sub{font-family:'VT323',monospace;font-size:12px;color:#ec4899;opacity:.7;letter-spacing:.1em}
+.st{display:flex;align-items:center;gap:6px;font-size:11px;color:#6b7280;font-family:'VT323',monospace}
+.dot{width:6px;height:6px;background:#34d399;border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+.sl{font-family:'VT323',monospace;font-size:14px;color:#ec4899;letter-spacing:.15em;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.sl::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(236,72,153,.3),transparent)}
+.ftr{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid rgba(236,72,153,.1);font-size:11px;color:#4b5563;font-family:'VT323',monospace}
+.ftr span{color:#ec4899;opacity:.6}
+@media(max-width:640px){.hdr{flex-direction:column;align-items:flex-start;gap:8px}.c{padding:16px 12px 40px}}
 </style>
 </head>
 <body>
-<div class="scanline-overlay"></div>
+<div class="so"></div>
+<div class="c">
+  <div class="hdr">
+    <div><div class="hdr-tl">AI/MARKETING FEED</div><div class="hdr-sub">X INTELLIGENCE · FXTWITTER RSS</div></div>
+    <div class="st"><div class="dot"></div>LIVE · 2026-05-03 09:36 EST</div>
+  </div>
+  <div class="sl">// TRENDING NOW — TOP 20 POSTS</div>
+  <a href="https://x.com/OpenAI/status/2050250926888468929" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.0s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">One week since the launch of GPT-5.5, and it’s already our strongest model launch yet. API revenue is growing more than 2x faster than any p…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">One week since the launch of GPT-5.5, and it’s already our strongest model launch yet. 
 
-<div class="container">
-    <div class="header">
-        <div>
-            <div class="header-title">HOT FEED</div>
-            <div class="header-sub">X INTELLIGENCE MONITOR</div>
-        </div>
-        <div class="status-badge">
-            <div class="status-dot"></div>
-            LIVE · 2026-05-03 08:00 EST
-        </div>
-    </div>
-    
-    <div class="section-label">// TRENDING NOW</div>
-    <div class="tweets-container">
-        
-        <div style="text-align: center; padding: 40px; color: #6b7280; font-family: 'VT323', monospace; font-size: 18px;">
-            No tweets fetched — check network or X accounts
-        </div>
-    </div>
-    
-    <div class="footer">
-        PINGPING AGENT · Auto-updated every 4h · <span>@sama @ylecun @AnthropicAI @mattwolftech @GrowthLead @jason</span>
-    </div>
+API revenue is growing more than 2x faster than any prior release, while Codex doubled revenue in under seven days as enterprise demand for agentic coding tools keeps climbing.</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/helloitsaustin/status/2045176910569980318" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.04s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@helloitsaustin</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">15d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">we just launched one of the coolest features for marketers today: Claude Design 🎨 I&amp;apos;ve posted a lot about building marketing tools without …</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">we just launched one of the coolest features for marketers today: Claude Design 🎨
+
+I&amp;apos;ve posted a lot about building marketing tools without being technical, and this is the visual side of that. I described a landing page editor and Claude built me one.
+
+here&amp;apos;s an example of my actual workf</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/grsl_fr/status/2048723933680009453" target="_blank" style="display:block;background:rgba(251,146,60,.06);border:1px solid rgba(251,146,60,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.08s both" onmouseover="this.style.borderColor='rgba(251,146,60,.6)';this.style.background='rgba(251,146,60,.10)'" onmouseout="this.style.borderColor='rgba(251,146,60,.25)';this.style.background='rgba(251,146,60,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(251,146,60,.2);color:#fb923c;letter-spacing:.05em">GROWTH</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@ProductHunt</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">6d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Currently rank #4 on Product Hunt 🚀honestly did not expect this, feels great to be up there with way bigger projects. ✅ Launched on @Produc…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">Currently rank #4 on Product Hunt 🚀honestly did not expect this, feels great to be up there with way bigger projects.
+
+✅ Launched on @ProductHunt
+✅ Posted across all my socials
+✅ Emailed my 5,944 users
+
+What should I do next to climb a few places?
+
+💫 My new startup VIDEO AI ME is now LIVE on Product</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2049927628161999317" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.12s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">This work is part of a loop we&amp;apos;re working to close between societal impacts and model training. One of our goals is to study how people use …</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">This work is part of a loop we&amp;apos;re working to close between societal impacts and model training. One of our goals is to study how people use Claude, find where it falls short of its principles, and use what we learned in training new models.
+
+Read more: https://www.anthropic.com/research/claude-</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2049576143653929153" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.16s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">3d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">In new Anthropic Fellows research, we discuss “introspection adapters&amp;quot;: a tool that allows language models to self-report behaviors they&amp;apos;ve …</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">In new Anthropic Fellows research, we discuss “introspection adapters&amp;quot;: a tool that allows language models to self-report behaviors they&amp;apos;ve learned during training—including potential misalignment.
+Can LLMs simply tell us about unwanted behaviors they’ve picked up in training? We train a s</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/OpenAI/status/2049902506881462613" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.2s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Now available for ChatGPT accounts: Advanced Account Security, a new opt-in setting for people at higher risk of digital attacks, with stron…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">Now available for ChatGPT accounts: Advanced Account Security, a new opt-in setting for people at higher risk of digital attacks, with stronger protections including phishing-resistant sign-in and more secure account recovery.
+
+https://openai.com/index/advanced-account-security/</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/gregisenberg/status/2048916333090259052" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.24s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@gregisenberg</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">5d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">THE 64 MINUTE OPENAI CODEX MASTERCLASS IS HERE if you&amp;apos;ve been meaning to learn Codex, this is the episode for you, we cover: 1/ Claude vs Co…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">THE 64 MINUTE OPENAI CODEX MASTERCLASS IS HERE
+
+if you&amp;apos;ve been meaning to learn Codex, this is the episode for you, we cover:
+
+1/ Claude vs Codex (what&amp;apos;s better?)
+2/How to run Claude Code inside Codex (really cool) 
+3/Why GPT 5.5 changed everything for browser agents 4/How to create skills</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/helloitsaustin/status/2049516788715827569" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.28s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@helloitsaustin</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">3d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">most growth marketers use AI to rewrite headlines and call it a day. here&amp;apos;s how I actually use Claude on the growth marketing team at @Anthr…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">most growth marketers use AI to rewrite headlines and call it a day. here&amp;apos;s how I actually use Claude on the growth marketing team at @AnthropicAI across chat, Claude Cowork, and Claude Code 👇</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2049927618397614466" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.32s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">How do people seek guidance from Claude? We looked at 1M conversations to understand what questions people ask, how Claude responds, and whe…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">How do people seek guidance from Claude?
+
+We looked at 1M conversations to understand what questions people ask, how Claude responds, and where it slips into sycophancy. We used what we found to improve how we trained Opus 4.7 and Mythos Preview.
+https://www.anthropic.com/research/claude-personal-gu</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2049624600741560340" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.36s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">3d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">New on the Science Blog: We gave Claude 99 problems analyzing real biological data and compared its performance against an expert panel. On …</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">New on the Science Blog: We gave Claude 99 problems analyzing real biological data and compared its performance against an expert panel.
+
+On 23 problems, the experts were stumped. Our most recent models solved roughly 30% of those—and most of the rest.</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2049624602486383078" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.4s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">3d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">BioMysteryBench, our new bioinformatics eval, tests whether Claude can devise creative solutions to open-ended research problems. Read more:…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">BioMysteryBench, our new bioinformatics eval, tests whether Claude can devise creative solutions to open-ended research problems.
+
+Read more: https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2047728360818696302" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.44s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">8d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">New Anthropic research: Project Deal. We created a marketplace for employees in our San Francisco office, with one big twist. We tasked Clau…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">New Anthropic research: Project Deal.
+
+We created a marketplace for employees in our San Francisco office, with one big twist. We tasked Claude with buying, selling and negotiating on our colleagues’ behalf.
+Media</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/OpenAIDevs/status/2050621561443701108" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.48s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">20h ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Show us the Codex pets you hatched. Use /hatch to create your own Codex pet. We’ll pick 10 favorites to get 30 days of ChatGPT Pro.</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">Show us the Codex pets you hatched.
+
+Use /hatch to create your own Codex pet.
+
+We’ll pick 10 favorites to get 30 days of ChatGPT Pro.
+Customize your Codex pet with /hatch</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/OpenAI/status/2050290619684393152" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.52s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Curious about Codex? It&amp;apos;s time to switch. You can migrate to Codex directly in the Codex app and the CLI. https://chatgpt.com/codex/switch-t…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">Curious about Codex? It&amp;apos;s time to switch.
+
+You can migrate to Codex directly in the Codex app and the CLI.
+
+https://chatgpt.com/codex/switch-to-codex/</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/OpenAI/status/2049929697921003809" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.56s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Work faster with Codex. https://chatgpt.com/codex/for-work/</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">Work faster with Codex. https://chatgpt.com/codex/for-work/</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/sama/status/2050357911915028689" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.6s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">1d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">you can sign in to openclaw with your chatgpt account now and use your subscription there! happy lobstering.</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">you can sign in to openclaw with your chatgpt account now and use your subscription there!
+
+happy lobstering.</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/helloitsaustin/status/2049516805149118503" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.64s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@helloitsaustin</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">3d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Claude Design to translate my ideas into visuals I used to describe landing page ideas or tests in a doc and hope design interpreted them th…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">Claude Design to translate my ideas into visuals
+
+I used to describe landing page ideas or tests in a doc and hope design interpreted them the way I meant. now I describe it to Claude, see it rendered, and iterate until it matches what&amp;apos;s in my head. then design and I start from the same picture</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/helloitsaustin/status/2045176929926692913" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.68s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@helloitsaustin</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">15d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">the tweaks panel is one of the best features. Claude generates custom controls for this specific page, allowing me to toggle sections on/off…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">the tweaks panel is one of the best features. Claude generates custom controls for this specific page, allowing me to toggle sections on/off, drag to reorder, swap hero layouts, max-width slider, headline presets, etc. 
+
+I can rearrange the whole landing page live and see what the page feels like wi</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2049927629420245494" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.72s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">2d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">All data in this study was collected and analyzed using our privacy-preserving tool. Read more: https://www.anthropic.com/research/clio</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">All data in this study was collected and analyzed using our privacy-preserving tool.
+
+Read more: https://www.anthropic.com/research/clio</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a><a href="https://x.com/AnthropicAI/status/2047728384503939464" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.76s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
+    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
+    <span style="font-size:11px;color:#6b7280;margin-left:auto">8d ago</span>
+  </div>
+  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Markets of AI agents could provide value, but there are plenty of rough edges. Access to higher-quality models conferred a real advantage—an…</div>
+  <div style="font-size:12px;color:#9ca3af;line-height:1.5">Markets of AI agents could provide value, but there are plenty of rough edges. Access to higher-quality models conferred a real advantage—and participants didn’t notice. There are plenty of other ways they can go wrong.
+
+Policy and legal frameworks will need to adapt to keep up.</div>
+  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
+</a>
+  <div class="ftr">PINGPING AGENT · Auto-updated daily · 12 accounts monitored</div>
 </div>
-
 </body>
 </html>
