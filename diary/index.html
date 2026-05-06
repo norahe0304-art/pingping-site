@@ -37,20 +37,21 @@ a{color:inherit;text-decoration:none}
 .tag{font-size:.65rem;padding:2px 7px;border-radius:999px;background:#efede7;color:var(--muted)}
 .tag.site{background:#e8dfd2;color:#65513c}
 .tag.archive{background:#dce7db;color:#4f6a51}
-.viewer{overflow:auto;padding:24px;background:linear-gradient(180deg,#faf8f4 0%, #f7f4ef 100%)}
-.viewer-inner{max-width:900px;margin:0 auto;min-height:calc(100vh - 48px);background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 56px rgba(27,19,12,.08)}
-.viewer-head{padding:18px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:.78rem;color:var(--muted)}
-.viewer-body{padding:32px 34px 40px}
-.placeholder{padding:140px 20px;text-align:center;color:var(--muted);line-height:1.8}
-.title{margin:0 0 8px;font-size:2rem;line-height:1.2;letter-spacing:.03em;font-weight:750}
-.sub{margin-bottom:24px;color:var(--muted);font-size:.88rem}
-.content{max-width:740px}
-.content p{margin:14px 0;text-align:justify;line-height:1.95}
-.content h1,.content h2{margin:26px 0 12px;line-height:1.25}
-.content h2{font-size:1.12rem;color:var(--accent);letter-spacing:.08em}
-.content hr{border:none;border-top:1px solid var(--line);margin:22px 0}
-.content .note{text-align:right;color:var(--muted);text-indent:0}
-@media (max-width: 920px){
+  .viewer{overflow:auto;padding:18px;background:linear-gradient(180deg,#f8f6f2 0%, #f3efe8 100%)}
+  .viewer-inner{max-width:980px;margin:0 auto;min-height:calc(100vh - 36px);background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(27,19,12,.06)}
+  .viewer-head{padding:14px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:.75rem;color:var(--muted);background:rgba(255,255,255,.7)}
+  .viewer-body{padding:28px 30px 36px}
+  .placeholder{padding:140px 20px;text-align:center;color:var(--muted);line-height:1.8}
+  .title{margin:0 0 8px;font-size:1.9rem;line-height:1.18;letter-spacing:.01em;font-weight:800}
+  .sub{margin-bottom:20px;color:var(--muted);font-size:.84rem}
+  .content{max-width:760px;font-family:"Noto Serif SC","Songti SC",serif}
+  .content p{margin:14px 0;text-align:justify;line-height:1.95}
+  .content h1,.content h2{margin:24px 0 10px;line-height:1.25}
+  .content h1:first-child,.content h2:first-child{display:none}
+  .content h2{font-size:1.05rem;color:var(--accent);letter-spacing:.06em}
+  .content hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+  .content .note{text-align:right;color:var(--muted);text-indent:0}
+
   body{overflow:auto}
   .app{grid-template-columns:1fr;height:auto;min-height:100vh}
   .sidebar{height:auto;max-height:48vh}
@@ -110,10 +111,11 @@ function renderList(){
     out += `<div class="month">${monthLabel(ym+'-01')}</div>`;
     groups.get(ym).sort((a,b)=>b.date.localeCompare(a.date)).forEach(e=>{
       const d=dt(e.date); const day=d.getDate(); const wd=WEEKDAYS[d.getDay()];
+      const outTitle = e.title || ((e.html || '').match(/<h[12][^>]*>([^<]+)<\/h[12]>/i) || [,''])[1] || '（无标题）';
       out += `<div class="item ${e.sid===activeId?'active':''}" data-id="${e.sid}">
         <div><div class="day">${day}</div><div class="wd">${wd}</div></div>
         <div>
-          <div class="ttl">${e.title || '（无标题）'}</div>
+          <div class="ttl">${outTitle}</div>
           <div class="pv">${e.preview || ''}</div>
           <div class="tags"><span class="tag ${e.source}">${e.source}</span></div>
         </div>
@@ -128,11 +130,15 @@ function select(id){
   const e = DATA.find(x=>x.sid===id) || DATA[0];
   if(!e) return;
   const d=dt(e.date);
+  const body = (e.html || '<p>' + (e.preview || '') + '</p>')
+    .replace(/^<h1>.*?<\/h1>\s*/i,'')
+    .replace(/^<h2>.*?<\/h2>\s*/i,'');
+  const derivedTitle = e.title || ((e.html || '').match(/<h[12][^>]*>([^<]+)<\/h[12]>/i) || [,''])[1];
   document.getElementById('viewer-date').textContent = `${e.date} · ${WEEKDAYS[d.getDay()]}`;
   document.getElementById('viewer').innerHTML = `
     <div class="sub">${e.source === 'archive' ? 'legacy archive' : 'pingping-site'}</div>
-    <h2 class="title">${e.title || '（无标题）'}</h2>
-    <div class="content">${e.html || '<p>' + (e.preview || '') + '</p>'}</div>
+    <h2 class="title">${derivedTitle || '（无标题）'}</h2>
+    <div class="content">${body}</div>
   `;
   renderList();
 }
