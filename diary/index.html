@@ -1,165 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PingPing Diary</title>
-<style>
-:root{
-  --bg:#F2F0EE;
-  --panel:#FFFDFC;
-  --panel-2:#F7F4EF;
-  --line:rgba(23,23,23,.12);
-  --ink:#171717;
-  --muted:rgba(23,23,23,.56);
-  --accent:#171717;
-  --accent-soft:rgba(23,23,23,.04);
-  --green:#4f6a51;
-  --shadow:0 20px 60px rgba(27,19,12,.06);
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Geist Mono","IBM Plex Mono","SF Mono",monospace;overflow:hidden;font-weight:400;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.app{display:grid;grid-template-columns:340px 1fr;height:100vh}
-.sidebar{background:rgba(255,253,250,.82);backdrop-filter:blur(16px);border-right:1px solid var(--line);display:flex;flex-direction:column;min-width:300px;box-shadow:inset -1px 0 0 rgba(255,255,255,.6)}
-.brand{padding:24px 18px 16px;border-bottom:1px solid var(--line)}
-.brand .eyebrow{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.brand h1{margin:8px 0 6px;font-size:1.2rem;letter-spacing:.08em;font-weight:400}
-.brand .meta{font-size:.78rem;color:var(--muted)}
-.toolbar{padding:12px 14px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
-.btn{border:1px solid var(--line);background:rgba(255,255,255,.8);padding:7px 11px;border-radius:999px;font:inherit;font-size:.74rem;color:var(--muted);cursor:pointer}
-.btn.active{background:var(--ink);border-color:var(--ink);color:#fff}
-.search{padding:10px 14px 14px;border-bottom:1px solid var(--line)}
-.search input{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 12px;font:inherit;outline:none;color:var(--ink)}
-.search input::placeholder{color:rgba(23,23,23,.35)}
-.search input:focus{border-color:rgba(23,23,23,.25);box-shadow:0 0 0 3px rgba(23,23,23,.05)}
-.list{overflow:auto;flex:1;padding:10px 10px 18px}
-.month{padding:12px 10px 8px;font-size:.7rem;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
-.item{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:12px 10px;border:1px solid transparent;border-radius:16px;cursor:pointer;transition:.18s ease;background:transparent}
-.item:hover{background:rgba(255,255,255,.7);border-color:var(--line)}
-.item.active{background:linear-gradient(180deg,#fff 0%,#faf7f2 100%);border-color:rgba(23,23,23,.18);box-shadow:0 14px 34px rgba(27,19,12,.06);transform:translateX(2px)}
-.day{font-size:1.15rem;font-weight:400;line-height:1;color:var(--ink)}
-.wd{font-size:.68rem;color:var(--muted);margin-top:4px;letter-spacing:.06em}
-.ttl{font-weight:400;font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
-.pv{margin-top:4px;font-size:.78rem;color:var(--muted);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.tags{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap}
-.tag{font-size:.62rem;padding:2px 7px;border-radius:999px;background:rgba(23,23,23,.05);color:var(--muted);letter-spacing:.04em}
-.tag.site{background:rgba(23,23,23,.07);color:var(--ink)}
-.tag.archive{background:rgba(79,106,81,.09);color:var(--green)}
-.viewer{overflow:auto;padding:18px;background:linear-gradient(180deg,#F6F3EF 0%, #F1ECE5 100%)}
-.viewer-inner{max-width:920px;margin:0 auto;min-height:calc(100vh - 36px);background:linear-gradient(180deg,#fffdf9 0%, #fffaf4 100%);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
-.viewer-head{padding:14px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:.72rem;color:var(--muted);background:rgba(255,255,255,.72);letter-spacing:.12em;text-transform:uppercase}
-.viewer-body{padding:30px 32px 38px}
-.placeholder{padding:150px 20px;text-align:center;color:var(--muted);line-height:1.8;letter-spacing:.02em}
-.title{margin:0 0 8px;font-size:2.05rem;line-height:1.16;letter-spacing:-.02em;font-weight:400}
-.sub{margin-bottom:18px;color:var(--muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
-.content{max-width:760px;font-family:"Noto Serif SC","Songti SC",serif}
-.content p{margin:14px 0;text-align:justify;line-height:2.0;letter-spacing:.005em}
-.content h1,.content h2{margin:24px 0 10px;line-height:1.25}
-.content h1:first-child,.content h2:first-child{display:none}
-.content h2{font-size:1.02rem;color:var(--ink);letter-spacing:.08em;font-weight:400}
-.content hr{border:none;border-top:1px solid var(--line);margin:22px 0}
-.content .note{text-align:right;color:var(--muted);text-indent:0}
-body{overflow:auto}
-.app{grid-template-columns:1fr;height:auto;min-height:100vh}
-.sidebar{height:auto;max-height:48vh}
-.viewer{padding:0}
-.viewer-inner{border:none;border-radius:0;box-shadow:none;min-height:auto}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PingPing 日记</title>
+  <style>
+    :root { --bg:#0b0f14; --panel:#111722; --panel2:#0f1520; --line:#223044; --text:#e8eef7; --muted:#8ea0b8; --accent:#7dd3fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:linear-gradient(180deg,#0b0f14,#090c11); color:var(--text); font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif; }
+    .wrap { display:grid; grid-template-columns: 320px 1fr; min-height:100vh; }
+    .sidebar { border-right:1px solid var(--line); background:rgba(15,21,32,.92); padding:20px 16px; position:sticky; top:0; height:100vh; overflow:auto; }
+    .brand { font-size:12px; letter-spacing:.24em; color:var(--accent); margin-bottom:14px; }
+    h1 { margin:0 0 14px; font-size:28px; }
+    .search { width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:#0c121b; color:var(--text); outline:none; }
+    .list { margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+    .entry-item { text-align:left; padding:12px; border-radius:12px; border:1px solid transparent; background:var(--panel2); color:var(--text); cursor:pointer; }
+    .entry-item:hover,.entry-item.active { border-color:rgba(125,211,252,.45); background:#132030; }
+    .entry-date { font-size:12px; color:var(--muted); margin-bottom:6px; }
+    .entry-title { font-size:15px; line-height:1.4; }
+    .main { padding:28px; }
+    .reader { max-width:860px; margin:0 auto; background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:28px; min-height:70vh; }
+    .meta { color:var(--muted); font-size:13px; margin-bottom:10px; }
+    .title { font-size:32px; margin:0 0 18px; }
+    .content-frame { width:100%; border:0; min-height:60vh; background:white; border-radius:14px; }
+    @media (max-width: 900px) { .wrap { grid-template-columns:1fr; } .sidebar { position:relative; height:auto; } }
+  </style>
 </head>
 <body>
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand">
-      <div class="eyebrow">PingPing Diary Archive</div>
+  <div class="wrap">
+    <aside class="sidebar">
+      <div class="brand">PINGPING DIARY ARCHIVE</div>
       <h1>PingPing 日记</h1>
-      <div class="meta"><span id="total">0</span> 篇 · 左侧选篇，右侧阅读全文</div>
-    </div>
-    <div class="toolbar">
-      <button class="btn active" data-filter="all">全部</button>
-      <button class="btn" data-filter="site">site</button>
-      <button class="btn" data-filter="archive">archive</button>
-    </div>
-    <div class="search"><input id="q" placeholder="搜索日期 / 标题 / 内容"></div>
-    <div class="list" id="list"></div>
-  </aside>
-  <main class="viewer">
-    <div class="viewer-inner">
-      <div class="viewer-head"><span>viewer / 读文</span><span id="viewer-date">—</span></div>
-      <div class="viewer-body" id="viewer"><div class="placeholder">从左边选一篇。<br>Pick one on the left.<br>这里会直接展开全文，不跳页面。</div></div>
-    </div>
-  </main>
-</div>
-<script src="entries.js"></script>
-<script>
-const WEEKDAYS=['周日','周一','周二','周三','周四','周五','周六'];
-const DATA = window.DIARY_DATA || [];
-let filter='all';
-let query='';
-let activeId = DATA[0]?.sid || null;
-
-document.getElementById('total').textContent = DATA.length;
-
-function monthLabel(d){ const [y,m]=d.split('-'); const n=['','一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']; return `${y} 年 · ${n[+m]}`; }
-function dt(s){ return new Date(s+'T12:00:00'); }
-function matches(e){
-  const q=query.trim().toLowerCase();
-  const okFilter = filter==='all' || e.source===filter;
-  if(!q) return okFilter;
-  const text=`${e.date} ${e.title||''} ${e.preview||''} ${e.html||''}`.toLowerCase();
-  return okFilter && text.includes(q);
-}
-function renderList(){
-  const items = DATA.filter(matches);
-  const groups = new Map();
-  items.forEach(e=>{ const ym=e.date.slice(0,7); if(!groups.has(ym)) groups.set(ym,[]); groups.get(ym).push(e); });
-  const months = [...groups.keys()].sort().reverse();
-  let out='';
-  for(const ym of months){
-    out += `<div class="month">${monthLabel(ym+'-01')}</div>`;
-    groups.get(ym).sort((a,b)=>b.date.localeCompare(a.date)).forEach(e=>{
-      const d=dt(e.date); const day=d.getDate(); const wd=WEEKDAYS[d.getDay()];
-      const outTitle = e.title || ((e.html || '').match(/<h[12][^>]*>([^<]+)<\/h[12]>/i) || [,''])[1] || '（无标题）';
-      out += `<div class="item ${e.sid===activeId?'active':''}" data-id="${e.sid}">
-        <div><div class="day">${day}</div><div class="wd">${wd}</div></div>
-        <div>
-          <div class="ttl">${outTitle}</div>
-          <div class="pv">${e.preview || ''}</div>
-          <div class="tags"><span class="tag ${e.source}">${e.source}</span></div>
-        </div>
-      </div>`;
-    });
-  }
-  document.getElementById('list').innerHTML = out || '<div class="placeholder">没有匹配结果。</div>';
-  document.querySelectorAll('.item').forEach(el=>el.addEventListener('click',()=>select(el.dataset.id)));
-}
-function select(id){
-  activeId=id;
-  const e = DATA.find(x=>x.sid===id) || DATA[0];
-  if(!e) return;
-  const d=dt(e.date);
-  const body = (e.html || '<p>' + (e.preview || '') + '</p>')
-    .replace(/^<h1>.*?<\/h1>\s*/i,'')
-    .replace(/^<h2>.*?<\/h2>\s*/i,'');
-  const derivedTitle = e.title || ((e.html || '').match(/<h[12][^>]*>([^<]+)<\/h[12]>/i) || [,''])[1];
-  document.getElementById('viewer-date').textContent = `${e.date} · ${WEEKDAYS[d.getDay()]}`;
-  document.getElementById('viewer').innerHTML = `
-    <div class="sub">${e.source === 'archive' ? 'legacy archive' : 'pingping-site'}</div>
-    <h2 class="title">${derivedTitle || '（无标题）'}</h2>
-    <div class="content">${body}</div>
-  `;
-  renderList();
-}
-
-document.querySelectorAll('.btn').forEach(btn=>btn.addEventListener('click',()=>{
-  document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active'); filter=btn.dataset.filter; renderList();
-}));
-document.getElementById('q').addEventListener('input',e=>{ query=e.target.value; renderList(); });
-renderList();
-if(activeId) select(activeId);
-</script>
+      <input id="q" class="search" placeholder="搜索日期 / 标题 / 内容" />
+      <div class="list" id="list"></div>
+    </aside>
+    <main class="main">
+      <section class="reader">
+        <div class="meta">左边是列表，右边是正文。就这么简单。</div>
+        <h2 class="title" id="title">暂无日记</h2>
+        <div class="meta" id="date"></div>
+        <iframe id="frame" class="content-frame"></iframe>
+      </section>
+    </main>
+  </div>
+  <script src="entries.js"></script>
+  <script>
+    const DATA = window.DIARY_DATA || [];
+    const list = document.getElementById('list');
+    const q = document.getElementById('q');
+    const title = document.getElementById('title');
+    const date = document.getElementById('date');
+    const frame = document.getElementById('frame');
+    function pick(e) {
+      [...list.querySelectorAll('.entry-item')].forEach(x => x.classList.toggle('active', x === e));
+      title.textContent = e.dataset.title;
+      date.textContent = e.dataset.date;
+      frame.src = e.dataset.file;
+    }
+    function filter() {
+      const s = q.value.trim().toLowerCase();
+      [...list.querySelectorAll('.entry-item')].forEach(e => {
+        const hit = !s || e.dataset.title.toLowerCase().includes(s) || e.dataset.date.includes(s) || e.textContent.toLowerCase().includes(s);
+        e.style.display = hit ? '' : 'none';
+      });
+    }
+    list.addEventListener('click', ev => { const btn = ev.target.closest('.entry-item'); if (btn) pick(btn); });
+    q.addEventListener('input', filter);
+    list.innerHTML = DATA.map(e => `
+      <button class="entry-item" data-file="${e.file}" data-title="${e.title}" data-date="${e.date}">
+        <div class="entry-date">${e.date.replace(/-/g,'.')}</div>
+        <div class="entry-title">${e.title}</div>
+      </button>
+    `).join('');
+    const first = list.querySelector('.entry-item');
+    if (first) pick(first);
+  </script>
 </body>
 </html>
