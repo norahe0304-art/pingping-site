@@ -117,6 +117,15 @@ Per entry: at most one of each.
 | `> text…`           | in-content quotation — handwritten Caveat centered |
 | `![alt](url "cap")` | Atlas figure with `[ Artifact … ]` caption |
 
+Annotation length rules (CRITICAL — rough-notation breaks on multi-line):
+- `((phrase))` must fit on a SINGLE line. Max ~6 words. Otherwise the
+  circle becomes a stretched oval spanning multiple text rows and looks
+  wrong on screen.
+- `==phrase==` can be longer (underline draws one stroke per text row,
+  so it stays clean) but keep under ~12 words.
+- `[[phrase]]` is the highlighter marker — works fine for short or
+  medium phrases.
+
 Sidenote rules:
 - Short. One sentence. Max ~12 words ideal.
 - Comments on the paragraph it follows.
