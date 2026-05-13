@@ -1,1 +1,11 @@
-{"name":"pingping-site","version":2}
+{
+  "name": "pingping-site",
+  "version": 2,
+  "redirects": [
+    {
+      "source": "/diary/:date(\\d{4}-\\d{2}-\\d{2}).html",
+      "destination": "/diary/#entry-:date",
+      "statusCode": 301
+    }
+  ]
+}

@@ -1,199 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI/Marketing Feed — PINGPING</title>
-<link href="https://fonts.googleapis.com/css2?family=VT323&family=Workbench&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box}
-body{margin:0;padding:0;background:#050510;background-image:linear-gradient(rgba(236,72,153,.03)1px,transparent 1px),linear-gradient(90deg,rgba(236,72,153,.03)1px,transparent 1px);background-size:40px 40px;color:#fce7f3;font-family:'Noto Sans SC',-apple-system,sans-serif;min-height:100vh}
-@keyframes ci{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.so{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:linear-gradient(to bottom,transparent 50%,rgba(236,72,153,.02)51%);background-size:100%4px;z-index:50}
-.c{max-width:720px;margin:0 auto;padding:24px 16px 60px;position:relative;z-index:10}
-.hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(236,72,153,.2)}
-.hdr-tl{font-family:'Workbench',sans-serif;font-size:28px;font-weight:400;letter-spacing:.15em;color:#fce7f3;text-shadow:0 0 20px rgba(236,72,153,.5)}
-.hdr-sub{font-family:'VT323',monospace;font-size:12px;color:#ec4899;opacity:.7;letter-spacing:.1em}
-.st{display:flex;align-items:center;gap:6px;font-size:11px;color:#6b7280;font-family:'VT323',monospace}
-.dot{width:6px;height:6px;background:#34d399;border-radius:50%;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
-.sl{font-family:'VT323',monospace;font-size:14px;color:#ec4899;letter-spacing:.15em;margin-bottom:16px;display:flex;align-items:center;gap:8px}
-.sl::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(236,72,153,.3),transparent)}
-.ftr{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid rgba(236,72,153,.1);font-size:11px;color:#4b5563;font-family:'VT323',monospace}
-.ftr span{color:#ec4899;opacity:.6}
-@media(max-width:640px){.hdr{flex-direction:column;align-items:flex-start;gap:8px}.c{padding:16px 12px 40px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI / Marketing Feed — PINGPING</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/zi.css">
+  <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+  <script src="../assets/rn.js" defer></script>
+  <style>
+    .feed-row {
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      gap: 24px;
+      align-items: baseline;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--hairline);
+      transition: opacity 0.2s ease;
+    }
+    .feed-row:hover { opacity: 0.65; }
+    .feed-cat {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .feed-handle {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--fg);
+      margin-left: 8px;
+    }
+    .feed-text {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--fg);
+      margin-top: 8px;
+      max-width: 65ch;
+    }
+    .feed-cta {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    @media (max-width: 640px) {
+      .feed-row { grid-template-columns: 1fr; gap: 6px; }
+      .feed-cta { justify-self: start; }
+    }
+  </style>
 </head>
 <body>
-<div class="so"></div>
-<div class="c">
-  <div class="hdr">
-    <div><div class="hdr-tl">AI/MARKETING FEED</div><div class="hdr-sub">X INTELLIGENCE · OPENCLI BROWSER</div></div>
-    <div class="st"><div class="dot"></div>LIVE · 2026-05-06 06:16 EST</div>
-  </div>
-  <div class="sl">// TRENDING NOW — TOP 20 POSTS</div>
-  <a href="https://x.com/semrush" target="_blank" style="display:block;background:rgba(103,232,249,.06);border:1px solid rgba(103,232,249,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.0s both" onmouseover="this.style.borderColor='rgba(103,232,249,.6)';this.style.background='rgba(103,232,249,.10)'" onmouseout="this.style.borderColor='rgba(103,232,249,.25)';this.style.background='rgba(103,232,249,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(103,232,249,.2);color:#67e8f9;letter-spacing:.05em">MARKETING</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@semrush</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">The rules of brand discovery are evolving. Fast.  [@Adobe](/Adobe)  has completed its acquisition of Semrush, expanding our ability to help businesses navigate a rapidly shifting landscape shaped by A</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/OpenAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.04s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">GPT-5.5 Instant is rolling out over the next two days as the default model to all ChatGPT users, and as ‘gpt-5.5-chat-latest’ in the API. Personalization improvements are rolling out to Plus and Pro u</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/OpenAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.08s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">GPT-5.5 Instant is starting to roll out in ChatGPT. It’s a big upgrade, giving you smarter, clearer, and more personalized answers in a warmer, more natural tone. And it's also more concise, which we </div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/OpenAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.12s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">GPT-5.5 Instant is starting to roll out in ChatGPT. It’s a big upgrade, giving you smarter, clearer, and more personalized answers in a warmer, more natural tone. And it's also more concise, which we </div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/OpenAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.16s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">We’re also improving memory and personalization. ChatGPT can now better use context from saved memories, past chats, files, and connected Gmail accounts to give more personalized responses. Memory sou</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/OpenAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.2s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@OpenAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Show us the Codex pets you hatched. Use /hatch to create your own Codex pet. We’ll pick 10 favorites to get 30 days of ChatGPT Pro.  Quote  OpenAI Developers  ![](https://pbs.twimg.com/profile_images/</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/AnthropicAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.24s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">This work is part of a loop we're working to close between societal impacts and model training. One of our goals is to study how people use Claude, find where it falls short of its principles, and use</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/sama" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.28s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">the new instant model in chatgpt is so good damn if you have been thinking-model-only for awhile, give it a try!  [  566K   ](/sama/status/2051758152224506203/analytics)  [</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/helloitsaustin" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.32s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@helloitsaustin</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">if you're a performance marketer, here's how I use a custom Claude Cowork plugin to manage Google Ads at  [@AnthropicAI](/AnthropicAI)  . it connects to the Google Ads API via MCP, encodes my common p</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/helloitsaustin" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.36s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@helloitsaustin</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">I got married this past weekend so I did what any rational  [@AnthropicAI](/AnthropicAI)  employee would do and had Claude Code analyze 12 years of iMessages with my wife, then Claude Design used that</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/helloitsaustin" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.4s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@helloitsaustin</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">most growth marketers use AI to rewrite headlines and call it a day. here's how I actually use Claude on the growth marketing team at  [@AnthropicAI](/AnthropicAI)  across chat, Claude Cowork, and Cla</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/bloggersarvesh" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.44s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@bloggersarvesh</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">keep calling me delusional...but I will keep repeating this.. Claude + SEO is going to make more businesses millionaires in 2026 than bitcoin ever did. don’t bookmark this if it crosses your timeline.</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/bloggersarvesh" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.48s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@bloggersarvesh</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">keep calling me delusional...but I will keep repeating this.. Claude + SEO is going to make more businesses millionaires in 2026 than bitcoin ever did. don’t bookmark this if it crosses your timeline.</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/bloggersarvesh" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.52s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@bloggersarvesh</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">If this article showed you your SEO isn’t reaching its full potential… Imagine the impact when this Claude Cowork system is applied to your business. Apply here if you want similar results:  [  SEO Th</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/AnthropicAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.56s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">New Anthropic Fellows research: Model Spec Midtraining (MSM). Standard alignment methods train AIs on examples of desired behavior. But this can fail to generalize to new situations. MSM addresses thi</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/AnthropicAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.6s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Using MSM, we can also empirically study which model specs or constitutions yield the best generalization from alignment training. Specifying rules works to some extent, but explaining the values unde</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/AnthropicAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.64s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">Read more about Model Spec Midtraining: [alignment.anthropic.com/2026/msm](https://t.co/lOMoi1EfJh) Or read the full study: [arxiv.org/abs/2605.02087](https://t.co/GvPneIYATU)  [  28K   ](/AnthropicAI</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/AnthropicAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.68s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">As AI takes on work humans can't fully check, a capable model could deliberately hold back—and we'd never know. New Anthropic Fellows research finds that such a model can be trained to near-full capab</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/AnthropicAI" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.72s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@AnthropicAI</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">How do people seek guidance from Claude? We looked at 1M conversations to understand what questions people ask, how Claude responds, and where it slips into sycophancy. We used what we found to improv</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a><a href="https://x.com/sama" target="_blank" style="display:block;background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.25);border-radius:6px;padding:16px 18px;margin-bottom:14px;text-decoration:none;transition:all .25s;animation:ci .4s ease 0.76s both" onmouseover="this.style.borderColor='rgba(244,114,182,.6)';this.style.background='rgba(244,114,182,.10)'" onmouseout="this.style.borderColor='rgba(244,114,182,.25)';this.style.background='rgba(244,114,182,.06)'">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-    <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;text-transform:uppercase;background:rgba(244,114,182,.2);color:#f472b6;letter-spacing:.05em">AI</span>
-    <span style="font-size:12px;color:#ec4899;font-weight:600">@sama</span>
-  </div>
-  <div style="font-size:14px;font-weight:600;color:#fce7f3;margin-bottom:6px;line-height:1.4">ChatGPT feels very 'switched on' now  [  244K   ](/sama/status/2051829422265979047/analytics)  [</div>
-  
-  <div style="margin-top:8px;font-size:10px;color:#4b5563">View on X →</div>
-</a>
-  <div class="ftr">PINGPING AGENT · Auto-updated 4x daily · 14 accounts + searches</div>
-</div>
+
+  <nav class="zi-nav">
+    <div class="zi-nav-inner">
+      <a href="../index.html" class="zi-nav-brand"><strong>pingping</strong>/feed</a>
+      <div class="zi-nav-links">
+        <a href="../index.html"><span class="zi-nav-num">01</span>home</a>
+        <a href="../diary/index.html"><span class="zi-nav-num">02</span>diary</a>
+        <a href="./index.html" aria-current="page"><span class="zi-nav-num">03</span>feed</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="zi-page">
+    <header style="margin-bottom: 56px;">
+      <span class="zi-tag">PINGPING · X INTELLIGENCE</span>
+      <h1 style="font-family: var(--font-serif); font-size: 44px; font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; margin-top: 14px; max-width: 22ch;">
+        AI / Marketing feed.
+      </h1>
+      <p style="margin-top: 18px; font-family: var(--font-mono); font-size: 13px; line-height: 1.65; color: var(--muted); max-width: 58ch;">
+        Top 20 trending posts from 14 accounts and live searches.
+        Auto-updated 4× daily by the PINGPING agent.
+      </p>
+
+      <div style="margin-top: 24px; display:flex; align-items:center; gap: 12px;">
+        <span class="zi-tag zi-tag-strong">LIVE</span>
+        <span class="zi-tag" id="last-updated">2026-05-06 · 06:16 EST</span>
+      </div>
+    </header>
+
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-top: 8px;">
+      <span class="zi-tag zi-tag-strong">Trending now</span>
+      <span class="zi-tag">Top 20 posts</span>
+    </div>
+
+    <!-- POSTS:START -->
+    <ol id="feed-list" style="list-style:none; padding:0; margin: 16px 0 0; border-top: 1px solid var(--hairline);">
+
+      <li><a href="https://x.com/semrush" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">Marketing</span></span>
+        <span>
+          <span class="feed-handle">@semrush</span>
+          <span class="feed-text" style="display:block;">The rules of brand discovery are evolving. Fast. @Adobe has completed its acquisition of Semrush, expanding our ability to help businesses navigate a rapidly shifting landscape shaped by AI…</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@OpenAI</span>
+          <span class="feed-text" style="display:block;">GPT-5.5 Instant is rolling out over the next two days as the default model to all ChatGPT users, and as 'gpt-5.5-chat-latest' in the API. Personalization improvements are rolling out to Plus and Pro users…</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@OpenAI</span>
+          <span class="feed-text" style="display:block;">GPT-5.5 Instant is starting to roll out in ChatGPT. It's a big upgrade, giving you smarter, clearer, and more personalized answers in a warmer, more natural tone. And it's also more concise…</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@OpenAI</span>
+          <span class="feed-text" style="display:block;">We're also improving memory and personalization. ChatGPT can now better use context from saved memories, past chats, files, and connected Gmail accounts to give more personalized responses…</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@OpenAI</span>
+          <span class="feed-text" style="display:block;">Show us the Codex pets you hatched. Use /hatch to create your own Codex pet. We'll pick 10 favorites to get 30 days of ChatGPT Pro.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@AnthropicAI</span>
+          <span class="feed-text" style="display:block;">This work is part of a loop we're working to close between societal impacts and model training. One of our goals is to study how people use Claude, find where it falls short of its principles, and use that to train better models.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/sama" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@sama</span>
+          <span class="feed-text" style="display:block;">the new instant model in chatgpt is so good — damn if you have been thinking-model-only for a while, give it a try!</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/helloitsaustin" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@helloitsaustin</span>
+          <span class="feed-text" style="display:block;">if you're a performance marketer, here's how I use a custom Claude Cowork plugin to manage Google Ads at @AnthropicAI. it connects to the Google Ads API via MCP, encodes my common playbooks…</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/helloitsaustin" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@helloitsaustin</span>
+          <span class="feed-text" style="display:block;">I got married this past weekend so I did what any rational @AnthropicAI employee would do and had Claude Code analyze 12 years of iMessages with my wife, then Claude Design used that to…</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/helloitsaustin" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@helloitsaustin</span>
+          <span class="feed-text" style="display:block;">most growth marketers use AI to rewrite headlines and call it a day. here's how I actually use Claude on the growth marketing team at @AnthropicAI across chat, Claude Cowork, and Claude Code.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/bloggersarvesh" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@bloggersarvesh</span>
+          <span class="feed-text" style="display:block;">keep calling me delusional… but I will keep repeating this. Claude + SEO is going to make more businesses millionaires in 2026 than bitcoin ever did.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/bloggersarvesh" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@bloggersarvesh</span>
+          <span class="feed-text" style="display:block;">If this article showed you your SEO isn't reaching its full potential… imagine the impact when this Claude Cowork system is applied to your business.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@AnthropicAI</span>
+          <span class="feed-text" style="display:block;">New Anthropic Fellows research: Model Spec Midtraining (MSM). Standard alignment methods train AIs on examples of desired behavior. But this can fail to generalize to new situations. MSM addresses this.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@AnthropicAI</span>
+          <span class="feed-text" style="display:block;">Using MSM, we can also empirically study which model specs or constitutions yield the best generalization from alignment training. Specifying rules works to some extent, but explaining the values underneath works better.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@AnthropicAI</span>
+          <span class="feed-text" style="display:block;">Read more about Model Spec Midtraining: alignment.anthropic.com/2026/msm — or read the full study at arxiv.org/abs/2605.02087.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@AnthropicAI</span>
+          <span class="feed-text" style="display:block;">As AI takes on work humans can't fully check, a capable model could deliberately hold back — and we'd never know. New Anthropic Fellows research finds that such a model can be trained to near-full capability.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@AnthropicAI</span>
+          <span class="feed-text" style="display:block;">How do people seek guidance from Claude? We looked at 1M conversations to understand what questions people ask, how Claude responds, and where it slips into sycophancy.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+      <li><a href="https://x.com/sama" target="_blank" rel="noopener" class="feed-row">
+        <span><span class="feed-cat">AI</span></span>
+        <span>
+          <span class="feed-handle">@sama</span>
+          <span class="feed-text" style="display:block;">ChatGPT feels very 'switched on' now.</span>
+        </span>
+        <span class="feed-cta">View on X →</span>
+      </a></li>
+
+    </ol>
+    <!-- POSTS:END -->
+
+    <footer style="margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display:flex; justify-content:space-between; align-items:center;">
+      <span class="zi-tag">PINGPING agent · auto-updated 4× daily</span>
+      <span class="zi-tag">14 accounts + live searches</span>
+    </footer>
+  </main>
+
 </body>
 </html>

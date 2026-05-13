@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# editor swap
+*.swp
+*.swo
+*~
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+
+# scratch / debugging — never deploys, never tracked
+_scratch/
+*.bak
