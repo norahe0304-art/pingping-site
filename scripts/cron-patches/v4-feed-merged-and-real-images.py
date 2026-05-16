@@ -52,7 +52,7 @@ NEW_RULES = f"""## 数据质量铁律 (v4 — {SENTINEL})
 2. **LoremFlickr** (X / Twitter 链接, 或 og:image 抓不到):
    X.com 永远 block 爬虫. 从 headline 提 2-3 个具体关键词 (实物名词:
    iphone, chip, laptop, marketing, camera, newspaper...), 组成
-   `https://loremflickr.com/600/420/{{keywords}}?lock={{N}}` 这个 URL.
+   `https://loremflickr.com/600/420/{keywords}?lock={N}` 这个 URL.
    `lock` 是稳定 seed (用 item.id 的数字部分即可, 比如 c001 → 5161),
    保证同一条信号每次拿到同一张真图.
 
