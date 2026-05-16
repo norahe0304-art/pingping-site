@@ -9,12 +9,14 @@ Pingping's diary cron (`a130f54960a2`) prompt evolved across 3 patches:
 | v1 | swap Pollinations curl → `node scripts/make-doodle.mjs` with a 6-motif menu | **applied** 2026-05-16 |
 | v2 | swap `.webp` → `.svg` output (Mac mini has no rsvg/cwebp) | **applied** 2026-05-16 |
 | v3 | **kill the motif menu**. pingping draws the actual thing in today's diary as raw SVG (with 2 inline style anchors + self-check). | **pending — apply when next on the Mac mini's network** |
+| v4 | X-feed cron `a536f6d6ea3a`: SIGNAL items must merge `why` into `deck` (one paragraph, `why=""`). Drop items without real source URLs (no `x.com/home` placeholders). Fetch `og:image` from non-X URLs to fill `image_url`. | **pending — apply when next on the Mac mini's network** |
 
-v3 patcher lives at `scripts/cron-patches/v3-free-form-svg.py`. Run:
+v3 + v4 patchers live at `scripts/cron-patches/`. Apply both:
 
 ```bash
-scp scripts/cron-patches/v3-free-form-svg.py pingping-mini:/tmp/
-ssh pingping-mini 'python3 /tmp/v3-free-form-svg.py'
+scp scripts/cron-patches/v3-free-form-svg.py             pingping-mini:/tmp/
+scp scripts/cron-patches/v4-feed-merged-and-real-images.py pingping-mini:/tmp/
+ssh pingping-mini 'python3 /tmp/v3-free-form-svg.py && python3 /tmp/v4-feed-merged-and-real-images.py'
 ```
 
 The script is idempotent — re-runs are no-ops. Backup written to
