@@ -459,10 +459,14 @@
     }
 
     /* ============================================================
-       PET — chonk companion, Anthropic Claude Code buddy species.
-       Pixel sprite (assets/pet-chonk.webp), 80px on page, pixelated.
-       Sits below streak grid; idle = breathe, awake = dance,
-       click = excited bounce.
+       PET — CLAWD, Claude Code's pixel mascot.
+       Sprites: rullerzhou-afk/clawd-on-desk (fan-art, see assets/clawd/NOTICE).
+       4 GIFs swapped by state via JS state machine:
+         default        → clawd-idle.gif
+         body.is-awake  → clawd-headphones-groove.gif (music dance)
+         hover / focus  → clawd-happy.gif
+         click          → clawd-react-double-jump.gif (1200ms)
+       Each GIF is its own animation loop — no CSS keyframes needed.
        ============================================================ */
     .pet {
       /* DOM order: kv-list / streak (margin-top:auto pushes to bottom) / pet.
@@ -476,30 +480,19 @@
     }
     .pet-art {
       display: block;
-      width: 80px;
-      height: auto;
+      width: 125px;
+      height: 125px;
+      object-fit: contain;
       image-rendering: pixelated;
       image-rendering: -moz-crisp-edges;
       image-rendering: crisp-edges;
       cursor: pointer;
       user-select: none;
       -webkit-user-drag: none;
-      transform-origin: 50% 95%;
-      animation: petIdle 3s ease-in-out infinite;
-      transition: filter 0.2s ease;
-      will-change: transform;
     }
-    .pet-art:hover { filter: saturate(1.15) brightness(1.04); }
     .pet-art:focus-visible {
       outline: 1.5px solid var(--mark-pink);
       outline-offset: 4px;
-    }
-    body.is-awake .pet-art {
-      animation: petDance 0.55s ease-in-out infinite;
-    }
-    .pet-art.is-excited {
-      animation: petBounce 0.6s cubic-bezier(0.36, 0, 0.16, 1.5);
-      filter: saturate(1.25) brightness(1.06);
     }
     .pet-meta {
       display: flex; flex-direction: column; gap: 2px;
@@ -520,28 +513,6 @@
       color: var(--ink-2);
       opacity: 0.7;
       line-height: 1.2;
-    }
-    body.is-awake .pet-status::after { content: " · dancing"; color: var(--mark-pink); }
-
-    @keyframes petIdle {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50%      { transform: translateY(-2px) rotate(0.4deg); }
-    }
-    @keyframes petDance {
-      0%   { transform: translateY(0)   rotate(-5deg) scaleY(1); }
-      25%  { transform: translateY(-7px) rotate(0deg)  scaleY(1.08); }
-      50%  { transform: translateY(0)   rotate(5deg)  scaleY(0.94); }
-      75%  { transform: translateY(-7px) rotate(0deg)  scaleY(1.08); }
-      100% { transform: translateY(0)   rotate(-5deg) scaleY(1); }
-    }
-    @keyframes petBounce {
-      0%   { transform: translateY(0)    scale(1); }
-      40%  { transform: translateY(-14px) scale(1.18); }
-      70%  { transform: translateY(0)    scale(0.92); }
-      100% { transform: translateY(0)    scale(1); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .pet-art { animation: none !important; }
     }
 
     /* ============================================================
@@ -1019,22 +990,24 @@
           <div class="streak-grid" id="streakGrid" aria-hidden="true"></div>
         </aside>
 
-        <!-- pet — chonk pixel sprite (Anthropic Claude Code buddy species).
-             Idle = breathe. body.is-awake (music playing) = dance.
-             Click = excited bounce. -->
-        <aside class="pet" aria-label="chonk pet, click to greet">
+        <!-- pet — CLAWD, Claude Code's pixel mascot.
+             Fan-art GIFs from rullerzhou-afk/clawd-on-desk (see
+             assets/clawd/NOTICE.md for attribution + usage notes).
+             State machine in JS: idle / groove / happy / jump. -->
+        <aside class="pet" aria-label="CLAWD pet, click or hover to greet">
           <img
             class="pet-art"
             id="petArt"
-            src="./assets/pet-chonk.webp"
-            alt="chonk pixel pet"
+            src="./assets/clawd/clawd-idle.gif"
+            alt="CLAWD, Claude Code pixel mascot"
             role="button"
             tabindex="0"
-            width="80"
+            width="125"
+            height="125"
             draggable="false"
           />
           <div class="pet-meta">
-            <span class="pet-tag">CHONK</span>
+            <span class="pet-tag">CLAWD</span>
             <span class="pet-status" id="petStatus">resting</span>
           </div>
         </aside>
@@ -1365,29 +1338,60 @@
       }, 1400);
     })();
 
-    /* chonk pet — click / Enter / Space → 600ms excited bounce burst.
-       Idle (breathe) + dance (when body.is-awake) handled fully in CSS. */
-    (function chonkPet() {
+    /* CLAWD pet — state machine over 4 GIFs from clawd-on-desk.
+       States: idle (default), groove (body.is-awake / music), happy (hover/focus),
+               jump (click 1200ms). Hover wins over awake; click wins over both. */
+    (function clawdPet() {
       const art = document.getElementById('petArt');
       const status = document.getElementById('petStatus');
       if (!art) return;
 
-      let timer = null;
-      const burst = () => {
-        if (timer) return; // debounce
-        art.classList.add('is-excited');
-        if (status) status.textContent = 'hi!';
-        timer = setTimeout(() => {
-          art.classList.remove('is-excited');
-          if (status) status.textContent = 'resting';
-          timer = null;
-        }, 600);
+      const SPRITES = {
+        idle:   './assets/clawd/clawd-idle.gif',
+        groove: './assets/clawd/clawd-headphones-groove.gif',
+        happy:  './assets/clawd/clawd-happy.gif',
+        jump:   './assets/clawd/clawd-react-double-jump.gif',
+      };
+      const LABEL = {
+        idle: 'resting', groove: 'grooving', happy: 'happy', jump: 'jump!',
       };
 
-      art.addEventListener('click', burst);
+      // pre-warm browser cache so swaps are instant
+      Object.values(SPRITES).forEach(src => { const i = new Image(); i.src = src; });
+
+      let hovered = false;
+      let clickLock = 0;
+
+      const ambient = () =>
+        document.body.classList.contains('is-awake') ? 'groove' : 'idle';
+
+      const render = () => {
+        const state = clickLock > 0 ? 'jump' : (hovered ? 'happy' : ambient());
+        if (art.dataset.state !== state) {
+          art.dataset.state = state;
+          art.src = SPRITES[state];
+          if (status) status.textContent = LABEL[state];
+        }
+      };
+
+      art.addEventListener('mouseenter', () => { hovered = true;  render(); });
+      art.addEventListener('mouseleave', () => { hovered = false; render(); });
+      art.addEventListener('focus',      () => { hovered = true;  render(); });
+      art.addEventListener('blur',       () => { hovered = false; render(); });
+
+      const click = () => {
+        clickLock++;
+        render();
+        setTimeout(() => { clickLock--; render(); }, 1200);
+      };
+      art.addEventListener('click', click);
       art.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); burst(); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); click(); }
       });
+
+      // observe body class to follow is-awake from the iPod player
+      const mo = new MutationObserver(render);
+      mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
     })();
   </script>
 
