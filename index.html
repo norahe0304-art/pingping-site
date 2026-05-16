@@ -582,7 +582,7 @@
        IPOD — classic-silhouette mini player pinned to the aurora.
        Click wheel = play/pause. Real <audio> + Web Audio analyser
        drives the aurora intensity via CSS custom props on .core.
-       Drop your mp3 at assets/music.mp3 to wire actual playback.
+       Track: assets/pingping-digital-sidekick.mp3 (vinyl spins on play).
        ============================================================ */
     .core { --audio-bass: 0; --audio-mid: 0; --audio-energy: 0; }
 
@@ -619,17 +619,9 @@
       overflow: hidden;
       position: relative;
     }
-    .ipod-screen iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%; height: 100%;
-      border: 0;
-      display: block;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .ipod.is-playing .ipod-screen iframe { opacity: 1; }
+    /* <audio> is invisible — vinyl cover stays visible the whole time,
+       and spins while .ipod.is-playing (see .vinyl-group rule below). */
+    .ipod-screen audio { display: none; }
 
     /* custom cover — twilight sky + scattered stars + a clumsy
        mouse-drawn dancing duo (original doodle, pingping voice).
@@ -648,7 +640,7 @@
       z-index: 2;
       overflow: hidden;
     }
-    .ipod.is-playing .ipod-cover { opacity: 0; }
+    /* vinyl never gets hidden anymore — it just starts spinning */
     /* star field — radial-gradient dots scattered */
     .ipod-cover::before {
       content: "";
@@ -715,6 +707,15 @@
       font-weight: 500;
     }
     .ipod-cover-art .vinyl-group { transform-origin: 60px 33px; }
+    @keyframes ipod-spin {
+      to { transform: rotate(360deg); }
+    }
+    .ipod.is-playing .ipod-cover-art .vinyl-group {
+      animation: ipod-spin 3.6s linear infinite;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ipod.is-playing .ipod-cover-art .vinyl-group { animation: none; }
+    }
     .ipod-cover-caption {
       display: none;   /* vinyl is self-labeling now */
     }
@@ -1059,9 +1060,9 @@
 
           <h2 class="core-mark">ping<em>ping</em></h2>
 
-          <!-- iPod mini player — YouTube embed inside the screen, click wheel
-               toggles play/pause via YT IFrame API. When playing, aurora
-               speeds up + bars pulse synthetically. -->
+          <!-- iPod mini player — native <audio> behind the screen, click wheel
+               toggles play/pause + lazily wires a Web Audio analyser. When
+               playing, vinyl spins, aurora speeds up, bars pulse to real FFT. -->
           <div class="core-ipod">
 
             <div class="ipod-note" aria-hidden="true">
@@ -1087,18 +1088,18 @@
                       <circle class="vinyl-groove" cx="60" cy="33" r="13"/>
                       <path class="vinyl-sheen" d="M 38 18 A 28 28 0 0 1 82 18"/>
                       <circle class="vinyl-label" cx="60" cy="33" r="10"/>
-                      <text class="vinyl-label-text" x="60" y="31.6" text-anchor="middle">CITY OF</text>
-                      <text class="vinyl-label-text" x="60" y="36.4" text-anchor="middle">STARS</text>
+                      <text class="vinyl-label-text" x="60" y="31.6" text-anchor="middle">PINGPING</text>
+                      <text class="vinyl-label-text" x="60" y="36.4" text-anchor="middle">SIDEKICK</text>
                       <circle class="vinyl-spindle" cx="60" cy="33" r="1.1"/>
                     </g>
                   </svg>
                 </div>
-                <iframe id="ipodVideo"
-                  src=""
-                  data-src="https://www.youtube-nocookie.com/embed/83u8K_hJrxk?enablejsapi=1&modestbranding=1&rel=0&controls=0&playsinline=1&iv_load_policy=3&autoplay=1"
-                  title="City of Stars · La La Land"
-                  allow="autoplay; encrypted-media"
-                  loading="lazy"></iframe>
+                <audio id="ipodAudio"
+                  src="./assets/pingping-digital-sidekick.mp3"
+                  preload="metadata"
+                  title="Pingping, Digital Sidekick"
+                  loop
+                  crossorigin="anonymous"></audio>
               </div>
               <button class="ipod-wheel" id="ipodPlay" type="button" aria-label="Play / pause">
                 <span class="ipod-wheel-label ipod-wheel-label--top">MENU</span>
@@ -1255,21 +1256,20 @@
         `30D · ${written} WRITTEN · STREAK ${longest}`;
     })();
 
-    /* iPod — YouTube IFrame API drives play/pause from the click wheel.
-       iframe src is empty until first click (prevents YT thumbnail flash +
-       defers all YT chrome). On first click: set src → load YT API →
-       create player → autoplay via API. Aurora reacts via .core.is-playing. */
+    /* iPod — native <audio> driven by click wheel. First click lazily wires
+       a Web Audio AnalyserNode that splits FFT bins into bass / mid / energy
+       and writes them to CSS vars (--audio-bass / --audio-mid / --audio-energy
+       on .core). Aurora, vinyl blur, dot glow all read those vars live. */
     (function () {
-      const btn  = document.getElementById('ipodPlay');
-      const icon = document.getElementById('ipodIcon');
-      const body = document.getElementById('ipodBody');
-      const core = document.querySelector('.core');
-      const note = document.querySelector('.ipod-note');
-      const iframe = document.getElementById('ipodVideo');
-      if (!btn || !body || !core || !iframe) return;
+      const btn   = document.getElementById('ipodPlay');
+      const icon  = document.getElementById('ipodIcon');
+      const body  = document.getElementById('ipodBody');
+      const core  = document.querySelector('.core');
+      const note  = document.querySelector('.ipod-note');
+      const audio = document.getElementById('ipodAudio');
+      if (!btn || !body || !core || !audio) return;
 
-      let player = null;
-      let initRequested = false;
+      let ctx = null, analyser = null, bins = null, rafId = 0;
 
       function setPlaying(state) {
         body.classList.toggle('is-playing', state);
@@ -1279,39 +1279,51 @@
         if (note) note.style.opacity = state ? '0' : '1';
       }
 
-      window.onYouTubeIframeAPIReady = function () {
-        player = new YT.Player('ipodVideo', {
-          events: {
-            onReady: (e) => { try { e.target.playVideo(); } catch (_) {} },
-            onStateChange: (e) => {
-              const PS = window.YT && YT.PlayerState;
-              if (!PS) return;
-              if (e.data === PS.PLAYING) setPlaying(true);
-              else if (e.data === PS.PAUSED || e.data === PS.ENDED) setPlaying(false);
-            }
-          }
-        });
-      };
-
-      function firstPlay() {
-        if (initRequested) return;
-        initRequested = true;
-        // swap src in → triggers iframe load
-        iframe.src = iframe.dataset.src;
-        // load YT API (will call onYouTubeIframeAPIReady when ready)
-        const tag = document.createElement('script');
-        tag.src = 'https://www.youtube.com/iframe_api';
-        document.head.appendChild(tag);
-        // optimistically reflect playing UI (onReady → playVideo)
-        setPlaying(true);
+      // FFT loop — writes CSS vars at requestAnimationFrame cadence
+      function tick() {
+        rafId = requestAnimationFrame(tick);
+        if (!analyser) return;
+        analyser.getByteFrequencyData(bins);
+        // bass = first ~8% of bins, mid = next ~25%, energy = full avg
+        const N = bins.length;
+        const bassEnd = Math.max(2, (N * 0.08) | 0);
+        const midEnd  = Math.max(bassEnd + 2, (N * 0.33) | 0);
+        let sB = 0, sM = 0, sE = 0;
+        for (let i = 0; i < bassEnd; i++) sB += bins[i];
+        for (let i = bassEnd; i < midEnd; i++) sM += bins[i];
+        for (let i = 0; i < N; i++) sE += bins[i];
+        const bass   = (sB / bassEnd / 255);
+        const mid    = (sM / (midEnd - bassEnd) / 255);
+        const energy = (sE / N / 255);
+        core.style.setProperty('--audio-bass',   bass.toFixed(3));
+        core.style.setProperty('--audio-mid',    mid.toFixed(3));
+        core.style.setProperty('--audio-energy', energy.toFixed(3));
       }
 
+      function ensureAnalyser() {
+        if (analyser) return;
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return; // graceful — playback still works, vars stay 0
+        ctx = new AC();
+        const src = ctx.createMediaElementSource(audio);
+        analyser = ctx.createAnalyser();
+        analyser.fftSize = 256;
+        analyser.smoothingTimeConstant = 0.78;
+        bins = new Uint8Array(analyser.frequencyBinCount);
+        src.connect(analyser);
+        analyser.connect(ctx.destination);
+        tick();
+      }
+
+      audio.addEventListener('play',  () => setPlaying(true));
+      audio.addEventListener('pause', () => setPlaying(false));
+      audio.addEventListener('ended', () => setPlaying(false));
+
       btn.addEventListener('click', () => {
-        if (!player) { firstPlay(); return; }
-        const PS = window.YT && YT.PlayerState;
-        const s = player.getPlayerState();
-        if (s === PS.PLAYING) player.pauseVideo();
-        else player.playVideo();
+        ensureAnalyser();
+        if (ctx && ctx.state === 'suspended') ctx.resume();
+        if (audio.paused) audio.play().catch(() => setPlaying(false));
+        else audio.pause();
       });
     })();
 
