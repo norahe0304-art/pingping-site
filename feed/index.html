@@ -1161,7 +1161,10 @@ a { color: inherit; text-decoration: none; }
       const res = await fetch('./days/manifest.json?t=' + Date.now());
       if (!res.ok) throw new Error('manifest fetch failed');
       MANIFEST = await res.json();
-      DAYS = (MANIFEST.days || []).slice(0, 30);
+      // manifest may be a flat array (pingping cron output) OR an
+      // object { updated_at, days: [...] } (legacy schema). accept both.
+      const list = Array.isArray(MANIFEST) ? MANIFEST : (MANIFEST.days || []);
+      DAYS = list.slice(0, 30);
     }
     async function loadIssue(date) {
       if (CACHE[date]) return CACHE[date];

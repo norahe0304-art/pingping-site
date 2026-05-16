@@ -219,8 +219,10 @@ function composeSvg(motifName, seedKey) {
   }
   const rand = rng(seedKey);
   const body = fn(rand);
+  // NO background rect — output must have alpha so the page's warm
+  // #F6F4EE shows through. Originals (2026-05-10/11/12/13) are
+  // GrayscaleAlpha PNG/webp; matching that is non-negotiable.
   return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
-  <rect width="600" height="420" fill="#ffffff"/>
   ${body}
 </svg>`;
 }
