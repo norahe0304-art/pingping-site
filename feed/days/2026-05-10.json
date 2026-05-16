@@ -1,0 +1,189 @@
+{
+  "date": "2026-05-10",
+  "weekday": "Sunday",
+  "no": 101,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-10T13:31:00.000Z",
+  "promo_headline": "Quiet Sunday. Three essays, two model updates.",
+  "whats_news": [
+    "<b>Every</b>: a long essay on workspace agents",
+    "<b>Platformer</b>: weekly recap on labs vs platforms",
+    "<b>Google</b>: Gemini gets faster on-device",
+    "<b>Yann LeCun</b>: a post about world-model evals",
+    "<b>AI Tidbits</b>: small-team deployment of frontier models"
+  ],
+  "digest": {
+    "title": "A reading Sunday — fewer pings, deeper takes.",
+    "body": "Sunday is essay-shaped. Every and Platformer publish their long pieces, Google nudges Gemini on-device speed, Yann LeCun pushes back on benchmark theater, and AI Tidbits explains how small teams now ship frontier-class models. Nothing in the day demands action; the cost is missing the read."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "CRAFT",
+      "tag_color": "cyan",
+      "kicker": "Today's Top Signal",
+      "headline": "Every: the workspace agent essay",
+      "deck": "Every published a long piece on what a workspace-level agent does that an in-app one cannot. This matters because the workspace surface is the real product battle of the next two quarters.",
+      "why": "",
+      "try": "",
+      "url": "https://every.to/",
+      "image_url": "https://loremflickr.com/600/420/desk%2Cpaper%2Cmorning?lock=5161",
+      "read_time_min": 5,
+      "author": {
+        "name": "Every",
+        "handle": "every",
+        "role": "essay collective",
+        "avatar_url": "https://unavatar.io/x/every"
+      },
+      "source": {
+        "label": "Newsletter · essay",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Platformer weekly: labs vs platforms",
+      "deck": "Casey Newton frames the labs-vs-platforms tension that will define the next regulatory cycle. This matters because the framing leaks into every panel discussion you sit through this month.",
+      "why": "",
+      "try": "",
+      "url": "https://www.platformer.news/",
+      "image_url": "https://loremflickr.com/600/420/newspaper%2Ccoffee%2Ccity?lock=5162",
+      "read_time_min": 5,
+      "author": {
+        "name": "Casey Newton",
+        "handle": "CaseyNewton",
+        "role": "Platformer",
+        "avatar_url": "https://unavatar.io/x/CaseyNewton"
+      },
+      "source": {
+        "label": "Newsletter · daily",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "NUMBERS",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Google: Gemini gets faster on-device",
+      "deck": "Google rolled a kernel update that drops Gemini Nano latency on Pixel devices. This matters because device-side latency is the gate for ambient AI features going mainstream.",
+      "why": "",
+      "try": "",
+      "url": "https://blog.google/",
+      "image_url": "https://loremflickr.com/600/420/phone%2Cchip%2Csilicon?lock=5163",
+      "read_time_min": 5,
+      "author": {
+        "name": "Google AI",
+        "handle": "GoogleAI",
+        "role": "AI research",
+        "avatar_url": "https://unavatar.io/x/GoogleAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "CONTRARIAN",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Yann LeCun pushes back on benchmark theater",
+      "deck": "Yann LeCun posted a long thread arguing world-model evals are more honest than current LLM benchmarks. This matters because benchmark talk is how labs justify their next round and the framing is shifting underfoot.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/ylecun",
+      "image_url": "https://loremflickr.com/600/420/graph%2Cwhiteboard%2Cresearch?lock=5164",
+      "read_time_min": 5,
+      "author": {
+        "name": "Yann LeCun",
+        "handle": "ylecun",
+        "role": "Meta chief AI",
+        "avatar_url": "https://unavatar.io/x/ylecun"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "STACK",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "AI Tidbits: 4-person teams running frontier models",
+      "deck": "AI Tidbits walks through a real four-person team that deploys 70B+ models in production. This matters because the small-team-frontier story changes hiring expectations for early-stage builders.",
+      "why": "",
+      "try": "",
+      "url": "https://www.aitidbits.ai/",
+      "image_url": "https://loremflickr.com/600/420/startup%2Ccoding%2Cstudio?lock=5165",
+      "read_time_min": 5,
+      "author": {
+        "name": "AI Tidbits",
+        "handle": "AITidbits",
+        "role": "AI newsletter",
+        "avatar_url": "https://unavatar.io/x/AITidbits"
+      },
+      "source": {
+        "label": "Newsletter · daily",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Read the Every essay end to end. No skim.",
+      "deck": "",
+      "why": "Sunday is the only day you have an uninterrupted hour. Skimming wastes the essay.",
+      "try": "Set a 45-min timer. Sit with coffee, read once through, then re-read the section that argues with you.",
+      "url": "https://every.to/",
+      "image_url": "",
+      "read_time_min": 45,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 45 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Note one belief you'd change after Platformer + Every.",
+      "deck": "",
+      "why": "Two essays in one morning is rare; capture the shift before the week erases it.",
+      "try": "Set a 15-min timer. Write one sentence: \"Last week I thought X. Now I think Y.\"",
+      "url": "https://www.platformer.news/",
+      "image_url": "",
+      "read_time_min": 15,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 15 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "date": "2026-05-15",
+  "weekday": "Friday",
+  "no": 106,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-15T13:31:00.000Z",
+  "promo_headline": "Friday set-up — what will matter Monday.",
+  "whats_news": [
+    "<b>OpenAI</b>: Codex preview on mobile begins to leak",
+    "<b>Anthropic</b>: pricing simplification announced",
+    "<b>Google</b>: TPU v6 production notes",
+    "<b>Stratechery</b>: on default models as commodity",
+    "<b>Corey Haines</b>: a video on marketing skills v2.0"
+  ],
+  "digest": {
+    "title": "Set up Monday from Friday.",
+    "body": "Friday is preview day. Codex mobile starts leaking, Anthropic warns about a pricing simplification, Google posts TPU v6 numbers, Stratechery argues default models are now commodity, and Corey Haines records a video to anchor next week's marketing-skills updates. None of it ships today; all of it lands by Tuesday."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Today's Top Signal",
+      "headline": "Codex on mobile begins to leak",
+      "deck": "Screenshots and a partial App Store listing show OpenAI testing a Codex companion on iOS. This matters because mobile coding agents are the surface that decides where the rest of the year is fought.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/openai",
+      "image_url": "https://loremflickr.com/600/420/iphone%2Ccoding%2Cmobile?lock=5161",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI",
+        "handle": "openai",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/openai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Anthropic announces pricing simplification",
+      "deck": "Anthropic announced a pricing simplification effective next Wednesday with a smaller number of tiers. This matters because simplification usually trims edge cases that some teams quietly relied on.",
+      "why": "",
+      "try": "",
+      "url": "https://www.anthropic.com/pricing",
+      "image_url": "https://loremflickr.com/600/420/invoice%2Coffice%2Ccalculator?lock=5162",
+      "read_time_min": 5,
+      "author": {
+        "name": "Anthropic",
+        "handle": "AnthropicAI",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/AnthropicAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "NUMBERS",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Google posts TPU v6 production notes",
+      "deck": "Google posted production notes for TPU v6 with throughput and energy numbers. This matters because TPU v6 numbers set how aggressive Google can be on Gemini pricing for the next quarter.",
+      "why": "",
+      "try": "",
+      "url": "https://cloud.google.com/blog",
+      "image_url": "https://loremflickr.com/600/420/chip%2Csilicon%2Cserver?lock=5163",
+      "read_time_min": 5,
+      "author": {
+        "name": "Google AI",
+        "handle": "GoogleAI",
+        "role": "AI research",
+        "avatar_url": "https://unavatar.io/x/GoogleAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "CONTRARIAN",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Stratechery: default models are commodity",
+      "deck": "Ben Thompson argues that default model quality has converged and competition shifts to distribution. This matters because the commodity framing changes which startups deserve a premium and which look overvalued.",
+      "why": "",
+      "try": "",
+      "url": "https://stratechery.com/",
+      "image_url": "https://loremflickr.com/600/420/newspaper%2Ccity%2Carchitecture?lock=5164",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ben Thompson",
+        "handle": "benthompson",
+        "role": "Stratechery",
+        "avatar_url": "https://unavatar.io/x/benthompson"
+      },
+      "source": {
+        "label": "Newsletter · daily",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Corey Haines: marketing skills v2.0 video",
+      "deck": "Corey Haines recorded a video walkthrough of his renamed marketing-skills curriculum. This matters because video versions of operator content tend to spread further than the original posts.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/coreyhainesco",
+      "image_url": "https://loremflickr.com/600/420/video%2Cmarketing%2Cstudio?lock=5165",
+      "read_time_min": 5,
+      "author": {
+        "name": "Corey Haines",
+        "handle": "coreyhainesco",
+        "role": "marketing operator",
+        "avatar_url": "https://unavatar.io/x/coreyhainesco"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Re-cost Anthropic line items before Wednesday.",
+      "deck": "",
+      "why": "Pricing change is announced for next Wednesday; doing the math today gives you the weekend to act.",
+      "try": "Set a 30-min timer. Pull last two invoices. Compare against announced tiers. Tag any line >10% off.",
+      "url": "https://www.anthropic.com/pricing",
+      "image_url": "",
+      "read_time_min": 30,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Sketch one distribution-first growth move for next week.",
+      "deck": "",
+      "why": "Stratechery just argued distribution beats default model quality; the time to sketch a move is the day the framing lands.",
+      "try": "Set a 45-min timer. On one page, write a distribution-first move you could ship in 5 working days. Be specific.",
+      "url": "https://stratechery.com/",
+      "image_url": "",
+      "read_time_min": 45,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 45 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

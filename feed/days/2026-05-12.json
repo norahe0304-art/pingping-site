@@ -1,0 +1,189 @@
+{
+  "date": "2026-05-12",
+  "weekday": "Tuesday",
+  "no": 103,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-12T13:31:00.000Z",
+  "promo_headline": "Alignment research, two receipts, one Vercel ship.",
+  "whats_news": [
+    "<b>Anthropic</b>: a new constitutional-AI follow-up",
+    "<b>OpenAI</b>: ChatGPT memory adds workspaces",
+    "<b>Vercel</b>: AI SDK 6 ships",
+    "<b>Corey Haines</b>: a positioning teardown",
+    "<b>Latent Space</b>: ep 201 on long-context agents"
+  ],
+  "digest": {
+    "title": "A working Tuesday — papers, receipts, ship notes.",
+    "body": "Tuesday is the most productive day of the week and the feed reflects that. An alignment follow-up from Anthropic, a quiet ChatGPT memory upgrade, Vercel AI SDK 6, and a Corey Haines positioning teardown all show up before lunch. The implicit instruction is: pick one, ship the consequence."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "CRAFT",
+      "tag_color": "indigo",
+      "kicker": "Today's Top Signal",
+      "headline": "Anthropic: a follow-up to constitutional AI",
+      "deck": "Anthropic posted a follow-up paper extending constitutional AI with model-written critique chains. This matters because the critique-chain mechanism is what governance teams will point to when arguing about audits.",
+      "why": "",
+      "try": "",
+      "url": "https://www.anthropic.com/research",
+      "image_url": "https://loremflickr.com/600/420/document%2Cpaper%2Cresearch?lock=5161",
+      "read_time_min": 5,
+      "author": {
+        "name": "Anthropic",
+        "handle": "AnthropicAI",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/AnthropicAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "ChatGPT memory adds team workspaces",
+      "deck": "OpenAI added team workspaces with shared memory and per-member redaction. This matters because shared memory turns ChatGPT from a personal tool into a small-team knowledge surface.",
+      "why": "",
+      "try": "",
+      "url": "https://openai.com/blog",
+      "image_url": "https://loremflickr.com/600/420/team%2Coffice%2Cwhiteboard?lock=5162",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI",
+        "handle": "openai",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/openai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "STACK",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Vercel AI SDK 6 lands",
+      "deck": "Vercel released AI SDK 6 with native MCP support and streamlined tool calls. This matters because the SDK update collapses 200 lines of glue code per agent and shifts where the bug surface lives.",
+      "why": "",
+      "try": "",
+      "url": "https://vercel.com/blog",
+      "image_url": "https://loremflickr.com/600/420/coding%2Cterminal%2Claptop?lock=5163",
+      "read_time_min": 5,
+      "author": {
+        "name": "Vercel",
+        "handle": "vercel",
+        "role": "platform",
+        "avatar_url": "https://unavatar.io/x/vercel"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Corey Haines: positioning teardown for a real SaaS",
+      "deck": "Corey Haines tore down the positioning of an actual mid-stage SaaS, line by line. This matters because positioning posts that name a real company punch harder than abstract frameworks.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/coreyhainesco",
+      "image_url": "https://loremflickr.com/600/420/marketing%2Cwhiteboard%2Coffice?lock=5164",
+      "read_time_min": 5,
+      "author": {
+        "name": "Corey Haines",
+        "handle": "coreyhainesco",
+        "role": "marketing operator",
+        "avatar_url": "https://unavatar.io/x/coreyhainesco"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Latent Space ep 201: long-context agents",
+      "deck": "Latent Space published episode 201 on agents that hold 1M+ token context across days. This matters because long-context behavior changes which features can move from demo to default.",
+      "why": "",
+      "try": "",
+      "url": "https://www.latent.space/",
+      "image_url": "https://loremflickr.com/600/420/podcast%2Cmicrophone%2Cstudio?lock=5165",
+      "read_time_min": 5,
+      "author": {
+        "name": "Every",
+        "handle": "every",
+        "role": "essay collective",
+        "avatar_url": "https://unavatar.io/x/every"
+      },
+      "source": {
+        "label": "Newsletter · essay",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Upgrade one tiny script to Vercel AI SDK 6.",
+      "deck": "",
+      "why": "Day-one migrations are cheap; week-three migrations get tangled in unrelated refactors.",
+      "try": "Set a 30-min timer. Pick the smallest agent you have. Bump the SDK. Note the diff.",
+      "url": "https://vercel.com/blog",
+      "image_url": "",
+      "read_time_min": 30,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Apply the Corey positioning teardown to your own page.",
+      "deck": "",
+      "why": "The frame is fresh enough that the exercise still feels like a checklist, not theater.",
+      "try": "Set a 45-min timer. Open your homepage. Run the same line-by-line teardown. Mark three lines to rewrite.",
+      "url": "https://x.com/coreyhainesco",
+      "image_url": "",
+      "read_time_min": 45,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 45 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

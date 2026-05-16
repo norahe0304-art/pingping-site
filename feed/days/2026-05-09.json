@@ -1,0 +1,189 @@
+{
+  "date": "2026-05-09",
+  "weekday": "Saturday",
+  "no": 100,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-09T13:31:00.000Z",
+  "promo_headline": "Growth on Saturday: Chen, Haines, and a Latent Space episode.",
+  "whats_news": [
+    "<b>Andrew Chen</b>: PLG is now PLG-with-agents",
+    "<b>Corey Haines</b>: a 12-step audit for marketing skills",
+    "<b>Latent Space</b>: episode 200 ships",
+    "<b>Stratechery</b>: on AI bundle dynamics",
+    "<b>levelsio</b>: a one-week indie shipping diary"
+  ],
+  "digest": {
+    "title": "Weekend, but the operators are still writing.",
+    "body": "Saturday is reading day. Andrew Chen reframes PLG around agents, Corey Haines gives a clean self-audit, Latent Space lands episode 200, Stratechery clarifies AI bundling, and pieter levels narrates a one-week ship cycle. The common thread is that the operators are no longer guessing — they have receipts and they are publishing them."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Andrew Chen: PLG is now PLG-with-agents",
+      "deck": "Andrew Chen argues PLG funnels are reshaping into agent-onboarding flows where the agent does the first job. This matters because the funnel diagram every B2B team draws on a whiteboard is about to look different.",
+      "why": "",
+      "try": "",
+      "url": "https://andrewchen.com/",
+      "image_url": "https://loremflickr.com/600/420/funnel%2Cgrowth%2Cmarketing?lock=5161",
+      "read_time_min": 5,
+      "author": {
+        "name": "Andrew Chen",
+        "handle": "andrewchen",
+        "role": "a16z partner",
+        "avatar_url": "https://unavatar.io/x/andrewchen"
+      },
+      "source": {
+        "label": "Newsletter · growth",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Corey Haines: 12-step audit for marketing skills v2.0",
+      "deck": "Corey Haines published a 12-step self-audit covering positioning, lifecycle, CRO, content, and ops. This matters because most marketers should run the audit once a quarter and few do.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/coreyhainesco",
+      "image_url": "https://loremflickr.com/600/420/checklist%2Coffice%2Cmarketing?lock=5162",
+      "read_time_min": 5,
+      "author": {
+        "name": "Corey Haines",
+        "handle": "coreyhainesco",
+        "role": "marketing operator",
+        "avatar_url": "https://unavatar.io/x/coreyhainesco"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Latent Space episode 200 ships",
+      "deck": "Latent Space marks 200 episodes with a long interview on agent infra in production. This matters because Latent Space is now the canonical record of how agent infra evolves week to week.",
+      "why": "",
+      "try": "",
+      "url": "https://www.latent.space/",
+      "image_url": "https://loremflickr.com/600/420/microphone%2Cstudio%2Cpodcast?lock=5163",
+      "read_time_min": 5,
+      "author": {
+        "name": "Every",
+        "handle": "every",
+        "role": "essay collective",
+        "avatar_url": "https://unavatar.io/x/every"
+      },
+      "source": {
+        "label": "Newsletter · essay",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "CONTRARIAN",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Stratechery on AI bundle dynamics",
+      "deck": "Ben Thompson argues AI bundling will look more like Microsoft Office than the smartphone app store. This matters because the bundle thesis sets which startups can stay independent and which get absorbed.",
+      "why": "",
+      "try": "",
+      "url": "https://stratechery.com/",
+      "image_url": "https://loremflickr.com/600/420/newspaper%2Coffice%2Carchitecture?lock=5164",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ben Thompson",
+        "handle": "benthompson",
+        "role": "Stratechery",
+        "avatar_url": "https://unavatar.io/x/benthompson"
+      },
+      "source": {
+        "label": "Newsletter · daily",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "NUMBERS",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "pieter levels: one-week indie ship cycle",
+      "deck": "levelsio posted a daily log of building, launching, and pricing one new product in seven days. This matters because indie cadence is the most useful counter-curriculum to enterprise PM theory right now.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/levelsio",
+      "image_url": "https://loremflickr.com/600/420/laptop%2Cbeach%2Ccoding?lock=5165",
+      "read_time_min": 5,
+      "author": {
+        "name": "pieter levels",
+        "handle": "levelsio",
+        "role": "indie dev",
+        "avatar_url": "https://unavatar.io/x/levelsio"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Run Corey's 12-step audit on your own funnel.",
+      "deck": "",
+      "why": "Your weekend is the only window without standing meetings; the audit needs uninterrupted reading.",
+      "try": "Set a 45-min timer. Open the 12-step list. Score each step 1-3 honestly. Tag the three worst.",
+      "url": "https://x.com/coreyhainesco",
+      "image_url": "",
+      "read_time_min": 45,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 45 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Listen to Latent Space ep 200 while doing laundry.",
+      "deck": "",
+      "why": "Weekend audio time is free; the agent-infra map you build now compounds across every product call next week.",
+      "try": "Set a 60-min timer. Take 5 bullet notes on the parts that surprise you.",
+      "url": "https://www.latent.space/",
+      "image_url": "",
+      "read_time_min": 60,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 60 min",
+        "kind": "task"
+      }
+    }
+  ]
+}
