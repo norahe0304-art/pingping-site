@@ -2,12 +2,33 @@
 
 ## What this records
 
-Pingping's diary cron (`a130f54960a2`) used to call Pollinations.ai
-for daily artifact doodles. Pollinations produces parchment-textured,
-colored, shaded sketches — wrong for the MS-Paint-mouse-drawn-pathetic
-aesthetic. As of **2026-05-16**, the cron prompt was patched to use
-`scripts/make-doodle.mjs` instead, which writes a `.svg` file directly
-(no rsvg/cwebp/native deps — Mac mini doesn't have those).
+Pingping's diary cron (`a130f54960a2`) prompt evolved across 3 patches:
+
+| Version | What it did | Status |
+|---|---|---|
+| v1 | swap Pollinations curl → `node scripts/make-doodle.mjs` with a 6-motif menu | **applied** 2026-05-16 |
+| v2 | swap `.webp` → `.svg` output (Mac mini has no rsvg/cwebp) | **applied** 2026-05-16 |
+| v3 | **kill the motif menu**. pingping draws the actual thing in today's diary as raw SVG (with 2 inline style anchors + self-check). | **pending — apply when next on the Mac mini's network** |
+
+v3 patcher lives at `scripts/cron-patches/v3-free-form-svg.py`. Run:
+
+```bash
+scp scripts/cron-patches/v3-free-form-svg.py pingping-mini:/tmp/
+ssh pingping-mini 'python3 /tmp/v3-free-form-svg.py'
+```
+
+The script is idempotent — re-runs are no-ops. Backup written to
+`jobs.json.bak-doodle-v3`.
+
+## Why v3 matters
+
+Menu-of-6 (thumbprint/house/rain/door/circle/leaf) makes every doodle
+a stock image. The original artifacts (a thumbtack pinned to paper, a
+silhouette door, a wobbly circle with chick-foot triangles, an open
+door frame) are each genuinely the *thing in that day's diary*. v3
+puts pingping back in charge of drawing — two style anchors in the
+prompt give her the visual vocabulary, plus a self-check shell guard
+that rejects oversized / wrong-colored / forbidden-element SVGs.
 
 ## Verifying the patch is still applied
 
