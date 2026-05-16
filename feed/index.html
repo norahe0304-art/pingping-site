@@ -1279,14 +1279,21 @@ a { color: inherit; text-decoration: none; }
     function renderStory(it, withArt) {
       const a = it.author || {};
       const s = it.source || {};
+      // SIGNAL items: deck + why are ONE thought, render as a single
+      // paragraph. The cron sometimes splits them; we re-merge here so
+      // the page never shows a stranded "Why:" label.
+      const merged = [it.deck, it.why].filter(Boolean).join(' ').trim();
+      // Avatar: empty handle/url → don't even render the <img>, just a
+      // soft circle. Bad handles still get caught by onerror.
+      const avatarHTML = a.avatar_url
+        ? `<img src="${esc(a.avatar_url)}" alt="" loading="lazy"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{style:'width:44px;height:44px;border-radius:50%;background:var(--sheet-2);flex-shrink:0'}))">`
+        : `<div style="width:44px;height:44px;border-radius:50%;background:var(--sheet-2);flex-shrink:0"></div>`;
       return `
         <article class="story story--${esc(it.tag_color || 'pink')}">
           ${withArt ? artBlock(it, false) : ''}
           <header class="story-head">
-            ${a.avatar_url
-              ? `<img src="${esc(a.avatar_url)}" alt="" loading="lazy"
-                     onerror="this.style.background='var(--sheet-2)';this.removeAttribute('src');">`
-              : `<div style="width:44px;height:44px;border-radius:50%;background:var(--sheet-2);flex-shrink:0"></div>`}
+            ${avatarHTML}
             <div>
               <div class="who">${esc(a.name || '—')}</div>
               <div class="src">${esc(s.label || '')}</div>
@@ -1294,8 +1301,7 @@ a { color: inherit; text-decoration: none; }
           </header>
           <span class="story-tag" style="color:var(--mark-${esc(it.tag_color || 'pink')});font-family:var(--font-mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;font-weight:500;margin-top:4px;display:inline-block;">${esc(it.tag || '')}</span>
           <h3><a href="${esc(it.url)}" target="_blank" rel="noopener">${mark(it.headline)}</a></h3>
-          <p class="story-deck" style="margin:0 0 12px;font-size:14px;line-height:1.5;color:var(--ink-2)">${mark(it.deck)}</p>
-          ${it.why ? `<div class="meta-row"><b>Why:</b> ${mark(it.why)}</div>` : ''}
+          <p class="story-deck" style="margin:0 0 12px;font-size:14px;line-height:1.5;color:var(--ink-2)">${mark(merged)}</p>
           ${it.try ? `<div class="meta-row"><b>Try:</b> ${mark(it.try)}</div>` : ''}
           ${it.sidenote ? `<span class="iss-sidenote">${esc(it.sidenote)}</span>` : ''}
           <a class="story-link" href="${esc(it.url)}" target="_blank" rel="noopener"
@@ -1361,12 +1367,11 @@ a { color: inherit; text-decoration: none; }
             <article class="iss-lead">
               <div class="kicker">A1 · ${esc(lead.kicker || lead.tag || '')}</div>
               <h1><a href="${esc(lead.url)}" target="_blank" rel="noopener">${mark(lead.headline)}</a></h1>
-              <p class="deck">${mark(lead.deck)}</p>
+              <p class="deck">${mark([lead.deck, lead.why].filter(Boolean).join(' ').trim())}</p>
               ${artBlock(lead, true)}
               <p class="byline">By <b>${esc(leadAuthor.name || '')}</b>${leadAuthor.role ? ', ' + esc(leadAuthor.role) : ''} · ${esc(leadSource.label || '')} · <b>${fmtShort(data.date)}</b></p>
-              ${lead.why || lead.try ? `
+              ${lead.try || lead.sidenote ? `
                 <div class="body" style="columns:1">
-                  ${lead.why ? `<p><b>Why it matters.</b> ${mark(lead.why)}</p>` : ''}
                   ${lead.try ? `<p class="pull">Try this: ${mark(lead.try)}</p>` : ''}
                   ${lead.sidenote ? `<aside class="iss-sidenote iss-sidenote--lead">${esc(lead.sidenote)}</aside>` : ''}
                   <p style="margin-top:1em"><a href="${esc(lead.url)}" target="_blank" rel="noopener" style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink)">Read at source →</a></p>
