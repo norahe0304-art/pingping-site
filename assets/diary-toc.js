@@ -11,7 +11,7 @@
   // Single live annotation that gets torn down + recreated on every
   // active change. Avoids stale SVGs left behind on previous items.
   // ----------------------------------------------------------
-  var ACCENT = '#E89A2A';
+  var ACCENT = '#F45397';
   var activeCircle = null;
 
   function tearDownCircle() {
@@ -26,9 +26,17 @@
     if (typeof RoughNotation === 'undefined') return;
     var num = link && link.querySelector('.zi-toc-num');
     if (!num) return;
+    // read the active entry's --rn-color so the TOC ring matches its accent
+    var targetId = link.getAttribute('data-target');
+    var section = targetId ? document.getElementById(targetId) : null;
+    var color = ACCENT;
+    if (section) {
+      var v = getComputedStyle(section).getPropertyValue('--rn-color');
+      if (v && v.trim()) color = v.trim();
+    }
     activeCircle = RoughNotation.annotate(num, {
       type: 'circle',
-      color: ACCENT,
+      color: color,
       strokeWidth: 1.5,
       padding: 5,
       animationDuration: 450,

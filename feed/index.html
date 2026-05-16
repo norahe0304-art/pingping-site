@@ -1,60 +1,1068 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AI / Marketing Feed — PINGPING</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/zi.css">
-  <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
-  <script src="../assets/rn.js" defer></script>
-  <style>
-    .feed-row {
-      display: grid;
-      grid-template-columns: 90px 1fr auto;
-      gap: 24px;
-      align-items: baseline;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--hairline);
-      transition: opacity 0.2s ease;
-    }
-    .feed-row:hover { opacity: 0.65; }
-    .feed-cat {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .feed-handle {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      color: var(--fg);
-      margin-left: 8px;
-    }
-    .feed-text {
-      font-family: var(--font-serif);
-      font-size: 15px;
-      line-height: 1.55;
-      color: var(--fg);
-      margin-top: 8px;
-      max-width: 65ch;
-    }
-    .feed-cta {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    @media (max-width: 640px) {
-      .feed-row { grid-template-columns: 1fr; gap: 6px; }
-      .feed-cta { justify-self: start; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feed — PINGPING Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Geist:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/zi.css?v=20">
+<script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+<script src="../assets/rn.js?v=20" defer></script>
+<script src="../assets/reveal.js?v=20" defer></script>
+<style>
+/* ============================================================
+   PINGPING — Newsstand. Pick an issue. Read it.
+   Restrained: cream paper, ink, one amber accent.
+   Tactile: real fold creases, soft drop shadows, micro-tilt.
+   Diary-pure inside each issue.
+   ============================================================ */
+
+:root {
+  /* Atlas tonality — paper warm off-white, ink warm-black,
+     pink flagship accent (was amber), hairlines at ink alphas. */
+  --paper:        #F6F4EE;       /* warm off-white surface */
+  --sheet:        #FBFAF5;       /* page sheet — slight lift */
+  --sheet-2:      #F1EEE6;       /* below-fold tone */
+  --ink:          #1c1b1b;
+  --ink-2:        #474746;
+  --ink-3:        #6b6a69;
+  --hair:         rgba(28, 27, 27, 0.15);   /* Atlas #1c1b1b26 */
+  --hair-2:       rgba(28, 27, 27, 0.08);
+  /* Accents — kept var name --amber for cascade, but value is pink.
+     Use --mark-cyan / --mark-indigo / --mark-amber-real for variety. */
+  --amber:            #F45397;
+  --amber-soft:       rgba(244, 83, 151, 0.18);
+  --mark-pink:        #F45397;
+  --mark-amber-real:  #FFB525;
+  --mark-cyan:        #3AC3FF;
+  --mark-indigo:      #5648FB;
+}
+
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* desk grain — almost invisible */
+body::before {
+  content: ""; position: fixed; inset: 0;
+  pointer-events: none; z-index: 1;
+  opacity: 0.045; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+a { color: inherit; text-decoration: none; }
+.zi-nav { z-index: 100; }
+
+/* ============================================================
+   VIEW 1 — NEWSSTAND
+   ============================================================ */
+.rack {
+  min-height: calc(100vh - 48px);
+  padding: 70px 24px 100px;
+  display: flex; flex-direction: column;
+  align-items: center;
+  position: relative; z-index: 2;
+  transition: opacity 0.5s cubic-bezier(.2,0,0,1), filter 0.5s;
+}
+.rack.is-hidden {
+  opacity: 0; pointer-events: none; filter: blur(8px);
+  position: fixed; inset: 0; transform: scale(0.96);
+}
+@media (max-width: 720px) { .rack { padding: 56px 20px 80px; } }
+
+.rack-hero {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 max(24px, calc((100vw - 1240px) / 2 + 24px));
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.rack-hero .lhs .kicker {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 10.5px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--amber);
+  margin-bottom: 14px;
+}
+.rack-hero h1 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.0; letter-spacing: -0.024em;
+  margin: 0; color: var(--ink);
+  text-wrap: balance;
+}
+.rack-hero h1 em { font-style: italic; font-weight: 500; }
+.rack-hero p {
+  margin: 14px 0 0;
+  font-family: var(--font-body); font-weight: 400;
+  font-size: 14.5px; line-height: 1.45; color: var(--ink-3);
+  max-width: 520px;
+}
+.rack-hero .rhs {
+  font-family: var(--font-body);
+  text-align: right;
+  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-3); font-weight: 500;
+  padding-bottom: 6px;
+}
+.rack-hero .rhs b { color: var(--ink); font-weight: 600; }
+@media (max-width: 720px) {
+  .rack-hero { grid-template-columns: 1fr; }
+  .rack-hero .rhs { text-align: left; }
+}
+
+/* ============================================================
+   THE SHELF — Apple News+ magazine cover wall.
+   Horizontal scroll, snap, infinite. Cover image is the hero.
+   No wood, no skeuomorphism. Cream surface, ink type, soft shadow.
+   ============================================================ */
+.shelf-wrap {
+  position: relative;
+  width: 100%;
+  margin: 24px 0 0;
+}
+.shelf {
+  display: flex;
+  gap: 28px;
+  padding: 24px max(28px, calc((100vw - 1240px) / 2 + 28px)) 36px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.shelf::-webkit-scrollbar { display: none; }
+@media (max-width: 720px) {
+  .shelf { gap: 18px; padding: 18px 20px 28px; }
+}
+
+/* edge fade — soft cream gradient at left/right so cards bleed in */
+.shelf-wrap::before,
+.shelf-wrap::after {
+  content: ""; position: absolute; top: 0; bottom: 0;
+  width: 80px; pointer-events: none; z-index: 5;
+}
+.shelf-wrap::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--paper), rgba(241,233,215,0));
+}
+.shelf-wrap::after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--paper), rgba(241,233,215,0));
+}
+
+/* navigation arrows — Apple-style circular, restrained */
+.shelf-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--sheet);
+  border: 1px solid var(--hair);
+  display: grid; place-items: center;
+  cursor: pointer; z-index: 10;
+  font-family: var(--font-body); font-size: 18px; font-weight: 400;
+  color: var(--ink);
+  box-shadow: 0 8px 20px -8px rgba(20,17,13,0.18);
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+}
+.shelf-wrap:hover .shelf-nav { opacity: 1; }
+.shelf-nav:hover { background: var(--ink); color: var(--sheet); transform: translateY(-50%) scale(1.06); }
+.shelf-nav.prev { left: 18px; }
+.shelf-nav.next { right: 18px; }
+.shelf-nav[disabled] { opacity: 0.25 !important; pointer-events: none; }
+
+/* pagination dots */
+.shelf-dots {
+  display: flex; justify-content: center; gap: 8px;
+  margin: 18px 0 0;
+}
+.shelf-dots .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--hair);
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+.shelf-dots .dot.is-active {
+  background: var(--ink);
+  transform: scale(1.4);
+}
+
+/* ============================================================
+   A COVER CARD — OpenAI case-study aesthetic.
+   No image. Pure typography + real author avatar + colored
+   edition tab. Headline-first, source badge, hairline border.
+   ============================================================ */
+.cover {
+  flex: 0 0 360px;
+  scroll-snap-align: start;
+  background: var(--sheet);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: flex; flex-direction: column;
+  text-align: left;
+  font-family: var(--font-body);
+  border: 1px solid var(--hair);
+  border-top: 4px solid var(--mark-pink);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+  transition:
+    transform 0.35s cubic-bezier(.2,0,0,1),
+    border-color 0.35s ease;
+  will-change: transform;
+}
+.cover:hover { transform: translateY(-3px); border-color: var(--hair-2); }
+.cover--pink   { border-top-color: var(--mark-pink); }
+.cover--amber  { border-top-color: var(--mark-amber-real); }
+.cover--cyan   { border-top-color: var(--mark-cyan); }
+.cover--indigo { border-top-color: var(--mark-indigo); }
+@media (max-width: 720px) { .cover { flex-basis: 84vw; } }
+
+/* hero photo at top of each cover — SVG renders as backdrop,
+   IMG covers when loaded, removes itself on error */
+.cover-art {
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--sheet-2);
+  border-bottom: 1px solid var(--hair);
+  position: relative;
+}
+.cover-art svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; display: block;
+}
+.cover-art img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; display: block;
+  object-fit: cover;
+  filter: saturate(0.92);
+  z-index: 1;
+}
+
+/* edition + date header — mono ribbon at top */
+.cover-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 22px 12px;
+  border-bottom: 1px solid var(--hair);
+  font-family: var(--font-mono);
+  font-size: 9.5px; letter-spacing: 0.20em;
+  text-transform: uppercase; color: var(--ink-2);
+}
+.cover-head .cover-date { color: var(--ink); font-weight: 500; }
+
+/* body — headline-first */
+.cover-body {
+  padding: 22px 22px 18px;
+  display: flex; flex-direction: column; gap: 12px;
+  flex: 1;
+}
+.cover-kicker {
+  font-family: var(--font-mono); font-weight: 500;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--mark-pink);
+}
+.cover--amber  .cover-kicker { color: var(--mark-amber-real); }
+.cover--cyan   .cover-kicker { color: var(--mark-cyan); }
+.cover--indigo .cover-kicker { color: var(--mark-indigo); }
+.cover-headline {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500; font-size: 24px; line-height: 1.14;
+  letter-spacing: -0.022em; color: var(--ink);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cover-deck {
+  font-family: var(--font-body); font-weight: 400;
+  font-size: 14px; line-height: 1.5; color: var(--ink-2);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* footer — byline (avatar + author + role) + source + meta */
+.cover-foot {
+  margin-top: auto;
+  padding: 14px 22px 18px;
+  border-top: 1px solid var(--hair);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.cover-byline {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 10px; align-items: center;
+}
+.cover-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--hair);
+  background: var(--sheet-2);
+}
+.cover-byline-text { display: flex; flex-direction: column; min-width: 0; }
+.cover-author {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 13px; color: var(--ink); line-height: 1.2;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.cover-byline-role {
+  font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: 0.10em; color: var(--ink-3); margin-top: 3px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.cover-source {
+  font-family: var(--font-mono); font-weight: 500;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink); padding: 4px 8px;
+  border: 1px solid var(--hair);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.cover-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--font-mono); font-weight: 500;
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.cover-meta .read {
+  display: inline-flex; align-items: center; gap: 4px;
+  color: var(--ink);
+}
+.cover-meta .read::after { content: "→"; transition: transform 0.25s ease; }
+.cover:hover .cover-meta .read::after { transform: translateX(3px); }
+
+/* OPENING — premium expand from rack to fullscreen */
+.cover.is-opening {
+  position: fixed !important;
+  z-index: 999 !important;
+  margin: 0 !important;
+  flex: none !important;
+  border-radius: 2px;
+  transition:
+    top    0.65s cubic-bezier(.4,0,.2,1),
+    left   0.65s cubic-bezier(.4,0,.2,1),
+    width  0.65s cubic-bezier(.4,0,.2,1),
+    height 0.65s cubic-bezier(.4,0,.2,1),
+    border-radius 0.65s cubic-bezier(.4,0,.2,1),
+    transform 0.65s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.65s;
+  box-shadow:
+    0 40px 80px -32px rgba(28,27,27,0.22),
+    0 12px 24px -8px rgba(28,27,27,0.10),
+    inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* dimmer behind the shelf when opening */
+.rack.is-opening { transition: opacity 0.5s, filter 0.5s; }
+.rack.is-opening > * { transition: opacity 0.4s; }
+.rack.is-opening .rack-hero { opacity: 0.2; filter: blur(2px); }
+.rack.is-opening .shelf-wrap { opacity: 0.35; filter: blur(3px); }
+
+/* ============================================================
+   VIEW 2 — ISSUE READER
+   ============================================================ */
+.issue {
+  position: relative; z-index: 2;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(.2,0,0,1) 0.15s, transform 0.6s cubic-bezier(.2,0,0,1) 0.15s;
+  display: none;
+  min-height: calc(100vh - 48px);
+  padding: 40px 20px 120px;
+}
+.issue.is-active {
+  display: block; opacity: 1; transform: translateY(0);
+}
+@media (max-width: 720px) { .issue { padding: 28px 16px 90px; } }
+
+.issue-paper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--sheet);
+  padding: 56px clamp(28px, 5vw, 80px) 80px;
+  border: 1px solid var(--hair);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+  position: relative;
+}
+.issue-paper::after {
+  content: ""; position: absolute; inset: 0;
+  opacity: 0.045; mix-blend-mode: multiply; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* back button */
+.issue-back {
+  position: sticky; top: 60px; z-index: 30;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.20em; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 32px;
+  padding: 10px 16px; background: var(--sheet);
+  border: 1px solid var(--ink); border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.issue-back:hover { background: var(--ink); color: var(--sheet); }
+
+/* ============================================================
+   ISSUE PAPER — Atlas editorial system (matches home + diary).
+   Hairline borders only, generous spacing, no newspaper theatrics
+   (no thick rules, no stars, no drop-cap, no double columns).
+   ============================================================ */
+
+.iss-mast {
+  padding: 8px 0 16px;
+  border-bottom: 1px solid var(--hair);
+}
+.iss-mast .pub {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 600; font-size: 16px;
+  line-height: 1; letter-spacing: 0;
+  margin: 0; color: var(--ink);
+  display: inline-flex; align-items: baseline; gap: 10px;
+}
+.iss-mast .pub em { font-style: italic; font-weight: 500; color: var(--amber); }
+.iss-mast .tag {
+  font-family: var(--font-mono);
+  font-weight: 500; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 6px 0 0; line-height: 1.2;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 13px;
+}
+/* legacy newspaper rules — kept as no-ops so render doesn't break */
+.iss-rule-thick, .iss-rule-double, .iss-stars { display: none; }
+
+.iss-folio {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-3); padding: 14px 0;
+  border-bottom: 1px solid var(--hair);
+  margin: 0;
+}
+.iss-folio .center {
+  font-family: var(--font-mono); letter-spacing: 0.10em;
+  font-style: normal; text-transform: uppercase; font-size: 10px;
+  color: var(--ink); font-weight: 500;
+}
+
+/* front page grid */
+.iss-front {
+  display: grid; grid-template-columns: 240px 1fr;
+  gap: 48px; padding: 56px 0 0;
+}
+@media (max-width: 800px) { .iss-front { grid-template-columns: 1fr; gap: 36px; padding-top: 36px; } }
+
+.iss-whats {
+  padding-right: 32px;
+  border-right: 1px solid var(--hair);
+}
+@media (max-width: 800px) { .iss-whats { border-right: 0; padding-right: 0; padding-bottom: 28px; border-bottom: 1px solid var(--hair); } }
+.iss-whats h2 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: 22px; line-height: 1.1;
+  letter-spacing: -0.018em; margin: 0 0 4px; color: var(--ink);
+}
+.iss-whats .col-tag {
+  font-family: var(--font-mono);
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  padding-top: 0; margin-bottom: 22px;
+  color: var(--ink-3); font-weight: 500;
+  border: 0;
+}
+.iss-whats .bullet { display: grid; grid-template-columns: 12px 1fr; gap: 8px; margin-bottom: 16px; }
+.iss-whats .bullet .b {
+  font-family: var(--font-body); font-weight: 500; font-size: 12px;
+  line-height: 1.5; color: var(--ink-3);
+}
+.iss-whats .bullet p {
+  margin: 0; font-family: var(--font-body);
+  font-size: 13.5px; line-height: 1.5; color: var(--ink); font-weight: 400;
+}
+.iss-whats .bullet p b { font-weight: 600; color: var(--ink); }
+
+/* generative art blocks — SVG renders as backdrop, optional IMG covers it */
+.iss-lead-art {
+  margin: 8px 0 22px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--hair);
+  border-radius: 2px;
+  background: var(--sheet-2);
+  position: relative;
+}
+.iss-lead-art svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; display: block;
+}
+.iss-lead-art img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; display: block;
+  object-fit: cover;
+  z-index: 1;
+}
+.story-art {
+  margin: -22px -22px 16px;   /* bleed to card edges */
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 1px solid var(--hair);
+  background: var(--sheet-2);
+  position: relative;
+}
+.story-art svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; display: block;
+}
+.story-art img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; display: block;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* lead */
+.iss-lead .kicker {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--amber); font-weight: 500;
+  padding-bottom: 0; margin-bottom: 18px;
+  border: 0;
+}
+.iss-lead h1 {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500; font-size: clamp(28px, 3.6vw, 42px);
+  line-height: 1.1; letter-spacing: -0.022em;
+  margin: 0 0 16px; color: var(--ink);
+}
+.iss-lead h1 a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+.iss-lead h1 a:hover { border-bottom-color: var(--amber); color: var(--amber); }
+.iss-lead .deck {
+  font-family: var(--font-body); font-style: normal; font-weight: 400;
+  font-size: 17px; line-height: 1.55;
+  color: var(--ink-2); margin: 0 0 22px;
+  border: 0; padding: 0;
+}
+.iss-lead .byline {
+  font-family: var(--font-mono); font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.16em; color: var(--ink-3); margin: 0 0 24px;
+  padding-bottom: 24px; border-bottom: 1px solid var(--hair);
+}
+.iss-lead .byline b { color: var(--ink); font-weight: 500; }
+.iss-lead .body { columns: 1; }
+.iss-lead .body p {
+  margin: 0 0 14px; text-align: left; hyphens: none;
+  font-family: var(--font-body);
+  font-size: 15.5px; line-height: 1.65; color: var(--ink);
+}
+.iss-lead .body p b { font-weight: 600; }
+.iss-lead .body p:first-child::first-letter {
+  /* drop-cap removed for editorial restraint */
+  font-size: inherit; float: none; padding: 0;
+}
+.iss-lead .pull {
+  font-family: var(--font-display), sans-serif;
+  font-style: italic; font-weight: 500;
+  font-size: 17px; line-height: 1.4; color: var(--amber);
+  border: 0; border-left: 2px solid var(--amber);
+  padding: 4px 0 4px 16px; margin: 18px 0;
+  letter-spacing: 0;
+}
+
+/* sections inside an issue */
+.iss-section-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+  margin: 64px 0 28px; padding: 16px 0 12px;
+  border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
+}
+.iss-section-head .label {
+  font-family: var(--font-display), sans-serif; font-weight: 500; font-style: normal;
+  font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink);
+}
+.iss-section-head .meta {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink-3); text-align: right; font-weight: 500;
+}
+.iss-section-head .center {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3);
+}
+
+/* story cell — clean hairline card, no divider lines */
+.iss-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+@media (max-width: 720px) { .iss-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+.story {
+  display: flex; flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--hair);
+  border-top: 3px solid var(--amber);
+  border-radius: 2px;
+  background: var(--sheet);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+  transition: border-color 0.25s;
+}
+.story:hover { border-color: var(--hair-2); }
+.story--pink   { border-top-color: var(--mark-pink);   }
+.story--amber  { border-top-color: var(--mark-amber-real); }
+.story--cyan   { border-top-color: var(--mark-cyan);   }
+.story--indigo { border-top-color: var(--mark-indigo); }
+
+.story-head {
+  display: grid; grid-template-columns: 36px 1fr;
+  gap: 10px; align-items: center; margin-bottom: 14px;
+  padding-bottom: 0; border-bottom: 0;
+}
+.story-head img {
+  width: 36px; height: 36px; border-radius: 50%; object-fit: cover;
+  background: var(--sheet-2);
+  border: 1px solid var(--hair);
+}
+.story-head .who {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 12.5px; color: var(--ink); line-height: 1.2;
+}
+.story-head .src {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-3); font-weight: 500; margin-top: 3px;
+  display: inline-block;
+}
+.story h3 {
+  font-family: var(--font-display), sans-serif; font-weight: 500;
+  font-size: 18px; line-height: 1.18; margin: 0 0 10px;
+  letter-spacing: -0.014em; color: var(--ink);
+}
+.story h3 a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+.story h3 a:hover { border-bottom-color: var(--ink-2); }
+.story .summary, .story .story-deck {
+  font-family: var(--font-body);
+  font-size: 13.5px; line-height: 1.55; margin: 0 0 12px;
+  color: var(--ink-2);
+}
+.story .why {
+  font-family: var(--font-body); font-size: 12.5px;
+  font-style: italic; line-height: 1.45; color: var(--ink-2);
+  padding: 0 0 0 10px; border-left: 2px solid var(--hair-2);
+  margin: 8px 0 12px;
+}
+.story .meta-row {
+  font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+  border-top: 1px solid var(--hair-2); padding-top: 10px; margin-top: auto;
+  display: flex; justify-content: space-between;
+}
+.story .meta-row a {
+  color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px;
+}
+.story .meta-row a:hover { color: var(--amber); border-color: var(--amber); }
+
+/* ============================================================
+   NORA 早报 schema — Overview / Must-Do / Insight blocks.
+   Replaces the old story-grid layout. Clean editorial Atlas.
+   ============================================================ */
+.iss-block {
+  margin-top: 56px;
+}
+.iss-block:first-of-type { margin-top: 36px; }
+.iss-block-head {
+  display: flex; align-items: baseline; gap: 14px;
+  padding: 16px 0 12px;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  margin-bottom: 28px;
+}
+.iss-block-icon {
+  font-size: 18px; line-height: 1; flex-shrink: 0;
+}
+.iss-block-title {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: 16px; letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+  flex: 1;
+}
+.iss-block-meta {
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink-3);
+  font-weight: 500;
+}
+
+/* OVERVIEW — 5 numbered signal cards */
+.ov-list {
+  display: flex; flex-direction: column; gap: 18px;
+}
+.ov-item {
+  display: grid; grid-template-columns: 44px 1fr;
+  gap: 18px; padding: 22px 24px 22px 22px;
+  background: var(--sheet);
+  border: 1px solid var(--hair);
+  border-left: 4px solid var(--mark-pink);
+  border-radius: 2px;
+  transition: border-color 0.2s;
+}
+.ov-item:hover { border-color: var(--hair-2); }
+.ov--pink   { border-left-color: var(--mark-pink); }
+.ov--cyan   { border-left-color: var(--mark-cyan); }
+.ov--amber  { border-left-color: var(--mark-amber-real); }
+.ov--indigo { border-left-color: var(--mark-indigo); }
+.ov-num {
+  font-family: var(--font-mono);
+  font-size: 26px; font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1;
+  padding-top: 3px;
+}
+.ov-body { min-width: 0; }
+.ov-title {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: 19px; line-height: 1.3;
+  letter-spacing: -0.014em;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+.ov-title a {
+  color: inherit; text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.ov-title a:hover { border-bottom-color: var(--ink); }
+.ov-why {
+  font-family: var(--font-body);
+  font-size: 14.5px; line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 14px;
+}
+.ov-foot {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; padding-top: 12px;
+  border-top: 1px solid var(--hair);
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.ov-byline {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--ink-3); min-width: 0;
+}
+.ov-byline b {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 12.5px; letter-spacing: 0;
+  text-transform: none; color: var(--ink);
+}
+.ov-avatar {
+  width: 24px; height: 24px; border-radius: 50%;
+  object-fit: cover; background: var(--sheet-2);
+  border: 1px solid var(--hair);
+  flex-shrink: 0;
+}
+.ov-source {
+  white-space: nowrap; color: var(--ink-3);
+}
+.ov-link {
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--ink); padding-bottom: 1px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.ov-link:hover { color: var(--amber); border-color: var(--amber); }
+
+/* MUST-DO — 2 task cards, slightly emphasized */
+.md-list {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+@media (max-width: 720px) {
+  .md-list { grid-template-columns: 1fr; }
+}
+.md-item {
+  display: grid; grid-template-columns: 44px 1fr;
+  gap: 18px; padding: 22px;
+  background: var(--sheet);
+  border: 1px solid var(--hair);
+  border-top: 3px solid var(--amber);  /* amber = action color */
+  border-radius: 2px;
+  position: relative;
+}
+.md-num {
+  font-family: var(--font-mono);
+  font-size: 26px; font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--amber);
+  line-height: 1;
+  padding-top: 3px;
+}
+.md-body { min-width: 0; }
+.md-task {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: 17px; line-height: 1.35;
+  letter-spacing: -0.012em;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.md-why {
+  font-family: var(--font-body);
+  font-size: 13.5px; line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 12px;
+}
+.md-why b {
+  color: var(--ink); font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.md-time {
+  display: inline-block;
+  padding: 3px 9px;
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* INSIGHT — single soft callout, italic, hairline border */
+.iss-insight {
+  padding: 28px 30px;
+  background: var(--sheet);
+  border: 1px solid var(--hair);
+  border-left: 4px solid var(--mark-pink);
+  border-radius: 2px;
+}
+.iss-insight p {
+  font-family: var(--font-display), sans-serif;
+  font-style: italic;
+  font-size: 18px; line-height: 1.55;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Atlas-style margin annotation — handwritten Caveat sidenote,
+   appears in cards and lead story alike */
+.iss-sidenote {
+  display: block;
+  margin: 12px 0 0;
+  font-family: var(--font-hand);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--amber);
+  font-style: normal;
+  text-wrap: balance;
+}
+.iss-sidenote::before {
+  content: "↳ ";
+  opacity: 0.6;
+}
+.iss-sidenote--lead {
+  margin: 18px 0;
+  padding: 6px 0 6px 14px;
+  border-left: 2px solid var(--amber);
+  font-size: 19px;
+  max-width: 36em;
+}
+.iss-sidenote--lead::before { content: ""; }
+
+/* ============================================================
+   TODO LIST — A3 must-do section. Real checkboxes (click to toggle),
+   no avatar, no tag, no card chrome — just task + why + time + source.
+   ============================================================ */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.todo-item {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--sheet);
+  border: 1px solid var(--hair);
+  border-radius: 2px;
+  align-items: start;
+  transition: opacity 0.25s, border-color 0.25s;
+}
+.todo-item.is-done {
+  opacity: 0.55;
+  border-color: var(--hair-2);
+}
+.todo-check {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  width: 20px; height: 20px;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  margin: 4px 0 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.18s, border-color 0.18s;
+}
+.todo-check:hover {
+  background: var(--hair);
+}
+.todo-check[aria-checked="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.todo-check[aria-checked="true"]::after {
+  content: "";
+  position: absolute;
+  top: 2px; left: 5px;
+  width: 5px; height: 10px;
+  border: solid var(--bg);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.todo-body { min-width: 0; }
+.todo-task {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.todo-item.is-done .todo-task {
+  text-decoration: line-through;
+  color: var(--ink-3);
+}
+.todo-why {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 8px;
+}
+.todo-try {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 12px;
+}
+.todo-try b {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.todo-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0;
+}
+.todo-time {
+  display: inline-block;
+  padding: 3px 9px;
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+}
+.todo-link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+  font-weight: 500;
+}
+.todo-link:hover {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+/* editor's digest at end — clean hairline panel, no double-bordered box */
+.iss-digest {
+  margin: 56px auto 0; max-width: 720px;
+  padding: 28px 0 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--hair);
+  position: relative;
+}
+.iss-digest h2 {
+  font-family: var(--font-display), sans-serif; font-weight: 500;
+  font-size: clamp(22px, 2.8vw, 28px); line-height: 1.2; margin: 0 0 14px;
+  letter-spacing: -0.018em; color: var(--ink);
+}
+.iss-digest p {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 1.65; margin: 0 0 12px; color: var(--ink-2);
+}
+.iss-digest p b { font-weight: 600; color: var(--ink); }
+
+.iss-colophon {
+  margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--hair);
+  text-align: center; font-family: var(--font-mono);
+  font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.iss-colophon b { color: var(--ink); font-weight: 500; }
+.iss-colophon a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+
+/* footer back-to-rack link */
+.iss-other {
+  margin-top: 48px; padding-top: 24px;
+  border-top: 1px solid var(--hair);
+  text-align: center;
+}
+.iss-other a {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-weight: 500; font-size: 10px;
+  letter-spacing: 0.20em; text-transform: uppercase;
+  color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+  text-decoration: none;
+}
+.iss-other a:hover { color: var(--amber); border-color: var(--amber); }
+</style>
 </head>
 <body>
 
@@ -69,201 +1077,486 @@
     </div>
   </nav>
 
-  <main class="zi-page">
-    <header style="margin-bottom: 56px;">
-      <span class="zi-tag">PINGPING · X INTELLIGENCE</span>
-      <h1 style="font-family: var(--font-serif); font-size: 44px; font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; margin-top: 14px; max-width: 22ch;">
-        AI / Marketing feed.
-      </h1>
-      <p style="margin-top: 18px; font-family: var(--font-mono); font-size: 13px; line-height: 1.65; color: var(--muted); max-width: 58ch;">
-        Top 20 trending posts from 14 accounts and live searches.
-        Auto-updated 4× daily by the PINGPING agent.
-      </p>
+  <!-- ============================================================
+       VIEW 1 — THE NEWSSTAND
+       ============================================================ -->
+  <section class="rack" id="rack" aria-label="Newspaper rack — pick an issue">
 
-      <div style="margin-top: 24px; display:flex; align-items:center; gap: 12px;">
-        <span class="zi-tag zi-tag-strong">LIVE</span>
-        <span class="zi-tag" id="last-updated">2026-05-06 · 06:16 EST</span>
+    <header class="rack-hero">
+      <div class="lhs">
+        <h1>Today's edition, and every one before it.</h1>
+        <p>An AI-marketing wire compiled overnight. Pick a cover, read the issue.</p>
       </div>
     </header>
 
-    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-top: 8px;">
-      <span class="zi-tag zi-tag-strong">Trending now</span>
-      <span class="zi-tag">Top 20 posts</span>
+    <div class="shelf-wrap">
+      <button class="shelf-nav prev" id="shelfPrev" aria-label="Previous issues">‹</button>
+      <button class="shelf-nav next" id="shelfNext" aria-label="More issues">›</button>
+      <div class="shelf" id="shelf" tabindex="0" aria-label="All issues, horizontally scrollable"></div>
     </div>
+    <div class="shelf-dots" id="shelfDots"></div>
 
-    <!-- POSTS:START -->
-    <ol id="feed-list" style="list-style:none; padding:0; margin: 16px 0 0; border-top: 1px solid var(--hairline);">
+  </section>
 
-      <li><a href="https://x.com/semrush" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">Marketing</span></span>
-        <span>
-          <span class="feed-handle">@semrush</span>
-          <span class="feed-text" style="display:block;">The rules of brand discovery are evolving. Fast. @Adobe has completed its acquisition of Semrush, expanding our ability to help businesses navigate a rapidly shifting landscape shaped by AI…</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+  <!-- ============================================================
+       VIEW 2 — ISSUE READER (populated by JS)
+       ============================================================ -->
+  <section class="issue" id="issue" aria-label="Selected issue">
+    <div id="issueBody"></div>
+  </section>
 
-      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@OpenAI</span>
-          <span class="feed-text" style="display:block;">GPT-5.5 Instant is rolling out over the next two days as the default model to all ChatGPT users, and as 'gpt-5.5-chat-latest' in the API. Personalization improvements are rolling out to Plus and Pro users…</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
 
-      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@OpenAI</span>
-          <span class="feed-text" style="display:block;">GPT-5.5 Instant is starting to roll out in ChatGPT. It's a big upgrade, giving you smarter, clearer, and more personalized answers in a warmer, more natural tone. And it's also more concise…</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+  <script>
+    /* ============================================================
+       Daily AI-marketing feed — JSON-driven.
+       Loads feed/days/manifest.json on boot (one entry per day),
+       renders the rack of covers, and on click fetches that day's
+       full JSON to render the issue paper. Every story links to
+       its real source URL via <a target="_blank">.
+       Pipeline: scripts/pingping-daily.mjs generates the JSON daily
+       (GitHub Action cron). See feed/PIPELINE.md.
+       ============================================================ */
+    const rack       = document.getElementById('rack');
+    const issue      = document.getElementById('issue');
+    const issueBody  = document.getElementById('issueBody');
+    const shelf      = document.getElementById('shelf');
+    const shelfPrev  = document.getElementById('shelfPrev');
+    const shelfNext  = document.getElementById('shelfNext');
+    const shelfDots  = document.getElementById('shelfDots');
 
-      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@OpenAI</span>
-          <span class="feed-text" style="display:block;">We're also improving memory and personalization. ChatGPT can now better use context from saved memories, past chats, files, and connected Gmail accounts to give more personalized responses…</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    let MANIFEST = null;
+    let DAYS     = [];     // preview entries from manifest
+    const CACHE  = {};     // date → full day JSON
 
-      <li><a href="https://x.com/OpenAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@OpenAI</span>
-          <span class="feed-text" style="display:block;">Show us the Codex pets you hatched. Use /hatch to create your own Codex pet. We'll pick 10 favorites to get 30 days of ChatGPT Pro.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    // -------- helpers --------
+    function esc(s) {
+      return (s == null ? '' : String(s)).replace(/[&<>"']/g, c =>
+        ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+    // news should be simple — no rough-notation, no margin notes.
+    // Strip any leftover markdown markers and just escape.
+    function mark(s) {
+      if (!s) return '';
+      return esc(String(s)
+        .replace(/__([^_]+)__/g, '$1')
+        .replace(/\*\*([^*]+)\*\*/g, '$1')
+        .replace(/~~([^~]+)~~/g, '$1'));
+    }
+    function fmtShort(iso) {
+      const d = new Date(iso + 'T12:00:00Z');
+      const w = d.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'UTC' });
+      const m = d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' });
+      return `${w} · ${m} ${d.getUTCDate()}`;
+    }
+    function fmtFull(iso) {
+      const d = new Date(iso + 'T12:00:00Z');
+      return d.toLocaleDateString('en-US', {
+        weekday: 'long', month: 'long', day: 'numeric', year: 'numeric',
+        timeZone: 'UTC'
+      });
+    }
 
-      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@AnthropicAI</span>
-          <span class="feed-text" style="display:block;">This work is part of a loop we're working to close between societal impacts and model training. One of our goals is to study how people use Claude, find where it falls short of its principles, and use that to train better models.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    // -------- data loading --------
+    async function loadManifest() {
+      const res = await fetch('./days/manifest.json?t=' + Date.now());
+      if (!res.ok) throw new Error('manifest fetch failed');
+      MANIFEST = await res.json();
+      DAYS = (MANIFEST.days || []).slice(0, 30);
+    }
+    async function loadIssue(date) {
+      if (CACHE[date]) return CACHE[date];
+      const res = await fetch(`./days/${date}.json?t=${Date.now()}`);
+      if (!res.ok) throw new Error(`day ${date} not found`);
+      CACHE[date] = await res.json();
+      return CACHE[date];
+    }
 
-      <li><a href="https://x.com/sama" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@sama</span>
-          <span class="feed-text" style="display:block;">the new instant model in chatgpt is so good — damn if you have been thinking-model-only for a while, give it a try!</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    // -------- shelf render --------
+    // Build a fake item-shape so artSVG works for the cover hero
+    function coverArt(day) {
+      const fake = {
+        id: day.date,
+        rank: day.no || 1,
+        tag: day.lead_tag || 'SIGNAL',
+        tag_color: day.tag_color || 'pink',
+      };
+      return artSVG(fake);
+    }
+    function renderShelf() {
+      shelf.innerHTML = DAYS.map(it => {
+        const author = it.lead_author || {};
+        const src = it.lead_source || {};
+        const heroImg = it.lead_image_url || '';
+        return `
+        <article class="cover cover--${esc(it.tag_color || 'pink')}"
+                 data-issue="${esc(it.date)}" tabindex="0" role="button"
+                 aria-label="Open issue ${esc(it.date)}">
+          <figure class="cover-art">
+            ${coverArt(it)}
+            ${heroImg ? `<img src="${esc(heroImg)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+          </figure>
+          <header class="cover-head">
+            <span class="cover-edition">№ ${esc(it.no)} · ${esc(it.edition)}</span>
+            <span class="cover-date">${fmtShort(it.date)}</span>
+          </header>
+          <div class="cover-body">
+            <span class="cover-kicker">${esc(it.lead_kicker || it.lead_tag || '')}</span>
+            <h3 class="cover-headline">${esc(it.lead_headline)}</h3>
+            <p class="cover-deck">${esc(it.lead_deck)}</p>
+          </div>
+          <footer class="cover-foot">
+            <div class="cover-byline">
+              ${author.avatar_url
+                ? `<img class="cover-avatar" src="${esc(author.avatar_url)}" alt="" loading="lazy"
+                       onerror="this.style.background='var(--sheet-2)';this.removeAttribute('src');">`
+                : `<div class="cover-avatar" style="background:var(--sheet-2)"></div>`}
+              <div class="cover-byline-text">
+                <span class="cover-author">${esc(author.name || '')}</span>
+                <span class="cover-byline-role">${esc(author.role || src.label || '')}</span>
+              </div>
+              <span class="cover-source">${esc(src.label || '')}</span>
+            </div>
+            <div class="cover-meta">
+              <span>${esc(it.story_count || 0)} stories · ${esc(it.read_time_total_min || 0)} min</span>
+              <span class="read">read</span>
+            </div>
+          </footer>
+        </article>`;
+      }).join('');
+      shelfDots.innerHTML = DAYS.map((_, i) =>
+        `<span class="dot${i === 0 ? ' is-active' : ''}" data-i="${i}" role="button" aria-label="Jump to ${i+1}"></span>`
+      ).join('');
+    }
 
-      <li><a href="https://x.com/helloitsaustin" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@helloitsaustin</span>
-          <span class="feed-text" style="display:block;">if you're a performance marketer, here's how I use a custom Claude Cowork plugin to manage Google Ads at @AnthropicAI. it connects to the Google Ads API via MCP, encodes my common playbooks…</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    // -------- generative art per item --------
+    // Magazine-cover style: 2-color diagonal gradient block + huge
+    // transparent rank number + tiny mono tag label. Each tag has
+    // its own color pair. Deterministic by rank+tag so each item
+    // always renders the same image.
+    const TAG_PALETTES = {
+      pink:   ['#F45397', '#FFE0EC'],
+      cyan:   ['#3AC3FF', '#D7F1FF'],
+      amber:  ['#FFB525', '#FFEFCB'],
+      indigo: ['#5648FB', '#D8D3FF'],
+    };
+    function artSVG(it) {
+      // pure gradient placeholder — shown only while real news IMG loads, or
+      // if image fails. No digits, no tag label. Real photo takes over on top.
+      const tag = it.tag_color || 'pink';
+      const [c1, c2] = TAG_PALETTES[tag] || TAG_PALETTES.pink;
+      const seed = (it.rank || 1) * 31 + ((it.tag || '').length * 7);
+      const angle = 110 + (seed % 6) * 12;
+      const gid = `g-${it.id || seed}`;
+      return `<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="${gid}" gradientTransform="rotate(${angle} 200 120)" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="400" y2="240">
+            <stop offset="0%" stop-color="${c1}"/>
+            <stop offset="100%" stop-color="${c2}"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="240" fill="url(#${gid})"/>
+      </svg>`;
+    }
+    function artBlock(it, isLead) {
+      // SVG renders as the always-on backdrop. If image_url is set, IMG
+      // layers on top and covers the SVG when loaded. If IMG fails, it
+      // removes itself, revealing the SVG underneath. No fragile onerror inline.
+      const cls = isLead ? 'iss-lead-art' : 'story-art';
+      const svg = artSVG(it);
+      if (it.image_url) {
+        return `<figure class="${cls}">
+          ${svg}
+          <img src="${esc(it.image_url)}" alt="${esc(it.image_alt || it.headline || '')}" loading="lazy" onerror="this.remove()">
+        </figure>`;
+      }
+      return `<figure class="${cls}">${svg}</figure>`;
+    }
 
-      <li><a href="https://x.com/helloitsaustin" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@helloitsaustin</span>
-          <span class="feed-text" style="display:block;">I got married this past weekend so I did what any rational @AnthropicAI employee would do and had Claude Code analyze 12 years of iMessages with my wife, then Claude Design used that to…</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    // -------- issue paper render (from full day JSON) --------
+    function renderStory(it, withArt) {
+      const a = it.author || {};
+      const s = it.source || {};
+      return `
+        <article class="story story--${esc(it.tag_color || 'pink')}">
+          ${withArt ? artBlock(it, false) : ''}
+          <header class="story-head">
+            ${a.avatar_url
+              ? `<img src="${esc(a.avatar_url)}" alt="" loading="lazy"
+                     onerror="this.style.background='var(--sheet-2)';this.removeAttribute('src');">`
+              : `<div style="width:44px;height:44px;border-radius:50%;background:var(--sheet-2);flex-shrink:0"></div>`}
+            <div>
+              <div class="who">${esc(a.name || '—')}</div>
+              <div class="src">${esc(s.label || '')}</div>
+            </div>
+          </header>
+          <span class="story-tag" style="color:var(--mark-${esc(it.tag_color || 'pink')});font-family:var(--font-mono);font-size:9px;letter-spacing:0.22em;text-transform:uppercase;font-weight:500;margin-top:4px;display:inline-block;">${esc(it.tag || '')}</span>
+          <h3><a href="${esc(it.url)}" target="_blank" rel="noopener">${mark(it.headline)}</a></h3>
+          <p class="story-deck" style="margin:0 0 12px;font-size:14px;line-height:1.5;color:var(--ink-2)">${mark(it.deck)}</p>
+          ${it.why ? `<div class="meta-row"><b>Why:</b> ${mark(it.why)}</div>` : ''}
+          ${it.try ? `<div class="meta-row"><b>Try:</b> ${mark(it.try)}</div>` : ''}
+          ${it.sidenote ? `<span class="iss-sidenote">${esc(it.sidenote)}</span>` : ''}
+          <a class="story-link" href="${esc(it.url)}" target="_blank" rel="noopener"
+             style="margin-top:auto;padding-top:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);text-decoration:none">${esc(s.label || 'Read')} →</a>
+        </article>`;
+    }
 
-      <li><a href="https://x.com/helloitsaustin" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@helloitsaustin</span>
-          <span class="feed-text" style="display:block;">most growth marketers use AI to rewrite headlines and call it a day. here's how I actually use Claude on the growth marketing team at @AnthropicAI across chat, Claude Cowork, and Claude Code.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    function renderTodo(it) {
+      const t = it.read_time_min || '';
+      const timeLabel = (it.source && it.source.label && /\d/.test(it.source.label))
+        ? it.source.label.replace(/^Must-do\s*·\s*/i, '')
+        : (t ? `${t} min` : '');
+      return `
+        <li class="todo-item">
+          <button class="todo-check" type="button" role="checkbox" aria-checked="false"
+                  onclick="this.setAttribute('aria-checked', this.getAttribute('aria-checked')==='true'?'false':'true'); this.closest('.todo-item').classList.toggle('is-done')"></button>
+          <div class="todo-body">
+            <h3 class="todo-task">${mark(it.headline)}</h3>
+            ${it.why ? `<p class="todo-why">${mark(it.why)}</p>` : ''}
+            ${it.try ? `<p class="todo-try"><b>How.</b> ${mark(it.try)}</p>` : ''}
+            <p class="todo-meta">
+              ${timeLabel ? `<span class="todo-time">${esc(timeLabel)}</span>` : ''}
+              ${it.url ? `<a class="todo-link" href="${esc(it.url)}" target="_blank" rel="noopener">source →</a>` : ''}
+            </p>
+          </div>
+        </li>`;
+    }
 
-      <li><a href="https://x.com/bloggersarvesh" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@bloggersarvesh</span>
-          <span class="feed-text" style="display:block;">keep calling me delusional… but I will keep repeating this. Claude + SEO is going to make more businesses millionaires in 2026 than bitcoin ever did.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+    function renderIssue(data) {
+      const lead = data.items[0] || {};
+      const rest = data.items.slice(1);
+      // A3 = anything tagged as a task (kicker "Today's Must-Do" or source.kind "task")
+      const isTask = it => (it.source && it.source.kind === 'task') || it.kicker === "Today's Must-Do";
+      const stack   = rest.filter(isTask);
+      // A2 = remaining signals, capped at 10
+      const markets = rest.filter(it => !isTask(it)).slice(0, 10);
+      const leadAuthor = lead.author || {};
+      const leadSource = lead.source || {};
 
-      <li><a href="https://x.com/bloggersarvesh" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@bloggersarvesh</span>
-          <span class="feed-text" style="display:block;">If this article showed you your SEO isn't reaching its full potential… imagine the impact when this Claude Cowork system is applied to your business.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+      return `
+        <button class="issue-back" onclick="closeIssue()">‹ back to rack</button>
+        <article class="issue-paper">
+          <header class="iss-mast">
+            <h1 class="pub">ping<em>ping</em> daily</h1>
+            <p class="tag">${esc(data.promo_headline || 'an ai-marketing wire — compiled overnight')}</p>
+          </header>
 
-      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@AnthropicAI</span>
-          <span class="feed-text" style="display:block;">New Anthropic Fellows research: Model Spec Midtraining (MSM). Standard alignment methods train AIs on examples of desired behavior. But this can fail to generalize to new situations. MSM addresses this.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+          <div class="iss-folio">
+            <span>No. ${esc(data.no)} · ${esc(data.edition)}</span>
+            <span class="center">${fmtFull(data.date)}</span>
+            <span>${data.items.length} stories</span>
+          </div>
 
-      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@AnthropicAI</span>
-          <span class="feed-text" style="display:block;">Using MSM, we can also empirically study which model specs or constitutions yield the best generalization from alignment training. Specifying rules works to some extent, but explaining the values underneath works better.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+          <section class="iss-front">
+            <aside class="iss-whats">
+              <h2>What's<br>News</h2>
+              <div class="col-tag">— Today's Briefing —</div>
+              ${(data.whats_news || []).map(b =>
+                `<div class="bullet"><span class="b">●</span><p>${b}</p></div>`
+              ).join('')}
+            </aside>
 
-      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@AnthropicAI</span>
-          <span class="feed-text" style="display:block;">Read more about Model Spec Midtraining: alignment.anthropic.com/2026/msm — or read the full study at arxiv.org/abs/2605.02087.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+            <article class="iss-lead">
+              <div class="kicker">A1 · ${esc(lead.kicker || lead.tag || '')}</div>
+              <h1><a href="${esc(lead.url)}" target="_blank" rel="noopener">${mark(lead.headline)}</a></h1>
+              <p class="deck">${mark(lead.deck)}</p>
+              ${artBlock(lead, true)}
+              <p class="byline">By <b>${esc(leadAuthor.name || '')}</b>${leadAuthor.role ? ', ' + esc(leadAuthor.role) : ''} · ${esc(leadSource.label || '')} · <b>${fmtShort(data.date)}</b></p>
+              ${lead.why || lead.try ? `
+                <div class="body" style="columns:1">
+                  ${lead.why ? `<p><b>Why it matters.</b> ${mark(lead.why)}</p>` : ''}
+                  ${lead.try ? `<p class="pull">Try this: ${mark(lead.try)}</p>` : ''}
+                  ${lead.sidenote ? `<aside class="iss-sidenote iss-sidenote--lead">${esc(lead.sidenote)}</aside>` : ''}
+                  <p style="margin-top:1em"><a href="${esc(lead.url)}" target="_blank" rel="noopener" style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink)">Read at source →</a></p>
+                </div>
+              ` : ''}
+            </article>
+          </section>
 
-      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@AnthropicAI</span>
-          <span class="feed-text" style="display:block;">As AI takes on work humans can't fully check, a capable model could deliberately hold back — and we'd never know. New Anthropic Fellows research finds that such a model can be trained to near-full capability.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+          ${markets.length > 0 ? `
+            <div class="iss-section-head">
+              <div class="label">A2 · Markets &amp; Models</div>
+              <div class="center">signals · stacks · contrarian reads</div>
+              <div class="meta">${markets.length} stories</div>
+            </div>
+            <div class="iss-grid">
+              ${markets.map((it, i) => renderStory(it, i === 0)).join('')}
+            </div>
+          ` : ''}
 
-      <li><a href="https://x.com/AnthropicAI" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@AnthropicAI</span>
-          <span class="feed-text" style="display:block;">How do people seek guidance from Claude? We looked at 1M conversations to understand what questions people ask, how Claude responds, and where it slips into sycophancy.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+          ${stack.length > 0 ? `
+            <div class="iss-section-head">
+              <div class="label">A3 · Today's Must-Do</div>
+              <div class="center">do these before bed</div>
+              <div class="meta">${stack.length} tasks</div>
+            </div>
+            <ul class="todo-list">
+              ${stack.map(renderTodo).join('')}
+            </ul>
+          ` : ''}
 
-      <li><a href="https://x.com/sama" target="_blank" rel="noopener" class="feed-row">
-        <span><span class="feed-cat">AI</span></span>
-        <span>
-          <span class="feed-handle">@sama</span>
-          <span class="feed-text" style="display:block;">ChatGPT feels very 'switched on' now.</span>
-        </span>
-        <span class="feed-cta">View on X →</span>
-      </a></li>
+          ${data.digest && data.digest.body ? `
+            <div class="iss-section-head">
+              <div class="label">A4 · Today's Insight</div>
+              <div class="center">the pattern under the noise</div>
+              <div class="meta">briefing</div>
+            </div>
+            <div class="iss-digest">
+              <h2>${esc(data.digest.title)}</h2>
+              <p>${esc(data.digest.body)}</p>
+            </div>
+          ` : ''}
 
-    </ol>
-    <!-- POSTS:END -->
+          <div class="iss-other">
+            <a href="#" onclick="event.preventDefault(); closeIssue()">‹ Back to rack</a>
+          </div>
+        </article>`;
+    }
 
-    <footer style="margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--hairline); display:flex; justify-content:space-between; align-items:center;">
-      <span class="zi-tag">PINGPING agent · auto-updated 4× daily</span>
-      <span class="zi-tag">14 accounts + live searches</span>
-    </footer>
-  </main>
+    // -------- click wiring + FLIP animation --------
+    function wireShelf() {
+      shelf.querySelectorAll('.cover').forEach(c => {
+        const open = () => openIssue(c.dataset.issue, c);
+        c.addEventListener('click', open);
+        c.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+        });
+      });
+      const stepDistance = () => {
+        const first = shelf.querySelector('.cover');
+        if (!first) return 348;
+        const style = getComputedStyle(shelf);
+        const gap = parseInt(style.columnGap || style.gap || '28', 10);
+        return first.getBoundingClientRect().width + gap;
+      };
+      shelfPrev.addEventListener('click', () =>
+        shelf.scrollBy({ left: -stepDistance(), behavior: 'smooth' }));
+      shelfNext.addEventListener('click', () =>
+        shelf.scrollBy({ left:  stepDistance(), behavior: 'smooth' }));
+      shelfDots.querySelectorAll('.dot').forEach(d => {
+        d.addEventListener('click', () => {
+          const i = +d.dataset.i;
+          const target = shelf.querySelectorAll('.cover')[i];
+          if (target) shelf.scrollTo({ left: target.offsetLeft - shelf.offsetLeft, behavior: 'smooth' });
+        });
+      });
+      const updateNav = () => {
+        shelfPrev.toggleAttribute('disabled', shelf.scrollLeft <= 4);
+        shelfNext.toggleAttribute('disabled',
+          shelf.scrollLeft >= shelf.scrollWidth - shelf.clientWidth - 4);
+        const cards = [...shelf.querySelectorAll('.cover')];
+        const center = shelf.scrollLeft + shelf.clientWidth / 2;
+        let active = 0, best = Infinity;
+        cards.forEach((c, i) => {
+          const mid = c.offsetLeft + c.offsetWidth / 2 - shelf.offsetLeft;
+          const d = Math.abs(mid - center);
+          if (d < best) { best = d; active = i; }
+        });
+        shelfDots.querySelectorAll('.dot').forEach((d, i) =>
+          d.classList.toggle('is-active', i === active));
+      };
+      shelf.addEventListener('scroll', updateNav, { passive: true });
+      window.addEventListener('resize', updateNav);
+      requestAnimationFrame(updateNav);
+    }
+
+    async function showIssueView(date) {
+      try {
+        const data = await loadIssue(date);
+        issueBody.innerHTML = renderIssue(data);
+        rack.classList.add('is-hidden');
+        rack.classList.remove('is-opening');
+        issue.classList.add('is-active');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        // re-init rough-notation for the newly-injected DOM
+        if (window.rnInit) window.rnInit();
+      } catch (e) {
+        console.error('failed to load issue', date, e);
+        issueBody.innerHTML = `
+          <button class="issue-back" onclick="closeIssue()">‹ back to rack</button>
+          <div style="padding:80px 24px;text-align:center;font-family:var(--font-mono);font-size:12px;letter-spacing:0.16em;color:var(--ink-3);max-width:540px;margin:0 auto">
+            <p>Issue for <b>${esc(date)}</b> couldn't load.</p>
+            <p style="opacity:0.6;margin-top:1em">Expected file: feed/days/${esc(date)}.json</p>
+          </div>`;
+        rack.classList.add('is-hidden');
+        issue.classList.add('is-active');
+      }
+    }
+
+    function openIssue(date, fromCover) {
+      const card = fromCover || document.querySelector(`.cover[data-issue="${date}"]`);
+      if (!card) {
+        showIssueView(date);
+        history.pushState({issue: date}, '', '#' + date);
+        return;
+      }
+      const rect = card.getBoundingClientRect();
+      const targetW = Math.min(920, window.innerWidth * 0.92);
+      const targetH = window.innerHeight * 0.92;
+      const targetL = (window.innerWidth - targetW) / 2;
+      const targetT = (window.innerHeight - targetH) / 2;
+
+      card.style.transform = 'none';
+      card.style.top    = rect.top + 'px';
+      card.style.left   = rect.left + 'px';
+      card.style.width  = rect.width + 'px';
+      card.style.height = rect.height + 'px';
+      card.classList.add('is-opening');
+      rack.classList.add('is-opening');
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          card.style.top    = targetT + 'px';
+          card.style.left   = targetL + 'px';
+          card.style.width  = targetW + 'px';
+          card.style.height = targetH + 'px';
+          card.style.borderRadius = '6px';
+        });
+      });
+
+      setTimeout(() => {
+        showIssueView(date);
+        card.classList.remove('is-opening');
+        card.style.cssText = '';
+        history.pushState({ issue: date }, '', '#' + date);
+      }, 680);
+    }
+
+    function closeIssue() {
+      issue.classList.remove('is-active');
+      rack.classList.remove('is-hidden');
+      rack.classList.remove('is-opening');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      history.pushState({}, '', '#');
+    }
+
+    window.openIssue = openIssue;
+    window.closeIssue = closeIssue;
+
+    // -------- boot --------
+    (async () => {
+      try {
+        await loadManifest();
+        renderShelf();
+        wireShelf();
+        // open on initial hash if it's a date
+        const hash = location.hash.slice(1);
+        if (/^\d{4}-\d{2}-\d{2}$/.test(hash)) showIssueView(hash);
+      } catch (e) {
+        console.error('feed boot failed', e);
+        shelf.innerHTML = `
+          <div style="padding:60px 30px;text-align:center;font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--ink-3);max-width:520px;margin:0 auto">
+            <p>Couldn't load manifest.</p>
+            <p style="opacity:0.6;margin-top:1em">Make sure <b>feed/days/manifest.json</b> exists. Run <code>node scripts/pingping-daily.mjs</code> locally to generate.</p>
+          </div>`;
+      }
+    })();
+
+    window.addEventListener('popstate', () => {
+      const hash = location.hash.slice(1);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(hash)) showIssueView(hash);
+      else closeIssue();
+    });
+  </script>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
    Types: underline · circle · highlight · box · strike-through
           crossed-off · bracket
    Optional attrs:
-     data-rn-color    (default #E89A2A — hand-drawn ink amber, matches --accent)
+     data-rn-color    (default #F45397 — Atlas pink, matches --accent)
      data-rn-stroke   (default 1.5)
      data-rn-padding  (default 4)
      data-rn-delay    (ms before showing, default 0)
@@ -19,7 +19,10 @@
     var els = document.querySelectorAll('[data-rn]');
     els.forEach(function (el) {
       var type = el.dataset.rn || 'underline';
-      var color = el.dataset.rnColor || '#E89A2A';
+      // priority: explicit data-rn-color attr → nearest --rn-color CSS var → pink fallback
+      var color = el.dataset.rnColor ||
+                  (getComputedStyle(el).getPropertyValue('--rn-color') || '').trim() ||
+                  '#F45397';
       var stroke = parseFloat(el.dataset.rnStroke || '1.5');
       var padding = el.dataset.rnPadding ? parseFloat(el.dataset.rnPadding) : 4;
       var delay = parseInt(el.dataset.rnDelay || '0', 10);
@@ -49,4 +52,7 @@
 
   if (document.readyState !== 'loading') init();
   else document.addEventListener('DOMContentLoaded', init);
+
+  // expose for dynamic content (e.g. feed renders issue paper on click)
+  window.rnInit = init;
 })();

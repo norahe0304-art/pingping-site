@@ -1,0 +1,89 @@
+{
+  "_doc": "Sources pingping reads daily. Add/remove RSS feeds in `rss`. Add hand-picked X URLs (or any single links you want featured today) in `manual_picks`.",
+
+  "rss": [
+    {
+      "id": "latent-space",
+      "name": "Latent Space",
+      "url": "https://www.latent.space/feed",
+      "kind": "podcast"
+    },
+    {
+      "id": "every",
+      "name": "Every",
+      "url": "https://every.to/feed.xml",
+      "kind": "essay"
+    },
+    {
+      "id": "stratechery",
+      "name": "Stratechery",
+      "url": "https://stratechery.com/feed/",
+      "kind": "essay"
+    },
+    {
+      "id": "ben-evans",
+      "name": "Benedict Evans",
+      "url": "https://www.ben-evans.com/benedictevans?format=rss",
+      "kind": "newsletter"
+    },
+    {
+      "id": "exponential-view",
+      "name": "Exponential View",
+      "url": "https://www.exponentialview.co/feed",
+      "kind": "newsletter"
+    },
+    {
+      "id": "platformer",
+      "name": "Platformer",
+      "url": "https://www.platformer.news/rss/",
+      "kind": "newsletter"
+    },
+    {
+      "id": "ai-tidbits",
+      "name": "AI Tidbits",
+      "url": "https://www.aitidbits.ai/feed",
+      "kind": "newsletter"
+    },
+    {
+      "id": "marketing-against-the-grain",
+      "name": "Marketing Against the Grain",
+      "url": "https://anchor.fm/s/2dab3d18/podcast/rss",
+      "kind": "podcast"
+    },
+    {
+      "id": "lenny",
+      "name": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/feed",
+      "kind": "newsletter"
+    },
+    {
+      "id": "import-ai",
+      "name": "Import AI",
+      "url": "https://jack-clark.net/feed/",
+      "kind": "newsletter"
+    },
+    {
+      "id": "interconnects",
+      "name": "Interconnects",
+      "url": "https://www.interconnects.ai/feed",
+      "kind": "newsletter"
+    },
+    {
+      "id": "one-useful-thing",
+      "name": "One Useful Thing",
+      "url": "https://www.oneusefulthing.org/feed",
+      "kind": "newsletter"
+    }
+  ],
+
+  "manual_picks": [
+    {
+      "url": "https://x.com/helloitsaustin/status/REPLACE_ME",
+      "title": "Three surfaces, one Claude",
+      "summary": "Optional pre-written summary; otherwise Claude expands it.",
+      "author": "Austin Hughes",
+      "source_label": "X · thread",
+      "kind": "x"
+    }
+  ]
+}

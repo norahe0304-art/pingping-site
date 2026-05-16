@@ -1,37 +1,77 @@
 /* ============================================================
    Zi UI — shared style for pingping-site
-   Aligned with Nora's portfolio: cream surface (#F2F0EE),
-   near-black ink (#171717), Geist Mono chrome, Source Serif prose.
+   Atlas-by-Attio tonality: warm off-white paper (#F6F4EE),
+   warm-black ink (#1c1b1b), multi-color sticker accents
+   (pink flagship + amber/cyan/indigo variety), 1px hairlines,
+   no shadows, tilted-sticker decoration.
    ============================================================ */
 
 :root {
-  /* Surface — kept cream per pingping/portfolio brand */
-  --bg: #F2F0EE;
-  --fg: #1c1b1b;          /* Atlas atlas-900 near-black */
-  --ink: #474746;         /* Atlas prose body color */
+  /* Surface — Atlas warm off-white (was cream #F2F0EE) */
+  --bg: #F6F4EE;
+  --fg: #1c1b1b;          /* Atlas warm-black */
+  --ink: #1c1b1b;         /* prose body — promoted to full warm-black */
+  --ink-2: #474746;       /* secondary copy (was --ink) */
   --muted: rgba(28, 27, 27, 0.55);
   --muted-strong: rgba(28, 27, 27, 0.72);
-  --muted-faint: #939190; /* Atlas atlas-400 — small mono kickers */
-  --hairline: rgba(28, 27, 27, 0.10);
-  --hairline-strong: rgba(28, 27, 27, 0.20);
+  --muted-faint: #939190;
+  --hairline: rgba(28, 27, 27, 0.15);       /* Atlas #1c1b1b26 */
+  --hairline-strong: rgba(28, 27, 27, 0.30); /* Atlas #1c1b1b4d */
 
-  /* Hand-drawn ink accent — rough-notation strokes, sidenote, byline.
-     Brighter/warmer than mustard so it pops on cream like Atlas's blue. */
-  --accent: #E89A2A;
-  --accent-soft: rgba(232, 154, 42, 0.20);
+  /* Atlas accent system — pink flagship, amber/cyan/indigo variety.
+     --accent is the default rough-notation / highlight color.
+     Use --mark-* directly when you need a specific sticker color. */
+  --accent:      #F45397;             /* pink — flagship "love" mark */
+  --accent-soft: rgba(244, 83, 151, 0.22);
+  --mark-pink:   #F45397;
+  --mark-amber:  #FFB525;
+  --mark-cyan:   #3AC3FF;
+  --mark-indigo: #5648FB;
+  --mark-red:    #FF253A;
 
-  /* Atlas typography system — EN only, no CN fallback
-     Inter body / Inter display / DM Mono kicker /
-     Caveat (free Biro Script alt) for handwritten quotes & sidenotes */
+  /* Typography — Inter body / Inter Tight display / DM Mono chrome /
+     Caveat (Biro Script alt) for rare handwritten moments */
   --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-body: "Inter", -apple-system, "Helvetica Neue", "Segoe UI",
     Arial, sans-serif;
-  --font-display: "Inter", -apple-system, "Helvetica Neue", sans-serif;
+  --font-display: "Geist", "Inter Tight", "Inter", -apple-system,
+    "Helvetica Neue", sans-serif;
   --font-hand: "Caveat", cursive;
 
   /* Legacy alias — kept so unrelated rules keep compiling. */
   --font-serif: var(--font-body);
 }
+
+/* ============================================================
+   Atlas signature: tilted-sticker utility.
+   Apply .zi-tilt-{neg22|neg15|neg12|12|18|22} to receipts,
+   polaroids, sticky notes, channel chips — anything that
+   wants to feel taped or pinned to the page.
+   ============================================================ */
+.zi-tilt-neg22 { transform: rotate(-22deg); }
+.zi-tilt-neg15 { transform: rotate(-15deg); }
+.zi-tilt-neg12 { transform: rotate(-12deg); }
+.zi-tilt-neg6  { transform: rotate(-6deg); }
+.zi-tilt-6     { transform: rotate(6deg); }
+.zi-tilt-12    { transform: rotate(12deg); }
+.zi-tilt-18    { transform: rotate(18deg); }
+.zi-tilt-22    { transform: rotate(22deg); }
+
+/* Atlas-style sticker — small label/receipt taped onto the page */
+.zi-sticker {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--bg);
+  border: 1px solid var(--hairline-strong);
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--fg);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+.zi-sticker--pink   { color: var(--mark-pink);   border-color: var(--mark-pink); }
+.zi-sticker--amber  { color: var(--mark-amber);  border-color: var(--mark-amber); }
+.zi-sticker--cyan   { color: var(--mark-cyan);   border-color: var(--mark-cyan); }
+.zi-sticker--indigo { color: var(--mark-indigo); border-color: var(--mark-indigo); }
 
 * { box-sizing: border-box; }
 
@@ -97,7 +137,7 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(242, 240, 238, 0.9);
+  background: rgba(246, 244, 238, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--hairline);
   font-family: var(--font-mono);
@@ -624,7 +664,15 @@ a { color: inherit; text-decoration: none; }
   padding: 72px 0;
   border-bottom: 1px solid var(--hairline);
   scroll-margin-top: 80px;
+  /* per-entry accent — drives rough-notation strokes (rn.js),
+     TOC ring (diary-toc.js), sidenote color, blockquote color,
+     and the highlighter wash inside the entry. */
+  --rn-color: var(--mark-pink);
+  --rn-color-soft: color-mix(in srgb, var(--rn-color) 22%, transparent);
 }
+.zi-section:nth-of-type(4n+2) { --rn-color: var(--mark-cyan); }
+.zi-section:nth-of-type(4n+3) { --rn-color: var(--mark-amber); }
+.zi-section:nth-of-type(4n+4) { --rn-color: var(--mark-indigo); }
 .zi-section:last-of-type { border-bottom: 0; }
 .zi-section-head {
   margin-bottom: 32px;
@@ -668,7 +716,7 @@ a { color: inherit; text-decoration: none; }
   font-style: normal;
   line-height: 1.12;
   letter-spacing: 0;
-  color: var(--accent);
+  color: var(--rn-color, var(--accent));
   text-align: center;
   text-wrap: balance;
   max-width: 22ch;
@@ -678,12 +726,14 @@ a { color: inherit; text-decoration: none; }
   .zi-prose-section blockquote p { font-size: 30px; max-width: 20ch; }
 }
 
-/* CSS highlighter-pen marker — bottom-half wash, text stays readable */
+/* CSS highlighter-pen marker — bottom-half wash, text stays readable.
+   Picks up the entry's --rn-color-soft so each entry's highlighter
+   matches its accent. */
 .zi-highlight {
   background: linear-gradient(
     transparent 55%,
-    var(--accent-soft) 55%,
-    var(--accent-soft) 92%,
+    var(--rn-color-soft, var(--accent-soft)) 55%,
+    var(--rn-color-soft, var(--accent-soft)) 92%,
     transparent 92%
   );
   padding: 0 2px;
@@ -754,7 +804,7 @@ a { color: inherit; text-decoration: none; }
   font-style: normal;
   line-height: 1.05;
   letter-spacing: 0;
-  color: var(--accent);
+  color: var(--rn-color, var(--accent));
   text-wrap: balance;
 }
 
@@ -770,7 +820,7 @@ a { color: inherit; text-decoration: none; }
     text-align: start;
     font-size: 20px;
     line-height: 1.05;
-    color: var(--accent);
+    color: var(--rn-color, var(--accent));
   }
 }
 
@@ -835,7 +885,7 @@ figure[data-artifact] figcaption::after { content: " ]"; }
   gap: 8px;
   padding: 8px 12px;
   border: 1px solid var(--hairline-strong);
-  background: rgba(242, 240, 238, 0.88);
+  background: rgba(246, 244, 238, 0.90);
   backdrop-filter: blur(6px);
   font-family: var(--font-mono);
   font-size: 10px;

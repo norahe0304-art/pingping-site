@@ -1,0 +1,50 @@
+# pingping-site — Nora's AI · daily-ish
+Static HTML (no build), Atlas-by-Attio tonality, deployed to Vercel.
+
+<directory>
+index.html       - 01 home (single-viewport dashboard, specimen-card centerpiece)
+diary/           - 02 diary aggregator + per-day entry pages (Obsidian-driven)
+feed/            - 03 newsstand: rack of issues + per-issue paper reader
+artifacts/       - clumsy MS Paint mouse-drawn webp doodles (one per diary day)
+assets/          - shared CSS (zi.css), rough-notation hooks (rn.js),
+                   scroll reveal (reveal.js), diary TOC scroll-spy (diary-toc.js)
+tools/           - publishing scripts
+</directory>
+
+<config>
+vercel.json       - Vercel static-site config
+.github/          - CI hooks
+README.md         - public-facing readme
+</config>
+
+<tonality>
+Atlas-by-Attio editorial paper aesthetic.
+  Bg          #F6F4EE  (warm off-white, NOT cream/beige)
+  Ink         #1c1b1b  (warm-black)
+  Hairline    rgba(28,27,27,0.15)  (Atlas #1c1b1b26)
+  Accent      #F45397  (pink flagship — rough-notation, kickers, hover)
+  Mark stack  amber #FFB525 · cyan #3AC3FF · indigo #5648FB · red #FF253A
+  Fonts       Inter (body) + Inter Tight (display) + DM Mono (chrome) + Caveat (rare hand)
+  Shadows     none, except `inset 0 0 0 1px rgba(0,0,0,0.03)` paper-feel insets
+  Borders     hairline 1px, radius 0/2px (occasionally 999px pills)
+  Signature   tilted-sticker decoration at single-use angles: -22/-18/-15/-12/+12/+15/+18/+22
+  Artifacts   clumsy MS Paint mouse-drawn pathetic doodles (verbatim prompt)
+</tonality>
+
+<conventions>
+Single source of truth for palette + chrome: assets/zi.css (:root tokens).
+Each page links `assets/zi.css?v=N` and bumps N on shared-asset change.
+Per-page inline <style> only for layout unique to that page (dash grid, rack/issue).
+Rough-notation: data-rn="circle|underline|highlight|box" with default --accent (pink).
+Polaroids/stickers/receipts use Atlas single-use angles; no two share the same rotation.
+</conventions>
+
+<runbook>
+Dev:     python3 -m http.server 4747  (cd into root first)
+Preview: open http://localhost:4747/ · /diary/ · /feed/
+Deploy:  push to main → Vercel auto-deploy
+</runbook>
+
+法则: Atlas 调性 · 单一真相源 zi.css · 倾斜角度不复用 · doodle 必须笨拙
+
+[PROTOCOL]: 变更时更新此文件，然后检查各 L2 CLAUDE.md
