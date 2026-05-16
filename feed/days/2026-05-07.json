@@ -1,0 +1,189 @@
+{
+  "date": "2026-05-07",
+  "weekday": "Thursday",
+  "no": 98,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-07T13:31:00.000Z",
+  "promo_headline": "Compute deals, new launches, a quiet alignment paper.",
+  "whats_news": [
+    "<b>Anthropic</b>: a compute deal with SpaceX",
+    "<b>OpenAI</b>: GPT-5.5 Instant rolls out everywhere",
+    "<b>OpenAI</b>: MRC protocol for AI supercomputers",
+    "<b>Anthropic</b>: MSM, a new alignment paradigm paper",
+    "<b>Meta</b>: NeuralBench opens for NeuroAI eval"
+  ],
+  "digest": {
+    "title": "Capacity and instruments arrive together.",
+    "body": "The day reads as an infrastructure day. New compute pacts, a faster default model, a network protocol, and a NeuroAI benchmark all land within hours — the field is investing in capacity and in measurement at the same time, and the marketing window is for builders who can ship against the new defaults this week."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Today's Top Signal",
+      "headline": "Anthropic strikes a compute deal with SpaceX",
+      "deck": "Anthropic signed a multi-year capacity arrangement with SpaceX for Starlink-backed compute. This matters because lab capacity is the binding constraint right now and the new pact reshuffles who can train at what scale.",
+      "why": "",
+      "try": "",
+      "url": "https://www.anthropic.com/news",
+      "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "Anthropic",
+        "handle": "AnthropicAI",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/AnthropicAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "GPT-5.5 Instant turns on for every account",
+      "deck": "OpenAI flipped GPT-5.5 Instant from preview to default across consumer and API. This matters because default-model quality is what most marketing copy and agents quietly inherit, so prompts written this morning are different by tonight.",
+      "why": "",
+      "try": "",
+      "url": "https://openai.com/index",
+      "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI",
+        "handle": "openai",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/openai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "STACK",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI publishes the MRC protocol",
+      "deck": "OpenAI released MRC, a network protocol for AI supercomputer clusters. This matters because shared protocols at the cluster layer make multi-lab training pools possible and pull infra cost down.",
+      "why": "",
+      "try": "",
+      "url": "https://openai.com/research",
+      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI",
+        "handle": "openai",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/openai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Anthropic drops MSM, a new alignment paradigm",
+      "deck": "Anthropic posted MSM (Modular Steering Mechanisms), a research direction that bundles steering into composable modules. This matters because alignment research is moving from monolithic RLHF toward swappable pieces, which makes safety easier to audit and ship.",
+      "why": "",
+      "try": "",
+      "url": "https://www.anthropic.com/research",
+      "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "Anthropic",
+        "handle": "AnthropicAI",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/AnthropicAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "NUMBERS",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Meta opens NeuralBench for NeuroAI evaluation",
+      "deck": "Meta open-sourced NeuralBench, a benchmark suite for brain-inspired models. This matters because shared evals are how a sub-field crystallizes, and Meta is paying the upfront tax so others can come in.",
+      "why": "",
+      "try": "",
+      "url": "https://ai.meta.com/research",
+      "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "Meta AI",
+        "handle": "AIatMeta",
+        "role": "AI research",
+        "avatar_url": "https://unavatar.io/x/AIatMeta"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Try GPT-5.5 Instant on your two real prompts.",
+      "deck": "",
+      "why": "GPT-5.5 just became the default — your saved prompts inherit it tonight whether you like the change or not.",
+      "try": "Set a 20-min timer. Open your two highest-use prompts, run each on Instant vs Heavy, paste the deltas in a note.",
+      "url": "https://openai.com/",
+      "image_url": "",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Map one workflow step that an agent should own.",
+      "deck": "",
+      "why": "The MRC + Instant launch widens what agents can handle this week without you reworking the prompt.",
+      "try": "Set a 30-min timer. Write a 5-line description of one repeating workflow step and what would have to be true for an agent to take it.",
+      "url": "https://www.anthropic.com/",
+      "image_url": "",
+      "read_time_min": 30,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

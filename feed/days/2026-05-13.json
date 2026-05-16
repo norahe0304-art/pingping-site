@@ -1,0 +1,189 @@
+{
+  "date": "2026-05-13",
+  "weekday": "Wednesday",
+  "no": 104,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-13T13:31:00.000Z",
+  "promo_headline": "Agents week peaks — Anthropic, OpenAI, Google all ship something.",
+  "whats_news": [
+    "<b>Anthropic</b>: Claude can now hold a screen for an hour",
+    "<b>OpenAI</b>: gpt-realtime adds long-form voice mode",
+    "<b>Google</b>: Gemini agents land on Workspace",
+    "<b>Sam Altman</b>: a thread on agent UX defaults",
+    "<b>Linear</b>: AI weekly review beta"
+  ],
+  "digest": {
+    "title": "The middle of agent week, and the labs all show up.",
+    "body": "Wednesday is when the labs that have been quiet on Monday and Tuesday all post. Anthropic, OpenAI, and Google each ship an agent feature; Sam Altman defends defaults; Linear adds a review surface. The day reads as proof that agent UX is now the next layer the industry argues about, not the model layer."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Today's Top Signal",
+      "headline": "Claude can hold a screen for an hour",
+      "deck": "Anthropic extended Claude computer-use to one-hour autonomous sessions with periodic check-in approvals. This matters because long-running computer-use is the line between demo and dependable, and Anthropic just crossed it.",
+      "why": "",
+      "try": "",
+      "url": "https://www.anthropic.com/news",
+      "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "Anthropic",
+        "handle": "AnthropicAI",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/AnthropicAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "gpt-realtime adds long-form voice mode",
+      "deck": "OpenAI added a long-form voice mode that holds context across 20+ minute sessions. This matters because long-form voice unlocks a new product layer for journaling, coaching, and tutoring apps.",
+      "why": "",
+      "try": "",
+      "url": "https://openai.com/index",
+      "image_url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI",
+        "handle": "openai",
+        "role": "AI lab",
+        "avatar_url": "https://unavatar.io/x/openai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "STACK",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Gemini agents land on Workspace",
+      "deck": "Google brought Gemini agents natively into Docs, Sheets, and Slides with per-doc memory. This matters because Workspace is where most knowledge work happens, and per-doc memory beats per-prompt context for that loop.",
+      "why": "",
+      "try": "",
+      "url": "https://workspace.google.com/blog",
+      "image_url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "Google AI",
+        "handle": "GoogleAI",
+        "role": "AI research",
+        "avatar_url": "https://unavatar.io/x/GoogleAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "CRAFT",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Sam Altman on agent UX defaults",
+      "deck": "Sam Altman posted a thread defending the new conservative defaults on consumer agent UX. This matters because the defaults shape what feels normal across every other vendor downstream.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/sama",
+      "image_url": "https://images.unsplash.com/photo-1488998427799-e3362cec87c3?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "Sam Altman",
+        "handle": "sama",
+        "role": "CEO @ OpenAI",
+        "avatar_url": "https://unavatar.io/x/sama"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Linear opens AI weekly review beta",
+      "deck": "Linear added an AI-generated weekly review for teams that summarizes shipped work and open risks. This matters because weekly review is the most-skipped useful ritual, and Linear is making it cheap to keep.",
+      "why": "",
+      "try": "",
+      "url": "https://linear.app/changelog",
+      "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80",
+      "read_time_min": 5,
+      "author": {
+        "name": "Linear",
+        "handle": "linear",
+        "role": "workflow tool",
+        "avatar_url": "https://unavatar.io/x/linear"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Run one boring real chore on Claude computer-use.",
+      "deck": "",
+      "why": "Today's session-length extension is the only reason the chore now feels worth attempting.",
+      "try": "Set a 45-min timer. Choose: rename a folder of files, or fill a spreadsheet from a PDF. Run it. Watch.",
+      "url": "https://www.anthropic.com/",
+      "image_url": "",
+      "read_time_min": 45,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 45 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Pick which lab default you want as your team default.",
+      "deck": "",
+      "why": "All three labs just changed defaults the same day. Picking now means you have a stable surface for the rest of the week.",
+      "try": "Set a 25-min timer. Open a doc. Write the three defaults that matter to your team. Choose one provider per row.",
+      "url": "https://x.com/sama",
+      "image_url": "",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

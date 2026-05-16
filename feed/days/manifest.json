@@ -7,7 +7,7 @@
     "promo_headline": "Five signals. Two moves. One pattern.",
     "lead_kicker": "Today's Top Signal",
     "lead_headline": "OpenAI puts Codex on mobile, not just desktop",
-    "lead_deck": "OpenAI is pushing coding agents into the phone workflow so tasks can keep moving off desk.",
+    "lead_deck": "OpenAI is pushing coding agents into the phone workflow so tasks can keep moving off desk. This matters because mobile approval and task handoff reduce the friction that slows long-running agent work.",
     "lead_tag": "SIGNAL",
     "tag_color": "indigo",
     "story_count": 7,
@@ -22,6 +22,231 @@
       "label": "X · trend",
       "kind": "x"
     },
-    "lead_image_url": "https://loremflickr.com/600/420/iphone,coding,laptop?lock=5161"
+    "lead_image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-15",
+    "weekday": "Friday",
+    "no": 106,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Friday set-up — what will matter Monday.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Codex on mobile begins to leak",
+    "lead_deck": "Screenshots and a partial App Store listing show OpenAI testing a Codex companion on iOS. This matters because mobile coding agents are the surface that decides where the rest of the year is fought.",
+    "lead_tag": "SIGNAL",
+    "tag_color": "indigo",
+    "story_count": 7,
+    "read_time_total_min": 100,
+    "lead_author": {
+      "name": "OpenAI",
+      "handle": "openai",
+      "role": "AI lab",
+      "avatar_url": "https://unavatar.io/x/openai"
+    },
+    "lead_source": {
+      "label": "X · post",
+      "kind": "x"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-14",
+    "weekday": "Thursday",
+    "no": 105,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Marketing day. Receipts from Lenny, Chen, and a Shopify case.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Lenny: 6 months of AI in PM workflows",
+    "lead_deck": "Lenny's newsletter published a six-month report on which AI patterns stuck in real PM workflows. This matters because most PM tooling reviews are pre-launch theater, and a six-month retrospective is the rarer signal.",
+    "lead_tag": "PLAYBOOK",
+    "tag_color": "pink",
+    "story_count": 7,
+    "read_time_total_min": 100,
+    "lead_author": {
+      "name": "Lenny's Newsletter",
+      "handle": "lennysan",
+      "role": "PM newsletter",
+      "avatar_url": "https://unavatar.io/x/lennysan"
+    },
+    "lead_source": {
+      "label": "Newsletter · weekly",
+      "kind": "newsletter"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-13",
+    "weekday": "Wednesday",
+    "no": 104,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Agents week peaks — Anthropic, OpenAI, Google all ship something.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Claude can hold a screen for an hour",
+    "lead_deck": "Anthropic extended Claude computer-use to one-hour autonomous sessions with periodic check-in approvals. This matters because long-running computer-use is the line between demo and dependable, and Anthropic just crossed it.",
+    "lead_tag": "SIGNAL",
+    "tag_color": "indigo",
+    "story_count": 7,
+    "read_time_total_min": 95,
+    "lead_author": {
+      "name": "Anthropic",
+      "handle": "AnthropicAI",
+      "role": "AI lab",
+      "avatar_url": "https://unavatar.io/x/AnthropicAI"
+    },
+    "lead_source": {
+      "label": "X · post",
+      "kind": "x"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-12",
+    "weekday": "Tuesday",
+    "no": 103,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Alignment research, two receipts, one Vercel ship.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Anthropic: a follow-up to constitutional AI",
+    "lead_deck": "Anthropic posted a follow-up paper extending constitutional AI with model-written critique chains. This matters because the critique-chain mechanism is what governance teams will point to when arguing about audits.",
+    "lead_tag": "CRAFT",
+    "tag_color": "indigo",
+    "story_count": 7,
+    "read_time_total_min": 100,
+    "lead_author": {
+      "name": "Anthropic",
+      "handle": "AnthropicAI",
+      "role": "AI lab",
+      "avatar_url": "https://unavatar.io/x/AnthropicAI"
+    },
+    "lead_source": {
+      "label": "X · post",
+      "kind": "x"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-11",
+    "weekday": "Monday",
+    "no": 102,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Monday hits the gas — Replit, Notion, and a Shopify push.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Replit Agents v2 launches with a single-pane runner",
+    "lead_deck": "Replit shipped Agents v2 with a unified runner and per-step approval. This matters because Replit is the cleanest reference UI for agent runs and competitors will copy within a month.",
+    "lead_tag": "SIGNAL",
+    "tag_color": "indigo",
+    "story_count": 7,
+    "read_time_total_min": 85,
+    "lead_author": {
+      "name": "Replit",
+      "handle": "Replit",
+      "role": "coding platform",
+      "avatar_url": "https://unavatar.io/x/Replit"
+    },
+    "lead_source": {
+      "label": "X · post",
+      "kind": "x"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-10",
+    "weekday": "Sunday",
+    "no": 101,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Quiet Sunday. Three essays, two model updates.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Every: the workspace agent essay",
+    "lead_deck": "Every published a long piece on what a workspace-level agent does that an in-app one cannot. This matters because the workspace surface is the real product battle of the next two quarters.",
+    "lead_tag": "CRAFT",
+    "tag_color": "cyan",
+    "story_count": 7,
+    "read_time_total_min": 85,
+    "lead_author": {
+      "name": "Every",
+      "handle": "every",
+      "role": "essay collective",
+      "avatar_url": "https://unavatar.io/x/every"
+    },
+    "lead_source": {
+      "label": "Newsletter · essay",
+      "kind": "newsletter"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-09",
+    "weekday": "Saturday",
+    "no": 100,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Growth on Saturday: Chen, Haines, and a Latent Space episode.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Andrew Chen: PLG is now PLG-with-agents",
+    "lead_deck": "Andrew Chen argues PLG funnels are reshaping into agent-onboarding flows where the agent does the first job. This matters because the funnel diagram every B2B team draws on a whiteboard is about to look different.",
+    "lead_tag": "PLAYBOOK",
+    "tag_color": "amber",
+    "story_count": 7,
+    "read_time_total_min": 130,
+    "lead_author": {
+      "name": "Andrew Chen",
+      "handle": "andrewchen",
+      "role": "a16z partner",
+      "avatar_url": "https://unavatar.io/x/andrewchen"
+    },
+    "lead_source": {
+      "label": "Newsletter · growth",
+      "kind": "newsletter"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-08",
+    "weekday": "Friday",
+    "no": 99,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Payments, edge, and a Linear AI mode.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Stripe ships an AI-first payments dashboard",
+    "lead_deck": "Stripe replaced the legacy dashboard search and rules editor with conversational equivalents. This matters because Stripe sets the bar for financial UX and competitors will be pressured to follow within a quarter.",
+    "lead_tag": "SIGNAL",
+    "tag_color": "pink",
+    "story_count": 7,
+    "read_time_total_min": 100,
+    "lead_author": {
+      "name": "Stripe",
+      "handle": "stripe",
+      "role": "payments",
+      "avatar_url": "https://unavatar.io/x/stripe"
+    },
+    "lead_source": {
+      "label": "X · post",
+      "kind": "x"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=420&fit=crop&auto=format&q=80"
+  },
+  {
+    "date": "2026-05-07",
+    "weekday": "Thursday",
+    "no": 98,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Compute deals, new launches, a quiet alignment paper.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "Anthropic strikes a compute deal with SpaceX",
+    "lead_deck": "Anthropic signed a multi-year capacity arrangement with SpaceX for Starlink-backed compute. This matters because lab capacity is the binding constraint right now and the new pact reshuffles who can train at what scale.",
+    "lead_tag": "SIGNAL",
+    "tag_color": "indigo",
+    "story_count": 7,
+    "read_time_total_min": 75,
+    "lead_author": {
+      "name": "Anthropic",
+      "handle": "AnthropicAI",
+      "role": "AI lab",
+      "avatar_url": "https://unavatar.io/x/AnthropicAI"
+    },
+    "lead_source": {
+      "label": "X · post",
+      "kind": "x"
+    },
+    "lead_image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80"
   }
 ]
