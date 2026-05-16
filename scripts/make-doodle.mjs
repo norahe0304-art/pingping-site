@@ -227,16 +227,27 @@ function composeSvg(motifName, seedKey) {
 </svg>`;
 }
 
-function renderToWebp(svg, outPath) {
-  // rsvg-convert + cwebp pipeline. ImageMagick's MSVG fallback drops
-  // complex paths silently; rsvg renders them faithfully.
+function render(svg, outPath) {
+  // .svg → write directly. Browsers render SVG natively, alpha is free,
+  // no native deps anywhere. This is the preferred path (esp. on the
+  // cron host which has no rsvg/cwebp installed).
+  if (outPath.toLowerCase().endsWith('.svg')) {
+    writeFileSync(outPath, svg);
+    return;
+  }
+  // .webp / .png → rsvg-convert + cwebp pipeline. Requires the tools
+  // to be installed locally (brew install librsvg webp).
   const dir = mkdtempSync(path.join(tmpdir(), 'doodle-'));
   const svgPath = path.join(dir, 'in.svg');
   const pngPath = path.join(dir, 'out.png');
   writeFileSync(svgPath, svg);
   try {
     execSync(`rsvg-convert "${svgPath}" -o "${pngPath}"`, { stdio: 'pipe' });
-    execSync(`cwebp -quiet -lossless "${pngPath}" -o "${outPath}"`, { stdio: 'pipe' });
+    if (outPath.toLowerCase().endsWith('.png')) {
+      execSync(`cp "${pngPath}" "${outPath}"`, { stdio: 'pipe' });
+    } else {
+      execSync(`cwebp -quiet -lossless "${pngPath}" -o "${outPath}"`, { stdio: 'pipe' });
+    }
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
@@ -263,7 +274,7 @@ function main() {
   }
   const seedKey = `${args.date}|${args.motif}|${args.seed || ''}`;
   const svg = composeSvg(args.motif, seedKey);
-  renderToWebp(svg, args.out);
+  render(svg, args.out);
   console.log(`✓ ${args.out}  (${args.motif} @ ${args.date})`);
 }
 

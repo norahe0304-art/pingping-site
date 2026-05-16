@@ -1,72 +1,46 @@
-# Feed backfill — deferred (Mac mini offline)
+# Feed backfill — not viable from cron archive
 
-## Status as of 2026-05-16
+## What we tried
 
-- `feed/days/` currently has **1** issue: `2026-05-16.json`
-- Pingping's cron archive on Mac mini has ~47 historical 早报 .md files
-  at `~/.hermes/profiles/personal/cron/output/a536f6d6ea3a/`
-  spanning 2026-05-05 → 2026-05-16
-- Mac mini (`macxiaoxiao@192.168.1.245`) is **unreachable** today
-  (ping times out, SSH times out)
+Mirrored the 47 `.md` files from
+`~/.hermes/profiles/personal/cron/output/a536f6d6ea3a/` on the Mac
+mini to `pingping-site/.cron-archive/` and classified each one:
 
-## When Mac mini is back, do this
+- **30 legacy-screenshots** (2026-04-30 → 2026-05-06):
+  the cron used to run `x-feed-push.py`, which scraped X via
+  OpenCLI browser and pushed screenshots. The .md output is the
+  job report — no JSON content to lift.
+- **2 unknown** (2026-04-30 early): pre-screenshot format, also
+  unusable.
+- **11 brief-text** (2026-05-07 → 2026-05-16 morning):
+  the cron schedule transitioned. The output for these days is
+  just the **delivery receipt** ("早报已发送至 Home channel.").
+  The actual brief content was delivered to Telegram and never
+  written to .md.
+- **1 v2-json** (2026-05-16 11:12): the post-patch cron run that
+  produced the structured 11+2+1 JSON. **This is the only file in
+  the archive that contains the brief content**, and it's already
+  live on the site as `feed/days/2026-05-16.json`.
 
-```bash
-# 1. mirror the archive locally
-mkdir -p ~/cron-archive-pingping
-rsync -avz macxiaoxiao@192.168.1.245:'~/.hermes/profiles/personal/cron/output/a536f6d6ea3a/*.md' \
-  ~/cron-archive-pingping/
+## Conclusion
 
-# 2. translate + restructure each .md into feed JSON
-# (run from pingping-site root; needs ANTHROPIC_API_KEY)
-node scripts/backfill-feed.mjs --archive ~/cron-archive-pingping \
-                               --limit 10 \
-                               --out feed/days/
+There is no usable backfill source on the Mac mini. The pre-v2 cron
+delivered briefs straight to Telegram and only logged delivery
+confirmations, not content.
 
-# 3. rebuild manifest.json from all feed/days/*.json
-node scripts/rebuild-feed-manifest.mjs
+## Real paths forward (none done)
 
-# 4. push
-git add feed/days artifacts && git commit -m "feed: backfill 10 historical issues" && git push
-```
+1. **Telegram export** — Nora's Telegram chat with the bot has the
+   actual brief text for each day. Export the chat (Telegram Desktop
+   → Export Chat History → JSON), then parse + translate + write
+   `feed/days/YYYY-MM-DD.json`. This is the only way to recover
+   content for 2026-05-07 → 2026-05-15.
+2. **Synthesize** — manually write 10 plausible brief issues from
+   memory or other sources. Loses authenticity; skip.
+3. **Accept the gap** — feed/days starts at 2026-05-16 and grows
+   forward as the cron runs daily. The patched cron from this
+   session produces v2-shaped JSON; tomorrow there should be a
+   2026-05-17.json.
 
-## What still needs writing
-
-- `scripts/backfill-feed.mjs` — reads .md, calls Claude to translate
-  + restructure to the `feed/days/YYYY-MM-DD.json` schema, picks 10
-  most-recent unique-day issues
-- `scripts/rebuild-feed-manifest.mjs` — scans feed/days/, generates
-  the manifest.json preview list
-
-Both deferred until source archive is reachable. No point writing
-translation logic against schema we cannot verify against real source
-files.
-
-## Schema target (matches 2026-05-16.json)
-
-```jsonc
-{
-  "date": "YYYY-MM-DD",
-  "weekday": "Saturday",
-  "no": 107,
-  "edition": "Nora's Early Brief",
-  "generated_at": "...Z",
-  "promo_headline": "...",
-  "whats_news": ["<b>X</b>: ...", ...],     // 5 bolded leads
-  "digest": { "title": "...", "body": "..." },
-  "items": [
-    // 5 SIGNAL items + 2 MUST-DO tasks = 7 total
-    {
-      "id": "c001", "rank": 1,
-      "tag": "SIGNAL", "tag_color": "indigo|pink|cyan|amber",
-      "kicker": "Today's Top Signal",
-      "headline": "...", "deck": "...", "why": "...", "try": "",
-      "url": "https://...", "image_url": "",
-      "read_time_min": 5,
-      "author": { "name", "handle", "role", "avatar_url" },
-      "source": { "label": "X · trend", "kind": "x|newsletter|task" }
-    },
-    // ... last 2 items have kind: "task", kicker: "Today's Must-Do"
-  ]
-}
-```
+The .cron-archive/ folder is gitignored — kept locally for reference
+but not committed.

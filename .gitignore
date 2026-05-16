@@ -14,3 +14,4 @@ __pycache__/
 # scratch / debugging — never deploys, never tracked
 _scratch/
 *.bak
+.cron-archive/

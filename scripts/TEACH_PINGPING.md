@@ -1,82 +1,71 @@
-# Teach pingping — the doodle pipeline (apply when Mac mini is reachable)
+# Teach pingping — diary cron now uses local SVG doodle pipeline
 
-The Pollinations/Flux image generator produces parchment-textured, colored,
-shaded sketches. That is **wrong** for diary artifacts. The correct
-aesthetic — single-stroke wobbly black ink on pure white, MS Paint
-mouse-drawn pathetic, mostly white space, 2-5KB per file — cannot be
-produced by any text-to-image model.
+## What this records
 
-Going forward, diary artifacts come from `scripts/make-doodle.mjs`,
-which renders a deterministic SVG via `rsvg-convert` + `cwebp`.
+Pingping's diary cron (`a130f54960a2`) used to call Pollinations.ai
+for daily artifact doodles. Pollinations produces parchment-textured,
+colored, shaded sketches — wrong for the MS-Paint-mouse-drawn-pathetic
+aesthetic. As of **2026-05-16**, the cron prompt was patched to use
+`scripts/make-doodle.mjs` instead, which writes a `.svg` file directly
+(no rsvg/cwebp/native deps — Mac mini doesn't have those).
 
-## Prereqs on the Mac mini
+## Verifying the patch is still applied
 
 ```bash
-brew install librsvg webp imagemagick   # cwebp ships with libwebp
-cd ~/code/pingping-site && git pull origin main
+ssh pingping-mini 'python3 -c "
+import json
+p = json.load(open(\"/Users/macxiaoxiao/.hermes/profiles/personal/cron/jobs.json\"))
+for j in p[\"jobs\"]:
+    if j[\"id\"] == \"a130f54960a2\":
+        prompt = j[\"prompt\"]
+        assert \"make-doodle.mjs\" in prompt, \"FAIL: not patched\"
+        assert \"pollinations.ai\" not in prompt.lower(), \"FAIL: pollinations still referenced as live URL\"
+        assert \".svg\\\"\" in prompt, \"FAIL: still on .webp\"
+        print(\"OK\")
+"'
 ```
 
-## The one prompt change in her diary cron
+## What the cron now does
 
-Find the diary cron job (`a130f54960a2`) prompt. There should be a step
-that calls Pollinations to produce the daily artifact. **Remove that step
-and replace it with the snippet below.**
+After Claude writes the diary, the prompt instructs:
 
-### Before (delete this kind of line)
+1. **Pick a motif** from 6 named options based on the diary's
+   concrete image:
+   - `thumbprint` — pressed mark / trace
+   - `house` — wobbly house + chimney + sun
+   - `rain` — rain over a terminal desk
+   - `door` — a closed door / threshold
+   - `circle` — wobbly circle (fallback)
+   - `leaf` — single leaf with vein
+2. **Run the generator** (writes `.svg`, ~1KB):
+   ```bash
+   node /tmp/pingping-site/scripts/make-doodle.mjs \
+     --date "$DATE" --motif "$MOTIF" \
+     --out "/tmp/pingping-site/artifacts/$DATE.svg"
+   ```
+3. **Set diary frontmatter** `cover: ../artifacts/$DATE.svg`
+4. **Build + push** as usual (`build-diary.mjs` already accepts the
+   cover field from frontmatter)
 
-```
-# generate the doodle cover via Pollinations
-curl -sSL "https://image.pollinations.ai/prompt/..." -o artifacts/$DATE.webp
-```
+## Re-applying the patch (if the cron prompt ever gets reset)
 
-### After
-
-```
-# generate the doodle cover via the local SVG pipeline.
-# pick ONE motif from: thumbprint, house, rain, door, circle, leaf.
-# choose based on the diary's main concrete image (a door, a leaf, etc).
-# if nothing fits, use 'circle' as the default.
-node scripts/make-doodle.mjs \
-  --date "$DATE" \
-  --motif "$MOTIF" \
-  --out "artifacts/$DATE.webp"
-```
-
-The cron prompt itself should also tell Claude (when drafting the diary)
-to **choose the motif** as part of its output, e.g.:
-
-```
-Output JSON:
-{
-  "title": "...",
-  "body": "...",
-  "motif": "house"   // pick ONE: thumbprint, house, rain, door, circle, leaf
-}
-```
-
-Then the cron shell wraps the value into `$MOTIF` and invokes the
-script.
-
-## Why this is a hard rule
-
-- File size: the originals are 2-5KB. Any AI-image output is 30-80KB.
-  If you see a >20KB artifact in `artifacts/`, the pipeline regressed.
-- Color: only `#1a1a1a` ink on `#ffffff`. No accent color in artifacts.
-- Texture: zero. No paper grain, no parchment edges, no shading.
+The patcher script lives in `/tmp/patch-diary-cron-doodle.py` /
+`/tmp/patch-diary-cron-doodle-v2.py` on this Mac mini. To redo from
+scratch, port them via `scp` and run with python3.
 
 ## Adding new motifs
 
-Open `scripts/make-doodle.mjs`, find the `MOTIFS` object, add a new
-key. Each motif function receives a seeded `rand()` and returns SVG
-inner markup. Use `wobblyLine(rand, x1, y1, x2, y2, segs, amp)` for
-trembling strokes. Commit + push so pingping picks it up on next pull.
+Edit `scripts/make-doodle.mjs`, find the `MOTIFS` object, add a new
+key. Each motif fn receives a seeded `rand()` and returns SVG inner
+markup. Use `wobblyLine(rand, x1, y1, x2, y2, segs, amp)` and
+`wobblyShape(rand, cx, cy, points, amp)` for trembling strokes. Push;
+pingping's `git pull --rebase` will pick it up on the next cron run.
 
-## What I already did locally (2026-05-16)
+## Aesthetic guardrails (do not negotiate)
 
-- Regenerated `artifacts/2026-05-14.webp` (motif=thumbprint, 4.7KB)
-- Regenerated `artifacts/2026-05-15.webp` (motif=house, 4.5KB)
-- Regenerated `artifacts/2026-05-16.webp` (motif=rain, 2.9KB)
-
-The Pollinations-generated versions of these (parchment + color) have
-been overwritten. Once the cron prompt is patched, **future days will
-generate cleanly without intervention**.
+- Stroke color: `#1a1a1a` only.
+- Background: transparent (no `<rect>` fill); the page paper `#F6F4EE`
+  shows through.
+- File size: 1-3 KB. >10KB means something regressed.
+- Output extension: `.svg`. Not `.webp`, not `.png`, not via any image
+  model.

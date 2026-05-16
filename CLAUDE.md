@@ -39,6 +39,15 @@ Atlas-by-Attio editorial paper aesthetic.
               single-stroke wobbly, mostly white space. Generated ONLY by
               scripts/make-doodle.mjs (rsvg-convert + cwebp). NEVER Pollinations
               or Flux — text-to-image cannot honor this constraint.
+  Pet         chonk pixel sprite (assets/pet-chonk.webp, 80px on page,
+              image-rendering: pixelated). Lives at Today panel bottom under
+              streak grid. Idle = breathe tilt; body.is-awake (iPod playing)
+              = dance keyframes; click / Enter / Space = 600ms bounce burst
+              with saturate filter. All inline in index.html — keyframes
+              petIdle / petDance / petBounce. Sprite extracted from original
+              pingping/home design mockup (orange chunky monster with yellow
+              tuft, two black square eyes, gray feet pad), background
+              floodfilled to transparent so cream panel shows through.
 </tonality>
 
 <conventions>
