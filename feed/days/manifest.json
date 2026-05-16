@@ -1,0 +1,27 @@
+[
+  {
+    "date": "2026-05-16",
+    "weekday": "Saturday",
+    "no": 107,
+    "edition": "Nora's Early Brief",
+    "promo_headline": "Five signals. Two moves. One pattern.",
+    "lead_kicker": "Today's Top Signal",
+    "lead_headline": "OpenAI puts Codex on mobile, not just desktop",
+    "lead_deck": "OpenAI is pushing coding agents into the phone workflow so tasks can keep moving off desk.",
+    "lead_tag": "SIGNAL",
+    "tag_color": "indigo",
+    "story_count": 7,
+    "read_time_total_min": 115,
+    "lead_author": {
+      "name": "OpenAI",
+      "handle": "openai",
+      "role": "AI lab",
+      "avatar_url": "https://unavatar.io/x/openai"
+    },
+    "lead_source": {
+      "label": "X · trend",
+      "kind": "x"
+    },
+    "lead_image_url": ""
+  }
+]
