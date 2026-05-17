@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://stripe.com/blog",
-      "image_url": "./og/b674bd4b5f.png",
+      "image_url": "./art/met-436043.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Stripe",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Friedrich III (1463–1525), the Wise, Elector of Saxony — Lucas Cranach the Elder and Workshop (1533)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://blog.cloudflare.com/",
-      "image_url": "./og/c4a9a0806d.png",
+      "image_url": "./art/met-436105.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Cloudflare",
@@ -63,7 +64,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://linear.app/changelog",
-      "image_url": "./og/d7ca9d1a06.png",
+      "image_url": "./art/met-451725.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Linear",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "./og/6ec26a93c5.jpg",
+      "image_url": "./art/met-438816.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Lenny's Newsletter",
@@ -111,7 +114,8 @@
       "source": {
         "label": "Newsletter · weekly",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Forest in Winter at Sunset — Théodore Rousseau (ca. 1846–67)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/enterprise",
-      "image_url": "./og/152202e52b.jpg",
+      "image_url": "./art/met-435651.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -135,7 +139,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Lamentation — Ambrosius Benson (ca. 1520–25)"
     },
     {
       "id": "c006",
@@ -148,7 +153,7 @@
       "why": "The vocabulary is moving today; sketching now puts you ahead of the next sprint plan.",
       "try": "Set a 45-min timer. Pick the pattern that fits your product. Draw it on one page.",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "./og/6ec26a93c5.jpg",
+      "image_url": "./art/met-453385.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -159,7 +164,8 @@
       "source": {
         "label": "Must-do · 45 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Anthology of Persian Poetry in Oblong Format (Safina) — Sultan Muhammad Nur (dated 905 AH/1499–1500 CE)"
     },
     {
       "id": "c007",
@@ -172,7 +178,7 @@
       "why": "Linear AI opens to teams today; switching costs are lowest on launch day before everyone has notes.",
       "try": "Set a 30-min timer. Pick the noisiest weekly triage and run it through Linear AI once.",
       "url": "https://linear.app/",
-      "image_url": "./og/466752d96d.jpg",
+      "image_url": "./art/met-436105.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -183,7 +189,8 @@
       "source": {
         "label": "Must-do · 30 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
     }
   ]
 }

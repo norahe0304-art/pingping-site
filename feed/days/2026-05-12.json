@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/research",
-      "image_url": "./og/2f17e06985.jpg",
+      "image_url": "./art/met-436803.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Adoration of the Magi — Joos van Wassenhove (1472–74)"
     },
     {
       "id": "c002",
@@ -62,7 +63,9 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_url": "./art/met-40080.jpg",
+      "image_alt": "Fragrant Snow at Broken Bridge — Wang Mian (14th century)"
     },
     {
       "id": "c003",
@@ -75,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://vercel.com/blog",
-      "image_url": "./og/14f24e474b.png",
+      "image_url": "./art/met-439327.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Vercel",
@@ -86,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Christ Blessing — Gerard David (ca. 1500–1505)"
     },
     {
       "id": "c004",
@@ -99,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "./og/934dc2c5d1.jpg",
+      "image_url": "./art/met-436105.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Corey Haines",
@@ -110,7 +114,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
     },
     {
       "id": "c005",
@@ -123,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://www.latent.space/",
-      "image_url": "./og/35e521c410.jpg",
+      "image_url": "./art/met-435702.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -134,7 +139,8 @@
       "source": {
         "label": "Newsletter · essay",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Horse Fair — Rosa Bonheur (1852–55)"
     },
     {
       "id": "c006",
@@ -147,7 +153,7 @@
       "why": "Day-one migrations are cheap; week-three migrations get tangled in unrelated refactors.",
       "try": "Set a 30-min timer. Pick the smallest agent you have. Bump the SDK. Note the diff.",
       "url": "https://vercel.com/blog",
-      "image_url": "./og/14f24e474b.png",
+      "image_url": "./art/met-193475.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -158,7 +164,8 @@
       "source": {
         "label": "Must-do · 30 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Rosary bead — Unknown (ca. 1525–50)"
     },
     {
       "id": "c007",
@@ -171,7 +178,7 @@
       "why": "The frame is fresh enough that the exercise still feels like a checklist, not theater.",
       "try": "Set a 45-min timer. Open your homepage. Run the same line-by-line teardown. Mark three lines to rewrite.",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "./og/934dc2c5d1.jpg",
+      "image_url": "./art/met-438817.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -182,7 +189,8 @@
       "source": {
         "label": "Must-do · 45 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "The Dance Class — Edgar Degas (1874)"
     }
   ]
 }

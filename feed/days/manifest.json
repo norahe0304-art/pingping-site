@@ -22,7 +22,7 @@
       "label": "X · trend",
       "kind": "x"
     },
-    "lead_image_url": ""
+    "lead_image_url": "./art/met-436986.jpg"
   },
   {
     "date": "2026-05-15",
@@ -47,7 +47,7 @@
       "label": "X · post",
       "kind": "x"
     },
-    "lead_image_url": "./og/2e46242587.jpg"
+    "lead_image_url": "./art/met-435852.jpg"
   },
   {
     "date": "2026-05-14",
@@ -72,7 +72,7 @@
       "label": "Newsletter · weekly",
       "kind": "newsletter"
     },
-    "lead_image_url": "./og/6ec26a93c5.jpg"
+    "lead_image_url": "./art/met-39895.jpg"
   },
   {
     "date": "2026-05-13",
@@ -97,7 +97,7 @@
       "label": "X · post",
       "kind": "x"
     },
-    "lead_image_url": "./og/2f17e06985.jpg"
+    "lead_image_url": "./art/met-53179.jpg"
   },
   {
     "date": "2026-05-12",
@@ -122,7 +122,7 @@
       "label": "X · post",
       "kind": "x"
     },
-    "lead_image_url": "./og/2f17e06985.jpg"
+    "lead_image_url": "./art/met-436803.jpg"
   },
   {
     "date": "2026-05-11",
@@ -147,7 +147,7 @@
       "label": "X · post",
       "kind": "x"
     },
-    "lead_image_url": ""
+    "lead_image_url": "./art/met-436529.jpg"
   },
   {
     "date": "2026-05-10",
@@ -172,7 +172,7 @@
       "label": "Newsletter · essay",
       "kind": "newsletter"
     },
-    "lead_image_url": "./og/10efc2ea18.png"
+    "lead_image_url": "./art/met-451725.jpg"
   },
   {
     "date": "2026-05-09",
@@ -197,7 +197,7 @@
       "label": "Newsletter · growth",
       "kind": "newsletter"
     },
-    "lead_image_url": ""
+    "lead_image_url": "./art/met-40454.jpg"
   },
   {
     "date": "2026-05-08",
@@ -222,7 +222,7 @@
       "label": "X · post",
       "kind": "x"
     },
-    "lead_image_url": "./og/b674bd4b5f.png"
+    "lead_image_url": "./art/met-436043.jpg"
   },
   {
     "date": "2026-05-07",
@@ -247,6 +247,6 @@
       "label": "X · post",
       "kind": "x"
     },
-    "lead_image_url": "./og/2f17e06985.jpg"
+    "lead_image_url": "./art/met-436043.jpg"
   }
 ]

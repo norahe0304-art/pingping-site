@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/openai",
-      "image_url": "./og/2e46242587.jpg",
+      "image_url": "./art/met-435852.jpg",
       "read_time_min": 5,
       "author": {
         "name": "OpenAI",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Two Children Teasing a Cat — Annibale Carracci (undated)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/pricing",
-      "image_url": "./og/92eafa596f.jpg",
+      "image_url": "./art/met-437261.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -63,7 +64,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://cloud.google.com/blog",
-      "image_url": "./og/b9feddf939.jpg",
+      "image_url": "./art/met-449596.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Google AI",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Panel from a Mosque Frieze Bearing the Name of a Sultan — Unknown (11th century)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://stratechery.com/",
-      "image_url": "./og/860ecec7f1.jpg",
+      "image_url": "./art/met-438821.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Ben Thompson",
@@ -111,7 +114,8 @@
       "source": {
         "label": "Newsletter · daily",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "./og/934dc2c5d1.jpg",
+      "image_url": "./art/met-435621.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Corey Haines",
@@ -135,7 +139,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
     },
     {
       "id": "c006",
@@ -148,7 +153,7 @@
       "why": "Pricing change is announced for next Wednesday; doing the math today gives you the weekend to act.",
       "try": "Set a 30-min timer. Pull last two invoices. Compare against announced tiers. Tag any line >10% off.",
       "url": "https://www.anthropic.com/pricing",
-      "image_url": "./og/92eafa596f.jpg",
+      "image_url": "./art/met-435844.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -159,7 +164,8 @@
       "source": {
         "label": "Must-do · 30 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "The Musicians — Caravaggio (Michelangelo Merisi) (1597)"
     },
     {
       "id": "c007",
@@ -172,7 +178,7 @@
       "why": "Stratechery just argued distribution beats default model quality; the time to sketch a move is the day the framing lands.",
       "try": "Set a 45-min timer. On one page, write a distribution-first move you could ship in 5 working days. Be specific.",
       "url": "https://stratechery.com/",
-      "image_url": "./og/860ecec7f1.jpg",
+      "image_url": "./art/met-436576.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -183,7 +189,8 @@
       "source": {
         "label": "Must-do · 45 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "The Vision of Saint John — El Greco (Domenikos Theotokopoulos) (ca. 1608–14)"
     }
   ]
 }

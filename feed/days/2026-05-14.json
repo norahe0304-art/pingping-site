@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "./og/6ec26a93c5.jpg",
+      "image_url": "./art/met-39895.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Lenny's Newsletter",
@@ -39,7 +39,8 @@
       "source": {
         "label": "Newsletter · weekly",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Classic of Filial Piety — Li Gonglin (ca. 1085)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://andrewchen.com/",
-      "image_url": "",
+      "image_url": "./art/met-435848.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Andrew Chen",
@@ -63,7 +64,8 @@
       "source": {
         "label": "Newsletter · growth",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Birth of the Virgin — Fra Carnevale (Bartolomeo di Giovanni Corradini) (1467)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://shopify.com/blog",
-      "image_url": "./og/a8dcba5e3e.webp",
+      "image_url": "./art/met-435702.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Shopify",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Horse Fair — Rosa Bonheur (1852–55)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://blog.cloudflare.com/",
-      "image_url": "./og/c4a9a0806d.png",
+      "image_url": "./art/met-437878.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Cloudflare",
@@ -111,7 +114,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://every.to/",
-      "image_url": "./og/10efc2ea18.png",
+      "image_url": "./art/met-436803.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -135,7 +139,8 @@
       "source": {
         "label": "Newsletter · essay",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Adoration of the Magi — Joos van Wassenhove (1472–74)"
     },
     {
       "id": "c006",
@@ -148,7 +153,7 @@
       "why": "You read the post today; you have not yet adjusted. The adjustment takes 30 minutes if done now.",
       "try": "Set a 30-min timer. Open your North Star + 5 secondary metrics. Mark which of Chen's critiques applies to each.",
       "url": "https://andrewchen.com/",
-      "image_url": "",
+      "image_url": "./art/met-816189.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -159,7 +164,8 @@
       "source": {
         "label": "Must-do · 30 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "”Abiding nowhere, the awakened mind arises” — Musō Soseki (early to mid-14th century)"
     },
     {
       "id": "c007",
@@ -172,7 +178,7 @@
       "why": "The six-month signal compresses six months of trial and error into one read; the savings are highest the day it ships.",
       "try": "Set a 45-min timer. Read fully. Star one pattern. Add it to next sprint's top of backlog.",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "./og/6ec26a93c5.jpg",
+      "image_url": "./art/met-437261.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -183,7 +189,8 @@
       "source": {
         "label": "Must-do · 45 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
     }
   ]
 }

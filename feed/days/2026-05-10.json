@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://every.to/",
-      "image_url": "./og/10efc2ea18.png",
+      "image_url": "./art/met-451725.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -39,7 +39,8 @@
       "source": {
         "label": "Newsletter · essay",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://www.platformer.news/",
-      "image_url": "./og/69430e9add.jpg",
+      "image_url": "./art/met-816189.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Casey Newton",
@@ -63,7 +64,8 @@
       "source": {
         "label": "Newsletter · daily",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "”Abiding nowhere, the awakened mind arises” — Musō Soseki (early to mid-14th century)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://blog.google/",
-      "image_url": "./og/24cf8442e5.png",
+      "image_url": "./art/met-39901.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Google AI",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Night-Shining White — Han Gan (ca. 750)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/ylecun",
-      "image_url": "./og/35a6d40f7f.jpg",
+      "image_url": "./art/met-438821.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Yann LeCun",
@@ -111,7 +114,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://www.aitidbits.ai/",
-      "image_url": "./og/893d144186.jpg",
+      "image_url": "./art/met-451725.jpg",
       "read_time_min": 5,
       "author": {
         "name": "AI Tidbits",
@@ -135,7 +139,8 @@
       "source": {
         "label": "Newsletter · daily",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
     },
     {
       "id": "c006",
@@ -148,7 +153,7 @@
       "why": "Sunday is the only day you have an uninterrupted hour. Skimming wastes the essay.",
       "try": "Set a 45-min timer. Sit with coffee, read once through, then re-read the section that argues with you.",
       "url": "https://every.to/",
-      "image_url": "./og/10efc2ea18.png",
+      "image_url": "./art/met-451267.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -159,7 +164,8 @@
       "source": {
         "label": "Must-do · 45 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "\"Shah Jahan on Horseback\", Folio from the Shah Jahan Album — Payag (verso: ca. 1630; recto: ca. 1530–50)"
     },
     {
       "id": "c007",
@@ -172,7 +178,7 @@
       "why": "Two essays in one morning is rare; capture the shift before the week erases it.",
       "try": "Set a 15-min timer. Write one sentence: \"Last week I thought X. Now I think Y.\"",
       "url": "https://www.platformer.news/",
-      "image_url": "./og/69430e9add.jpg",
+      "image_url": "./art/met-73359.jpg",
       "read_time_min": 15,
       "author": {
         "name": "",
@@ -183,7 +189,8 @@
       "source": {
         "label": "Must-do · 15 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Ten Rakan Examining a Painting of White-Robed Kannon — Katō Nobukiyo (1788–92)"
     }
   ]
 }

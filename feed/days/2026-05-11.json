@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://replit.com/changelog",
-      "image_url": "",
+      "image_url": "./art/met-436529.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Replit",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://www.notion.so/blog",
-      "image_url": "./og/8726e7a885.png",
+      "image_url": "./art/met-53660.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Notion",
@@ -63,7 +64,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Ten Verses on Oxherding — Unknown (1278)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://shopify.com/blog",
-      "image_url": "./og/a8dcba5e3e.webp",
+      "image_url": "./art/met-437873.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Shopify",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Philip IV (1605–1665), King of Spain — Velázquez (Diego Rodríguez de Silva y Velázquez) (probably 1624)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://stripe.com/atlas",
-      "image_url": "./og/90b837608a.jpg",
+      "image_url": "./art/met-435702.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Stripe",
@@ -111,7 +114,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Horse Fair — Rosa Bonheur (1852–55)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://openai.com/pricing",
-      "image_url": "",
+      "image_url": "./art/met-49549.jpg",
       "read_time_min": 5,
       "author": {
         "name": "OpenAI",
@@ -135,7 +139,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Anchorage on a rainy night — Shen Zhou (dated 1477)"
     },
     {
       "id": "c006",
@@ -158,7 +163,9 @@
       "source": {
         "label": "Must-do · 30 min",
         "kind": "task"
-      }
+      },
+      "image_url": "./art/met-436529.jpg",
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
     },
     {
       "id": "c007",
@@ -171,7 +178,7 @@
       "why": "Agents-v2 launch day is the moment to lock in your mental model before everyone has hot takes.",
       "try": "Set a 30-min timer. Pick a chore (rename files, add type hints, scaffold a test). Run it. Note where you intervened.",
       "url": "https://replit.com/",
-      "image_url": "./og/02f491d96d.jpg",
+      "image_url": "./art/met-651837.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -182,7 +189,8 @@
       "source": {
         "label": "Must-do · 30 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Bashi-Bazouk — Jean-Léon Gérôme (ca. 1868–69)"
     }
   ]
 }

@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/news",
-      "image_url": "./og/2f17e06985.jpg",
+      "image_url": "./art/met-53179.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Shaka (Shakyamuni), the Historical Buddha, with Two Attendant Bodhisattvas and Sixteen Arhats — Unknown (14th century)"
     },
     {
       "id": "c002",
@@ -62,7 +63,9 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_url": "./art/met-437173.jpg",
+      "image_alt": "Don Andrés de Andrade y la Cal — Bartolomé Estebán Murillo (ca. 1665–72)"
     },
     {
       "id": "c003",
@@ -75,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://workspace.google.com/blog",
-      "image_url": "./og/75c94ffd38.jpg",
+      "image_url": "./art/met-451273.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Google AI",
@@ -86,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "\"Portrait of Muhammad Ali Baig\", Folio from the Shah Jahan Album — Unknown (recto and verso: early 19th century)"
     },
     {
       "id": "c004",
@@ -99,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/sama",
-      "image_url": "./og/6d5ccc9f92.jpg",
+      "image_url": "./art/met-437878.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Sam Altman",
@@ -110,7 +114,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
     },
     {
       "id": "c005",
@@ -123,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://linear.app/changelog",
-      "image_url": "./og/d7ca9d1a06.png",
+      "image_url": "./art/met-437490.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Linear",
@@ -134,7 +139,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Annunciation — Hans Memling (ca. 1465–70)"
     },
     {
       "id": "c006",
@@ -147,7 +153,7 @@
       "why": "Today's session-length extension is the only reason the chore now feels worth attempting.",
       "try": "Set a 45-min timer. Choose: rename a folder of files, or fill a spreadsheet from a PDF. Run it. Watch.",
       "url": "https://www.anthropic.com/",
-      "image_url": "./og/713014219e.jpg",
+      "image_url": "./art/met-437969.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -158,7 +164,8 @@
       "source": {
         "label": "Must-do · 45 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Battle between Christians and Muslims at El Sotillo — Francisco de Zurbarán (ca. 1637–39)"
     },
     {
       "id": "c007",
@@ -171,7 +178,7 @@
       "why": "All three labs just changed defaults the same day. Picking now means you have a stable surface for the rest of the week.",
       "try": "Set a 25-min timer. Open a doc. Write the three defaults that matter to your team. Choose one provider per row.",
       "url": "https://x.com/sama",
-      "image_url": "./og/6d5ccc9f92.jpg",
+      "image_url": "./art/met-451725.jpg",
       "read_time_min": 25,
       "author": {
         "name": "",
@@ -182,7 +189,8 @@
       "source": {
         "label": "Must-do · 25 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
     }
   ]
 }
