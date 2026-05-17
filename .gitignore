@@ -15,3 +15,9 @@ __pycache__/
 _scratch/
 *.bak
 .cron-archive/
+
+# env — secrets stay out of git, real values live in Vercel env vars
+.env
+.env.local
+.env.*.local
+.vercel

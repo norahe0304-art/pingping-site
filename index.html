@@ -163,7 +163,8 @@
       color: var(--accent); font-size: 10px;
     }
     .ask-chips { display: flex; gap: 6px; flex-wrap: wrap; }
-    .ask-chips a {
+    .ask-chips a,
+    .ask-chips button {
       flex: 1 1 0;
       text-align: center;
       padding: 8px 10px;
@@ -175,13 +176,58 @@
       color: var(--fg);
       border-radius: 2px;
       transition: all 0.18s ease;
+      cursor: pointer;
     }
-    .ask-chips a:hover { border-color: var(--accent); color: var(--accent); }
-    .ask-chips a.primary {
+    .ask-chips a:hover,
+    .ask-chips button:hover { border-color: var(--accent); color: var(--accent); }
+    .ask-chips a.primary,
+    .ask-chips button.primary {
       background: var(--fg); color: var(--bg); border-color: var(--fg);
     }
-    .ask-chips a.primary:hover {
+    .ask-chips a.primary:hover,
+    .ask-chips button.primary:hover {
       background: var(--accent); border-color: var(--accent); color: #fff;
+    }
+    .ask-chips button.primary:disabled {
+      opacity: 0.45; cursor: not-allowed;
+      background: var(--fg); border-color: var(--fg); color: var(--bg);
+    }
+
+    /* ---------- ASK ANSWER PANEL ----------
+       Lives below the chips; appears after first submission. */
+    .ask-answer[hidden] { display: none; }
+    .ask-answer {
+      margin-top: 4px;
+      padding: 10px 12px;
+      border: 1px solid var(--hairline);
+      border-radius: 2px;
+      background: rgba(28, 27, 27, 0.02);
+      font-family: var(--font-body);
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--fg);
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+    .ask-answer.is-loading {
+      color: var(--muted);
+      font-style: italic;
+    }
+    .ask-answer.is-error {
+      color: var(--mark-red, #FF253A);
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+    .ask-answer-meta {
+      display: block;
+      margin-top: 6px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
     /* ============================================================
@@ -1123,16 +1169,24 @@
           <h2 class="pn-title">Ask pingping</h2>
           <span class="pn-num">03</span>
         </header>
-        <form class="ask" action="#" onsubmit="event.preventDefault();">
+        <form class="ask" id="askForm" autocomplete="off">
           <div class="ask-input-wrap">
-            <input type="text" placeholder="ask anything — e.g. 'this week in 3 lines'" autocomplete="off">
+            <input
+              type="text"
+              id="askInput"
+              name="question"
+              placeholder="ask anything — e.g. 'this week in 3 lines'"
+              autocomplete="off"
+              maxlength="800"
+            >
           </div>
           <div class="ask-chips">
             <a href="./diary/index.html">Diary</a>
             <a href="./feed/index.html">Feed</a>
             <a href="https://github.com/norahe0304-art" target="_blank" rel="noopener">GitHub</a>
-            <a class="primary" href="#">Ask ↗</a>
+            <button type="submit" class="primary" id="askBtn">Ask ↗</button>
           </div>
+          <div class="ask-answer" id="askAnswer" hidden role="status" aria-live="polite"></div>
         </form>
       </section>
 
@@ -1404,6 +1458,61 @@
       // observe body class to follow is-awake from the iPod player
       const mo = new MutationObserver(render);
       mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    })();
+
+    /* Ask pingping — submit user question to /api/ask (MiniMax proxy)
+       and render the answer in the panel below. Disables input while
+       in-flight; on error, shows a terse mono message in red. */
+    (function askPingping() {
+      const form   = document.getElementById('askForm');
+      const input  = document.getElementById('askInput');
+      const btn    = document.getElementById('askBtn');
+      const answer = document.getElementById('askAnswer');
+      if (!form || !input || !btn || !answer) return;
+
+      const setState = (state, payload) => {
+        answer.hidden = false;
+        answer.classList.toggle('is-loading', state === 'loading');
+        answer.classList.toggle('is-error',   state === 'error');
+        if (state === 'loading') answer.textContent = 'thinking…';
+        else if (state === 'error') answer.textContent = payload || 'something broke. try again in a sec.';
+        else if (state === 'answer') {
+          answer.textContent = '';
+          const body = document.createElement('span');
+          body.textContent = payload;
+          const meta = document.createElement('span');
+          meta.className = 'ask-answer-meta';
+          meta.textContent = 'pingping · via minimax';
+          answer.appendChild(body);
+          answer.appendChild(meta);
+        }
+      };
+
+      const ask = async () => {
+        const q = input.value.trim();
+        if (!q) return;
+        btn.disabled = true;
+        setState('loading');
+        try {
+          const r = await fetch('/api/ask', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question: q }),
+          });
+          const data = await r.json().catch(() => ({}));
+          if (!r.ok) {
+            setState('error', `[${r.status}] ${data?.error || 'unknown error'}`);
+          } else {
+            setState('answer', data.answer);
+          }
+        } catch (e) {
+          setState('error', `[network] ${String(e).slice(0, 120)}`);
+        } finally {
+          btn.disabled = false;
+        }
+      };
+
+      form.addEventListener('submit', (e) => { e.preventDefault(); ask(); });
     })();
   </script>
 
