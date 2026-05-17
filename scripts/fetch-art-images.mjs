@@ -181,7 +181,17 @@ async function candidateArt(query, seed, usedOids, wanted = 8) {
 // Met returns full-res masterworks (3-5 MB each, 4000+ px). The feed card
 // renders at 600x420, so we resize to 1400px max + q82 jpg on the way in.
 // 13x size reduction with no perceptible quality loss at display size.
-const HAS_MAGICK = spawnSync('which', ['magick']).status === 0;
+//
+// macOS cron environments often have a stripped PATH (`/usr/bin:/bin:...`)
+// that doesn't include homebrew, so the bare `magick` command fails even
+// when ImageMagick is installed. Search known install locations.
+const MAGICK_BIN = (() => {
+  for (const p of ['magick', '/opt/homebrew/bin/magick', '/usr/local/bin/magick']) {
+    if (spawnSync(p, ['-version']).status === 0) return p;
+  }
+  return null;
+})();
+const HAS_MAGICK = MAGICK_BIN !== null;
 
 async function downloadBinary(url, outPath) {
   const r = await fetch(url, { headers: { 'user-agent': 'pingping-site/1.0', referer: 'https://www.metmuseum.org/' } });
@@ -190,7 +200,7 @@ async function downloadBinary(url, outPath) {
   if (buf.length < 4096) throw new Error(`tiny: ${buf.length}b`);
   if (DRY) return buf.length;
   if (HAS_MAGICK) {
-    const proc = spawnSync('magick', ['-', '-resize', '1400x1400>', '-strip', '-quality', '82', '-interlace', 'Plane', '-sampling-factor', '4:2:0', outPath], { input: buf });
+    const proc = spawnSync(MAGICK_BIN, ['-', '-resize', '1400x1400>', '-strip', '-quality', '82', '-interlace', 'Plane', '-sampling-factor', '4:2:0', outPath], { input: buf });
     if (proc.status === 0) {
       try { const s = await stat(outPath); return s.size; } catch { return buf.length; }
     }
