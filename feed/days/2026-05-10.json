@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://every.to/",
-      "image_url": "./art/met-451725.jpg",
+      "image_url": "./art/met-544320.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -40,7 +40,7 @@
         "label": "Newsletter · essay",
         "kind": "newsletter"
       },
-      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
+      "image_alt": "Stela of the Steward Mentuwoser — Unknown (ca. 1944 B.C.)"
     },
     {
       "id": "c002",
@@ -128,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://www.aitidbits.ai/",
-      "image_url": "./art/met-451725.jpg",
+      "image_url": "./art/met-435997.jpg",
       "read_time_min": 5,
       "author": {
         "name": "AI Tidbits",
@@ -140,7 +140,7 @@
         "label": "Newsletter · daily",
         "kind": "newsletter"
       },
-      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
+      "image_alt": "The Storm — Pierre-Auguste Cot (1880)"
     },
     {
       "id": "c006",

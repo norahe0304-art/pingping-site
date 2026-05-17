@@ -53,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/pricing",
-      "image_url": "./art/met-437261.jpg",
+      "image_url": "./art/met-437790.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -65,7 +65,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
+      "image_alt": "Allegory of the Planets and Continents — Giovanni Battista Tiepolo (1752)"
     },
     {
       "id": "c003",
@@ -103,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://stratechery.com/",
-      "image_url": "./art/met-438821.jpg",
+      "image_url": "./art/met-437508.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Ben Thompson",
@@ -115,7 +115,7 @@
         "label": "Newsletter · daily",
         "kind": "newsletter"
       },
-      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
+      "image_alt": "Self-Portrait — Salvator Rosa (ca. 1647)"
     },
     {
       "id": "c005",
@@ -128,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "./art/met-435621.jpg",
+      "image_url": "./art/met-436180.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Corey Haines",
@@ -140,7 +140,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
+      "image_alt": "The Natchez — Eugène Delacroix (1823–24 and 1835)"
     },
     {
       "id": "c006",

@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://stripe.com/blog",
-      "image_url": "./art/met-436043.jpg",
+      "image_url": "./art/met-436045.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Stripe",
@@ -40,7 +40,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "image_alt": "Friedrich III (1463–1525), the Wise, Elector of Saxony — Lucas Cranach the Elder and Workshop (1533)"
+      "image_alt": "Johann I (1468–1532), the Constant, Elector of Saxony — Lucas Cranach the Elder and Workshop (1532–33)"
     },
     {
       "id": "c002",
@@ -178,7 +178,7 @@
       "why": "Linear AI opens to teams today; switching costs are lowest on launch day before everyone has notes.",
       "try": "Set a 30-min timer. Pick the noisiest weekly triage and run it through Linear AI once.",
       "url": "https://linear.app/",
-      "image_url": "./art/met-436105.jpg",
+      "image_url": "./art/met-437202.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -190,7 +190,7 @@
         "label": "Must-do · 30 min",
         "kind": "task"
       },
-      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
+      "image_alt": "Christ Bearing the Cross — North Netherlandish (Bruges) Painter (undated)"
     }
   ]
 }

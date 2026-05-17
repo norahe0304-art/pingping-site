@@ -78,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://shopify.com/blog",
-      "image_url": "./art/met-435702.jpg",
+      "image_url": "./art/met-436607.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Shopify",
@@ -90,7 +90,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "image_alt": "The Horse Fair — Rosa Bonheur (1852–55)"
+      "image_alt": "An Allegory — Domenico Guidobono (1710–20)"
     },
     {
       "id": "c004",
@@ -103,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://blog.cloudflare.com/",
-      "image_url": "./art/met-437878.jpg",
+      "image_url": "./art/met-438813.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Cloudflare",
@@ -115,7 +115,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
+      "image_alt": "Saint John the Baptist Bearing Witness — Annibale Carracci (ca. 1600)"
     },
     {
       "id": "c005",
@@ -128,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://every.to/",
-      "image_url": "./art/met-436803.jpg",
+      "image_url": "./art/met-340575.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -140,7 +140,7 @@
         "label": "Newsletter · essay",
         "kind": "newsletter"
       },
-      "image_alt": "The Adoration of the Magi — Joos van Wassenhove (1472–74)"
+      "image_alt": "Design Fragment for the Left Side of the 'Fonte Gaia' in Siena — Jacopo della Quercia (Jacopo di Pietro d’Angelo di Guarnieri) (1415–16)"
     },
     {
       "id": "c006",
@@ -153,7 +153,7 @@
       "why": "You read the post today; you have not yet adjusted. The adjustment takes 30 minutes if done now.",
       "try": "Set a 30-min timer. Open your North Star + 5 secondary metrics. Mark which of Chen's critiques applies to each.",
       "url": "https://andrewchen.com/",
-      "image_url": "./art/met-816189.jpg",
+      "image_url": "./art/met-436177.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -165,7 +165,7 @@
         "label": "Must-do · 30 min",
         "kind": "task"
       },
-      "image_alt": "”Abiding nowhere, the awakened mind arises” — Musō Soseki (early to mid-14th century)"
+      "image_alt": "George Sand's Garden at Nohant — Eugène Delacroix (ca. 1842–43)"
     },
     {
       "id": "c007",
@@ -178,7 +178,7 @@
       "why": "The six-month signal compresses six months of trial and error into one read; the savings are highest the day it ships.",
       "try": "Set a 45-min timer. Read fully. Star one pattern. Add it to next sprint's top of backlog.",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "./art/met-437261.jpg",
+      "image_url": "./art/met-448280.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -190,7 +190,7 @@
         "label": "Must-do · 45 min",
         "kind": "task"
       },
-      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
+      "image_alt": "\"Bizhan Slaughters the Wild Boars of Irman\", Folio from a Shahnama (Book of Kings) — Abu'l Qasim Firdausi (dated 741 AH/1341 CE)"
     }
   ]
 }

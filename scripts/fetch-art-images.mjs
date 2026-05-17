@@ -140,13 +140,17 @@ async function fetchJson(url) {
   throw new Error(`HTTP retry exhausted`);
 }
 
-async function candidateArt(query, seed) {
+// candidateArt — return up to `wanted` unique masterworks for the query.
+// Skips any oid already consumed elsewhere in the feed (usedOids), so
+// the global uniqueness constraint stays enforced even when multiple
+// stories share keywords.
+async function candidateArt(query, seed, usedOids, wanted = 8) {
   const url = `${API}/search?q=${encodeURIComponent(query)}&hasImages=true&isPublicDomain=true`;
   const sr = await fetchJson(url);
-  const ids = sr.objectIDs || [];
+  const ids = (sr.objectIDs || []).filter(o => !usedOids.has(o));
   if (ids.length === 0) return [];
   const rng = stableRng(seed);
-  const tries = Math.min(ids.length, 18);
+  const tries = Math.min(ids.length, 40);
   const picks = [];
   while (picks.length < tries) {
     const idx = Math.floor(rng() * ids.length);
@@ -167,7 +171,7 @@ async function candidateArt(query, seed) {
           date: obj.objectDate || '',
           classification: obj.classification || '',
         });
-        if (out.length >= 6) break;   // enough fallbacks
+        if (out.length >= wanted) break;
       }
     } catch {}
   }
@@ -207,36 +211,72 @@ async function main() {
     docs.push({ f, doc: JSON.parse(await readFile(f, 'utf8')) });
   }
 
-  // cache search results per query so multiple stories with same query share artwork lookup
-  const searchCache = new Map();   // query -> [ids]
-  let ok = 0, miss = 0, dlFail = 0;
+  // global uniqueness — once an oid is consumed by any slot, no other
+  // slot can pick it. Seed with whatever's already pinned in the day
+  // files when we're not rebuilding, so previously-good assignments
+  // stay stable and only collisions get re-rolled.
+  const REBUILD = process.argv.includes('--rebuild');
+  const usedOids = new Set();
+  if (!REBUILD) {
+    // preserve existing assignments — only re-search for slots that
+    // are sharing an oid with another slot (dupe groups)
+    const oidUsers = new Map(); // oid -> [ {doc, it} ]
+    for (const { doc } of docs) {
+      for (const it of (doc.items || [])) {
+        const m = (it.image_url || '').match(/met-(\d+)\./);
+        if (!m) continue;
+        const oid = Number(m[1]);
+        if (!oidUsers.has(oid)) oidUsers.set(oid, []);
+        oidUsers.get(oid).push({ doc, it });
+      }
+    }
+    // for each oid: first user keeps it, rest get image_url cleared so the
+    // main loop below re-searches them with usedOids enforced
+    for (const [oid, users] of oidUsers) {
+      usedOids.add(oid);
+      for (const { it } of users.slice(1)) {
+        it.image_url = '';
+        it.image_alt = '';
+      }
+    }
+  } else {
+    for (const { doc } of docs) {
+      for (const it of (doc.items || [])) { it.image_url = ''; it.image_alt = ''; }
+    }
+  }
+
+  let ok = 0, miss = 0, dlFail = 0, skipped = 0;
   const log = [];
 
   for (const { doc } of docs) {
     for (const it of (doc.items || [])) {
       if (!it.headline) continue;
+      // already pinned (non-dupe) — skip
+      if (it.image_url) { skipped++; continue; }
       const seed   = `${doc.date}:${it.id}:${it.headline}`;
       const query  = buildQuery(it.headline);
       let candidates;
       try {
-        candidates = await candidateArt(query, seed);
+        candidates = await candidateArt(query, seed, usedOids);
       } catch (e) {
         miss++;
         log.push(`  [apierr] ${doc.date} ${it.id}  q='${query}'  — ${e.message}`);
         continue;
       }
-      // generic fallback — if the specific query yielded nothing, fall back
-      // to a broad art-topic search seeded by the slot so we still get a
-      // stable per-story masterwork rather than an empty card
+      // generic fallback — if the specific query yielded nothing unique,
+      // try broad art-topic searches until we find something not already
+      // consumed by another slot
       if (candidates.length === 0) {
-        const GENERIC = ['figure portrait', 'landscape scene', 'study allegory', 'merchant scene', 'scholar study', 'still life'];
-        const idx = Math.floor(stableRng(seed + ':fallback')() * GENERIC.length);
-        const fallbackQuery = GENERIC[idx];
-        try {
-          candidates = await candidateArt(fallbackQuery, seed + ':fallback');
-          if (candidates.length) log.push(`  [fbk]    ${doc.date} ${it.id}  primary q='${query}' empty → fallback '${fallbackQuery}'`);
-        } catch (e) {
-          log.push(`  [fbkerr] ${doc.date} ${it.id}  fallback '${fallbackQuery}'  — ${e.message}`);
+        const GENERIC = ['figure portrait', 'landscape scene', 'study allegory', 'merchant scene', 'scholar study', 'still life', 'allegory virtue', 'pastoral scene', 'banquet feast', 'devotional panel', 'travel caravan'];
+        for (let salt = 0; salt < GENERIC.length && candidates.length === 0; salt++) {
+          const idx = (Math.floor(stableRng(seed + ':fallback:' + salt)() * GENERIC.length));
+          const fallbackQuery = GENERIC[idx];
+          try {
+            candidates = await candidateArt(fallbackQuery, `${seed}:fallback:${salt}`, usedOids);
+            if (candidates.length) log.push(`  [fbk]    ${doc.date} ${it.id}  primary q='${query}' empty → fallback '${fallbackQuery}'`);
+          } catch (e) {
+            log.push(`  [fbkerr] ${doc.date} ${it.id}  fallback '${fallbackQuery}'  — ${e.message}`);
+          }
         }
       }
       if (candidates.length === 0) {
@@ -272,6 +312,7 @@ async function main() {
       }
       it.image_url = picked.rel;
       it.image_alt = `${picked.art.title} — ${picked.art.artist || 'Unknown'} (${picked.art.date || 'undated'})`;
+      usedOids.add(picked.art.oid);
       ok++;
     }
   }
@@ -295,7 +336,7 @@ async function main() {
   }
 
   console.log(log.join('\n'));
-  console.log(`\n=== ${ok} ok | ${miss} miss | ${dlFail} dl-fail ===`);
+  console.log(`\n=== ${ok} ok | ${skipped} skipped (kept) | ${miss} miss | ${dlFail} dl-fail | ${usedOids.size} unique oids in use ===`);
   if (DRY) console.log('(dry run — nothing written)');
 }
 
