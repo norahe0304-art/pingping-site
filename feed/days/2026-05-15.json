@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/openai",
-      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/2e46242587.jpg",
       "read_time_min": 5,
       "author": {
         "name": "OpenAI",
@@ -52,7 +52,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/pricing",
-      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/92eafa596f.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -76,7 +76,7 @@
       "why": "",
       "try": "",
       "url": "https://cloud.google.com/blog",
-      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/b9feddf939.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Google AI",
@@ -100,7 +100,7 @@
       "why": "",
       "try": "",
       "url": "https://stratechery.com/",
-      "image_url": "https://images.unsplash.com/photo-1488998427799-e3362cec87c3?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/860ecec7f1.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Ben Thompson",
@@ -124,7 +124,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/934dc2c5d1.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Corey Haines",
@@ -148,7 +148,7 @@
       "why": "Pricing change is announced for next Wednesday; doing the math today gives you the weekend to act.",
       "try": "Set a 30-min timer. Pull last two invoices. Compare against announced tiers. Tag any line >10% off.",
       "url": "https://www.anthropic.com/pricing",
-      "image_url": "",
+      "image_url": "./og/92eafa596f.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -172,7 +172,7 @@
       "why": "Stratechery just argued distribution beats default model quality; the time to sketch a move is the day the framing lands.",
       "try": "Set a 45-min timer. On one page, write a distribution-first move you could ship in 5 working days. Be specific.",
       "url": "https://stratechery.com/",
-      "image_url": "",
+      "image_url": "./og/860ecec7f1.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",

@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://stripe.com/blog",
-      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/b674bd4b5f.png",
       "read_time_min": 5,
       "author": {
         "name": "Stripe",
@@ -52,7 +52,7 @@
       "why": "",
       "try": "",
       "url": "https://blog.cloudflare.com/",
-      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/c4a9a0806d.png",
       "read_time_min": 5,
       "author": {
         "name": "Cloudflare",
@@ -76,7 +76,7 @@
       "why": "",
       "try": "",
       "url": "https://linear.app/changelog",
-      "image_url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/d7ca9d1a06.png",
       "read_time_min": 5,
       "author": {
         "name": "Linear",
@@ -100,7 +100,7 @@
       "why": "",
       "try": "",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/6ec26a93c5.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Lenny's Newsletter",
@@ -124,7 +124,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/enterprise",
-      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/152202e52b.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -148,7 +148,7 @@
       "why": "The vocabulary is moving today; sketching now puts you ahead of the next sprint plan.",
       "try": "Set a 45-min timer. Pick the pattern that fits your product. Draw it on one page.",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "",
+      "image_url": "./og/6ec26a93c5.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -172,7 +172,7 @@
       "why": "Linear AI opens to teams today; switching costs are lowest on launch day before everyone has notes.",
       "try": "Set a 30-min timer. Pick the noisiest weekly triage and run it through Linear AI once.",
       "url": "https://linear.app/",
-      "image_url": "",
+      "image_url": "./og/466752d96d.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",

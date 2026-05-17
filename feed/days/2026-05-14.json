@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/6ec26a93c5.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Lenny's Newsletter",
@@ -52,7 +52,7 @@
       "why": "",
       "try": "",
       "url": "https://andrewchen.com/",
-      "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "",
       "read_time_min": 5,
       "author": {
         "name": "Andrew Chen",
@@ -76,7 +76,7 @@
       "why": "",
       "try": "",
       "url": "https://shopify.com/blog",
-      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/a8dcba5e3e.webp",
       "read_time_min": 5,
       "author": {
         "name": "Shopify",
@@ -100,7 +100,7 @@
       "why": "",
       "try": "",
       "url": "https://blog.cloudflare.com/",
-      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/c4a9a0806d.png",
       "read_time_min": 5,
       "author": {
         "name": "Cloudflare",
@@ -124,7 +124,7 @@
       "why": "",
       "try": "",
       "url": "https://every.to/",
-      "image_url": "https://images.unsplash.com/photo-1488998427799-e3362cec87c3?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/10efc2ea18.png",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -172,7 +172,7 @@
       "why": "The six-month signal compresses six months of trial and error into one read; the savings are highest the day it ships.",
       "try": "Set a 45-min timer. Read fully. Star one pattern. Add it to next sprint's top of backlog.",
       "url": "https://www.lennysnewsletter.com/",
-      "image_url": "",
+      "image_url": "./og/6ec26a93c5.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",

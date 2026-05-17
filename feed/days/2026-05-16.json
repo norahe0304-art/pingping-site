@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/home",
-      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "",
       "read_time_min": 5,
       "author": {
         "name": "OpenAI",
@@ -52,7 +52,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/home",
-      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "",
       "read_time_min": 5,
       "author": {
         "name": "Google",
@@ -76,7 +76,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/coreyhainesco/status/2055011827600572668",
-      "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/934dc2c5d1.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Corey Haines",
@@ -100,7 +100,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/dingyi/status/2055256144705425773",
-      "image_url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/f5aaa556f6.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Dingyi",
@@ -124,7 +124,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/home",
-      "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "",
       "read_time_min": 5,
       "author": {
         "name": "Alex Banks",

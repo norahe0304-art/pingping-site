@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/news",
-      "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/2f17e06985.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -52,7 +52,6 @@
       "why": "",
       "try": "",
       "url": "https://openai.com/index",
-      "image_url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=420&fit=crop&auto=format&q=80",
       "read_time_min": 5,
       "author": {
         "name": "OpenAI",
@@ -76,7 +75,7 @@
       "why": "",
       "try": "",
       "url": "https://workspace.google.com/blog",
-      "image_url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/75c94ffd38.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Google AI",
@@ -100,7 +99,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/sama",
-      "image_url": "https://images.unsplash.com/photo-1488998427799-e3362cec87c3?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/6d5ccc9f92.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Sam Altman",
@@ -124,7 +123,7 @@
       "why": "",
       "try": "",
       "url": "https://linear.app/changelog",
-      "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/d7ca9d1a06.png",
       "read_time_min": 5,
       "author": {
         "name": "Linear",
@@ -148,7 +147,7 @@
       "why": "Today's session-length extension is the only reason the chore now feels worth attempting.",
       "try": "Set a 45-min timer. Choose: rename a folder of files, or fill a spreadsheet from a PDF. Run it. Watch.",
       "url": "https://www.anthropic.com/",
-      "image_url": "",
+      "image_url": "./og/713014219e.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -172,7 +171,7 @@
       "why": "All three labs just changed defaults the same day. Picking now means you have a stable surface for the rest of the week.",
       "try": "Set a 25-min timer. Open a doc. Write the three defaults that matter to your team. Choose one provider per row.",
       "url": "https://x.com/sama",
-      "image_url": "",
+      "image_url": "./og/6d5ccc9f92.jpg",
       "read_time_min": 25,
       "author": {
         "name": "",

@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://andrewchen.com/",
-      "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "",
       "read_time_min": 5,
       "author": {
         "name": "Andrew Chen",
@@ -52,7 +52,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/934dc2c5d1.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Corey Haines",
@@ -76,7 +76,7 @@
       "why": "",
       "try": "",
       "url": "https://www.latent.space/",
-      "image_url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/35e521c410.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -100,7 +100,7 @@
       "why": "",
       "try": "",
       "url": "https://stratechery.com/",
-      "image_url": "https://images.unsplash.com/photo-1488998427799-e3362cec87c3?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/860ecec7f1.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Ben Thompson",
@@ -124,7 +124,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/levelsio",
-      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/ee57943acc.jpg",
       "read_time_min": 5,
       "author": {
         "name": "pieter levels",
@@ -148,7 +148,7 @@
       "why": "Your weekend is the only window without standing meetings; the audit needs uninterrupted reading.",
       "try": "Set a 45-min timer. Open the 12-step list. Score each step 1-3 honestly. Tag the three worst.",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "",
+      "image_url": "./og/934dc2c5d1.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",
@@ -172,7 +172,7 @@
       "why": "Weekend audio time is free; the agent-infra map you build now compounds across every product call next week.",
       "try": "Set a 60-min timer. Take 5 bullet notes on the parts that surprise you.",
       "url": "https://www.latent.space/",
-      "image_url": "",
+      "image_url": "./og/35e521c410.jpg",
       "read_time_min": 60,
       "author": {
         "name": "",

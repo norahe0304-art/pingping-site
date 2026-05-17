@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://www.anthropic.com/research",
-      "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/2f17e06985.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Anthropic",
@@ -52,7 +52,6 @@
       "why": "",
       "try": "",
       "url": "https://openai.com/blog",
-      "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=420&fit=crop&auto=format&q=80",
       "read_time_min": 5,
       "author": {
         "name": "OpenAI",
@@ -76,7 +75,7 @@
       "why": "",
       "try": "",
       "url": "https://vercel.com/blog",
-      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/14f24e474b.png",
       "read_time_min": 5,
       "author": {
         "name": "Vercel",
@@ -100,7 +99,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/934dc2c5d1.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Corey Haines",
@@ -124,7 +123,7 @@
       "why": "",
       "try": "",
       "url": "https://www.latent.space/",
-      "image_url": "https://images.unsplash.com/photo-1502920514313-52581002a659?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/35e521c410.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Every",
@@ -148,7 +147,7 @@
       "why": "Day-one migrations are cheap; week-three migrations get tangled in unrelated refactors.",
       "try": "Set a 30-min timer. Pick the smallest agent you have. Bump the SDK. Note the diff.",
       "url": "https://vercel.com/blog",
-      "image_url": "",
+      "image_url": "./og/14f24e474b.png",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -172,7 +171,7 @@
       "why": "The frame is fresh enough that the exercise still feels like a checklist, not theater.",
       "try": "Set a 45-min timer. Open your homepage. Run the same line-by-line teardown. Mark three lines to rewrite.",
       "url": "https://x.com/coreyhainesco",
-      "image_url": "",
+      "image_url": "./og/934dc2c5d1.jpg",
       "read_time_min": 45,
       "author": {
         "name": "",

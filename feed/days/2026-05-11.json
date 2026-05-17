@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://replit.com/changelog",
-      "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "",
       "read_time_min": 5,
       "author": {
         "name": "Replit",
@@ -52,7 +52,7 @@
       "why": "",
       "try": "",
       "url": "https://www.notion.so/blog",
-      "image_url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/8726e7a885.png",
       "read_time_min": 5,
       "author": {
         "name": "Notion",
@@ -76,7 +76,7 @@
       "why": "",
       "try": "",
       "url": "https://shopify.com/blog",
-      "image_url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/a8dcba5e3e.webp",
       "read_time_min": 5,
       "author": {
         "name": "Shopify",
@@ -100,7 +100,7 @@
       "why": "",
       "try": "",
       "url": "https://stripe.com/atlas",
-      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "./og/90b837608a.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Stripe",
@@ -124,7 +124,7 @@
       "why": "",
       "try": "",
       "url": "https://openai.com/pricing",
-      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=420&fit=crop&auto=format&q=80",
+      "image_url": "",
       "read_time_min": 5,
       "author": {
         "name": "OpenAI",
@@ -148,7 +148,6 @@
       "why": "Stripe and OpenAI both moved pricing this morning; today's reconciliation is cheaper than next month's surprise.",
       "try": "Set a 30-min timer. Pull the last two invoices, compare against new pricing, flag any change >10%.",
       "url": "https://openai.com/pricing",
-      "image_url": "",
       "read_time_min": 30,
       "author": {
         "name": "",
@@ -172,7 +171,7 @@
       "why": "Agents-v2 launch day is the moment to lock in your mental model before everyone has hot takes.",
       "try": "Set a 30-min timer. Pick a chore (rename files, add type hints, scaffold a test). Run it. Note where you intervened.",
       "url": "https://replit.com/",
-      "image_url": "",
+      "image_url": "./og/02f491d96d.jpg",
       "read_time_min": 30,
       "author": {
         "name": "",
