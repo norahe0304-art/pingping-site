@@ -1,0 +1,346 @@
+{
+  "date": "2026-05-17",
+  "weekday": "Sunday",
+  "no": 108,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-17T23:50:14Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Ding</b>: Codex + MagicPath may compress the design-to-build loop.",
+    "<b>Berryxia.AI</b>: A 3D portfolio becomes the product itself.",
+    "<b>志辉</b>: Claude Code SEO and ads skills are getting encoded.",
+    "<b>超级个体｜柿子</b>: PPT skills are turning taste into reusable software.",
+    "<b>The Rundown AI</b>: Google and Arm are speeding AI on the CPU."
+  ],
+  "digest": {
+    "title": "The center of gravity is moving from model output to operator leverage.",
+    "body": "The strongest stories today all reduce friction around how people control, distribute, or operationalize AI. That shows up in mobile agent supervision, database-native agents, launch orchestration, and encoded skills; the winners are shipping systems that make AI easier to use at the moment of work, not just more powerful in a benchmark."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Codex + MagicPath could replace Figma faster than expected",
+      "deck": "Dingyi is arguing that Codex paired with MagicPath can cover a surprising amount of the design-to-build loop, making Figma feel less like the center of gravity and more like a handoff layer. The interesting part is not the demo itself but the workflow implication: if prototypes can become shippable interactions with less translation, product teams can collapse days of back-and-forth into one tighter loop.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/dingyi/status/2056027480906182924",
+      "image_url": "./art/met-764636.jpg",
+      "read_time_min": 6,
+      "author": {
+        "name": "Ding",
+        "handle": "dingyi",
+        "role": "creator / builder",
+        "avatar_url": "https://unavatar.io/x/dingyi"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Last Toilet of Charlotte Corday — Lumb Stocks (1869 or after)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "An open 3D office turns a portfolio into a product demo",
+      "deck": "Berryxia highlighted David Heckhoff’s fully rebuilt portfolio, which now opens as an interactive 3D office rather than a static page. That matters because the site itself becomes the proof of taste and engineering quality, and this kind of immersive self-marketing is increasingly how standout creators win attention in crowded markets.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/berryxia/status/2055784649830670829",
+      "image_url": "./art/met-302635.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Berryxia.AI",
+        "handle": "berryxia",
+        "role": "AI / product curator",
+        "avatar_url": "https://unavatar.io/x/berryxia"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "No. 7. Ye-nan-gyoung. Pagoda and Kyoung. — Linnaeus Tripe (August 14–16, 1855)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Open-source SEO and ads skills are becoming a compounding moat",
+      "deck": "A new open-source skill pack for Claude Code aims at SEO, GEO, Google Ads, and Meta Ads, and the draw is obvious: it turns repeatable marketing know-how into something you can actually run. If these skills work, the moat moves from “who knows the playbook” to “who has the best encoded execution system,” which is much easier to scale and reuse.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/iamzhihui/status/2055922677127561599",
+      "image_url": "./art/met-436896.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "志辉",
+        "handle": "iamzhihui",
+        "role": "operator / builder",
+        "avatar_url": "https://unavatar.io/x/iamzhihui"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Portrait of a Woman with a Man at a Casement — Fra Filippo Lippi (ca. 1440)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "PPT skills are turning taste into reusable software",
+      "deck": "The open-source PPT skill wave is interesting because it reframes slide quality as an encoding problem, not just a model-quality problem. If teams can bake aesthetic constraints into reusable skills, then “good-looking” decks stop being a one-off craft achievement and become a repeatable system that non-designers can actually operate.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/yaohui12138/status/2055849330498736619",
+      "image_url": "./art/met-436046.jpg",
+      "read_time_min": 6,
+      "author": {
+        "name": "超级个体｜柿子",
+        "handle": "yaohui12138",
+        "role": "creator / operator",
+        "avatar_url": "https://unavatar.io/x/yaohui12138"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Johann I (1468–1532), the Constant, Elector of Saxony — Lucas Cranach the Elder (1532–33)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Google and Arm are pushing AI inference closer to CPU cores",
+      "deck": "The newsletter’s most concrete technical signal is that LiteRT, XNNPACK, KleidiAI, and Arm’s SME2 can materially speed up inference on commodity CPUs. That matters because it widens the deployment path for AI: instead of waiting for every device to get a specialized accelerator, teams can ship useful experiences on the hardware people already own.",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai/",
+      "image_url": "./art/met-464148.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Rundown AI",
+        "handle": "therundownai",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/therundownai"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Virgin and Child — Unknown (ca. 1250–75)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Agent platforms are moving from dashboards to raw databases",
+      "deck": "The pro-human digest points to a new agent layer with full SQL and MCP support across many databases, without the usual dashboard and provisioning overhead. That is worth watching because it compresses the ops tax around AI systems: if agents can directly inspect and act on real databases, the product surface shifts from “monitoring” to “usable control plane.”",
+      "why": "",
+      "try": "",
+      "url": "https://theprohuman.mail.beehiiv.com/",
+      "image_url": "./art/met-45628.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Portrait of Jianzhen — Unknown (15th century)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "A $1.1B bet says AI learning is about to change shape",
+      "deck": "The big fundraise around the founder who helped build AlphaGo is not just a financing story; it is a bet that AI will improve through a different learning regime than the one most teams currently optimize for. The strategic signal is contrarian: if the next phase of AI feels more like self-play and less like straight imitation, the winners may be the teams that rethink training loops now instead of later.",
+      "why": "",
+      "try": "",
+      "url": "https://neatprompts.com/",
+      "image_url": "./art/met-437473.jpg",
+      "read_time_min": 6,
+      "author": {
+        "name": "Aadit",
+        "handle": "neatprompts",
+        "role": "newsletter / curator",
+        "avatar_url": "https://unavatar.io/x/neatprompts"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "The Bathing Pool — Hubert Robert (1777–79)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Launches are becoming orchestration problems, not posting problems",
+      "deck": "The B2B newsletter’s launch advice is basically a systems memo: anticipation, amplification, and relaunch matter more than the single publish moment. That matters because it turns content into a multi-step distribution machine, which is exactly the kind of thinking growth teams need once AI lowers the cost of production but not the cost of attention.",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-354278.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Christ Carrying the Cross — Pierre Mignard (ca. 1684)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI keeps pushing coding work into the phone workflow",
+      "deck": "The Codex mobile push still matters as a product direction, even if it is only a feature update cycle now, because it normalizes remote agent supervision from the one device people always carry. The big idea is that coding is no longer chained to a desktop session; approvals, task starts, and handoffs are becoming ambient actions instead of deliberate workstation rituals.",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.theneuron.daily.com/",
+      "image_url": "./art/met-453210.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Neuron",
+        "handle": "theneuron",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/theneuron"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Buffaloes in Combat — Miskin (late 16th century)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Altman’s UBI retreat shows the politics of abundance have cooled",
+      "deck": "The Alex Banks note is a reminder that the rhetoric around universal basic income is shifting from visionary to skeptical. That change matters because it reflects a broader mood swing around AI-era distribution: the conversation is moving away from abstract future compensation and toward immediate policy and product mechanics.",
+      "why": "",
+      "try": "",
+      "url": "https://substack.com/",
+      "image_url": "./art/met-437229.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Alex Banks",
+        "handle": "alexbanks",
+        "role": "writer",
+        "avatar_url": "https://unavatar.io/x/alexbanks"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Virgin and Child with Angels — Bernard van Orley (ca. 1518)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "AI teams are starting to sell confidence, not just output",
+      "deck": "Across the newsletter set, the recurring pattern is that products win when they reduce uncertainty for the operator, not merely when they generate more content or code. That is why the strongest ideas here are agent control, mobile approvals, and distribution systems: they all sell the feeling that work is moving forward even when the model is doing the heavy lifting.",
+      "why": "",
+      "try": "",
+      "url": "https://www.theneurondaily.com/",
+      "image_url": "./art/met-853102.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "The Neuron",
+        "handle": "theneuron",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/theneuron"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "John Jehu, L'Inghilterra — James Bretherton (March 6, 1772)"
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Benchmark your own product workflow against mobile-agent control",
+      "deck": "",
+      "why": "Mobile approvals, task starts, and handoffs are becoming a core UX pattern for agents, so you need to know where your product still forces desktop-only friction.",
+      "try": "Set a 20-minute timer. Map one real workflow and mark every step that would break if the user had only a phone.",
+      "url": "https://x.com/dingyi/status/2056027480906182924",
+      "image_url": "./art/met-437871.jpg",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "The Supper at Emmaus — Velázquez (Diego Rodríguez de Silva y Velázquez) (1622–23)"
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Translate one launch into a 3-step distribution sequence",
+      "deck": "",
+      "why": "The strongest growth advice today says the launch itself is only one beat in a larger attention system, so you should convert that into an operating rule now.",
+      "try": "Set a 25-minute timer. Write the pre-announce, launch, and follow-up posts for your next release in one draft.",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-436301.jpg",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      },
+      "image_alt": "The Parable of the Mote and the Beam — Domenico Fetti (ca. 1619)"
+    }
+  ]
+}

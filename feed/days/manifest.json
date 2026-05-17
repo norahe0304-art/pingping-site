@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T08:30:00Z",
+  "updated_at": "2026-05-17T23:50:14Z",
   "days": [
     {
       "date": "2026-05-17",
@@ -8,23 +8,23 @@
       "edition": "Nora's Early Brief",
       "promo_headline": "Eleven signals. Two moves. One pattern.",
       "lead_kicker": "Today's Top Signal",
-      "lead_headline": "OpenAI puts Codex in ChatGPT iOS — ship code from your phone",
-      "lead_deck": "OpenAI rolled out Codex in preview inside the ChatGPT iOS app across all plans, letting developers track, manage, and act on long-running AI coding tasks from their phone. The move targets the commute-hour coding window while competing directly with Anthropic for the coding-tool market. Users can approve decisions, start new tasks, and push changes while their agent grinds away back at the desk.",
+      "lead_headline": "Codex + MagicPath could replace Figma faster than expected",
+      "lead_deck": "Dingyi is arguing that Codex paired with MagicPath can cover a surprising amount of the design-to-build loop, making Figma feel less like the center of gravity and more like a handoff layer. The interesting part is not the demo itself but the workflow implication: if prototypes can become shippable interactions with less translation, product teams can collapse days of back-and-forth into one tighter loop.",
       "lead_tag": "SIGNAL",
       "tag_color": "pink",
       "story_count": 13,
-      "read_time_total_min": 89,
+      "read_time_total_min": 101,
       "lead_author": {
-        "name": "The Rundown",
-        "handle": "therundownai",
-        "role": "AI news platform",
-        "avatar_url": "https://unavatar.io/x/therundownai"
+        "name": "Ding",
+        "handle": "dingyi",
+        "role": "creator / builder",
+        "avatar_url": "https://unavatar.io/x/dingyi"
       },
       "lead_source": {
         "label": "X · post",
         "kind": "x"
       },
-      "lead_image_url": "./art/met-459001.jpg"
+      "lead_image_url": "./art/met-764636.jpg"
     },
     {
       "date": "2026-05-16",
