@@ -335,13 +335,16 @@ async function main() {
   if (!DRY && !dateArg) {
     const manifestPath = path.join(DAYS_DIR, 'manifest.json');
     try {
-      const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+      const manifestRaw = JSON.parse(await readFile(manifestPath, 'utf8'));
+      const wrapped = !Array.isArray(manifestRaw) && Array.isArray(manifestRaw.days);
+      const entries = wrapped ? manifestRaw.days : manifestRaw;
       const byDate = new Map(docs.map(({ doc }) => [doc.date, (doc.items.find(i => i.rank === 1) || doc.items[0])]));
-      for (const entry of manifest) {
+      for (const entry of entries) {
         const lead = byDate.get(entry.date);
         if (lead) entry.lead_image_url = lead.image_url || '';
       }
-      await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+      const out = wrapped ? { ...manifestRaw, days: entries } : entries;
+      await writeFile(manifestPath, JSON.stringify(out, null, 2) + '\n');
     } catch {}
   }
 

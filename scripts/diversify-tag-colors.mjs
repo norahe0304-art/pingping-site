@@ -59,7 +59,11 @@ async function main() {
   }
 
   const manifestPath = path.join(DAYS_DIR, 'manifest.json');
-  const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  const manifestRaw = JSON.parse(await readFile(manifestPath, 'utf8'));
+  // manifest format evolved — old was a bare array, newer cron output wraps
+  // it as { updated_at, days: [...] }. Normalize on read, preserve shape on write.
+  const manifestIsWrapped = !Array.isArray(manifestRaw) && Array.isArray(manifestRaw.days);
+  const manifest = manifestIsWrapped ? manifestRaw.days : manifestRaw;
   const docByDate = new Map(docs.map(({ f, doc }) => [doc.date, { f, doc }]));
 
   // ----- 2) assign cover colors (manifest, newest-first stack) -----
@@ -106,7 +110,8 @@ async function main() {
   // ----- 4) write -----
   if (!DRY) {
     for (const { f, doc } of docs) await writeFile(f, JSON.stringify(doc, null, 2) + '\n');
-    await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+    const out = manifestIsWrapped ? { ...manifestRaw, days: manifest } : manifest;
+    await writeFile(manifestPath, JSON.stringify(out, null, 2) + '\n');
   }
 
   // ----- 5) report -----
