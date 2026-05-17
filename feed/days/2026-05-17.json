@@ -1,0 +1,352 @@
+{
+  "date": "2026-05-17",
+  "weekday": "Sunday",
+  "no": 108,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-17T08:30:00Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>OpenAI puts Codex in ChatGPT iOS</b>: ship code from your phone while agents run at your desk",
+    "<b>Coding agents evolve their own tools</b>: auto-tuned harness beats human in 32 hours",
+    "<b>AlphaGo architect raises $1.1B</b>: self-play reasoning is the next frontier, not scaling",
+    "<b>Sam Altman walks back UBI</b>: the $14M bet he championed now says he does not believe in it",
+    "<b>Google + Arm run AI on mobile CPU</b>: 14s inference down to 6.6s, no accelerator needed",
+    "<b>Corey Haines /launch-strategy</b>: 40 open-source marketing skills structure your whole launch",
+    "<b>Content launch as an event</b>: hit every channel at once or the algorithm buries your piece",
+    "<b>Seedance 2.0</b>: watermark-free video export at 50% off removes last production friction",
+    "<b>AI trust layer missing</b>: confidence ships but fact-checking does not — the reverse Turing test",
+    "<b>AI auto-connects your knowledge</b>: surfaces insights humans missed via Karl Weick reasoning",
+    "<b>Hermes Agent masterclass</b>: from one agent to ten running 24/7 — the multi-agent playbook"
+  ],
+  "digest": {
+    "title": "AI splits into two bets: massive inference and lean automation",
+    "body": "AI is splitting into two distinct bets: massive infrastructure plays chasing AGI at one end, and lean on-device or fully-automated systems at the other. David Silver raised $1.1B to build machines that reason from scratch. Google ran inference on a phone CPU. AlphaSignal's agent auto-tuned itself past every human harness in 32 hours. All three landed in the same 24 hours — and all point to the same conclusion: the bottleneck is no longer access to models, it is orchestration and inference efficiency. The race this quarter is not who has the biggest model, it is who runs the leanest stack."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Today's Top Signal",
+      "headline": "OpenAI puts Codex in ChatGPT iOS — ship code from your phone",
+      "deck": "OpenAI rolled out Codex in preview inside the ChatGPT iOS app across all plans, letting developers track, manage, and act on long-running AI coding tasks from their phone. The move targets the commute-hour coding window while competing directly with Anthropic for the coding-tool market. Users can approve decisions, start new tasks, and push changes while their agent grinds away back at the desk.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/coreyhainesco/status/2055627850758357403",
+      "image_url": "./art/met-459001.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Rundown",
+        "handle": "therundownai",
+        "role": "AI news platform",
+        "avatar_url": "https://unavatar.io/x/therundownai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Madonna Adoring the Child — Botticelli (Alessandro di Mariano Filipepi) (ca. 1490–95)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Coding agents evolve their own tools — surpass human-tuned harness in 32 hours",
+      "deck": "A new paper evolves a coding agent's tools, middleware, and memory automatically, beating every human-tuned harness in 32 hours. The system prompt alone regresses when edited as the only adaptation mechanism — the real leverage is in the tool-middleware loop, not the prompt. This matters because it flips the assumption that more human oversight equals better agent output.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/nash_su/status/2055881750304243735",
+      "image_url": "./art/met-436099.jpg",
+      "read_time_min": 6,
+      "author": {
+        "name": "AlphaSignal AI",
+        "handle": "AlphaSignalAI",
+        "role": "AI research aggregator",
+        "avatar_url": "https://unavatar.io/x/AlphaSignalAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Nativity with Donors and Saints Jerome and Leonard — Gerard David (ca. 1510–15)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "AlphaGo architect David Silver raises $1.1B to make AI think, not just match patterns",
+      "deck": "David Silver, the architect of AlphaGo at DeepMind, raised $1.1 billion to build AI systems that don't learn from human games — they play themselves millions of times to find moves no human considered. The bet is that self-play reasoning is the next frontier, not scaling existing architectures. This matters because the $1.1B validates that AI learning from scratch beats human imitation at the highest levels.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/akshay_pachaar/status/2055684764816871533",
+      "image_url": "./art/met-435678.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Aadit",
+        "handle": "aadit",
+        "role": "NeatPrompts founder",
+        "avatar_url": "https://unavatar.io/x/aadit"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Temptation of Saint Anthony — Herri met de Bles (ca. 1550–60)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Sam Altman put $14M into UBI in 2019 — now he says he doesn't believe in it",
+      "deck": "Sam Altman helped raise $60 million in 2019 for the largest UBI experiment of its kind, putting $1,000 a month in the hands of low-income Americans for three years, and said equality of opportunity was impossible without guaranteed income. He now says he doesn't believe in it anymore. This matters because when the loudest AI optimist publicly walks back his social contract pitch, it changes the narrative around who AI wealth actually flows to.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/nash_su/status/2055881750304243735",
+      "image_url": "./art/met-435897.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Alex Banks",
+        "handle": "alexbanks",
+        "role": "Substack author",
+        "avatar_url": "https://unavatar.io/x/alexbanks"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Head of Christ (Ecce Homo) — Petrus Christus (ca. 1445)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Google and Arm run AI inference on mobile CPU — 14s down to 6.6s, no accelerator needed",
+      "deck": "Google and Arm demonstrated LiteRT, XNNPACK, KleidiAI, and Arm SME2 running Stability AI's stable-audio-open-small model on Android and Mac CPUs — generation time dropped from 14 seconds to 6.6 seconds with one thread, and the DiT submodel became roughly 4x smaller. This matters because CPU-based AI gives developers a broader path than waiting for every device to have the same specialized accelerator.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/nash_su/status/2055881750304243735",
+      "image_url": "./art/met-436069.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "AI newsletter",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Saint Reparata before the Emperor Decius — Bernardo Daddi (ca. 1338–40)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Marketing skills collection: 40 skills for AI agents to run product launches end-to-end",
+      "deck": "Corey Haines released /launch-strategy, a skill that builds a full product launch plan — waitlist strategy, Product Hunt prep, social blitz schedule, email sequences, press outreach, and post-launch iteration cycle — from a product description and timeline. It is part of a free open-source collection of 40 marketing skills for AI agents like Claude Code, Cursor, and Codex. Most launches are a tweet and a prayer; this structures the whole thing before, during, and after.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/coreyhainesco/status/2055627850758357403",
+      "image_url": "./art/met-437071.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Corey Haines",
+        "handle": "coreyhainesco",
+        "role": "Marketing skills author",
+        "avatar_url": "https://unavatar.io/x/coreyhainesco"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Visit to the Nursery — Gabriël Metsu (1661)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Content arrives as an event, not a publication — launch from every direction at once",
+      "deck": "Publishing a single piece into a feed full of competing noise gives only a few hours of visibility before the algorithm moves on. The piece did its entire job in less than a day if you did not seed anticipation before, build for amplification during, and relaunch after. The answer is to treat every asset arrival as an event — LinkedIn post, newsletter, partner co-promotion, sales rep outreach, and paid amplification, all at once.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/nash_su/status/2055881750304243735",
+      "image_url": "./art/met-451277.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "B2B marketing newsletter",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "\"Portrait of Qilich Khan Turani\", Folio from the Shah Jahan Album — La'lchand (recto: ca. 1640; verso: ca. 1530–50)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Seedance 2.0: switch models, make 4-15s videos, export watermark-free at 50% off",
+      "deck": "Seedance 2.0 lets users switch models, generate 4-to-15-second videos quickly, and export them watermark-free, with 50% off via Off-Peak Credits. This matters because the watermark-free export removes the last friction point between generative video and production use.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/lovart_ai/status/2045079691833295356",
+      "image_url": "./art/met-435711.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Lovart AI",
+        "handle": "lovart_ai",
+        "role": "AI design platform",
+        "avatar_url": "https://unavatar.io/x/lovart_ai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "An Egyptian Peasant Woman and Her Child — Léon Bonnat (1869–70)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "AI made people suspicious of everything — confidence ships but fact-checking does not",
+      "deck": "AI has made people suspicious of everything, but confidence still seems to ship with no fact-checking layer. The reverse Turing test is now in full effect: humans prove they are human by hallucinating they are art critics. This is both a cultural observation and a product design warning — the trust layer is the missing moat.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/nash_su/status/2055881750304243735",
+      "image_url": "./art/met-395643.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "The Neuron",
+        "handle": "theneurondaily",
+        "role": "AI newsletter",
+        "avatar_url": "https://unavatar.io/x/theneurondaily"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Victory Banquet — Jacques Philippe Le Bas (1770)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "AI auto-connects knowledge and surfaces insights humans missed — Karl Weick in the loop",
+      "deck": "An AI auto-connects knowledge across documents and surfaces new discoveries that surprised even the author. The system does not just find connections — it asks deeper questions based on organizational behavior theory from Karl E. Weick. This matters because it suggests the next breakthrough in knowledge work comes from AI that reasons across a personal knowledge base, not just retrieves it.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/nash_su/status/2055881750304243735",
+      "image_url": "./art/met-437061.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Nash Su",
+        "handle": "nash_su",
+        "role": "AI researcher",
+        "avatar_url": "https://unavatar.io/x/nash_su"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Salvator Mundi — Hans Memling (1480–85)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Hermes Agent Masterclass: from one agent to ten that work 24/7",
+      "deck": "A masterclass on Hermes Agent covers everything from self-evolving skills and three-tier memory to GEPA optimization and scaling from one to ten agents running around the clock. Hermes Agent has crossed significant usage thresholds, and the workflow patterns being documented here are the most concrete reference for multi-agent orchestration currently available.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/akshay_pachaar/status/2055684764816871533",
+      "image_url": "./art/met-437368.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Akshay Pachaar",
+        "handle": "akshay_pachaar",
+        "role": "AI content creator",
+        "avatar_url": "https://unavatar.io/x/akshay_pachaar"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Holy Family with an Angel — Raffaellino del Garbo (also known as Raffaelle de' Capponi and Raffaelle de' Carli) (ca. 1490)"
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Install the /launch-strategy skill and audit your next product launch with it",
+      "deck": "",
+      "why": "Most launches miss 60% of the steps because there is no structured checklist. This skill forces you to fill in every phase — before, during, after — so nothing gets missed.",
+      "try": "Set a 20-min timer. Run: npx skills add coreyhaines31/marketingskills, then describe your next product and timeline to /launch-strategy. Review the output and flag the three gaps in your current plan.",
+      "url": "https://x.com/coreyhainesco/status/2055627850758357403",
+      "image_url": "./art/met-437457.jpg",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "The Baptism of Christ — Sebastiano Ricci (ca. 1713–14)"
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Read the AlphaSignal paper on auto-evolving coding agents — 32 hours to beat human tuning",
+      "deck": "",
+      "why": "If your team manually writes system prompts or hardcodes agent tools, you are leaving performance on the table. The 32-hour auto-evolution result means your harness is probably already outdated tomorrow.",
+      "try": "Set a 15-min timer. Read the AlphaSignal AI paper summary on coding agent tool and middleware auto-evolution. Note one tool or middleware change you could apply to your current agent stack this week.",
+      "url": "https://x.com/nash_su/status/2055881750304243735",
+      "image_url": "./art/met-436522.jpg",
+      "read_time_min": 15,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 15 min",
+        "kind": "task"
+      },
+      "image_alt": "A Benedictine Monk — Hugo van der Goes (undated)"
+    }
+  ]
+}
