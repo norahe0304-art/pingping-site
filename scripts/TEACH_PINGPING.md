@@ -9,14 +9,14 @@ Pingping's diary cron (`a130f54960a2`) prompt evolved across 3 patches:
 | v1 | swap Pollinations curl → `node scripts/make-doodle.mjs` with a 6-motif menu | **applied** 2026-05-16 |
 | v2 | swap `.webp` → `.svg` output (Mac mini has no rsvg/cwebp) | **applied** 2026-05-16 |
 | v3 | **kill the motif menu**. pingping draws the actual thing in today's diary as raw SVG (with 2 inline style anchors + self-check). | **applied** 2026-05-16 (SSH response buffered ~30min, easy to mis-read as failed) |
-| v4 | X-feed cron `a536f6d6ea3a`: SIGNAL items must merge `why` into `deck` (one paragraph, `why=""`). Drop items without real source URLs (no `x.com/home` placeholders). Fetch og:image first, fall back to LoremFlickr by keyword for X URLs. | **pending — apply when next on the Mac mini's network** |
+| v4 | X-feed cron `a536f6d6ea3a`: og:image + LoremFlickr fallback for SIGNAL items. | **DO NOT APPLY — superseded.** Feed images now come from the GitHub Action via `scripts/fetch-art-images.mjs` (Met Museum). The og:image / LoremFlickr path is obsolete; `feed/art/met-*.jpg` is the only source of truth. v4 patcher kept only for historical reference. |
+| v4-dedup | The "merge why into deck" + "drop placeholder URLs" parts of v4 are still desirable but live in the Mac mini cron prompt itself, not in this repo. Apply manually if regressions appear. | informational |
 
-v3 + v4 patchers live at `scripts/cron-patches/`. Apply both:
+v3 patcher lives at `scripts/cron-patches/v3-free-form-svg.py`:
 
 ```bash
-scp scripts/cron-patches/v3-free-form-svg.py             pingping-mini:/tmp/
-scp scripts/cron-patches/v4-feed-merged-and-real-images.py pingping-mini:/tmp/
-ssh pingping-mini 'python3 /tmp/v3-free-form-svg.py && python3 /tmp/v4-feed-merged-and-real-images.py'
+scp scripts/cron-patches/v3-free-form-svg.py pingping-mini:/tmp/
+ssh pingping-mini 'python3 /tmp/v3-free-form-svg.py'
 ```
 
 The script is idempotent — re-runs are no-ops. Backup written to

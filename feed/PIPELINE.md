@@ -5,19 +5,31 @@ Daily AI-marketing wire. Every cover = one day. Every story = real source URL.
 ## Architecture
 
 ```
-13:00 UTC daily (GitHub Action cron)
+13:00 UTC daily (GitHub Action — .github/workflows/daily-feed.yml)
    │
-   ▼
+   ▼ step 1
 scripts/pingping-daily.mjs
    ├─ reads feed/sources.json  (RSS feeds + manual X picks)
-   ├─ fetches all RSS in parallel
-   ├─ filters last 48h
-   ├─ → if ANTHROPIC_API_KEY: Claude curates + paraphrases top 6-8
-   ├─ → else: falls back to top-N by recency
-   ├─ writes feed/days/YYYY-MM-DD.json   (full issue)
-   └─ updates feed/days/manifest.json     (rack preview per day)
+   ├─ fetches RSS in parallel, filters last 48h
+   ├─ Claude curates + paraphrases (falls back to top-N by recency)
+   ├─ writes feed/days/YYYY-MM-DD.json  (7 items, image_url empty)
+   └─ updates feed/days/manifest.json
    │
-   ▼
+   ▼ step 2
+scripts/fetch-art-images.mjs
+   ├─ tokenizes each new headline → ART_LIFT → Met API query
+   ├─ stable hash picks a public-domain masterwork per slot
+   ├─ enforces global uniqueness (usedOids Set)
+   ├─ pipes download through `magick`: 1400px, q82 jpeg
+   └─ writes feed/art/met-<oid>.jpg + sets item.image_url
+   │
+   ▼ step 3
+scripts/diversify-tag-colors.mjs
+   ├─ rotates 4-color palette with no adjacent same-color
+   ├─ enforces cover ≠ that day's lead
+   └─ rewrites tag_color in day jsons + manifest
+   │
+   ▼ step 4
 git commit & push → Vercel rebuilds → live
    │
    ▼
@@ -27,6 +39,11 @@ feed/index.html
    └─ on click → fetches that day's JSON → renders issue paper
         (every <a href="…" target="_blank"> points to real source)
 ```
+
+All three scripts are **idempotent**:
+- `fetch-art-images.mjs` skips slots that already have a unique image_url
+- `diversify-tag-colors.mjs` only swaps colors when there's a collision
+- safe to re-run locally any time without breaking state
 
 ## One-time setup
 
@@ -73,18 +90,26 @@ Edit `feed/sources.json`:
 ## Local testing
 
 ```bash
-# generate today's issue locally (no commit)
+# 1. generate today's issue (writes feed/days/YYYY-MM-DD.json, items have empty image_url)
 node scripts/pingping-daily.mjs
+
+# 2. pull a unique Met masterwork per item
+node scripts/fetch-art-images.mjs              # only new/empty slots
+node scripts/fetch-art-images.mjs --rebuild    # re-roll every slot from scratch
+
+# 3. ensure no two adjacent stripes share a color
+node scripts/diversify-tag-colors.mjs
 
 # backfill a specific date
 PINGPING_DATE=2026-05-14 node scripts/pingping-daily.mjs
+node scripts/fetch-art-images.mjs --date 2026-05-14
 
 # preview locally
 python3 -m http.server 4747
 # → http://localhost:4747/feed/
 ```
 
-If `ANTHROPIC_API_KEY` is not set in the local shell, the script falls back to top-N-by-recency mode (no Claude curation).
+If `ANTHROPIC_API_KEY` is not set in the local shell, the script falls back to top-N-by-recency mode (no Claude curation). `fetch-art-images.mjs` and `diversify-tag-colors.mjs` need no keys — Met Museum Open Access API is public.
 
 ## Data shape
 
