@@ -4,33 +4,37 @@ Daily AI-marketing wire. Every cover = one day. Every story = real source URL.
 
 ## Architecture
 
+The daily cron runs on the **Mac mini Hermes** system (job id `a536f6d6ea3a`),
+NOT on GitHub Actions. Pingping (the AI agent on that machine) is the
+single source of truth for daily feed commits — it has X access and
+runs a long-running prompt that does the curation. GitHub Actions has
+no X access and would only duplicate the work, so there's no Action
+for the feed.
+
 ```
-13:00 UTC daily (GitHub Action — .github/workflows/daily-feed.yml)
+~15:00 UTC daily (Mac mini Hermes cron a536f6d6ea3a)
    │
    ▼ step 1
-scripts/pingping-daily.mjs
-   ├─ reads feed/sources.json  (RSS feeds + manual X picks)
-   ├─ fetches RSS in parallel, filters last 48h
-   ├─ Claude curates + paraphrases (falls back to top-N by recency)
-   ├─ writes feed/days/YYYY-MM-DD.json  (7 items, image_url empty)
-   └─ updates feed/days/manifest.json
+Pingping reads X timeline + newsletter feeds, curates 5 SIGNAL +
+2 MUST-DO items per the cron prompt rules (see TEACH_PINGPING.md).
+Writes feed/days/YYYY-MM-DD.json with every item's image_url = "".
    │
    ▼ step 2
-scripts/fetch-art-images.mjs
-   ├─ tokenizes each new headline → ART_LIFT → Met API query
+node scripts/fetch-art-images.mjs
+   ├─ tokenize each headline → ART_LIFT → Met API query
    ├─ stable hash picks a public-domain masterwork per slot
-   ├─ enforces global uniqueness (usedOids Set)
+   ├─ global uniqueness (usedOids Set) — no oid reused anywhere
    ├─ pipes download through `magick`: 1400px, q82 jpeg
    └─ writes feed/art/met-<oid>.jpg + sets item.image_url
    │
    ▼ step 3
-scripts/diversify-tag-colors.mjs
-   ├─ rotates 4-color palette with no adjacent same-color
+node scripts/diversify-tag-colors.mjs
+   ├─ 4-color palette rotation, no adjacent same-color
    ├─ enforces cover ≠ that day's lead
    └─ rewrites tag_color in day jsons + manifest
    │
    ▼ step 4
-git commit & push → Vercel rebuilds → live
+git add feed/days/ feed/art/  →  commit  →  push  →  Vercel auto-deploys
    │
    ▼
 feed/index.html
@@ -40,6 +44,10 @@ feed/index.html
         (every <a href="…" target="_blank"> points to real source)
 ```
 
+Steps 2-4 are stitched into the cron prompt via the v5 patch
+(`scripts/cron-patches/v5-art-and-colors.py`). Apply v5 + v3 (diary
+doodle) once per fresh Mac mini install; both patchers are idempotent.
+
 All three scripts are **idempotent**:
 - `fetch-art-images.mjs` skips slots that already have a unique image_url
 - `diversify-tag-colors.mjs` only swaps colors when there's a collision
@@ -47,45 +55,36 @@ All three scripts are **idempotent**:
 
 ## One-time setup
 
-### 1. Get a Claude API key
-- https://console.anthropic.com → API keys → create
-- Free tier covers ~30-40 days of curation; paid plans for more
+The Mac mini Hermes cron is the runtime. There's no GitHub Action.
 
-### 2. Add as GitHub Secret
-- Repo → Settings → Secrets and variables → Actions → New repository secret
-- Name: `ANTHROPIC_API_KEY`
-- Value: your key (starts with `sk-ant-…`)
+### 1. Apply cron patches
 
-### 3. Customize sources
-Edit `feed/sources.json`:
-- **`rss`** — list of RSS feeds pingping reads daily. Newsletters, podcasts, YouTube channels — anything with a public feed.
-- **`manual_picks`** — hand-curated URLs (usually X threads, since X doesn't have stable RSS). Pingping will include these in today's issue and Claude will expand them.
-
-```json
-{
-  "rss": [
-    { "id": "latent-space", "name": "Latent Space",
-      "url": "https://www.latent.space/feed", "kind": "podcast" }
-  ],
-  "manual_picks": [
-    { "url": "https://x.com/helloitsaustin/status/...",
-      "title": "Optional title",
-      "author": "Austin Hughes",
-      "source_label": "X · thread",
-      "kind": "x" }
-  ]
-}
+```bash
+scp scripts/cron-patches/v3-free-form-svg.py   pingping-mini:/tmp/
+scp scripts/cron-patches/v5-art-and-colors.py  pingping-mini:/tmp/
+ssh pingping-mini 'python3 /tmp/v3-free-form-svg.py && python3 /tmp/v5-art-and-colors.py'
 ```
 
-### 4. Enable the workflow
-- `.github/workflows/daily-feed.yml` already exists
-- Push to `main` once; GitHub will start scheduling
+- v3 → diary cron (`a130f54960a2`): free-form SVG doodle generator
+- v5 → X-feed cron (`a536f6d6ea3a`): runs fetch-art + diversify-colors after JSON write
 
-## Daily flow (after setup)
+Both patchers are idempotent (re-runs are no-ops, written backups
+named `jobs.json.bak-doodle-v3` / `jobs.json.bak-feed-v5`).
 
-- **Automatic**: 13:00 UTC cron runs the script, commits today's `.json`, Vercel auto-deploys.
-- **Manual trigger**: Repo → Actions → "daily pingping feed" → Run workflow
-- **Backfill a specific date**: same Run workflow form, paste `YYYY-MM-DD` into the date field
+### 2. Customize sources (optional)
+
+The Mac mini cron reads its source list from its own prompt, not from
+`feed/sources.json`. The `feed/sources.json` file in this repo is only
+used by `scripts/pingping-daily.mjs` (the manual-backfill fallback —
+see "Local testing" below). To change what pingping reads daily, edit
+the cron prompt directly via SSH.
+
+## Daily flow
+
+- **Automatic**: Mac mini cron fires daily ~15:00 UTC → writes JSON →
+  runs `fetch-art-images.mjs` + `diversify-tag-colors.mjs` →
+  commits + pushes feed/days/ + feed/art/ → Vercel auto-deploys
+- **Backfill a specific date manually**: see Local testing below
 
 ## Local testing
 
