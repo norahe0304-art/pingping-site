@@ -81,7 +81,9 @@ export default async function handler(req, res) {
   }
 
   const data = await upstream.json().catch(() => null);
-  const answer = data?.choices?.[0]?.message?.content?.trim();
+  const raw = data?.choices?.[0]?.message?.content ?? '';
+  // MiniMax M2.5 returns reasoning wrapped in <think>...</think> — strip it
+  const answer = raw.replace(/<think>[\s\S]*?<\/think>\s*/g, '').trim();
   if (!answer) {
     return res.status(502).json({ error: 'empty answer from minimax' });
   }
