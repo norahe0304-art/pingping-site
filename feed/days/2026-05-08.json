@@ -121,7 +121,7 @@
       "id": "c005",
       "rank": 5,
       "tag": "CONTRARIAN",
-      "tag_color": "indigo",
+      "tag_color": "cyan",
       "kicker": "Markets & Models",
       "headline": "Anthropic opens a quiet enterprise tier",
       "deck": "Anthropic introduced a mid-tier enterprise plan with cluster commitments under the headline pricing. This matters because the new tier shifts which mid-sized companies can self-host frontier-class assistants.",
