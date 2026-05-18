@@ -1,0 +1,346 @@
+{
+  "date": "2026-05-18",
+  "weekday": "Monday",
+  "no": 109,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-18T12:33:02Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Tom Huang</b>: Open Design is turning template packs into an AI moat.",
+    "<b>Garry Tan</b>: GBrain makes memory feel like product infrastructure.",
+    "<b>Bridge Wang</b>: Hermes's cron stack is the real 24/7 product.",
+    "<b>The Pro Human</b>: Database-native agents are moving closer to SQL.",
+    "<b>Neatprompts</b>: A $1.1B bet says AI learning is changing shape."
+  ],
+  "digest": {
+    "title": "AI products are winning by bundling memory, runtime, and distribution.",
+    "body": "The strongest signals today are not about one bigger model; they are about the systems around it. Memory stacks, cron/heartbeat plumbing, isolated runtimes, and launch orchestration are all becoming product features, which means the next edge is less about raw capability and more about how much operational friction a team can remove."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Open Design is turning template packs into an AI moat",
+      "deck": "Tom Huang says html-anything's template pack has now landed across Open Design, and the pitch is bigger than a shortcut library. If agents can produce elite-looking HTML from reusable skills and templates, the moat shifts from raw generation to encoded taste, which is exactly where creator tools start to compound.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/tuturetom/status/2056258502050357334",
+      "image_url": "./art/met-425894.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Tom Huang",
+        "handle": "tuturetom",
+        "role": "creator / builder",
+        "avatar_url": "https://unavatar.io/x/tuturetom"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "'Aqua' in a Decorative Border with Sea Creatures, from a Series of Circular Designs with the Four Elements — Crispijn de Passe the Elder (1590–1612)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "GBrain turns personal memory into infrastructure",
+      "deck": "Garry Tan's GBrain framing is compelling because it stops treating memory as a small feature and instead treats it as a full operating layer for agents. If the stack really gives OpenClaw or Hermes richer personal context, then the next wave of AI products may win by remembering who you are and what you were trying to do, not just by answering faster.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/garrytan/status/2055670533451366479",
+      "image_url": "./art/met-435864.jpg",
+      "read_time_min": 6,
+      "author": {
+        "name": "Garry Tan",
+        "handle": "garrytan",
+        "role": "builder / investor",
+        "avatar_url": "https://unavatar.io/x/garrytan"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "A Woman with a Dog — Giacomo Ceruti (1740s)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Hermes’s cron stack is the real 24/7 product",
+      "deck": "Bridge Wang's note on Cron, Gateway, and Heartbeat is valuable because it explains how long-running agents actually stay alive in practice. The story is not the agent itself; it's the plumbing that keeps tasks, retries, and liveness checks running long enough to matter, which is where autonomous systems stop being demos and start becoming operations.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/qc777qc/status/2055938260103548970",
+      "image_url": "./art/met-435678.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Bridge Wang",
+        "handle": "qc777qc",
+        "role": "builder / operator",
+        "avatar_url": "https://unavatar.io/x/qc777qc"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Temptation of Saint Anthony — Herri met de Bles (ca. 1550–60)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Full-SQL agents are moving closer to the database",
+      "deck": "The Pro Human digest's database-native agent story stands out because it removes the fake dashboard layer and lets tools talk to real SQL backends through MCP. That matters when agent products are judged by whether they can do useful work without provisioning drama, because the fastest control plane is often the one that already sits next to the data.",
+      "why": "",
+      "try": "",
+      "url": "https://theprohuman.mail.beehiiv.com/",
+      "image_url": "./art/met-436176.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Christ Asleep during the Tempest — Eugène Delacroix (ca. 1853)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "A cloud sandbox is becoming a default agent primitive",
+      "deck": "Hyperagent's pitch is interesting not because it is another agent wrapper, but because it gives every session its own isolated cloud runtime with browser access and code execution. If that model holds up, the unit of distribution changes again: instead of shipping software to a user, you ship a temporary workbench that can actually finish the task on its own.",
+      "why": "",
+      "try": "",
+      "url": "https://www.hyperagent.com/",
+      "image_url": "./art/met-437457.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Hyperagent",
+        "handle": "hyperagentapp",
+        "role": "product",
+        "avatar_url": "https://unavatar.io/x/hyperagentapp"
+      },
+      "source": {
+        "label": "X · ad",
+        "kind": "x"
+      },
+      "image_alt": "The Baptism of Christ — Sebastiano Ricci (ca. 1713–14)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "AI learning now looks like a capital-intensive science bet",
+      "deck": "The $1.1B raise around the AlphaGo architect is less a headline about money than a signal that the field is broadening its learning bets. It suggests some investors think the next jump won't come from prettier wrappers, but from systems that learn in fundamentally different loops than today's standard model training.",
+      "why": "",
+      "try": "",
+      "url": "https://neatprompts.com/",
+      "image_url": "./art/met-49021.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Aadit",
+        "handle": "neatprompts",
+        "role": "newsletter / curator",
+        "avatar_url": "https://unavatar.io/x/neatprompts"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Landscapes after Song and Yuan masters — Lan Ying (1642)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Launches are being redesigned as coordinated systems",
+      "deck": "The B2B launch essay is a clean reminder that publication is no longer the product launch; it is just one beat in a wider distribution system. The real edge comes from orchestrating anticipation, launch-day amplification, and follow-up relaunches so the asset keeps working after the feed scrolls past.",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-338108.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Study of a Figure in a Niche (Saint Ambrose; recto); Architectural Studies: Four Alternative Designs for Fictive Niches and an Unrelated Design with Garlands (verso), ca. 1560-67 — Giuseppe Arcimboldo (1564–65)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Open-source skill packs are becoming product distribution",
+      "deck": "Tom Huang's Open Design post also points to a broader distribution shift: packaging skills, templates, and exports as a shared surface makes the whole tool more portable. That matters because once the workflow is encoded, a creator can move across agents and still keep the same aesthetic and operating standard.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/tuturetom/status/2056258502050357334",
+      "image_url": "./art/met-435725.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Tom Huang",
+        "handle": "tuturetom",
+        "role": "creator / builder",
+        "avatar_url": "https://unavatar.io/x/tuturetom"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Christ's Descent into Hell — Hieronymus Bosch (undated)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "AI teams are shipping memory before they ship more model size",
+      "deck": "GBrain's appeal is that it formalizes memory as a layered system rather than a single embedding trick. That is a useful signal for the market because it implies the competitive frontier is moving toward context, identity, and continuity — all the things that make a product feel like it actually knows the user.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/garrytan/status/2055670533451366479",
+      "image_url": "./art/met-371974.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Garry Tan",
+        "handle": "garrytan",
+        "role": "builder / investor",
+        "avatar_url": "https://unavatar.io/x/garrytan"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "\"Four-in-Hand\" — Louis Maurer (1861)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Long-running autonomy is now a plumbing story",
+      "deck": "Bridge Wang's cron-and-heartbeat memo is important because it demystifies what makes 24-hour agent work possible. The recurring pattern is boring infrastructure: state, scheduling, retries, and checks, which is exactly why the best agent products may look less like chat interfaces and more like dependable background services.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/qc777qc/status/2055938260103548970",
+      "image_url": "./art/met-437368.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Bridge Wang",
+        "handle": "qc777qc",
+        "role": "builder / operator",
+        "avatar_url": "https://unavatar.io/x/qc777qc"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Holy Family with an Angel — Raffaellino del Garbo (also known as Raffaelle de' Capponi and Raffaelle de' Carli) (ca. 1490)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Product teams are quietly buying the browser plus runtime stack",
+      "deck": "Hyperagent's cloud sandbox is a neat signal because it bundles browser, code execution, and isolated compute into one session boundary. That combination is powerful for product teams: it collapses setup time, reduces environment friction, and turns a fragile workflow into something closer to a disposable execution layer.",
+      "why": "",
+      "try": "",
+      "url": "https://www.hyperagent.com/",
+      "image_url": "./art/met-436572.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Hyperagent",
+        "handle": "hyperagentapp",
+        "role": "product",
+        "avatar_url": "https://unavatar.io/x/hyperagentapp"
+      },
+      "source": {
+        "label": "X · ad",
+        "kind": "x"
+      },
+      "image_alt": "Christ Healing the Blind — El Greco (Domenikos Theotokopoulos) (ca. 1570)"
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Map one agent workflow onto a real database",
+      "deck": "",
+      "why": "Database-native agents are moving from novelty to control plane, so today's fastest learning comes from testing a real workflow against real data instead of a toy demo.",
+      "try": "Set a 30-minute timer. Pick one recurring agent task and trace the exact SQL tables, permissions, and failure points it would need.",
+      "url": "https://theprohuman.mail.beehiiv.com/",
+      "image_url": "./art/met-702001.jpg",
+      "read_time_min": 30,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 min",
+        "kind": "task"
+      },
+      "image_alt": "Prison des Chantiers, le 15 août 1871, Versailles — Ernest Eugène Appert (1870–71)"
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Build a launch relay for one ship this week",
+      "deck": "",
+      "why": "The launch pattern keeps repeating across the strongest growth notes: the asset matters less than the orchestration around it.",
+      "try": "Set a 20-minute timer. Draft anticipation, launch-day amplification, and relaunch follow-up for one thing you ship this week.",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-436099.jpg",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "The Nativity with Donors and Saints Jerome and Leonard — Gerard David (ca. 1510–15)"
+    }
+  ]
+}

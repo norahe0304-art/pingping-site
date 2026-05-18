@@ -1,6 +1,31 @@
 {
-  "updated_at": "2026-05-17T23:50:14Z",
+  "updated_at": "2026-05-18T12:33:15Z",
   "days": [
+    {
+      "date": "2026-05-18",
+      "weekday": "Monday",
+      "no": 109,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "Eleven signals. Two moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "Open Design is turning template packs into an AI moat",
+      "lead_deck": "Tom Huang says html-anything's template pack has now landed across Open Design, and the pitch is bigger than a shortcut library. If agents can produce elite-looking HTML from reusable skills and templates, the moat shifts from raw generation to encoded taste, which is exactly where creator tools start to compound.",
+      "lead_tag": "SIGNAL",
+      "tag_color": "pink",
+      "story_count": 13,
+      "read_time_total_min": 104,
+      "lead_author": {
+        "name": "Tom Huang",
+        "handle": "tuturetom",
+        "role": "creator / builder",
+        "avatar_url": "https://unavatar.io/x/tuturetom"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": "./art/met-425894.jpg"
+    },
     {
       "date": "2026-05-17",
       "weekday": "Sunday",
@@ -11,7 +36,7 @@
       "lead_headline": "Codex + MagicPath could replace Figma faster than expected",
       "lead_deck": "Dingyi is arguing that Codex paired with MagicPath can cover a surprising amount of the design-to-build loop, making Figma feel less like the center of gravity and more like a handoff layer. The interesting part is not the demo itself but the workflow implication: if prototypes can become shippable interactions with less translation, product teams can collapse days of back-and-forth into one tighter loop.",
       "lead_tag": "SIGNAL",
-      "tag_color": "pink",
+      "tag_color": "amber",
       "story_count": 13,
       "read_time_total_min": 101,
       "lead_author": {
@@ -36,7 +61,7 @@
       "lead_headline": "OpenAI puts Codex on mobile, not just desktop",
       "lead_deck": "OpenAI is pushing coding agents into the phone workflow so tasks can keep moving off desk. This matters because mobile approval and task handoff reduce the friction that slows long-running agent work.",
       "lead_tag": "SIGNAL",
-      "tag_color": "amber",
+      "tag_color": "cyan",
       "story_count": 7,
       "read_time_total_min": 115,
       "lead_author": {
@@ -61,7 +86,7 @@
       "lead_headline": "Codex on mobile begins to leak",
       "lead_deck": "Screenshots and a partial App Store listing show OpenAI testing a Codex companion on iOS. This matters because mobile coding agents are the surface that decides where the rest of the year is fought.",
       "lead_tag": "SIGNAL",
-      "tag_color": "cyan",
+      "tag_color": "indigo",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -86,7 +111,7 @@
       "lead_headline": "Lenny: 6 months of AI in PM workflows",
       "lead_deck": "Lenny's newsletter published a six-month report on which AI patterns stuck in real PM workflows. This matters because most PM tooling reviews are pre-launch theater, and a six-month retrospective is the rarer signal.",
       "lead_tag": "PLAYBOOK",
-      "tag_color": "indigo",
+      "tag_color": "pink",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -111,7 +136,7 @@
       "lead_headline": "Claude can hold a screen for an hour",
       "lead_deck": "Anthropic extended Claude computer-use to one-hour autonomous sessions with periodic check-in approvals. This matters because long-running computer-use is the line between demo and dependable, and Anthropic just crossed it.",
       "lead_tag": "SIGNAL",
-      "tag_color": "pink",
+      "tag_color": "amber",
       "story_count": 7,
       "read_time_total_min": 95,
       "lead_author": {
@@ -136,7 +161,7 @@
       "lead_headline": "Anthropic: a follow-up to constitutional AI",
       "lead_deck": "Anthropic posted a follow-up paper extending constitutional AI with model-written critique chains. This matters because the critique-chain mechanism is what governance teams will point to when arguing about audits.",
       "lead_tag": "CRAFT",
-      "tag_color": "amber",
+      "tag_color": "cyan",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -161,7 +186,7 @@
       "lead_headline": "Replit Agents v2 launches with a single-pane runner",
       "lead_deck": "Replit shipped Agents v2 with a unified runner and per-step approval. This matters because Replit is the cleanest reference UI for agent runs and competitors will copy within a month.",
       "lead_tag": "SIGNAL",
-      "tag_color": "cyan",
+      "tag_color": "indigo",
       "story_count": 7,
       "read_time_total_min": 85,
       "lead_author": {
@@ -186,7 +211,7 @@
       "lead_headline": "Every: the workspace agent essay",
       "lead_deck": "Every published a long piece on what a workspace-level agent does that an in-app one cannot. This matters because the workspace surface is the real product battle of the next two quarters.",
       "lead_tag": "CRAFT",
-      "tag_color": "indigo",
+      "tag_color": "pink",
       "story_count": 7,
       "read_time_total_min": 85,
       "lead_author": {
@@ -211,7 +236,7 @@
       "lead_headline": "Andrew Chen: PLG is now PLG-with-agents",
       "lead_deck": "Andrew Chen argues PLG funnels are reshaping into agent-onboarding flows where the agent does the first job. This matters because the funnel diagram every B2B team draws on a whiteboard is about to look different.",
       "lead_tag": "PLAYBOOK",
-      "tag_color": "pink",
+      "tag_color": "amber",
       "story_count": 7,
       "read_time_total_min": 130,
       "lead_author": {
@@ -236,7 +261,7 @@
       "lead_headline": "Stripe ships an AI-first payments dashboard",
       "lead_deck": "Stripe replaced the legacy dashboard search and rules editor with conversational equivalents. This matters because Stripe sets the bar for financial UX and competitors will be pressured to follow within a quarter.",
       "lead_tag": "SIGNAL",
-      "tag_color": "amber",
+      "tag_color": "cyan",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -261,7 +286,7 @@
       "lead_headline": "Anthropic strikes a compute deal with SpaceX",
       "lead_deck": "Anthropic signed a multi-year capacity arrangement with SpaceX for Starlink-backed compute. This matters because lab capacity is the binding constraint right now and the new pact reshuffles who can train at what scale.",
       "lead_tag": "SIGNAL",
-      "tag_color": "cyan",
+      "tag_color": "indigo",
       "story_count": 7,
       "read_time_total_min": 75,
       "lead_author": {
