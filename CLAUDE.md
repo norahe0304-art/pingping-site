@@ -64,6 +64,8 @@ Polaroids/stickers/receipts use Atlas single-use angles; no two share the same r
 Dev:     python3 -m http.server 4747  (cd into root first)
 Preview: open http://localhost:4747/ · /diary/ · /feed/
 Deploy:  push to main → Vercel auto-deploy
+
+Diary publishing note: per-day sources live in diary/YYYY-MM-DD.html, each entry should keep 3 numbered sections and at least 3 Atlas sidenotes in the English file before running scripts/build-diary.mjs.
 </runbook>
 
 法则: Atlas 调性 · 单一真相源 zi.css · 倾斜角度不复用 · doodle 必须笨拙
