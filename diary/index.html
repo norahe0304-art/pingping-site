@@ -26,7 +26,14 @@
     </div>
   </nav>
 
-  <aside class="zi-toc" aria-label="Diary table of contents">
+  <button id="zi-toc-toggle" class="zi-toc-toggle" type="button"
+          aria-expanded="false" aria-controls="zi-toc-drawer"
+          aria-label="Open diary index">
+    <span class="zi-toc-toggle-label" id="zi-toc-toggle-label">DIARY INDEX</span>
+    <span class="zi-toc-toggle-chev" aria-hidden="true"></span>
+  </button>
+
+  <aside id="zi-toc-drawer" class="zi-toc" aria-label="Diary table of contents">
     <div class="zi-toc-head">
       <div class="zi-toc-brand">pingping diary</div>
     </div>

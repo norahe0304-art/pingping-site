@@ -175,12 +175,12 @@ a { color: inherit; text-decoration: none; }
 }
 .zi-nav-links {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  align-items: stretch;
+  gap: 4px;
   margin: 0 -20px;
-  padding: 10px 20px;
+  padding: 0 16px;
   border-top: 1px solid var(--hairline);
-  font-size: 10.5px;
+  font-size: 12px;
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none;
@@ -194,16 +194,33 @@ a { color: inherit; text-decoration: none; }
     gap: 28px;
     font-size: 11px;
     overflow: visible;
+    align-items: center;
   }
 }
 .zi-nav-links a {
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 10px;
   color: rgba(23, 23, 23, 0.45);
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
+  border-radius: 2px;
 }
 .zi-nav-links a:hover,
 .zi-nav-links a[aria-current="page"] {
   color: var(--fg);
+}
+.zi-nav-links a[aria-current="page"] {
+  background: rgba(28, 27, 27, 0.04);
+}
+@media (min-width: 768px) {
+  .zi-nav-links a {
+    min-height: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+  .zi-nav-links a[aria-current="page"] { background: transparent; }
 }
 .zi-nav-num {
   display: none;
@@ -455,25 +472,88 @@ a { color: inherit; text-decoration: none; }
 
 /* ============================================================
    Atlas-style aggregator: long single page with left TOC + sections
+
+   Mobile (<1024px) — off-canvas drawer slides down from the top.
+     toggle button (.zi-toc-toggle) sticks below the nav, shows
+     the active entry label. tap → opens drawer. tap entry → closes.
+   Desktop (≥1024px) — fixed 320/336px left sidebar.
    ============================================================ */
 .zi-toc {
-  display: none;
+  position: fixed;
+  /* mobile: nav stacks to ~85px (brand 40 + border + links 44).
+     desktop ≥768px nav collapses to single 48px row (handled below). */
+  top: 85px;
+  left: 0; right: 0;
+  bottom: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--hairline);
+  z-index: 35;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px 24px;
+  transform: translateY(-110%);
+  transition: transform 0.32s cubic-bezier(.25,.1,.25,1);
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.zi-toc.is-open { transform: translateY(0); }
+
+/* Mobile drawer toggle — sticky pill below nav. Hidden on desktop.
+   z-index above the drawer so user can tap to close while open. */
+.zi-toc-toggle {
+  position: sticky;
+  top: 85px;                 /* mobile nav stack height */
+  z-index: 36;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  background: rgba(246, 244, 238, 0.92);
+  backdrop-filter: blur(6px);
+  border: 0;
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg);
+  cursor: pointer;
+  text-align: left;
+  min-height: 44px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.zi-toc-toggle-label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.zi-toc-toggle-chev {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-right: 1.5px solid var(--fg);
+  border-bottom: 1.5px solid var(--fg);
+  transform: rotate(45deg);
+  transition: transform 0.22s ease;
+  margin-top: -4px;
+  flex-shrink: 0;
+}
+.zi-toc-toggle[aria-expanded="true"] .zi-toc-toggle-chev { transform: rotate(-135deg); margin-top: 2px; }
+
+@media (min-width: 768px) {
+  /* nav collapses to single 48px row; drawer + toggle align to that */
+  .zi-toc { top: 48px; }
+  .zi-toc-toggle { top: 48px; }
 }
 @media (min-width: 1024px) {
   .zi-toc {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 48px;          /* clear the sticky nav */
-    left: 0;
-    bottom: 0;
+    right: auto;
     width: 320px;
     padding: 28px 24px 28px 32px;
-    background: var(--bg);
     border-right: 1px solid var(--hairline);
-    overflow: hidden;
-    z-index: 30;
+    border-bottom: 0;
+    transform: none;
+    transition: none;
   }
+  .zi-toc-toggle { display: none; }
 }
 @media (min-width: 1280px) {
   .zi-toc {
@@ -609,7 +689,7 @@ a { color: inherit; text-decoration: none; }
   z-index: 2;
   max-width: 720px;
   margin: 0 auto;
-  padding: 56px 20px 120px;
+  padding: 32px 20px 120px;
 }
 @media (min-width: 1024px) {
   .zi-aggregate-main {

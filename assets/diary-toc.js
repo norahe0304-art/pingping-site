@@ -51,7 +51,33 @@
     if (!sections.length || !tocLinks.length) return;
 
     var pillLabel = document.getElementById('zi-pill-label');
+    var toggleBtn = document.getElementById('zi-toc-toggle');
+    var toggleLabel = document.getElementById('zi-toc-toggle-label');
+    var drawer = document.getElementById('zi-toc-drawer');
     var current = null;
+
+    // ----------------------------------------------------------
+    // Mobile drawer: toggle open/close on tap, close on backdrop
+    // tap, close after picking an entry. Body scroll-lock when open.
+    // ----------------------------------------------------------
+    function openDrawer() {
+      if (!drawer || !toggleBtn) return;
+      drawer.classList.add('is-open');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      if (!drawer || !toggleBtn) return;
+      drawer.classList.remove('is-open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function () {
+        if (drawer.classList.contains('is-open')) closeDrawer();
+        else openDrawer();
+      });
+    }
 
     function setActive(id) {
       if (id === current) return;
@@ -62,9 +88,12 @@
       // single circle on the active item; torn down before redraw
       var activeLink = tocLinks.find(function (a) { return a.dataset.target === id; });
       drawCircleOn(activeLink);
-      if (pillLabel) {
-        var date = id.replace('entry-', '').replace(/-/g, '.');
-        pillLabel.textContent = 'DIARY · ' + date;
+      // sync pill (≥1280) + mobile drawer toggle label
+      var date = id.replace('entry-', '').replace(/-/g, '.');
+      if (pillLabel) pillLabel.textContent = 'DIARY · ' + date;
+      if (toggleLabel) {
+        var title = activeLink && activeLink.querySelector('.zi-toc-title');
+        toggleLabel.textContent = (title ? title.textContent.trim() : 'DIARY') + ' · ' + date;
       }
       // keep active toc item in view
       var active = tocLinks.find(function (a) { return a.dataset.target === id; });
@@ -105,18 +134,39 @@
       setTimeout(function () { setActive(first.dataset.target); }, 60);
     }
 
-    // smooth-scroll on TOC click; offset for sticky nav
+    // smooth-scroll on TOC click; offset for sticky nav + mobile toggle
     tocLinks.forEach(function (a) {
       a.addEventListener('click', function (ev) {
         var id = a.dataset.target;
         var target = document.getElementById(id);
         if (!target) return;
         ev.preventDefault();
-        var top = target.getBoundingClientRect().top + window.pageYOffset - 64;
+        var wasOpen = drawer && drawer.classList.contains('is-open');
+        if (wasOpen) closeDrawer();
+        // clear sticky chrome (nav + toggle) on mobile; just nav on desktop
+        var w = window.innerWidth;
+        var offset = w >= 1024 ? 64 : (w >= 768 ? 110 : 145);
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
         window.scrollTo({ top: top, behavior: 'smooth' });
         history.replaceState(null, '', '#' + id);
         setActive(id);
       });
+    });
+
+    // Escape closes the drawer
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && drawer && drawer.classList.contains('is-open')) {
+        closeDrawer();
+      }
+    });
+
+    // If we resize to desktop while drawer is open, clean up scroll-lock
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1024) {
+        document.body.style.overflow = '';
+        if (drawer) drawer.classList.remove('is-open');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
