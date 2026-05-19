@@ -1,0 +1,346 @@
+{
+  "date": "2026-05-19",
+  "weekday": "Tuesday",
+  "no": 110,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-19T08:30:00Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Google + Arm</b>: CPU inference keeps moving closer to the device.",
+    "<b>Anthropic</b>: Claude's token ceiling got roomier across plans.",
+    "<b>Nous Research</b>: baoyu-comic now lives inside Hermes Agent.",
+    "<b>Aadit</b>: a $1.1B raise says AI learning is becoming a science bet.",
+    "<b>Electric B2B</b>: launches are turning into coordinated systems."
+  ],
+  "digest": {
+    "title": "The edge is shifting from model size to operational leverage.",
+    "body": "Today's signals cluster around a single pattern: the best AI products are winning by reducing friction in the surrounding system, not by chasing a bigger model alone. On-device inference, richer memory, longer-running agents, coordinated launch stacks, and workflow-encoded creative tools all point to the same move — ship less magic, more leverage, and make the product do real work where people already are."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Google and Arm push AI inference onto CPUs",
+      "deck": "Google and Arm are showing how LiteRT, XNNPACK, KleidiAI, and Arm's SME2 can speed up AI inference directly on CPUs, using Stability AI's stable-audio-open-small as the demo path. The important part is not just the benchmark win; it is the strategic bet that useful AI will increasingly run on mainstream hardware instead of waiting for every device to have a special accelerator.",
+      "why": "",
+      "try": "",
+      "url": "https://theprohuman.mail.beehiiv.com/",
+      "image_url": "./art/met-45477.jpg",
+      "read_time_min": 6,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Bathtime (Gyōzui) — Kitagawa Utamaro (ca. 1801)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Nous Research ports baoyu-comic into Hermes Agent",
+      "deck": "Nous Research is showing that baoyu-comic can be transplanted into Hermes Agent as a real skill, not just a demo trick. That matters because it turns taste-heavy knowledge formatting into reusable infrastructure, and once those creative transforms become portable, product teams can ship more polished output without rebuilding the whole workflow each time.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NousResearch/status/2056590436324491771",
+      "image_url": "./art/met-438144.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Nous Research",
+        "handle": "NousResearch",
+        "role": "AI research / tools",
+        "avatar_url": "https://unavatar.io/x/NousResearch"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The \"Kearsarge\" at Boulogne — Edouard Manet (1864)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "A user's verdict says AI-native UX is winning",
+      "deck": "Yanhua's post is not a benchmark, but it is still a useful signal because it captures real-user enthusiasm for an AI-native product surface. When someone says the older stack feels wasted and the new one feels like the right native product, that usually means the UX has crossed from novelty into habit-forming utility.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/yanhua1010/status/2056562330734035113",
+      "image_url": "./art/met-437868.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Yanhua",
+        "handle": "yanhua1010",
+        "role": "creator",
+        "avatar_url": "https://unavatar.io/x/yanhua1010"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Don Gaspar de Guzmán (1587–1645), Count-Duke of Olivares — Juan Bautista Martínez del Mazo (ca. 1636 or later)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Aadit's $1.1B thesis says learning itself is the bet",
+      "deck": "The neatprompts piece frames the $1.1B raise around David Silver as a wager on new learning loops, not another wrapper company. That is worth paying attention to because it suggests some capital is moving toward systems that learn in different ways than today's standard training stack, which could create a separate frontier from the usual model-scaling race.",
+      "why": "",
+      "try": "",
+      "url": "https://neatprompts.com/",
+      "image_url": "./art/met-435897.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Aadit",
+        "handle": "neatprompts",
+        "role": "newsletter / curator",
+        "avatar_url": "https://unavatar.io/x/neatprompts"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Head of Christ (Ecce Homo) — Petrus Christus (ca. 1445)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Launches now need a repeatable distribution stack",
+      "deck": "Electric B2B's launch essay is useful because it treats publication as only one beat inside a longer distribution system. The lesson is that anticipation, launch-day amplification, and follow-up relaunches are now part of the product itself, which means teams that coordinate channels well can keep an asset alive long after the initial post scrolls away.",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-194033.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Pair-case quarter-repeating watch — John Champion (ca. 1770–72)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Database-native agents are collapsing the dashboard layer",
+      "deck": "The Pro Human digest points toward a cleaner agent architecture: full SQL and MCP support without the fake dashboard layer in between. That matters because the fastest way to make an agent feel real is to let it sit next to the source of truth, where it can actually query, act, and avoid the provisioning theater that slows adoption.",
+      "why": "",
+      "try": "",
+      "url": "https://theprohuman.mail.beehiiv.com/",
+      "image_url": "./art/met-459001.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Madonna Adoring the Child — Botticelli (Alessandro di Mariano Filipepi) (ca. 1490–95)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Hermes skills are becoming exportable creative IP",
+      "deck": "The baoyu-comic port is important because it turns a one-off creative capability into something that can travel with the agent. Once a workflow can be packaged as a skill, the moat is no longer just the model; it is the repeatable taste and format encoded inside the toolchain.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NousResearch/status/2056590436324491771",
+      "image_url": "./art/met-436523.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Nous Research",
+        "handle": "NousResearch",
+        "role": "AI research / tools",
+        "avatar_url": "https://unavatar.io/x/NousResearch"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Adoration of the Magi — Hugo van der Goes (undated)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "CPU-first inference is a distribution strategy",
+      "deck": "Google and Arm's demo is useful because it reopens the middle of the hardware market instead of assuming every AI feature needs a top-end accelerator. If CPUs can carry enough inference load, the real distribution win is broader reach: more devices, lower cost, and far less friction when you want to ship AI into places that never had a dedicated chip budget.",
+      "why": "",
+      "try": "",
+      "url": "https://theprohuman.mail.beehiiv.com/",
+      "image_url": "./art/met-437422.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Charity — Guido Reni (ca. 1630)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Memory is moving from feature to operating layer",
+      "deck": "The broader memory-adjacent chatter in the feed matters because it keeps pointing to continuity as the thing users actually pay for. The next generation of AI tools will feel less impressive if they forget context and more indispensable if they can remember tasks, preferences, and unfinished work across sessions.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/joenandez/status/2050321110864936962",
+      "image_url": "./art/met-373908.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Joe Fernandez",
+        "handle": "joenandez",
+        "role": "founder",
+        "avatar_url": "https://unavatar.io/x/joenandez"
+      },
+      "source": {
+        "label": "X · ad",
+        "kind": "x"
+      },
+      "image_alt": "An Allegory — Adam Gutmann (1598)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Agents are getting a real creative output path",
+      "deck": "The growth of AI-to-comic tooling is a strong sign that agents are escaping plain text and starting to produce more legible, shareable artifacts. That matters because once the output is visually packaged, it becomes easier to teach, distribute, and reuse — which is how a tool stops being a novelty and starts becoming part of a team's communication stack.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NousResearch/status/2056590436324491771",
+      "image_url": "./art/met-451271.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Nous Research",
+        "handle": "NousResearch",
+        "role": "AI research / tools",
+        "avatar_url": "https://unavatar.io/x/NousResearch"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "\"Red-Headed Vulture\", Folio from the Shah Jahan Album — Unknown (recto and verso: early 19th century)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Content tooling is drifting toward batch extraction",
+      "deck": "The wechat-article post is interesting because it shows the market's appetite for bulk retrieval and analysis of creator-owned content. That is a subtle but real trend: people increasingly want to turn messy public content into reusable datasets, and the tools that make that easy are quietly becoming part of the AI stack.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/gkxspace/status/2055993627629781080",
+      "image_url": "./art/met-435762.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "余温",
+        "handle": "gkxspace",
+        "role": "creator",
+        "avatar_url": "https://unavatar.io/x/gkxspace"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Virgin and Child — Dieric Bouts (ca. 1455–60)"
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Map one AI workflow to CPU-first execution",
+      "deck": "",
+      "why": "CPU inference is becoming practical enough that you should know which user-facing flow can move off the GPU path this quarter.",
+      "try": "Set a 25-min timer. Pick one product workflow, list the model steps, and mark the pieces that could run on CPU or mobile hardware without killing the experience.",
+      "url": "https://theprohuman.mail.beehiiv.com/",
+      "image_url": "./art/met-436838.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      },
+      "image_alt": "The Fortune-Teller — Georges de La Tour (probably 1630s)"
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Turn one launch into a three-beat system",
+      "deck": "",
+      "why": "The feed says distribution now compounds when anticipation, launch-day push, and follow-up relaunch are coordinated instead of improvised.",
+      "try": "Set a 20-min timer. Write one asset's prelaunch teaser, launch-day amplification plan, and post-launch relaunch beat as three bullets you can actually execute this week.",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-435711.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "An Egyptian Peasant Woman and Her Child — Léon Bonnat (1869–70)"
+    }
+  ]
+}
