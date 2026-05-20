@@ -1,0 +1,346 @@
+{
+  "date": "2026-05-20",
+  "weekday": "Wednesday",
+  "no": 111,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-20T12:33:27Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Anthropic</b>: Claude Code is leaning into HTML for plans and reports.",
+    "<b>Seedance</b>: Video comparisons are still favoring Seedance 2.0.",
+    "<b>X Developers</b>: Hermes gets a first-party xurl integration guide.",
+    "<b>Google + Arm</b>: CPU-side AI inference is getting faster and smaller.",
+    "<b>Design teams</b>: AI-native workflows are rewriting job requirements."
+  ],
+  "digest": {
+    "title": "The market is rewarding workflows, not just model demos.",
+    "body": "Across the signals, the common pattern is that AI value is moving into the interface and the distribution layer: HTML for agent outputs, xurl for first-party X actions, and browser plugins that collapse publishing into one surface. At the same time, model progress is becoming more practical and more local, which means the winning products this week are the ones that turn capability into a shippable workflow rather than another demo."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Anthropic doubles down on HTML for Claude Code",
+      "deck": "Anthropic is pushing Claude Code output toward HTML instead of Markdown, arguing that richer structure makes plans, reports, and temporary edits easier to read and act on. The bigger signal is that agent UX is becoming a document problem as much as a model problem: the winning interface may be the one humans can scan, trust, and hand back to the agent fastest.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/techCaramba/status/2057033351626698804",
+      "image_url": "./art/met-747499.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Andreas Becker",
+        "handle": "techCaramba",
+        "role": "AI commentator",
+        "avatar_url": "https://unavatar.io/x/techCaramba"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Four Studies of Horses (recto); Four Studies of Galloping Horses and Riders (verso) — Eugène Delacroix (1824–25)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Seedance 2.0 keeps pulling ahead in video tests",
+      "deck": "Seedance 2.0 is being framed as the stronger video generation benchmark in side-by-side comparisons, with creators pointing to smoother outputs and better storytelling than Gemini Omni Flash in this lane. It matters because the center of gravity in video AI is shifting from raw generation bragging rights to editing quality, control, and how fast a creator can ship something that feels finished.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/free_ai_guides/status/2057075543972184272",
+      "image_url": "./art/met-459028.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "AI Guides",
+        "handle": "free_ai_guides",
+        "role": "AI media commentator",
+        "avatar_url": "https://unavatar.io/x/free_ai_guides"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Portrait of Alvise Contarini(?); (verso) A Tethered Roebuck — Jacometto (Jacometto Veneziano) (ca. 1485–95)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "X pushes Hermes integration through xurl",
+      "deck": "X Developers are now circulating a guide that shows how Hermes Agent can use the official xurl CLI to read, post, search, bookmark, reply, quote, and like on X from an agent workflow. That is a meaningful distribution signal for agent tooling because it makes social media, and the workflows around it, a first-class action surface instead of a manual browser chore.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/chuhaiqu/status/2057069231011971481",
+      "image_url": "./art/met-436522.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "出海去孵化器",
+        "handle": "chuhaiqu",
+        "role": "X API / agent workflow commentator",
+        "avatar_url": "https://unavatar.io/x/chuhaiqu"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "A Benedictine Monk — Hugo van der Goes (undated)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Arm and Google move AI inference closer to CPUs",
+      "deck": "Google and Arm are showing that CPU-side AI is getting real performance upgrades through LiteRT, XNNPACK, KleidiAI, and SME2, with stable-audio-open-small running faster and smaller on everyday hardware. This is important because it broadens the deployment path for AI products: not every useful model needs a flagship accelerator if the software stack can squeeze more out of the silicon people already have.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/rwayne/status/2055281325125558741",
+      "image_url": "./art/met-378664.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Roland.W",
+        "handle": "rwayne",
+        "role": "AI infrastructure observer",
+        "avatar_url": "https://unavatar.io/x/rwayne"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Design for Dog Cart or 2 Wheeler, no. 3818 — Brewster & Co. (1883)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Design roles are being rewritten around AI-native work",
+      "deck": "A new 2026 design-job lens says the baseline has shifted: prototyping in code, AI-native workflows, and closer collaboration with model thinking are becoming table stakes. The interesting part is not just that design is changing, but that the market is rewarding hybrid profiles where taste, systems thinking, and shipping velocity matter more than the old Figma-only definition of the job.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/dingyi/status/2056872035587084497",
+      "image_url": "./art/met-475569.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ding",
+        "handle": "dingyi",
+        "role": "design thinker",
+        "avatar_url": "https://unavatar.io/x/dingyi"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "9 of Nooses, from The Cloisters Playing Cards — Unknown (ca. 1475–80)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "MultiPost turns cross-posting into one browser action",
+      "deck": "The MultiPost browser plugin is pitched as a free, open-source way to sync a single piece of content across many platforms, with scheduling, web extraction, and AI-assisted drafting built in. It is worth tracking because distribution tooling keeps collapsing into the browser itself, which lowers the friction between making something once and publishing it everywhere.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/NFTCPS/status/2056726316129603647",
+      "image_url": "./art/met-436658.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "鸟哥 | 蓝鸟会",
+        "handle": "NFTCPS",
+        "role": "creator tools commentator",
+        "avatar_url": "https://unavatar.io/x/NFTCPS"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Hermann von Wedigh III (died 1560) — Hans Holbein the Younger (1532)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Claude Code leans into HTML over Markdown",
+      "deck": "Anthropic-linked chatter says Claude Code is increasingly being used to generate plans, designs, and interim reports in HTML rather than Markdown. That matters because the agent layer is drifting toward richer intermediate artifacts, and the best outputs may be the ones that make review, navigation, and downstream reuse easier for humans.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/FakeMaidenMaker/status/2056901363246780677",
+      "image_url": "./art/met-437061.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ren",
+        "handle": "FakeMaidenMaker",
+        "role": "Claude Code observer",
+        "avatar_url": "https://unavatar.io/x/FakeMaidenMaker"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Salvator Mundi — Hans Memling (1480–85)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Sam Altman is cooling on UBI",
+      "deck": "A fresh UBI thread argues that Sam Altman has moved away from universal basic income, despite having put major money behind the idea in 2019. The signal here is less about one policy opinion and more about how AI-era compensation debates are shifting from universal cash to ownership, upside, and new forms of participation.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/ShreyasNalle/status/2050493447484936685",
+      "image_url": "./art/met-733847.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Shreyas Nalle",
+        "handle": "ShreyasNalle",
+        "role": "tech commentator",
+        "avatar_url": "https://unavatar.io/x/ShreyasNalle"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Famous Women — Gai Qi (dated 1799)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "David Silver is funding a new bet on learning",
+      "deck": "David Silver’s new startup is being read as a billion-dollar bet on training AI with less dependence on human-produced data, using self-play and other synthetic learning loops. If that thesis holds, the next frontier is not merely bigger pretraining runs but new ways to manufacture experience for models when the internet runs thin.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/supraEVM/status/2049217702024347657",
+      "image_url": "./art/met-202860.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Supra 𝔖",
+        "handle": "supraEVM",
+        "role": "AI research commentator",
+        "avatar_url": "https://unavatar.io/x/supraEVM"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Miniature trivet — David Clayton (ca. 1720–30)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Claude Design exports feel like a new product layer",
+      "deck": "A post about Claude Design argues that the tool is not trying to be a full production app builder; instead, it exports clean artifacts like ZIP, PDF, PowerPoint, Canva, HTML, and Claude Code handoffs. That matters because it makes the tool feel like an upstream creative engine for many downstream surfaces, which is exactly where a lot of AI productivity software is converging.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/vibecodingth/status/2056900657375072653",
+      "image_url": "./art/met-448587.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Vibe Coding Thailand",
+        "handle": "vibecodingth",
+        "role": "AI design workflow commentator",
+        "avatar_url": "https://unavatar.io/x/vibecodingth"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Panel from a Tent Lining (Qanat) — Unknown (17th century)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "X developers make xurl feel broadly usable",
+      "deck": "A companion post about the official xurl CLI shows the tool as more than a one-off demo: it can stand on its own as a general X API client for agents and manual use alike. That matters because when infrastructure becomes independently useful outside the hero workflow, adoption usually moves much faster.",
+      "why": "",
+      "try_": "",
+      "url": "https://x.com/aiandcloud/status/2057063510601789598",
+      "image_url": "./art/met-452817.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Jintao Zhang 张晋涛",
+        "handle": "aiandcloud",
+        "role": "cloud + AI observer",
+        "avatar_url": "https://unavatar.io/x/aiandcloud"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Hexagonal Tile Ensemble with Sphinx — Unknown (ca. 1160s–70s)"
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Rewrite one agent deliverable in HTML today",
+      "deck": "",
+      "why": "HTML is emerging as a better review and handoff format for agent-generated work, so one concrete experiment today will tell you whether the workflow actually improves readability and speed.",
+      "try_": "Set a 20-minute timer. Pick one recent agent output and rewrite it as a clean HTML artifact with headings, bullets, and a visible call-to-action.",
+      "url": "https://x.com/techCaramba/status/2057033351626698804",
+      "image_url": "./art/met-712539.jpg",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "Saint Philip Neri (1515–1595) — Carlo Dolci (1645 or 1646)"
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Test one CPU-first AI path on a real device",
+      "deck": "",
+      "why": "The Arm/Google story shows that on-device inference is becoming good enough to matter, so you should validate whether your own use case can move off a cloud-only assumption.",
+      "try_": "Set a 25-minute timer. Choose one model or workflow you ship, identify the smallest CPU/mobile deployment path, and write down the latency and memory constraints you would need to meet.",
+      "url": "https://x.com/rwayne/status/2055281325125558741",
+      "image_url": "./art/met-436885.jpg",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      },
+      "image_alt": "Scene from a Novella — Liberale da Verona (undated)"
+    }
+  ]
+}
