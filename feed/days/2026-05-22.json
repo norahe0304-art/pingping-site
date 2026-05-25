@@ -1,0 +1,333 @@
+{
+  "date": "2026-05-22",
+  "weekday": "Friday",
+  "no": 113,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-22T00:00:00Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Hermes</b>: Browser skills are getting turned into a distributable ecosystem, not just a docs page.",
+    "<b>XHS</b>: Social platforms are starting to accept Skill uploads directly, which hints at a new app-distribution layer.",
+    "<b>NVIDIA</b>: LongLive pushes open video generation toward effectively endless, interactive clips.",
+    "<b>OpenAI</b>: Codex is sliding into mobile and workflow control, not just desktop coding.",
+    "<b>Google + Arm</b>: CPU-first inference is still a live strategic lane, not a side quest."
+  ],
+  "digest": {
+    "title": "The interface is becoming the distribution layer.",
+    "body": "Across the feed, the strongest thread is that AI products are no longer judged only by model quality; they are judged by how easily they plug into browsers, phones, social platforms, and long-running workflows. The most valuable ships this week are the ones that reduce the distance between a thought and an action, whether that means browser skills, mobile control, or richer output formats."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Today's Top Signal",
+      "headline": "Browser skills are turning into the new app store",
+      "deck": "Hermes users are talking about Browse.sh as a place where hundreds of browser skills can be discovered and installed with a single CLI step, and the signal is bigger than the directory itself. It suggests that agent capability is starting to look like a package ecosystem: if a browser task can be shipped as a skill, distribution becomes part of the product surface.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/eastweb3eth/status/2057269103036166591",
+      "image_url": "./art/met-747499.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Jealousy 尼卡",
+        "handle": "eastweb3eth",
+        "role": "Hermes / browser-skills commentator",
+        "avatar_url": "https://unavatar.io/x/eastweb3eth"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "XHS skill uploads hint at a new distribution layer",
+      "deck": "A post about Xiaohongshu accepting Skill uploads reads like a small product tweak, but it points to a much larger shift in platform behavior. If platform-native actions can now accept reusable skills, the next fight is not just content creation but embedded capability inside social apps.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/op7418/status/2057711810728559034",
+      "image_url": "./art/met-733847.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "歸藏(guizang.ai)",
+        "handle": "op7418",
+        "role": "AI product watcher",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "NVIDIA's LongLive makes long video feel live",
+      "deck": "NVLabs' LongLive is being framed as open long-form video generation that can keep going far past the short-clip ceiling, with interactive control while it renders. That matters because it moves video generation from a novelty demo toward an operator tool for iterative, real-time creative work.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NFTCPS/status/2057360698142007534",
+      "image_url": "./art/met-712539.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "鸟哥 | 蓝鸟会",
+        "handle": "NFTCPS",
+        "role": "AI / creative tools commentator",
+        "avatar_url": "https://unavatar.io/x/NFTCPS"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Codex is moving from desktop to phone control",
+      "deck": "The newsletter stack says Codex is now crossing into the mobile workflow, where users can approve decisions and keep long-running coding tasks moving from the phone. That is a meaningful product shift because mobile stops being a notification surface and becomes the control plane for agent work.",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai/",
+      "image_url": "./art/met-702001.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Rundown",
+        "handle": "dailytherundown",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/dailytherundown"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "ChatGPT's PowerPoint add-in turns decks into an AI surface",
+      "deck": "The day's news list includes a beta ChatGPT add-in for PowerPoint, which is a small surface change with big implications for how AI moves into existing office workflows. Instead of asking users to switch tools, OpenAI is continuing the push to make everyday software itself the agent interface.",
+      "why": "",
+      "try": "",
+      "url": "https://openai.com/",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "OpenAI",
+        "handle": "openai",
+        "role": "newsletter / product",
+        "avatar_url": "https://unavatar.io/x/openai"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Long-running AI tasks are becoming normal",
+      "deck": "The coding-news digest makes the core change explicit: agent work is now expected to run for hours, not seconds. Once that becomes normal, the user experience shifts from one-shot outputs to a loop of approval, intervention, and resumption.",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai/",
+      "image_url": "./art/met-502761.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "The Rundown",
+        "handle": "dailytherundown",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/dailytherundown"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "NVIDIA's open video stack is about interactive control",
+      "deck": "LongLive matters not just because it stretches video length, but because it lets creators steer the generation while it is happening. That makes the product feel less like a render button and more like a live creative instrument.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NFTCPS/status/2057360698142007534",
+      "image_url": "./art/met-49021.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "鸟哥 | 蓝鸟会",
+        "handle": "NFTCPS",
+        "role": "AI / creative tools commentator",
+        "avatar_url": "https://unavatar.io/x/NFTCPS"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "David Silver's new bet is on learning loops",
+      "deck": "The $1.1B company around David Silver is being read as a wager that the next leap in AI comes from new learning loops, not just bigger static pretraining runs. If that thesis holds, the value chain shifts toward systems that can generate, test, and learn from their own experience at scale.",
+      "why": "",
+      "try": "",
+      "url": "https://www.neatprompts.com/",
+      "image_url": "./art/met-475569.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Aadit / neatprompts",
+        "handle": "neatprompts",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/neatprompts"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Sam Altman's UBI retreat changes the politics",
+      "deck": "The UBI note is interesting because it shows the narrative around abundance cooling even as AI capability rises. The policy conversation is shifting from guaranteed income as inevitability to a more skeptical debate about who actually captures the gains.",
+      "why": "",
+      "try": "",
+      "url": "https://substack.com/@alexbanks",
+      "image_url": "./art/met-459028.jpg",
+      "read_time_min": 3,
+      "author": {
+        "name": "Alex Banks",
+        "handle": "alexbanks",
+        "role": "writer / observer",
+        "avatar_url": "https://unavatar.io/x/alexbanks"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Launches are becoming orchestration systems",
+      "deck": "The launch memo argues that one post is no longer a launch; the launch is the full stack of anticipation, amplification, and follow-up. That is useful because it treats distribution as a coordinated sequence rather than a lucky spike, which is how more products are going to ship this quarter.",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.com/",
+      "image_url": "./art/met-459027.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Taste is getting packaged as reusable software",
+      "deck": "The SEO and ads skill-pack chatter is another sign that high-level know-how is being encoded into reusable artifacts rather than kept as bespoke human craft. The win is not just automation; it is repeatability, where a skill can carry a method across tools, teams, and channels.",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai/",
+      "image_url": "./art/met-45477.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Corey Haines",
+        "handle": "coreyhainesco",
+        "role": "growth operator",
+        "avatar_url": "https://unavatar.io/x/coreyhainesco"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Map one browser skill into your own workflow",
+      "deck": "",
+      "why": "The browser-skill wave is strongest when you translate it into an actual task you already repeat, otherwise it stays a cool demo.",
+      "try": "Set a 25-minute timer. Pick one repeated browser task and write the exact steps it would need as a reusable skill.",
+      "url": "https://x.com/eastweb3eth/status/2057269103036166591",
+      "image_url": "",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Draft a mobile control loop for one long task",
+      "deck": "",
+      "why": "Mobile agent control matters because the next bottleneck is supervision, not generation.",
+      "try": "Set a 20-minute timer. Write a simple phone-first approval loop for one long-running AI task you would actually use this week.",
+      "url": "https://www.therundown.ai/",
+      "image_url": "",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

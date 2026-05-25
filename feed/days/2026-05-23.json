@@ -1,0 +1,333 @@
+{
+  "date": "2026-05-23",
+  "weekday": "Saturday",
+  "no": 114,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-23T12:31:50Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>XHS</b>: Skills are starting to look like native uploadable objects inside social platforms.",
+    "<b>Voicebox</b>: Local-first voice control is getting fast enough to challenge paid voice APIs.",
+    "<b>Google + Arm</b>: CPU-side inference keeps widening the deployment surface for AI.",
+    "<b>OpenAI</b>: Long-running coding work keeps drifting toward phone-based supervision.",
+    "<b>David Silver</b>: The next AI moat may be learning loops, not just bigger pretraining."
+  ],
+  "digest": {
+    "title": "The interface is becoming the distribution layer.",
+    "body": "Today’s signals all point to one pattern: AI products are winning when they move closer to where people already work, post, or supervise. The strongest ships this week reduce friction between intent and action by embedding skills into social apps, voice into local workflows, and long-running agents into mobile control loops."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Today's Top Signal",
+      "headline": "XHS opening Skill uploads could change app distribution",
+      "deck": "A post on X shows Xiaohongshu allowing direct Skill uploads, which sounds like a small feature but points at a much larger platform shift. If social apps start accepting reusable agent capabilities as native objects, distribution stops being about posts alone and becomes about shipping actions inside the feed itself.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/op7418/status/2057711810728559034",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "歸藏(guizang.ai)",
+        "handle": "op7418",
+        "role": "AI product watcher",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Voicebox makes local voice control feel inevitable",
+      "deck": "The open-source Voicebox pitch is more than another voice toy: it bundles voice cloning, global voice input, and agent speech into a local-first stack. That matters because it attacks both cost and trust, making voice a default interface rather than a premium API feature.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NFTCPS/status/2057674935200522598",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "鸟哥 | 蓝鸟会",
+        "handle": "NFTCPS",
+        "role": "AI / creative tools commentator",
+        "avatar_url": "https://unavatar.io/x/NFTCPS"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "A browser plugin is collapsing cross-post distribution",
+      "deck": "MultiPost is pitched as a free browser plugin that can synchronize one piece of content across multiple platforms without forcing a copy-paste workflow. The useful signal is not the plugin itself; it is the direction of travel toward distribution tooling that lives where creators already work.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/yidabuilds/status/2057636362925617246",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "百年 AI×出海",
+        "handle": "yidabuilds",
+        "role": "builder / observer",
+        "avatar_url": "https://unavatar.io/x/yidabuilds"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Google and Arm keep pushing AI onto CPUs",
+      "deck": "Google and Arm are showing that LiteRT, XNNPACK, KleidiAI, and SME2 can materially speed up inference on ordinary CPUs. The strategic significance is bigger than the benchmark: it widens the deployment surface for AI and reduces the industry’s dependence on specialized accelerators.",
+      "why": "",
+      "try": "",
+      "url": "https://www.theprohuman.com/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Full SQL and MCP are replacing dashboard-first agents",
+      "deck": "The Pro Human digest argues for agents that talk directly to databases with full SQL and MCP instead of sitting behind another dashboard layer. That matters because it pushes AI products closer to the system of record, where the real edge is less friction between intent and action.",
+      "why": "",
+      "try": "",
+      "url": "https://www.theprohuman.com/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "David Silver’s $1.1B bet is on learning loops",
+      "deck": "The new company around David Silver is being read as a wager that the next jump in AI comes from systems that learn from their own experience, not just bigger static pretraining runs. If that thesis wins, the moat shifts toward environments, feedback loops, and synthetic experience pipelines.",
+      "why": "",
+      "try": "",
+      "url": "https://www.neatprompts.com/",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "Aadit / neatprompts",
+        "handle": "neatprompts",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/neatprompts"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Altman’s UBI retreat cools the abundance story",
+      "deck": "Alex Banks’ note captures a subtle but important shift: the policy conversation around AI is moving away from universal basic income as an obvious endpoint. That matters because it shows the politics of abundance are getting harder even as capability keeps rising.",
+      "why": "",
+      "try": "",
+      "url": "https://substack.com/@alexbanks",
+      "image_url": "",
+      "read_time_min": 3,
+      "author": {
+        "name": "Alex Banks",
+        "handle": "alexbanks",
+        "role": "writer / observer",
+        "avatar_url": "https://unavatar.io/x/alexbanks"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Distribution is shifting from posts to systems",
+      "deck": "Electric B2B’s launch memo treats publication as only one beat in a larger sequence of anticipation, amplification, and follow-up. That is a useful reminder that distribution is increasingly a coordinated system, not a single heroic announcement.",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.com/",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "3D office portfolios are becoming product demos",
+      "deck": "David Heckhoff’s rebuilt portfolio shows how a simple personal site can become a fully interactive experience instead of a static résumé. The signal is that taste, product storytelling, and interface novelty are converging into one compact demo surface.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/yidabuilds/status/2057636362925617246",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "百年 AI×出海",
+        "handle": "yidabuilds",
+        "role": "builder / observer",
+        "avatar_url": "https://unavatar.io/x/yidabuilds"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Design workflows now start in code, not Figma",
+      "deck": "The 2026 design-job lens says prototyping in code and using AI-native workflows is becoming baseline, not bonus material. That matters because the design role is being rewritten around speed of iteration and direct production, not just polished mockups.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/yidabuilds/status/2057636362925617246",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "百年 AI×出海",
+        "handle": "yidabuilds",
+        "role": "builder / observer",
+        "avatar_url": "https://unavatar.io/x/yidabuilds"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Voice-first agents are getting a local moat",
+      "deck": "Voicebox’s pitch only really matters if local execution becomes a feature, not just a privacy compromise. A local voice layer gives agent products a better cost curve, lower latency, and a stronger story for trust than cloud-only voice tools can offer.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NFTCPS/status/2057674935200522598",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "鸟哥 | 蓝鸟会",
+        "handle": "NFTCPS",
+        "role": "AI / creative tools commentator",
+        "avatar_url": "https://unavatar.io/x/NFTCPS"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Turn one social-app action into a reusable skill",
+      "deck": "",
+      "why": "Platform-native skill uploads matter most when you map them to one workflow you repeat every day, otherwise the signal stays abstract.",
+      "try": "Set a 25-minute timer. Pick one recurring social or browser action and write the exact steps needed to make it a reusable skill.",
+      "url": "https://x.com/op7418/status/2057711810728559034",
+      "image_url": "",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Draft a phone-first approval loop for one long task",
+      "deck": "",
+      "why": "Long-running agent work becomes useful only when you can supervise it from the phone without losing momentum.",
+      "try": "Set a 20-minute timer. Write a simple mobile approval and checkpoint loop for one AI task you would actually run this week.",
+      "url": "https://www.therundown.ai/",
+      "image_url": "",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

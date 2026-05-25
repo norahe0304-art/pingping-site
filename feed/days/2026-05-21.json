@@ -1,0 +1,345 @@
+{
+  "date": "2026-05-21",
+  "weekday": "Thursday",
+  "no": 112,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-21T12:33:38Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Oracle</b>: database-native agents are replacing the dashboard layer.",
+    "<b>Google + Arm</b>: CPU inference is getting faster and smaller.",
+    "<b>David Silver</b>: learning loops may matter more than bigger pretraining.",
+    "<b>Anthropic</b>: Claude Code is leaning into HTML handoffs.",
+    "<b>X Developers</b>: xurl is maturing into real infrastructure."
+  ],
+  "digest": {
+    "title": "The market is rewarding systems, not just demos.",
+    "body": "Today's signals all point to the same pattern: the winning AI products are moving closer to real systems — databases, browsers, devices, and handoff formats — instead of staying as isolated chat demos. This week, the sharpest teams ship the workflow layer, the distribution layer, and the review layer together, because that is where confidence and adoption compound."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Database-native agents are shedding the dashboard layer",
+      "deck": "Pro Human's new digest argues for agents with full SQL and MCP support, plus direct access to many databases, instead of a dashboard-first abstraction. The important signal is that more AI products are moving closer to the system of record, where the value is speed, control, and fewer layers between intent and action.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Oracle/status/2054633746633244976",
+      "image_url": "./art/met-459027.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Oracle",
+        "handle": "Oracle",
+        "role": "AI-native database commentator",
+        "avatar_url": "https://unavatar.io/x/Oracle"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Portrait of a Woman, Possibly a Nun of San Secondo; (verso) Scene in Grisaille — Jacometto (Jacometto Veneziano) (ca. 1485–95)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Mixed-precision CPU inference is getting practical",
+      "deck": "Google and Arm are showing that LiteRT, XNNPACK, KleidiAI, and SME2 can materially improve on-device inference, with a stable-audio-open-small demo that runs faster and smaller on everyday hardware. The important part is that AI deployment is no longer only a top-end GPU story; software optimization is becoming a distribution advantage.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/rwayne/status/2055281325125558741",
+      "image_url": "./art/met-437756.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Roland.W",
+        "handle": "rwayne",
+        "role": "AI infrastructure observer",
+        "avatar_url": "https://unavatar.io/x/rwayne"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Japanese Robe — Alfred Stevens (ca. 1872)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "David Silver's new bet is on manufactured experience",
+      "deck": "The new $1.1B company around David Silver is being read as a wager that AI progress will come from new learning loops, not only from bigger pretraining runs. If that thesis holds, synthetic experience and self-play become the scarce input, which changes where the next research moat lives.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/supraEVM/status/2049217702024347657",
+      "image_url": "./art/met-266257.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Supra 𝔖",
+        "handle": "supraEVM",
+        "role": "AI research commentator",
+        "avatar_url": "https://unavatar.io/x/supraEVM"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Circe — Julia Margaret Cameron (1865)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Launches are turning into coordinated distribution systems",
+      "deck": "The B2B launch memo says the real launch moment is not a single post; it is the orchestration of newsletter, LinkedIn, partner promotion, sales outreach, and paid amplification. That is a useful reminder that growth is increasingly a sequencing problem, not a publishing problem.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/dotey/status/2057017875605647804",
+      "image_url": "./art/met-437056.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "宝玉",
+        "handle": "dotey",
+        "role": "content strategist",
+        "avatar_url": "https://unavatar.io/x/dotey"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Tommaso di Folco Portinari (1428–1501); Maria Portinari (Maria Maddalena Baroncelli, born 1456) — Hans Memling (ca. 1470)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "AI-native design work is becoming the baseline",
+      "deck": "A 2026 design-job lens says the old Figma-only profile is fading in favor of prototyping in code, AI-native workflows, and closer collaboration with model systems. The signal is bigger than design: hybrid taste-plus-systems roles are becoming the new premium in AI product teams.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/dingyi/status/2056872035587084497",
+      "image_url": "./art/met-502761.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ding",
+        "handle": "dingyi",
+        "role": "design thinker",
+        "avatar_url": "https://unavatar.io/x/dingyi"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Tsii' Edo' Ai (Apache fiddle) — Athabascan Family (ca. 1900)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Skill bundles are becoming exportable work products",
+      "deck": "The open-source PPT and skill-pack chatter shows people packaging higher-level know-how as reusable software instead of one-off prompts. That matters because the moat shifts from “I can do this once” to “I can ship the workflow as an asset others can run.”",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/huangyun_122/status/2057315847304278074",
+      "image_url": "./art/met-436052.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "黄赟",
+        "handle": "huangyun_122",
+        "role": "skill workflow observer",
+        "avatar_url": "https://unavatar.io/x/huangyun_122"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Madonna and Child — Carlo Crivelli (ca. 1480)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Cross-posting is collapsing into the browser",
+      "deck": "MultiPost is pitched as a free open-source browser plugin that can synchronize one piece of content across platforms with scheduling, extraction, and AI drafting. The broader takeaway is that distribution tooling keeps moving into the browser runtime, which is where creators already spend their attention.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/NFTCPS/status/2056726316129603647",
+      "image_url": "./art/met-435898.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "鸟哥 | 蓝鸟会",
+        "handle": "NFTCPS",
+        "role": "creator tools commentator",
+        "avatar_url": "https://unavatar.io/x/NFTCPS"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Lamentation — Petrus Christus (ca. 1450)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Claude Code is moving toward richer handoffs",
+      "deck": "Claude Code is increasingly being used to produce plans, designs, and reports in HTML rather than plain Markdown. The real shift is toward richer intermediate artifacts, because the more readable the handoff, the easier it is for humans to review, trust, and continue the work.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/FakeMaidenMaker/status/2056901363246780677",
+      "image_url": "./art/met-437894.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ren",
+        "handle": "FakeMaidenMaker",
+        "role": "Claude Code observer",
+        "avatar_url": "https://unavatar.io/x/FakeMaidenMaker"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Eugène Joseph Stanislas Foullon d'Ecotier (1753–1821) — Antoine Vestier (1785)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "X's official xurl layer is looking like real infrastructure",
+      "deck": "A companion post around xurl frames the CLI as more than a novelty: it can serve as a general X API client for both agents and human workflows. That is valuable because infrastructure adoption usually accelerates once it stops depending on a single hero use case.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/aiandcloud/status/2057063510601789598",
+      "image_url": "./art/met-209104.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Jintao Zhang 张晋涛",
+        "handle": "aiandcloud",
+        "role": "cloud + AI observer",
+        "avatar_url": "https://unavatar.io/x/aiandcloud"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Settee (one of a pair) (part of a set) — Johann Michael Bauer (ca. 1763–64)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "The home timeline says Codex mastery is the new default",
+      "deck": "The most useful Codex chatter today is not another launch note; it is the reminder that developers are now sharing “best practice” playbooks for getting more out of the agent. That suggests the product is maturing into a workflow discipline, where competitive advantage comes from operator skill, not just access.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/huangyun_122/status/2057315847304278074",
+      "image_url": "./art/met-436101.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "黄赟",
+        "handle": "huangyun_122",
+        "role": "developer workflow commentator",
+        "avatar_url": "https://unavatar.io/x/huangyun_122"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Rest on the Flight into Egypt — Gerard David (ca. 1512–15)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "The product layer is becoming more visually branded",
+      "deck": "A note about diabrowser's new 3D logo orb is a tiny but useful product signal: interface identity is getting more immersive and more persistent across the product. That matters because AI apps increasingly compete on feel and memorability, not only on raw capability.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/dingyi/status/2057017875605647804",
+      "image_url": "./art/met-646996.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ding",
+        "handle": "dingyi",
+        "role": "product observer",
+        "avatar_url": "https://unavatar.io/x/dingyi"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Still life with bronze vessels and flowering plants — Jang Seung-eop (pen name: Owon) (1894)"
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Rewrite one agent output as an HTML artifact",
+      "deck": "",
+      "why": "HTML is emerging as a better review and handoff format for agent-generated work, so one concrete experiment today will tell you whether the workflow actually improves readability and speed.",
+      "try": "Set a 20-minute timer. Pick one recent agent output and rewrite it as a clean HTML artifact with headings, bullets, and a clear next action.",
+      "url": "https://x.com/FakeMaidenMaker/status/2056901363246780677",
+      "image_url": "./art/met-435807.jpg",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "The Smokers — Adriaen Brouwer (ca. 1636)"
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Test one CPU-first AI path on a real device",
+      "deck": "",
+      "why": "The Arm/Google story shows that on-device inference is becoming good enough to matter, so you should validate whether your own use case can move off a cloud-only assumption.",
+      "try": "Set a 25-minute timer. Choose one model or workflow you ship, identify the smallest CPU/mobile deployment path, and note the latency and memory constraints you would need to meet.",
+      "url": "https://x.com/rwayne/status/2055281325125558741",
+      "image_url": "",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      }
+    }
+  ]
+}

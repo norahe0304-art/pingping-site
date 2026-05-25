@@ -1,6 +1,131 @@
 {
-  "updated_at": "2026-05-20T12:33:27Z",
+  "updated_at": "2026-05-25T12:34:10.217949Z",
   "days": [
+    {
+      "date": "2026-05-25",
+      "weekday": "Monday",
+      "no": 116,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "Eleven signals. Two moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "AI can now make a living homepage in minutes",
+      "lead_deck": "Vincent Logic’s workflow turns a static website into a page with motion and atmosphere by chaining Pinterest, Gemini, Kling, Mux, and an AI site builder. It is worth watching because it shows how quickly a polished homepage can be assembled once image cleanup, motion, and publishing are all treated as AI steps instead of manual craft.",
+      "lead_tag": "SIGNAL",
+      "tag_color": "indigo",
+      "story_count": 13,
+      "read_time_total_min": 103,
+      "lead_author": {
+        "name": "Vincent Logic",
+        "handle": "VincentLogic",
+        "role": "creator / web workflow hacker",
+        "avatar_url": "https://unavatar.io/x/VincentLogic"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": ""
+    },
+    {
+      "date": "2026-05-24",
+      "weekday": "Sunday",
+      "no": 115,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "Eleven signals. Two moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "Gemini Omni brings video editing into chat",
+      "lead_deck": "Google is opening Gemini Omni so people can edit video by describing changes in plain language, and the model is now showing up in Flow with free daily access. That matters because it turns video editing from a timeline skill into an AI-native conversation, which should expand who can ship polished motion content.",
+      "lead_tag": "SIGNAL",
+      "tag_color": "indigo",
+      "story_count": 13,
+      "read_time_total_min": 59,
+      "lead_author": {
+        "name": "Google Flow",
+        "handle": "FlowbyGoogle",
+        "role": "AI video product @ Google",
+        "avatar_url": "https://unavatar.io/x/FlowbyGoogle"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": ""
+    },
+    {
+      "date": "2026-05-23",
+      "weekday": "Saturday",
+      "no": 114,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "Eleven signals. Two moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "XHS opening Skill uploads could change app distribution",
+      "lead_deck": "A post on X shows Xiaohongshu allowing direct Skill uploads, which sounds like a small feature but points at a much larger platform shift. If social apps start accepting reusable agent capabilities as native objects, distribution stops being about posts alone and becomes about shipping actions inside the feed itself.",
+      "lead_tag": "SIGNAL",
+      "tag_color": "indigo",
+      "story_count": 13,
+      "read_time_total_min": 91,
+      "lead_author": {
+        "name": "歸藏(guizang.ai)",
+        "handle": "op7418",
+        "role": "AI product watcher",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": ""
+    },
+    {
+      "date": "2026-05-22",
+      "weekday": "Friday",
+      "no": 113,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "Eleven signals. Two moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "Browser skills are turning into the new app store",
+      "lead_deck": "Hermes users are talking about Browse.sh as a place where hundreds of browser skills can be discovered and installed with a single CLI step, and the signal is bigger than the directory itself. It suggests that agent capability is starting to look like a package ecosystem: if a browser task can be shipped as a skill, distribution becomes part of the product surface.",
+      "lead_tag": "SIGNAL",
+      "tag_color": "indigo",
+      "story_count": 13,
+      "read_time_total_min": 91,
+      "lead_author": {
+        "name": "Jealousy 尼卡",
+        "handle": "eastweb3eth",
+        "role": "Hermes / browser-skills commentator",
+        "avatar_url": "https://unavatar.io/x/eastweb3eth"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": "./art/met-747499.jpg"
+    },
+    {
+      "date": "2026-05-21",
+      "weekday": "Thursday",
+      "no": 112,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "Eleven signals. Two moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "Database-native agents are shedding the dashboard layer",
+      "lead_deck": "Pro Human's new digest argues for agents with full SQL and MCP support, plus direct access to many databases, instead of a dashboard-first abstraction. The important signal is that more AI products are moving closer to the system of record, where the value is speed, control, and fewer layers between intent and action.",
+      "lead_tag": "SIGNAL",
+      "tag_color": "pink",
+      "story_count": 13,
+      "read_time_total_min": 100,
+      "lead_author": {
+        "name": "Oracle",
+        "handle": "Oracle",
+        "role": "AI-native database commentator",
+        "avatar_url": "https://unavatar.io/x/Oracle"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": "./art/met-459027.jpg"
+    },
     {
       "date": "2026-05-20",
       "weekday": "Wednesday",
@@ -11,7 +136,7 @@
       "lead_headline": "Anthropic doubles down on HTML for Claude Code",
       "lead_deck": "Anthropic is pushing Claude Code output toward HTML instead of Markdown, arguing that richer structure makes plans, reports, and temporary edits easier to read and act on. The bigger signal is that agent UX is becoming a document problem as much as a model problem: the winning interface may be the one humans can scan, trust, and hand back to the agent fastest.",
       "lead_tag": "SIGNAL",
-      "tag_color": "pink",
+      "tag_color": "amber",
       "story_count": 13,
       "read_time_total_min": 100,
       "lead_author": {
@@ -36,7 +161,7 @@
       "lead_headline": "Google and Arm push AI inference onto CPUs",
       "lead_deck": "Google and Arm are showing how LiteRT, XNNPACK, KleidiAI, and Arm's SME2 can speed up AI inference directly on CPUs, using Stability AI's stable-audio-open-small as the demo path. The important part is not just the benchmark win; it is the strategic bet that useful AI will increasingly run on mainstream hardware instead of waiting for every device to have a special accelerator.",
       "lead_tag": "SIGNAL",
-      "tag_color": "amber",
+      "tag_color": "cyan",
       "story_count": 13,
       "read_time_total_min": 59,
       "lead_author": {
@@ -61,7 +186,7 @@
       "lead_headline": "Open Design is turning template packs into an AI moat",
       "lead_deck": "Tom Huang says html-anything's template pack has now landed across Open Design, and the pitch is bigger than a shortcut library. If agents can produce elite-looking HTML from reusable skills and templates, the moat shifts from raw generation to encoded taste, which is exactly where creator tools start to compound.",
       "lead_tag": "SIGNAL",
-      "tag_color": "cyan",
+      "tag_color": "indigo",
       "story_count": 13,
       "read_time_total_min": 104,
       "lead_author": {
@@ -86,7 +211,7 @@
       "lead_headline": "Codex + MagicPath could replace Figma faster than expected",
       "lead_deck": "Dingyi is arguing that Codex paired with MagicPath can cover a surprising amount of the design-to-build loop, making Figma feel less like the center of gravity and more like a handoff layer. The interesting part is not the demo itself but the workflow implication: if prototypes can become shippable interactions with less translation, product teams can collapse days of back-and-forth into one tighter loop.",
       "lead_tag": "SIGNAL",
-      "tag_color": "indigo",
+      "tag_color": "pink",
       "story_count": 13,
       "read_time_total_min": 101,
       "lead_author": {
@@ -111,7 +236,7 @@
       "lead_headline": "OpenAI puts Codex on mobile, not just desktop",
       "lead_deck": "OpenAI is pushing coding agents into the phone workflow so tasks can keep moving off desk. This matters because mobile approval and task handoff reduce the friction that slows long-running agent work.",
       "lead_tag": "SIGNAL",
-      "tag_color": "pink",
+      "tag_color": "amber",
       "story_count": 7,
       "read_time_total_min": 115,
       "lead_author": {
@@ -136,7 +261,7 @@
       "lead_headline": "Codex on mobile begins to leak",
       "lead_deck": "Screenshots and a partial App Store listing show OpenAI testing a Codex companion on iOS. This matters because mobile coding agents are the surface that decides where the rest of the year is fought.",
       "lead_tag": "SIGNAL",
-      "tag_color": "amber",
+      "tag_color": "cyan",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -161,7 +286,7 @@
       "lead_headline": "Lenny: 6 months of AI in PM workflows",
       "lead_deck": "Lenny's newsletter published a six-month report on which AI patterns stuck in real PM workflows. This matters because most PM tooling reviews are pre-launch theater, and a six-month retrospective is the rarer signal.",
       "lead_tag": "PLAYBOOK",
-      "tag_color": "cyan",
+      "tag_color": "indigo",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -186,7 +311,7 @@
       "lead_headline": "Claude can hold a screen for an hour",
       "lead_deck": "Anthropic extended Claude computer-use to one-hour autonomous sessions with periodic check-in approvals. This matters because long-running computer-use is the line between demo and dependable, and Anthropic just crossed it.",
       "lead_tag": "SIGNAL",
-      "tag_color": "indigo",
+      "tag_color": "pink",
       "story_count": 7,
       "read_time_total_min": 95,
       "lead_author": {
@@ -211,7 +336,7 @@
       "lead_headline": "Anthropic: a follow-up to constitutional AI",
       "lead_deck": "Anthropic posted a follow-up paper extending constitutional AI with model-written critique chains. This matters because the critique-chain mechanism is what governance teams will point to when arguing about audits.",
       "lead_tag": "CRAFT",
-      "tag_color": "pink",
+      "tag_color": "amber",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -236,7 +361,7 @@
       "lead_headline": "Replit Agents v2 launches with a single-pane runner",
       "lead_deck": "Replit shipped Agents v2 with a unified runner and per-step approval. This matters because Replit is the cleanest reference UI for agent runs and competitors will copy within a month.",
       "lead_tag": "SIGNAL",
-      "tag_color": "amber",
+      "tag_color": "cyan",
       "story_count": 7,
       "read_time_total_min": 85,
       "lead_author": {
@@ -261,7 +386,7 @@
       "lead_headline": "Every: the workspace agent essay",
       "lead_deck": "Every published a long piece on what a workspace-level agent does that an in-app one cannot. This matters because the workspace surface is the real product battle of the next two quarters.",
       "lead_tag": "CRAFT",
-      "tag_color": "cyan",
+      "tag_color": "indigo",
       "story_count": 7,
       "read_time_total_min": 85,
       "lead_author": {
@@ -286,7 +411,7 @@
       "lead_headline": "Andrew Chen: PLG is now PLG-with-agents",
       "lead_deck": "Andrew Chen argues PLG funnels are reshaping into agent-onboarding flows where the agent does the first job. This matters because the funnel diagram every B2B team draws on a whiteboard is about to look different.",
       "lead_tag": "PLAYBOOK",
-      "tag_color": "indigo",
+      "tag_color": "pink",
       "story_count": 7,
       "read_time_total_min": 130,
       "lead_author": {
@@ -311,7 +436,7 @@
       "lead_headline": "Stripe ships an AI-first payments dashboard",
       "lead_deck": "Stripe replaced the legacy dashboard search and rules editor with conversational equivalents. This matters because Stripe sets the bar for financial UX and competitors will be pressured to follow within a quarter.",
       "lead_tag": "SIGNAL",
-      "tag_color": "pink",
+      "tag_color": "amber",
       "story_count": 7,
       "read_time_total_min": 100,
       "lead_author": {
@@ -336,7 +461,7 @@
       "lead_headline": "Anthropic strikes a compute deal with SpaceX",
       "lead_deck": "Anthropic signed a multi-year capacity arrangement with SpaceX for Starlink-backed compute. This matters because lab capacity is the binding constraint right now and the new pact reshuffles who can train at what scale.",
       "lead_tag": "SIGNAL",
-      "tag_color": "amber",
+      "tag_color": "cyan",
       "story_count": 7,
       "read_time_total_min": 75,
       "lead_author": {

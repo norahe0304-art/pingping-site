@@ -1,0 +1,333 @@
+{
+  "date": "2026-05-25",
+  "weekday": "Monday",
+  "no": 116,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-25T12:34:10.217949Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Vincent Logic</b>: a web homepage can now be assembled as an AI motion stack.",
+    "<b>Meituan</b>: open avatar generation is getting expressive enough for real content.",
+    "<b>Google × Arm</b>: CPU inference is creeping into production territory.",
+    "<b>Huawei</b>: semiconductor performance is being framed beyond transistor shrink.",
+    "<b>Electric B2B</b>: launches are turning into orchestration systems."
+  ],
+  "digest": {
+    "title": "The stack is moving from models to motion, memory, and distribution.",
+    "body": "This morning’s signals point to a broader shift: the best teams are not just shipping smarter models, they are packaging those models into reusable motion systems, memory layers, and launch playbooks. The product edge is moving upward into distribution and downward into runtime, and the people who can combine both will move fastest this week."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Today's Top Signal",
+      "headline": "AI can now make a living homepage in minutes",
+      "deck": "Vincent Logic’s workflow turns a static website into a page with motion and atmosphere by chaining Pinterest, Gemini, Kling, Mux, and an AI site builder. It is worth watching because it shows how quickly a polished homepage can be assembled once image cleanup, motion, and publishing are all treated as AI steps instead of manual craft.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/VincentLogic/status/2058801464815046850",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "Vincent Logic",
+        "handle": "VincentLogic",
+        "role": "creator / web workflow hacker",
+        "avatar_url": "https://unavatar.io/x/VincentLogic"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Meituan ships an open video-avatar stack",
+      "deck": "Meituan’s LongCat-Video-Avatar-1.5 is being framed as an open, free avatar model that can turn one photo and one voice clip into expressive talking video. That matters because it pushes the “good enough for production” line farther down the stack and makes avatar generation feel less like a demo and more like a reusable content primitive.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/hank_aibtc/status/2058719673181692086",
+      "image_url": "",
+      "read_time_min": 6,
+      "author": {
+        "name": "HankAI",
+        "handle": "hank_aibtc",
+        "role": "AI creator / model watcher",
+        "avatar_url": "https://unavatar.io/x/hank_aibtc"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Products & Infra",
+      "headline": "Google and Arm push AI closer to CPUs",
+      "deck": "Google and Arm are showing that LiteRT, XNNPACK, KleidiAI, and SME2 can speed up inference directly on CPUs, and the demo is already hitting Android and Mac hardware. The important part is not just the benchmark win; it is the distribution implication that more AI workloads can ship without waiting for a specialized accelerator on every device.",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.example.com/google-arm-cpu-inference",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "AI/Infra",
+      "headline": "Huawei is pitching time scaling for semiconductors",
+      "deck": "Huawei’s He Tingbo is pushing a sustainable semiconductor path based on time scaling rather than only geometric scaling, and that is a useful strategic signal even as the branding is corporate. The broader takeaway is that compute vendors are still searching for ways to stretch performance without relying only on the old shrinking-transistor narrative.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Huawei/status/2058824415199277095",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "Huawei",
+        "handle": "Huawei",
+        "role": "semiconductor company",
+        "avatar_url": "https://unavatar.io/x/Huawei"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Agent Stack",
+      "headline": "Anthropic memory work is turning practical",
+      "deck": "The workshop clip around Anthropic engineer Kevin is notable because it moves memory from abstraction into a real operating pattern: proving no cross-chat memory, introducing a memory store, and using it as an external layer. That matters because continuity is becoming a product expectation, not just an implementation detail.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/MinLiBuilds/status/2058561294861791620",
+      "image_url": "",
+      "read_time_min": 6,
+      "author": {
+        "name": "实践哥MinLi",
+        "handle": "MinLiBuilds",
+        "role": "AI workflow commentator",
+        "avatar_url": "https://unavatar.io/x/MinLiBuilds"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Growth & Distribution",
+      "headline": "Launches are becoming three-beat systems",
+      "deck": "Electric B2B’s launch memo makes the same point in a very practical way: the launch is not a single post, it is anticipation, amplification, and follow-up working together. That matters because it reframes distribution as an operating system rather than a one-off event, which is how more teams will want to ship from now on.",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.example.com/electricb2b-launches",
+      "image_url": "",
+      "read_time_min": 6,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "AI Strategy",
+      "headline": "David Silver is betting on learning loops",
+      "deck": "The new $1.1B company around David Silver is being read as a bet on systems that learn from experience, not just on larger static models. That is a serious signal because it implies the next jump in AI may come from better feedback loops and manufactured experience rather than another round of parameter escalation.",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.example.com/david-silver-learning-loops",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "Aadit Sheth",
+        "handle": "aadit",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/aadit"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Products & Business",
+      "headline": "AI UGC is already a real media factory",
+      "deck": "The creator case study showing a 28-day, $1.4M AI-UGC business is valuable because it proves the output can move from experiments into repeatable revenue. The scale matters less as a brag and more as evidence that AI content pipelines are now good enough to support actual media operations, not just marketing tests.",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.example.com/ai-ugc-media-factory",
+      "image_url": "",
+      "read_time_min": 6,
+      "author": {
+        "name": "NeatPrompts",
+        "handle": "neatprompts",
+        "role": "newsletter editor",
+        "avatar_url": "https://unavatar.io/x/neatprompts"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Agent Runtime",
+      "headline": "Isolated runtimes are becoming the agent default",
+      "deck": "A cloud sandbox per session is interesting because it bundles browser access, code execution, and image generation into one boundary. That matters if agents are going to be trusted to do real work, since isolation is quietly becoming part of the product, not just an infrastructure afterthought.",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.example.com/hyperagent-cloud-sandbox",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "Hyperagent",
+        "handle": "hyperagent",
+        "role": "agent runtime company",
+        "avatar_url": "https://unavatar.io/x/hyperagent"
+      },
+      "source": {
+        "label": "Newsletter · issue",
+        "kind": "newsletter"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Products & Models",
+      "headline": "A browser workflow can now replace a web studio",
+      "deck": "The browser-made homepage post is also a signal about the toolchain itself: inspiration, cleanup, motion, hosting, and site assembly are collapsing into one fluid path. That is valuable because it turns a web design stack into a repeatable AI workflow instead of a bespoke production pipeline.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/VincentLogic/status/2058801464815046850",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "Vincent Logic",
+        "handle": "VincentLogic",
+        "role": "creator / web workflow hacker",
+        "avatar_url": "https://unavatar.io/x/VincentLogic"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Creative Systems",
+      "headline": "Open avatar models are becoming practical media tools",
+      "deck": "LongCat-Video-Avatar-1.5 shows how quickly a model can move from novelty into utility when it can handle lip sync, gesture, and longer-form motion without falling apart. That matters because expressive video generation is becoming a repeatable content format, not just a one-off demo.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/hank_aibtc/status/2058719673181692086",
+      "image_url": "",
+      "read_time_min": 6,
+      "author": {
+        "name": "HankAI",
+        "handle": "hank_aibtc",
+        "role": "AI creator / model watcher",
+        "avatar_url": "https://unavatar.io/x/hank_aibtc"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "m001",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Benchmark one CPU-first AI path on a real device",
+      "deck": "",
+      "why": "Google and Arm are making CPU-side inference a practical path again, so today is the day to test whether one of your own workloads can run without depending on a heavyweight accelerator.",
+      "try": "Set a 25-minute timer. Pick one real workflow, run it on the slowest device you care about, and record latency, quality, and what breaks.",
+      "url": "https://newsletter.example.com/google-arm-cpu-inference",
+      "image_url": "",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "m002",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "amber",
+      "kicker": "Today's Must-Do",
+      "headline": "Map one launch into a three-beat relay",
+      "deck": "",
+      "why": "The launch stack signal says single-post launches are losing to coordinated distribution systems, so your next ship should not rely on one announcement alone.",
+      "try": "Set a 20-minute timer. Draft anticipation, launch, and follow-up beats for one thing shipping this week, with one asset and one channel per beat.",
+      "url": "https://newsletter.example.com/electricb2b-launches",
+      "image_url": "",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      }
+    }
+  ]
+}
