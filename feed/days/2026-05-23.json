@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/op7418/status/2057711810728559034",
-      "image_url": "",
+      "image_url": "./art/met-436803.jpg",
       "read_time_min": 5,
       "author": {
         "name": "歸藏(guizang.ai)",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Adoration of the Magi — Joos van Wassenhove (1472–74)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/NFTCPS/status/2057674935200522598",
-      "image_url": "",
+      "image_url": "./art/met-435997.jpg",
       "read_time_min": 4,
       "author": {
         "name": "鸟哥 | 蓝鸟会",
@@ -63,7 +64,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Storm — Pierre-Auguste Cot (1880)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/yidabuilds/status/2057636362925617246",
-      "image_url": "",
+      "image_url": "./art/met-53660.jpg",
       "read_time_min": 4,
       "author": {
         "name": "百年 AI×出海",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Ten Verses on Oxherding — Unknown (1278)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://www.theprohuman.com/",
-      "image_url": "",
+      "image_url": "./art/met-757344.jpg",
       "read_time_min": 5,
       "author": {
         "name": "The Pro Human",
@@ -111,7 +114,8 @@
       "source": {
         "label": "Newsletter · digest",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Boy Attendants Kongara Dōji and Seitaka Dōji — Unidentified (ca. 1350)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://www.theprohuman.com/",
-      "image_url": "",
+      "image_url": "./art/met-436529.jpg",
       "read_time_min": 5,
       "author": {
         "name": "The Pro Human",
@@ -135,7 +139,8 @@
       "source": {
         "label": "Newsletter · digest",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
     },
     {
       "id": "c006",
@@ -148,7 +153,7 @@
       "why": "",
       "try": "",
       "url": "https://www.neatprompts.com/",
-      "image_url": "",
+      "image_url": "./art/met-202868.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Aadit / neatprompts",
@@ -159,7 +164,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "Miniature coffeepot — David Clayton (18th century)"
     },
     {
       "id": "c007",
@@ -172,7 +178,7 @@
       "why": "",
       "try": "",
       "url": "https://substack.com/@alexbanks",
-      "image_url": "",
+      "image_url": "./art/met-438816.jpg",
       "read_time_min": 3,
       "author": {
         "name": "Alex Banks",
@@ -183,7 +189,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Forest in Winter at Sunset — Théodore Rousseau (ca. 1846–67)"
     },
     {
       "id": "c008",
@@ -196,7 +203,7 @@
       "why": "",
       "try": "",
       "url": "https://electricb2b.com/",
-      "image_url": "",
+      "image_url": "./art/met-307617.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Electric B2B",
@@ -207,7 +214,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "Bowl — Unknown (3rd century BCE)"
     },
     {
       "id": "c009",
@@ -220,7 +228,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/yidabuilds/status/2057636362925617246",
-      "image_url": "",
+      "image_url": "./art/met-388576.jpg",
       "read_time_min": 4,
       "author": {
         "name": "百年 AI×出海",
@@ -231,7 +239,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Landing of the Pilgrims at Plymouth Rock, 1620 — Joseph Andrews (1869)"
     },
     {
       "id": "c010",
@@ -244,7 +253,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/yidabuilds/status/2057636362925617246",
-      "image_url": "",
+      "image_url": "./art/met-437873.jpg",
       "read_time_min": 4,
       "author": {
         "name": "百年 AI×出海",
@@ -255,7 +264,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Philip IV (1605–1665), King of Spain — Velázquez (Diego Rodríguez de Silva y Velázquez) (probably 1624)"
     },
     {
       "id": "c011",
@@ -268,7 +278,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/NFTCPS/status/2057674935200522598",
-      "image_url": "",
+      "image_url": "./art/met-398714.jpg",
       "read_time_min": 4,
       "author": {
         "name": "鸟哥 | 蓝鸟会",
@@ -279,7 +289,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Last Trumpet (recto); Two studies of a right eye, a profile of an open-mouthed young man, the head of an eagle, and the head of a lion (verso) — William Blake (1780–85)"
     },
     {
       "id": "c012",
@@ -292,7 +303,7 @@
       "why": "Platform-native skill uploads matter most when you map them to one workflow you repeat every day, otherwise the signal stays abstract.",
       "try": "Set a 25-minute timer. Pick one recurring social or browser action and write the exact steps needed to make it a reusable skill.",
       "url": "https://x.com/op7418/status/2057711810728559034",
-      "image_url": "",
+      "image_url": "./art/met-437878.jpg",
       "read_time_min": 25,
       "author": {
         "name": "",
@@ -303,7 +314,8 @@
       "source": {
         "label": "Must-do · 25 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
     },
     {
       "id": "c013",
@@ -316,7 +328,7 @@
       "why": "Long-running agent work becomes useful only when you can supervise it from the phone without losing momentum.",
       "try": "Set a 20-minute timer. Write a simple mobile approval and checkpoint loop for one AI task you would actually run this week.",
       "url": "https://www.therundown.ai/",
-      "image_url": "",
+      "image_url": "./art/met-39895.jpg",
       "read_time_min": 20,
       "author": {
         "name": "",
@@ -327,7 +339,8 @@
       "source": {
         "label": "Must-do · 20 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "The Classic of Filial Piety — Li Gonglin (ca. 1085)"
     }
   ]
 }

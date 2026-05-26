@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/VincentLogic/status/2058801464815046850",
-      "image_url": "",
+      "image_url": "./art/met-459136.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Vincent Logic",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Madonna and Child — Simone Martini (ca. 1326)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/hank_aibtc/status/2058719673181692086",
-      "image_url": "",
+      "image_url": "./art/met-435651.jpg",
       "read_time_min": 6,
       "author": {
         "name": "HankAI",
@@ -63,7 +64,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Lamentation — Ambrosius Benson (ca. 1520–25)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://newsletter.example.com/google-arm-cpu-inference",
-      "image_url": "",
+      "image_url": "./art/met-436043.jpg",
       "read_time_min": 5,
       "author": {
         "name": "The Pro Human",
@@ -87,7 +89,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "Friedrich III (1463–1525), the Wise, Elector of Saxony — Lucas Cranach the Elder and Workshop (1533)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/Huawei/status/2058824415199277095",
-      "image_url": "",
+      "image_url": "./art/met-816189.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Huawei",
@@ -111,7 +114,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "”Abiding nowhere, the awakened mind arises” — Musō Soseki (early to mid-14th century)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/MinLiBuilds/status/2058561294861791620",
-      "image_url": "",
+      "image_url": "./art/met-451726.jpg",
       "read_time_min": 6,
       "author": {
         "name": "实践哥MinLi",
@@ -135,7 +139,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "\"Shaikh San'an beneath the Window of the Christian Maiden\", Folio18r  from a Mantiq al-Tayr (Language of the Birds) — Farid al-Din `Attar (ca. 1600)"
     },
     {
       "id": "c006",
@@ -148,7 +153,7 @@
       "why": "",
       "try": "",
       "url": "https://newsletter.example.com/electricb2b-launches",
-      "image_url": "",
+      "image_url": "./art/met-435844.jpg",
       "read_time_min": 6,
       "author": {
         "name": "Electric B2B",
@@ -159,7 +164,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Musicians — Caravaggio (Michelangelo Merisi) (1597)"
     },
     {
       "id": "c007",
@@ -172,7 +178,7 @@
       "why": "",
       "try": "",
       "url": "https://newsletter.example.com/david-silver-learning-loops",
-      "image_url": "",
+      "image_url": "./art/met-436991.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Aadit Sheth",
@@ -183,7 +189,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "Jan (1438/41–1516), First Count of Egmond; Magdalena, Countess of Egmond (1464–1538) — North Netherlandish Painter (undated)"
     },
     {
       "id": "c008",
@@ -196,7 +203,7 @@
       "why": "",
       "try": "",
       "url": "https://newsletter.example.com/ai-ugc-media-factory",
-      "image_url": "",
+      "image_url": "./art/met-436838.jpg",
       "read_time_min": 6,
       "author": {
         "name": "NeatPrompts",
@@ -207,7 +214,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "The Fortune-Teller — Georges de La Tour (probably 1630s)"
     },
     {
       "id": "c009",
@@ -220,7 +228,7 @@
       "why": "",
       "try": "",
       "url": "https://newsletter.example.com/hyperagent-cloud-sandbox",
-      "image_url": "",
+      "image_url": "./art/met-459001.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Hyperagent",
@@ -231,7 +239,8 @@
       "source": {
         "label": "Newsletter · issue",
         "kind": "newsletter"
-      }
+      },
+      "image_alt": "Madonna Adoring the Child — Botticelli (Alessandro di Mariano Filipepi) (ca. 1490–95)"
     },
     {
       "id": "c010",
@@ -244,7 +253,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/VincentLogic/status/2058801464815046850",
-      "image_url": "",
+      "image_url": "./art/met-435848.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Vincent Logic",
@@ -255,7 +264,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Birth of the Virgin — Fra Carnevale (Bartolomeo di Giovanni Corradini) (1467)"
     },
     {
       "id": "c011",
@@ -268,7 +278,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/hank_aibtc/status/2058719673181692086",
-      "image_url": "",
+      "image_url": "./art/met-51581.jpg",
       "read_time_min": 6,
       "author": {
         "name": "HankAI",
@@ -279,7 +289,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "One hundred portraits of Peking opera characters — Unidentified artist (late 19th–early 20th century)"
     },
     {
       "id": "m001",
@@ -292,7 +303,7 @@
       "why": "Google and Arm are making CPU-side inference a practical path again, so today is the day to test whether one of your own workloads can run without depending on a heavyweight accelerator.",
       "try": "Set a 25-minute timer. Pick one real workflow, run it on the slowest device you care about, and record latency, quality, and what breaks.",
       "url": "https://newsletter.example.com/google-arm-cpu-inference",
-      "image_url": "",
+      "image_url": "./art/met-626692.jpg",
       "read_time_min": 25,
       "author": {
         "name": "",
@@ -303,7 +314,8 @@
       "source": {
         "label": "Must-do · 25 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
     },
     {
       "id": "m002",
@@ -316,7 +328,7 @@
       "why": "The launch stack signal says single-post launches are losing to coordinated distribution systems, so your next ship should not rely on one announcement alone.",
       "try": "Set a 20-minute timer. Draft anticipation, launch, and follow-up beats for one thing shipping this week, with one asset and one channel per beat.",
       "url": "https://newsletter.example.com/electricb2b-launches",
-      "image_url": "",
+      "image_url": "./art/met-437202.jpg",
       "read_time_min": 20,
       "author": {
         "name": "",
@@ -327,7 +339,8 @@
       "source": {
         "label": "Must-do · 20 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Christ Bearing the Cross — North Netherlandish (Bruges) Painter (undated)"
     }
   ]
 }

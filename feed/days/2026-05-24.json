@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/FlowbyGoogle/status/2058214525393064153",
-      "image_url": "",
+      "image_url": "./art/met-544320.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Google Flow",
@@ -39,7 +39,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Stela of the Steward Mentuwoser — Unknown (ca. 1944 B.C.)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/oliverkaneAI/status/2058034715626553802",
-      "image_url": "",
+      "image_url": "./art/met-39895.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Oliver Kane",
@@ -63,7 +64,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Classic of Filial Piety — Li Gonglin (ca. 1085)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/deepseek_ai/status/2057854261699195173",
-      "image_url": "",
+      "image_url": "./art/met-438821.jpg",
       "read_time_min": 4,
       "author": {
         "name": "DeepSeek",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/GoSailGlobal/status/2051942423895712149",
-      "image_url": "",
+      "image_url": "./art/met-436607.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Jason Zhu",
@@ -111,7 +114,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "An Allegory — Domenico Guidobono (1710–20)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/hyperagentapp/status/2044086412421517664",
-      "image_url": "",
+      "image_url": "./art/met-437384.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Hyperagent",
@@ -135,7 +139,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Salome — Henri Regnault (1870)"
     },
     {
       "id": "c006",
@@ -148,7 +153,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/aronhouyu/status/2058044748980740427",
-      "image_url": "",
+      "image_url": "./art/met-436105.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Aron厚玉",
@@ -159,7 +164,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
     },
     {
       "id": "c007",
@@ -172,7 +178,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/sairahul1/status/2055940008926990447",
-      "image_url": "",
+      "image_url": "./art/met-435678.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Rahul",
@@ -183,7 +189,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Temptation of Saint Anthony — Herri met de Bles (ca. 1550–60)"
     },
     {
       "id": "c008",
@@ -196,7 +203,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/GoogleDeepMind/status/2057057310975901784",
-      "image_url": "",
+      "image_url": "./art/met-470304.jpg",
       "read_time_min": 5,
       "author": {
         "name": "Google DeepMind",
@@ -207,7 +214,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "Annunciation Triptych (Merode Altarpiece) — Robert Campin (ca. 1427–32)"
     },
     {
       "id": "c009",
@@ -220,7 +228,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/search?q=Fastlane%20AI%20Tool%20Automates%20Social%20Media%20Marketing%20with%20Claude&src=typed_query",
-      "image_url": "",
+      "image_url": "./art/met-626692.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Search result",
@@ -231,7 +239,8 @@
       "source": {
         "label": "X · search",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
     },
     {
       "id": "c010",
@@ -244,7 +253,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/search?q=DeepSeek%20V4%20Pro&src=typed_query",
-      "image_url": "",
+      "image_url": "./art/met-437261.jpg",
       "read_time_min": 4,
       "author": {
         "name": "DeepSeek",
@@ -255,7 +264,8 @@
       "source": {
         "label": "X · search",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
     },
     {
       "id": "c011",
@@ -268,7 +278,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/search?q=Investor%20Calls%20Out%20Solo%20Founders%2C%20Draws%20400%2B%20Replies&src=typed_query",
-      "image_url": "",
+      "image_url": "./art/met-283133.jpg",
       "read_time_min": 4,
       "author": {
         "name": "Search result",
@@ -279,7 +289,8 @@
       "source": {
         "label": "X · search",
         "kind": "x"
-      }
+      },
+      "image_alt": "Spartan Soldier — Charles Nègre (1859)"
     },
     {
       "id": "m001",
@@ -292,7 +303,7 @@
       "why": "Today’s signal set keeps pointing back to memory as a product moat, and that means the weakest part of any agent system is usually the place where context gets lost, retyped, or forgotten.",
       "try": "Set a 30-minute timer. Trace where your current workflow drops state between sessions, then write the three most expensive memory failures in one note.",
       "url": "https://x.com/sairahul1/status/2055940008926990447",
-      "image_url": "",
+      "image_url": "./art/met-435621.jpg",
       "read_time_min": 3,
       "author": {
         "name": "",
@@ -303,7 +314,8 @@
       "source": {
         "label": "Must-do · 30 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
     },
     {
       "id": "m002",
@@ -316,7 +328,7 @@
       "why": "The mobile Codex workflow suggests that long-running work is becoming something people want to supervise away from the desk, so the review path should work where the user already is.",
       "try": "Set a 20-minute timer. Sketch one step that lets a user approve or redirect a long job from a phone without opening a desktop dashboard.",
       "url": "https://x.com/oliverkaneAI/status/2058034715626553802",
-      "image_url": "",
+      "image_url": "./art/met-437055.jpg",
       "read_time_min": 3,
       "author": {
         "name": "",
@@ -327,7 +339,8 @@
       "source": {
         "label": "Must-do · 20 min",
         "kind": "task"
-      }
+      },
+      "image_alt": "Portrait of an Old Man — Hans Memling (ca. 1475)"
     }
   ]
 }

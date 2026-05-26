@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-26T12:32:15.618874Z",
+  "updated_at": "2026-05-26T16:53:31.004981Z",
   "days": [
     {
       "date": "2026-05-26",
@@ -24,7 +24,7 @@
         "label": "Newsletter · digest",
         "kind": "newsletter"
       },
-      "lead_image_url": ""
+      "lead_image_url": "./art/met-451287.jpg"
     },
     {
       "date": "2026-05-25",
@@ -49,7 +49,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "lead_image_url": ""
+      "lead_image_url": "./art/met-459136.jpg"
     },
     {
       "date": "2026-05-24",
@@ -74,7 +74,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "lead_image_url": ""
+      "lead_image_url": "./art/met-544320.jpg"
     },
     {
       "date": "2026-05-23",
@@ -99,7 +99,7 @@
         "label": "X · post",
         "kind": "x"
       },
-      "lead_image_url": ""
+      "lead_image_url": "./art/met-436803.jpg"
     },
     {
       "date": "2026-05-22",
