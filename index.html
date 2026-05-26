@@ -33,9 +33,10 @@
       display: flex; flex-direction: column;
     }
     @media (max-width: 900px) {
-      html, body { height: auto; min-height: 100%; }
+      html, body { height: auto; min-height: 100svh; }
       body {
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
         display: block;
       }
     }
@@ -65,10 +66,10 @@
         gap: 12px;
         max-width: 560px;
       }
-      /* DOM order is left → center → right; mobile order: center (hero) → left → right */
-      .dash > .col:nth-of-type(1) { order: 2; }
-      .dash > .col:nth-of-type(2) { order: 1; }
-      .dash > .col:nth-of-type(3) { order: 3; }
+      /* DOM order is left -> center -> right; mobile pins the hero first. */
+      .dash > .col:nth-of-type(1) { grid-row: 2; }
+      .dash > .col:nth-of-type(2) { grid-row: 1; }
+      .dash > .col:nth-of-type(3) { grid-row: 3; }
       .col {
         min-height: auto;
       }
@@ -921,7 +922,14 @@
         max-width: 100%;
         overflow-wrap: anywhere;
       }
-      .core-meta { top: 14px; left: 14px; right: 14px; font-size: 9px; }
+      .core-meta {
+        top: 14px;
+        left: 14px;
+        right: 14px;
+        font-size: 8.5px;
+        letter-spacing: 0.14em;
+      }
+      .core-meta .right { white-space: nowrap; }
       .core-sig { font-size: 20px; margin-top: 18px; }
       .core-receipt { margin-top: 14px; font-size: 8.5px; }
       .ch--diary { top: 14%; left: 6%; }
@@ -936,6 +944,10 @@
       .kv-row { grid-template-columns: 92px 1fr; gap: 10px; padding: 9px 0; }
     }
     @media (max-width: 420px) {
+      .core-meta,
+      .pn-num {
+        display: none;
+      }
       .core-mark { font-size: 46px; }
       .core { min-height: 260px; padding: 18px 14px; }
       .streak-grid { grid-template-columns: repeat(8, 1fr); }
