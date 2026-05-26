@@ -1,0 +1,346 @@
+{
+  "date": "2026-05-26",
+  "weekday": "Tuesday",
+  "no": 117,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-26T12:32:15.618874Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>OpenAI</b>: Codex is moving into the mobile app, turning agents into supervised workers.",
+    "<b>Google × Arm</b>: CPU-side inference is getting real with LiteRT, XNNPACK, KleidiAI, and SME2.",
+    "<b>David Silver</b>: a new $1.1B bet puts self-play and reasoning back in the spotlight.",
+    "<b>Growth teams</b>: launch choreography is starting to matter more than single-post publishing.",
+    "<b>Creator tools</b>: AI video and design workflows keep collapsing specialist steps into one chat loop."
+  ],
+  "digest": {
+    "title": "Agents are moving from chat boxes to supervised workers, while distribution moves from single posts to choreographed launches.",
+    "body": "Across the signals, the biggest pattern is that AI products are becoming operational systems: Codex is now something you oversee from mobile, inference is getting pushed onto cheaper CPUs, and tool layers are changing without requiring model changes. On the growth side, the winning play is no longer one big post or one big demo; it is a repeatable sequence that turns capability into durable distribution."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Sam Altman’s UBI reversal is a signal on AI politics",
+      "deck": "A newsletter recap says Sam Altman once backed a major universal basic income experiment with $14 million of his own money, but now says he no longer believes in it. That is worth watching because it shows how quickly the politics around AI wealth-sharing can shift once the practical costs and incentives get clearer.",
+      "why": "",
+      "try": "",
+      "url": "https://substack.com/@alexbanks",
+      "image_url": "./art/met-451287.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Alex Banks",
+        "handle": "alexbanks",
+        "role": "newsletter / AI-policy watcher",
+        "avatar_url": "https://unavatar.io/x/alexbanks"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "\"Page of Calligraphy Illuminated with Animals and Plants in a Field of Flowers\", Folio from the Shah Jahan Album — Nanha (verso: ca. 1610–15; recto: ca.1535–45)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "A $1.1B bet on teaching AI to reason",
+      "deck": "David Silver, the architect behind AlphaGo, is now at the center of a $1.1B funding story aimed at teaching AI to reason through self-play rather than only mimicking human examples. That is worth watching because it revives the idea that the next leap may come from better learning dynamics, not just larger pretraining runs.",
+      "why": "",
+      "try": "",
+      "url": "https://neatprompts.com/",
+      "image_url": "./art/met-438779.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Aadit Shekhar",
+        "handle": "aadit",
+        "role": "newsletter / AI investor watch",
+        "avatar_url": "https://unavatar.io/x/aadit"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "A Peasant Family — Antoine Le Nain (ca. 1640–48)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Launch choreography is now part of the product",
+      "deck": "A growth playbook newsletter argues that a single feed post only gets a few hours of attention unless you seed anticipation before launch, amplify during launch, and follow up after. The useful signal is that product marketing is increasingly treated as a sequence design problem: the asset matters, but the surrounding choreography is what makes the asset compound.",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-436896.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Electric B2B",
+        "handle": "electricb2b",
+        "role": "newsletter / growth marketing",
+        "avatar_url": "https://unavatar.io/x/electricb2b"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Portrait of a Woman with a Man at a Casement — Fra Filippo Lippi (ca. 1440)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Open source is being priced like extractive capital",
+      "deck": "One X post argues that the open-source community has become too easy to exploit, using a provocative line about the “most expensive” things being the free ones. The broader pattern is contrarian but useful: the economic center of gravity is shifting toward whoever owns distribution, support, and packaging around the supposedly free layer.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/himself65/status/2059112583676952825",
+      "image_url": "./art/met-436533.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Bread",
+        "handle": "himself65",
+        "role": "creator / open-source critic",
+        "avatar_url": "https://unavatar.io/x/himself65"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Shoes — Vincent van Gogh (1888)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Today's Top Signal",
+      "headline": "Codex mobile makes agents feel on-call",
+      "deck": "The Rundown frames Codex in ChatGPT iOS as a way to approve decisions and manage long-running coding tasks from the phone while the agent keeps grinding in the background. That is important because it moves the category from “AI assistant” toward “remote operator,” where the key product question is orchestration rather than raw generation.",
+      "why": "",
+      "try": "",
+      "url": "https://daily.therundown.ai/",
+      "image_url": "./art/met-436105.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "The Rundown",
+        "handle": "therundownai",
+        "role": "newsletter / AI coding market watcher",
+        "avatar_url": "https://unavatar.io/x/therundownai"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "AI video editing is becoming conversational",
+      "deck": "Vincent Logic describes a workflow where Claude Code, video understanding, and automated editing cut the time needed to clean up a clip and shape it into publishable form. It matters because it suggests the next creator tools win by collapsing several specialist steps into one conversational loop.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/VincentLogic/status/2058824774197882996",
+      "image_url": "./art/met-451725.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Vincent Logic",
+        "handle": "VincentLogic",
+        "role": "creator / workflow builder",
+        "avatar_url": "https://unavatar.io/x/VincentLogic"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Template packs are becoming a creator moat",
+      "deck": "A newsletter about Framer says challenge creators are still turning templates into direct revenue, which is a reminder that design ecosystems can function like mini marketplaces. The important part is not just the earnings, but the way repeatable template products let one good workflow compound across many buyers.",
+      "why": "",
+      "try": "",
+      "url": "https://framer.com/",
+      "image_url": "./art/met-437873.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Framer Challenge",
+        "handle": "framer",
+        "role": "product / creator economy",
+        "avatar_url": "https://unavatar.io/x/framer"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Philip IV (1605–1665), King of Spain — Velázquez (Diego Rodríguez de Silva y Velázquez) (probably 1624)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "A 45-minute Musk talk still reads like a startup manual",
+      "deck": "A resurfaced Stanford lecture from 2003 shows Musk breaking down how to build companies from zero by talking through the mechanics, not the mythology. It is worth a slot because older founder content still outperforms a lot of current advice when the question is how to think under constraints.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Etudecn/status/2058918948389994612",
+      "image_url": "./art/met-437261.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "淘沙者",
+        "handle": "Etudecn",
+        "role": "founder-history curator",
+        "avatar_url": "https://unavatar.io/x/Etudecn"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Self-improving agents are becoming a distribution story",
+      "deck": "The “Hermes Agent” newsletter claim is less about a single product and more about the direction of travel: teams are shipping systems that learn, adapt, and swap skills without model changes. That matters because once capability can be updated at the tool layer, distribution becomes an operating system problem rather than a model-release problem.",
+      "why": "",
+      "try": "",
+      "url": "https://hermes-agent.nousresearch.com/docs",
+      "image_url": "./art/met-436529.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Hermes Agent",
+        "handle": "hermesagent",
+        "role": "agent platform / ecosystem note",
+        "avatar_url": "https://unavatar.io/x/hermesagent"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "AI teams are getting nervous about database-native competitors",
+      "deck": "A newsletter teaser about a new agent stack says the product gives teams full SQL and MCP support across many databases, with no dashboards or provisioning. The signal is that AI tooling is moving closer to the system of record, where control and operational depth matter more than polished chat surfaces.",
+      "why": "",
+      "try": "",
+      "url": "https://hyperagent.com/",
+      "image_url": "./art/met-436803.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "Hyperagent",
+        "handle": "hyperagentapp",
+        "role": "agent infrastructure / product ad",
+        "avatar_url": "https://unavatar.io/x/hyperagentapp"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Adoration of the Magi — Joos van Wassenhove (1472–74)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Newsletters still beat raw feeds when they teach the why",
+      "deck": "The Pro Human digest on CPU-side AI, the Rundown on mobile Codex, and Electric B2B on launch choreography all do the same thing: they turn a scattered set of updates into one actionable model. That matters because the strongest briefs no longer just report news; they translate it into operational language you can actually use.",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com/",
+      "image_url": "./art/met-435621.jpg",
+      "read_time_min": 4,
+      "author": {
+        "name": "The Pro Human",
+        "handle": "theprohuman",
+        "role": "newsletter / synthesis layer",
+        "avatar_url": "https://unavatar.io/x/theprohuman"
+      },
+      "source": {
+        "label": "Newsletter · digest",
+        "kind": "newsletter"
+      },
+      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Test Codex mobile on one real repo task",
+      "deck": "",
+      "why": "OpenAI’s mobile Codex shift matters only if it can handle a real workflow for you today, not just in a demo.",
+      "try": "Set a 25-minute timer. Pick one repo task, start it from mobile, and note where approval, context, or handoff breaks down.",
+      "url": "https://daily.therundown.ai/",
+      "image_url": "./art/met-436176.jpg",
+      "read_time_min": 25,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      },
+      "image_alt": "Christ Asleep during the Tempest — Eugène Delacroix (ca. 1853)"
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Draft one launch sequence for a feed post",
+      "deck": "",
+      "why": "The growth signal is that distribution now depends on sequencing, not just the asset itself.",
+      "try": "Set a 20-minute timer. Write a before-during-after launch sequence for one upcoming post or feature and assign one action to each phase.",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "./art/met-436523.jpg",
+      "read_time_min": 20,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "The Adoration of the Magi — Hugo van der Goes (undated)"
+    }
+  ]
+}
