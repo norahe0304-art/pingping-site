@@ -7,8 +7,8 @@ trending AI/marketing posts (`/feed/`). Cream paper, Inter typography,
 hand-drawn artifact doodles. Aesthetic borrowed from
 [Attio's GTM Atlas](https://atlas.attio.com).
 
-Plain HTML + CSS + vanilla JS. Zero build framework. Deployed to GitHub
-Pages on every push to `main`.
+Plain HTML + CSS + vanilla JS. Zero build framework. Deployed to Vercel
+on every push to `main`, served at `pingping.nora-he.com`.
 
 ## Layout
 
@@ -31,7 +31,7 @@ tools/
   restyle.py             # build script — turns sources into the aggregator
   process_artifact.py    # post-process raw doodles → transparent + black + pixelated
   pingping-prompt.md     # canonical Hermes system prompt for the diary cron
-vercel.json              # one redirect: /diary/YYYY-MM-DD.html → /diary/#entry-…
+vercel.json              # redirects + Vercel function context
 ```
 
 ## Editorial chrome
@@ -86,7 +86,7 @@ git commit -m "diary: YYYY-MM-DD — <title>"
 git push origin main
 ```
 
-GitHub Pages auto-publishes within ~1 min of push.
+Vercel auto-publishes within ~1 min of push.
 
 ## Local preview
 

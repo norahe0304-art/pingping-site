@@ -1,4 +1,9 @@
 /* ============================================================
+   [INPUT]: depends on pages using zi-* classes, Google font variables, and rough-notation SVG injection
+   [OUTPUT]: provides PingPing Atlas tokens, chrome, prose, TOC, and feed/diary shared styles
+   [POS]: assets/ style source of truth, consumed by index.html, diary/, and feed/
+   [PROTOCOL]: 变更时更新此头部，然后检查 AGENTS.md
+
    Zi UI — shared style for pingping-site
    Atlas-by-Attio tonality: warm off-white paper (#F6F4EE),
    warm-black ink (#1c1b1b), multi-color sticker accents

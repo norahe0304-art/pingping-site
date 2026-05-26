@@ -1,5 +1,5 @@
 # pingping-site — Nora's AI · daily-ish
-Static HTML (no build), Atlas-by-Attio tonality, deployed to Vercel.
+Static HTML (no build), Atlas-by-Attio tonality, deployed to Vercel at pingping.nora-he.com.
 
 <directory>
 index.html       - 01 home (single-viewport dashboard, specimen-card centerpiece)
@@ -20,10 +20,11 @@ tools/           - legacy publishing scripts (pre-cron era)
 </directory>
 
 <config>
-vercel.json       - Vercel static-site config
-.github/          - CI hooks
+vercel.json       - Vercel redirect + api/ask function config
+.github/          - legacy GitHub Pages workflow; not canonical production
 README.md         - public-facing readme
 .env.local.example - placeholder for MINIMAX_API_KEY (real key only in Vercel env)
+AGENTS.md         - GEB L1 project map; keep it aligned with this file
 </config>
 
 <tonality>
@@ -63,11 +64,11 @@ Polaroids/stickers/receipts use Atlas single-use angles; no two share the same r
 <runbook>
 Dev:     python3 -m http.server 4747  (cd into root first)
 Preview: open http://localhost:4747/ · /diary/ · /feed/
-Deploy:  push to main → Vercel auto-deploy
+Deploy:  push to main → Vercel auto-deploy → pingping.nora-he.com
 
 Diary publishing note: per-day sources live in diary/YYYY-MM-DD.html, each entry should keep 3 numbered sections and at least 3 Atlas sidenotes in the English file before running scripts/build-diary.mjs.
 </runbook>
 
 法则: Atlas 调性 · 单一真相源 zi.css · 倾斜角度不复用 · doodle 必须笨拙
 
-[PROTOCOL]: 变更时更新此文件，然后检查各 L2 CLAUDE.md
+[PROTOCOL]: 变更时更新此文件，然后检查 AGENTS.md
