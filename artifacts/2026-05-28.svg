@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <!-- handle: thick rounded rectangle-ish shape via path -->
+  <path d="M 300.0 300.0 L 305.8 298.3 L 311.9 297.7 L 318.4 299.1 L 324.2 300.0" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M 324.2 300.0 L 325.1 287.6 L 326.3 274.9 L 324.7 262.1 L 325.0 250.0" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M 325.0 250.0 L 318.9 251.4 L 311.7 250.3 L 304.8 248.9 L 300.0 250.0" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M 300.0 250.0 L 302.1 262.3 L 300.8 275.1 L 298.3 287.9 L 300.0 300.0" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- shaft: thin line down from handle -->
+  <path d="M 300.0 250.0 L 298.4 228.7 L 299.7 207.3 L 301.2 186.0 L 300.0 165.0 L 300.0 145.0 L 300.0 125.0" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- tip: slightly flared -->
+  <path d="M 300.0 125.0 L 296.2 116.3 L 298.8 108.4 L 300.0 100.0" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M 300.0 125.0 L 304.1 116.8 L 302.3 108.1 L 300.0 100.0" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- small dot on handle top -->
+  <circle cx="300" cy="275" r="4" stroke="#1a1a1a" stroke-width="2" fill="#1a1a1a"/>
+</svg>
