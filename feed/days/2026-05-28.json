@@ -1,0 +1,346 @@
+{
+  "date": "2026-05-28",
+  "weekday": "Thursday",
+  "no": 119,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-05-28T06:00:00.000Z",
+  "promo_headline": "Eleven signals. Two moves. One pattern.",
+  "whats_news": [
+    "<b>Higgsfield AI</b>: AI video editing arrives inside Premiere Pro and After Effects — generate, reframe, and upscale to 4K without leaving the timeline.",
+    "<b>OpenAI</b>: Secure MCP Tunnels let ChatGPT and Codex reach private enterprise servers through outbound-only HTTPS — no inbound ports, no permanent API keys scattered across services.",
+    "<b>Tibo</b>: Codex is retiring GPT-5.2 and GPT-5.3 on June 2 — GPT-5.5 becomes the frontier default for all plans inside the ChatGPT account.",
+    "<b>Cursor</b>: Design Sidebar brings drag-and-drop visual layout into the IDE — resize, recolor, switch themes, then hit Apply and the agent writes the code.",
+    "<b>DesignMD Supply</b>: Drop any URL, get a complete design.md spec — extracted design tokens, typography, and color decisions ready to hand to any AI coding tool."
+  ],
+  "digest": {
+    "title": "The AI tooling layer is collapsing into professional workflows.",
+    "body": "Two stories today — Higgsfield inside Premiere Pro and Cursor's Design Sidebar — point in the same direction: AI is no longer landing on the edge of professional workflows, it is being embedded inside the tools professionals already use. OpenAI's Secure MCP Tunnels accelerate this by removing the last enterprise compliance barrier. The pattern is clear — the next competitive moat is not which AI exists, but which app it lives inside of."
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Higgsfield AI puts generation directly inside Premiere Pro",
+      "deck": "Higgsfield launched plugins for Adobe Premiere Pro and After Effects that generate images, videos, and transitions inside the timeline — draw on a clip to specify what you want, reframe aspect ratios without cropping, remove backgrounds from footage, and upscale the final export to 4K. With over 624K views and strong reposts from professional editors, it is the clearest sign yet that AI video generation is not competing with professional tools; it is being absorbed into them.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/higgsfield/status/2059690191187824681",
+      "image_url": "./art/met-437873.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Higgsfield AI",
+        "handle": "higgsfield",
+        "role": "AI video generation platform",
+        "avatar_url": "https://unavatar.io/x/higgsfield"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Philip IV (1605–1665), King of Spain — Velázquez (Diego Rodríguez de Silva y Velázquez) (probably 1624)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI's Secure MCP Tunnels eliminate enterprise's last compliance excuse",
+      "deck": "OpenAI launched Private MCP Tunnels, which let enterprise teams keep MCP servers inside their private network while ChatGPT, Codex, and the Responses API connect through outbound-only HTTPS — no inbound ports, no permanent API keys, no exposure of internal infrastructure to the public internet. The security and compliance teams that have been blocking AI adoption now have no remaining technical objection. At 430K views, this is the infrastructure unlock that many enterprise teams have been waiting for.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/OpenAIDevs/status/2059703536825565499",
+      "image_url": "./art/met-437173.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI Developers",
+        "handle": "OpenAIDevs",
+        "role": "Developer platform @ OpenAI",
+        "avatar_url": "https://unavatar.io/x/OpenAIDevs"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Don Andrés de Andrade y la Cal — Bartolomé Estebán Murillo (ca. 1665–72)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Codex sunsets GPT-5.2 and 5.3 on June 2 — GPT-5.5 takes over",
+      "deck": "Codex announced it will retire GPT-5.2 and GPT-5.3-Codex on June 2 when logged in with a ChatGPT account, consolidating the compute fleet under GPT-5.5 as the default frontier model for all plans. This is a clean-up move, not a downgrade — GPT-5.5 becomes the single recommended model going forward, which simplifies the product and the pricing math for teams running long agent sessions.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/thsottiaux/status/2059650685948551384",
+      "image_url": "./art/met-436947.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Tibo",
+        "handle": "thsottiaux",
+        "role": "Open source builder and Codex fleet operator",
+        "avatar_url": "https://unavatar.io/x/thsottiaux"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Boating — Edouard Manet (1874)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Cursor's Design Sidebar brings visual editing into the IDE loop",
+      "deck": "Cursor launched a Design Sidebar that lets developers drag layout blocks, adjust spacing, change colors, and switch between light and dark themes inside the IDE using a built-in browser — hit Apply and the agent translates the visual changes into code. This collapses the Figma-to-IDE handoff into a single tool, making visual iteration feel as fast as writing prompts rather than exporting files and switching contexts.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/AISuperDomain/status/2059926823912526283",
+      "image_url": "./art/met-435844.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "AI超元域",
+        "handle": "AISuperDomain",
+        "role": "AI tooling newsletter",
+        "avatar_url": "https://unavatar.io/x/AISuperDomain"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Musicians — Caravaggio (Michelangelo Merisi) (1597)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "DesignMD Supply extracts a full design spec from any URL",
+      "deck": "DesignMD Supply takes any website URL and generates a complete design.md file with extracted colors, typography, spacing rules, and component patterns — the exact spec an AI coding tool needs to replicate a site's visual language without screenshots. It removes the manual step of inspecting a site and writing design rules from scratch, making it faster to spin up AI-generated pages that actually match a reference.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/dingyi/status/2059620404621377779",
+      "image_url": "./art/met-544320.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Ding",
+        "handle": "dingyi",
+        "role": "Developer tools builder",
+        "avatar_url": "https://unavatar.io/x/dingyi"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Stela of the Steward Mentuwoser — Unknown (ca. 1944 B.C.)"
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Intel's foundry revival is being built on advanced packaging, not just nodes",
+      "deck": "Intel is placing large-scale purchase orders for materials, components, and equipment to expand its EMIB advanced packaging capacity — the 2.5D chip-stacking technology that connects chiplets via an embedded silicon bridge at lower cost than TSMC's interposer approach. Combined with Intel 18A at the front-end, the packaging investment signals that Intel has secured meaningful foundry customers and is pursuing a differentiated revival path through the back-end rather than trying to out-node TSMC directly.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/jukan05/status/2059895609642127856",
+      "image_url": "./art/met-438821.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Jukan",
+        "handle": "jukan05",
+        "role": "Semiconductor and AI hardware analyst",
+        "avatar_url": "https://unavatar.io/x/jukan05"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Tencent bridges PayPal to WeChat Pay, opening 30M US users to China QR commerce",
+      "deck": "Tencent's TenPay Global announced that PayPal is now linked to the WeChat Pay QR merchant network, allowing US users to pay at tens of millions of Chinese merchants by scanning codes with their PayPal app. This is the most significant cross-border payment integration between a Western and Chinese platform to date, opening the full Chinese QR payment ecosystem to PayPal's 30 million US users without requiring a Chinese bank account.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Cointelegraph/status/2059817201163444635",
+      "image_url": "./art/met-626692.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Cointelegraph",
+        "handle": "Cointelegraph",
+        "role": "Crypto and fintech news",
+        "avatar_url": "https://unavatar.io/x/Cointelegraph"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Taste Skill fixes AI's generic-output problem across every coding tool",
+      "deck": "Taste Skill is an open-source package that gives AI coding tools — Cursor, Claude Code, v0, Lovable — a design sensibility, so that generated pages have proper typography, spacing, and color decisions instead of looking like system-default templates. At nearly 20K GitHub stars, it has become the de facto solution to the most common complaint about AI-generated frontend code, and it installs with a single command.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/VincentLogic/status/2059482088240202053",
+      "image_url": "./art/met-286624.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Vincent Logic",
+        "handle": "VincentLogic",
+        "role": "AI tooling newsletter / signal watcher",
+        "avatar_url": "https://unavatar.io/x/VincentLogic"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Peter Force — Mathew B. Brady (ca. 1858)"
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "A startup is hiring for AI-native product engineers who live in Claude Code",
+      "deck": "A San Francisco startup posted a hiring thread explicitly seeking an AI-native product engineer who is 'in a committed relationship with Claude Code,' willing to relocate, and obsessed with building side projects. The job description treats Claude Code fluency as a core qualification — not a bonus — and offers unlimited Claude credits and relocation to SF. It is one of the clearest signals yet that AI coding tool mastery is becoming a required skill for senior product roles.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/CoCo_AIxWeb3/status/2059869778106523655",
+      "image_url": "./art/met-438779.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "CoCo_AI",
+        "handle": "CoCo_AIxWeb3",
+        "role": "AI and web3 community builder",
+        "avatar_url": "https://unavatar.io/x/CoCo_AIxWeb3"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "A Peasant Family — Antoine Le Nain (ca. 1640–48)"
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Agents are learning to remember across sessions through layered memory hacks",
+      "deck": "Multiple posts today surfaced a practical 4-layer memory architecture for Claude Code and similar agents: sticky notes, project-level CLAUDE.md files, agent memory tools, and self-improving feedback loops. The approach turns agents from goldfish that forget everything between sessions into systems that accumulate context over time — the missing piece that makes long-horizon automation feel reliable rather than fragile.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/dunik_7/status/2059914845533655418",
+      "image_url": "./art/met-437394.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "dunik",
+        "handle": "dunik_7",
+        "role": "AI workflow educator and tool reviewer",
+        "avatar_url": "https://unavatar.io/x/dunik_7"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Aristotle with a Bust of Homer — Rembrandt (Rembrandt van Rijn) (1653)"
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "FloatBoat turns your calendar into an AI agent command center",
+      "deck": "FloatBoat launched on ProductHunt as a proactive agent OS that reads your calendar and prepares meeting tasks and executes work across 3,500-plus connected tools before you ask. Rather than waiting for a prompt, it surfaces relevant context, drafts deliverables, and schedules follow-ups automatically — the calendar becomes the dashboard for an always-on AI agent instead of just a timekeeping tool.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/FloatboatAI/status/2058199310823792852",
+      "image_url": "./art/met-437792.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Floatboat.ai",
+        "handle": "FloatboatAI",
+        "role": "AI productivity tools",
+        "avatar_url": "https://unavatar.io/x/FloatboatAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Apotheosis of the Spanish Monarchy — Giovanni Battista Tiepolo (1760s)"
+    },
+    {
+      "id": "m001",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Install Taste Skill on one project and compare before/after",
+      "deck": "",
+      "why": "The 20K GitHub trend is real — Taste Skill solves AI frontend output quality in one install, and seeing the difference on a real project will reframe what you expect from AI-generated design.",
+      "try": "Run: npx taste-skill install — then ask Claude Code or Cursor to build a landing page. Compare the result to the generic output you would have shipped without it. Set a 25-min timer.",
+      "url": "https://x.com/VincentLogic/status/2059482088240202053",
+      "image_url": "./art/met-453350.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 25 min",
+        "kind": "task"
+      },
+      "image_alt": "Interior of the Hammam at the Red Fort, Delhi, Furnished According to English Taste — Unknown (ca. 1830–40)"
+    },
+    {
+      "id": "m002",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Read the 4-layer agent memory guide and implement layer 1 today",
+      "deck": "",
+      "why": "Agents that forget everything between sessions are not reliable enough for real workflows — adding even one layer of memory (a project CLAUDE.md file) changes what the agent can accomplish in the second session versus the first.",
+      "try": "Open the dunik 4-layer memory thread linked above. Create a CLAUDE.md in one active project with: project name, tech stack, naming conventions, and what the project does. Watch how the next Claude Code session responds differently. Set a 20-min timer.",
+      "url": "https://x.com/dunik_7/status/2059914845533655418",
+      "image_url": "./art/met-39668.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "",
+        "handle": "",
+        "role": "Today's task",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 min",
+        "kind": "task"
+      },
+      "image_alt": "Old Trees, Level Distance — Guo Xi (ca. 1080)"
+    }
+  ]
+}
