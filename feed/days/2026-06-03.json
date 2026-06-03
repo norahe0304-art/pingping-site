@@ -1,0 +1,333 @@
+{
+  "date": "2026-06-03",
+  "weekday": "Wednesday",
+  "no": 125,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-03T18:21:12.525452+00:00",
+  "promo_headline": "11 signals. 2 moves. One pattern.",
+  "whats_news": [
+    "<b>Hermes 桌面版把 agent 变成操作界面</b>: Hermes 桌面版把 agent 变成操作界面",
+    "<b>Claude Opus 4.8 把工作流做进模型调用</b>: Claude Opus 4.8 把工作流做进模型调用",
+    "<b>Impeccable 让前端设计从写代码变成审稿</b>: Impeccable 让前端设计从写代码变成审稿",
+    "<b>COSS UI 和 HeroUI 抢占 AI 友好组件库心智</b>: COSS UI 和 HeroUI 抢占 AI 友好组件库心智",
+    "<b>Google Pay 正在把支付轨道交给 Agent</b>: Google Pay 正在把支付轨道交给 Agent"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今天最强的信号不是单一模型，而是 agent、支付、数据库、设计审稿和 launch 编排同时在往“可操作”收缩。谁能把这些表面做成默认界面，谁就更接近下一代产品入口。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Hermes 桌面版把 agent 变成操作界面",
+      "deck": "这说明 agent 正从网页功能往桌面常驻层迁移，分发入口、长任务管理和人机协同会一起改写。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/explore/tabs/news",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "explore",
+        "handle": "explore",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/explore"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Claude Opus 4.8 把工作流做进模型调用",
+      "deck": "它不只是更会答，而是在把“怎么做事”本身变成能力，子 agent、并行规划和更少工具步数都指向这一点。",
+      "why": "",
+      "try": "",
+      "url": "https://www.artificialintelligence-news.com/news/anthropic-releases-claude-opus-4-8/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "artificialintelligence-news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "artificialintelligence-news",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Impeccable 让前端设计从写代码变成审稿",
+      "deck": "这类工具把 AI 生成界面的竞争，从“能不能出图”推进到“能不能稳定过审”，对产品成品率影响很大。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/wsl8297/status/2061810154040172572",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "wsl8297",
+        "handle": "wsl8297",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/wsl8297"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "COSS UI 和 HeroUI 抢占 AI 友好组件库心智",
+      "deck": "组件库的竞争开始变成“是否适合 agent 协作”的竞争，选型不再只是风格问题，而是生产线问题。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/vikingmute/status/2061979261637181775",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "vikingmute",
+        "handle": "vikingmute",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/vikingmute"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Google Pay 正在把支付轨道交给 Agent",
+      "deck": "这不是普通支付更新，而是在给 agent 一条能直接成交的轨道，谁先标准化身份、支付和下单，谁就握住入口。",
+      "why": "",
+      "try": "",
+      "url": "https://www.artificialintelligence-news.com/news/google-pay-ai-agents-universal-commerce-protocol/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "artificialintelligence-news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "artificialintelligence-news",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "数据库开始吞掉传统面板",
+      "deck": "full SQL 和 MCP 这类路线是在把数据库变成 agent 控制台，以后很多运营动作可能直接在数据边界里闭环。",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Codex 上手机后，长任务监督变轻了",
+      "deck": "审批、提醒、跟进都能在手机上做，意味着人不必再死守电脑前盯着 agent。",
+      "why": "",
+      "try": "",
+      "url": "https://daily.therundown.ai",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "daily",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "daily",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "自博弈融资回潮，学习循环重回主线",
+      "deck": "David Silver 这笔钱押的不是更大模型，而是模型怎么自己变强，这会影响下一轮训练范式。",
+      "why": "",
+      "try": "",
+      "url": "https://neatprompts.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "neatprompts",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "neatprompts",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Launch 现在是编排问题，不是发帖问题",
+      "deck": "预热、发布、放大、跟进是一整段流程，增长团队如果只盯着单篇内容，会漏掉真正的分发系统。",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "electricb2b",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "electricb2b",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "多语言能力正在变成产品护城河",
+      "deck": "xAI 招中文母语者做 Grok 语音和多语言能力，说明语言覆盖已经是核心产品力，不只是本地化补丁。",
+      "why": "",
+      "try": "",
+      "url": "https://job-boards.greenhouse.io/xai/jobs/50901",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "job-boards",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "job-boards",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "普通 CPU 上的推理还在继续降门槛",
+      "deck": "AI 部署的默认答案正在从“等更强硬件”变成“先把现有硬件用起来”，这会让更多产品更早把 AI 做成默认能力。",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "列出你产品里最容易被 Agent 接管的交易环节",
+      "deck": "",
+      "why": "支付、下单和身份校验正在被协议化，越早看清接入点，越不容易被新入口绕过去",
+      "try": "Timer: 20 分钟.",
+      "url": "https://x.com/explore/tabs/news",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 分钟",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "拿一个真实前端页跑一次 AI 设计审稿流程",
+      "deck": "",
+      "why": "前端生成正在从“能不能出图”变成“能不能过审”，今天就该看清你的 UI 流程哪里最容易被 agent 改进",
+      "try": "Timer: 30 分钟.",
+      "url": "https://x.com/explore/tabs/news",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 分钟",
+        "kind": "task"
+      }
+    }
+  ]
+}

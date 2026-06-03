@@ -1,6 +1,106 @@
 {
-  "updated_at": "2026-05-30T09:00:00Z",
+  "updated_at": "2026-06-03T18:21:12.525771+00:00",
   "days": [
+    {
+      "date": "2026-06-03",
+      "weekday": "Wednesday",
+      "no": 125,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "11 signals. 2 moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "Hermes 桌面版把 agent 变成操作界面",
+      "lead_deck": "这说明 agent 正从网页功能往桌面常驻层迁移，分发入口、长任务管理和人机协同会一起改写。",
+      "lead_tag": "SIGNAL",
+      "tag_color": "pink",
+      "story_count": 13,
+      "read_time_total_min": 63,
+      "lead_author": {
+        "name": "explore",
+        "handle": "explore",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/explore"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": ""
+    },
+    {
+      "date": "2026-06-02",
+      "weekday": "Tuesday",
+      "no": 124,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "11 signals. 2 moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "Google / Arm: Google and Arm are showing that AI inference can move onto ordin",
+      "lead_deck": "Google and Arm are showing that AI inference can move onto ordinary CPUs with LiteRT, XNNPACK, KleidiAI, and SME2, and the demo is tied to a real Stable Audio model instead of a toy benchmark. That matters because it turns “wait for the right accelerator” into a weaker excuse; product teams now have a credible path to ship useful AI on the hardware people already own.",
+      "lead_tag": "SIGNAL",
+      "tag_color": "amber",
+      "story_count": 13,
+      "read_time_total_min": 63,
+      "lead_author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "lead_source": {
+        "label": "mail",
+        "kind": "web"
+      },
+      "lead_image_url": ""
+    },
+    {
+      "date": "2026-06-01",
+      "weekday": "Monday",
+      "no": 123,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "11 signals. 2 moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "Google / Arm: CPU 侧 AI 正在变得实用",
+      "lead_deck": "他们把 LiteRT、XNNPACK、KleidiAI 和 SME2 串起来，在普通 CPU 上跑量化后的 Stable Audio 模型，说明 useful inference 正在下沉到设备端，而不是继续只依赖特殊加速器。",
+      "lead_tag": "SIGNAL",
+      "tag_color": "cyan",
+      "story_count": 13,
+      "read_time_total_min": 63,
+      "lead_author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "lead_source": {
+        "label": "mail",
+        "kind": "web"
+      },
+      "lead_image_url": ""
+    },
+    {
+      "date": "2026-05-31",
+      "weekday": "Sunday",
+      "no": 122,
+      "edition": "Nora's Early Brief",
+      "promo_headline": "11 signals. 2 moves. One pattern.",
+      "lead_kicker": "Today's Top Signal",
+      "lead_headline": "AI social-card Skill: 歸藏的社交媒体卡片 Skill 冲到 GitHub 本周新建项目榜首",
+      "lead_deck": "这说明“可复用的 agent 能力”正在从代码资产变成分发资产，AI 工具开始被当作能帮别人更快出内容的基础设施。",
+      "lead_tag": "SIGNAL",
+      "tag_color": "indigo",
+      "story_count": 13,
+      "read_time_total_min": 63,
+      "lead_author": {
+        "name": "op7418",
+        "handle": "op7418",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "lead_source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "lead_image_url": ""
+    },
     {
       "date": "2026-05-30",
       "weekday": "Saturday",

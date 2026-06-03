@@ -1,0 +1,333 @@
+{
+  "date": "2026-06-02",
+  "weekday": "Tuesday",
+  "no": 124,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-03T18:21:12.524112+00:00",
+  "promo_headline": "11 signals. 2 moves. One pattern.",
+  "whats_news": [
+    "<b>Google / Arm</b>: Google / Arm: Google and Arm are showing that AI inference can move onto ordin",
+    "<b>Google / Arm</b>: Google / Arm: The Stable Audio Open Small demo is less about a single model an",
+    "<b>The Pro Human</b>: The Pro Human: The new agent pitch that bundles full SQL and MCP support across",
+    "<b>The Rundown AI</b>: The Rundown AI: The Codex-in-the-mobile-app wave is important because it changes",
+    "<b>Aadit Sheth</b>: Aadit Sheth: David Silver's $1"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今天最大的 pattern，是 AI 正在从“云端展示”变成“操作界面”：它跑在普通 CPU 上，嵌进数据库，挂到手机审批流里，也写进 launch choreography 里。真正有优势的团队，不再只是做更大的模型，而是把能力压进更小的硬件、更短的链路、和更可执行的工作流里。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Today's Top Signal",
+      "headline": "Google / Arm: Google and Arm are showing that AI inference can move onto ordin",
+      "deck": "Google and Arm are showing that AI inference can move onto ordinary CPUs with LiteRT, XNNPACK, KleidiAI, and SME2, and the demo is tied to a real Stable Audio model instead of a toy benchmark. That matters because it turns “wait for the right accelerator” into a weaker excuse; product teams now have a credible path to ship useful AI on the hardware people already own.",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Google / Arm: The Stable Audio Open Small demo is less about a single model an",
+      "deck": "The Stable Audio Open Small demo is less about a single model and more about the workflow it unlocks: mixed-precision quantization, CPU execution, and fast enough generation for real device constraints. If audio can run this way, then a lot of creative AI will stop being a cloud-only luxury and start looking like an embedded feature.",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "The Pro Human: The new agent pitch that bundles full SQL and MCP support across",
+      "deck": "The new agent pitch that bundles full SQL and MCP support across many databases is notable because it removes the dashboard layer entirely. When an agent can inspect data, act on it, and stay inside the database boundary, operational work starts to collapse into a single conversational surface.",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "The Rundown AI: The Codex-in-the-mobile-app wave is important because it changes",
+      "deck": "The Codex-in-the-mobile-app wave is important because it changes how long-running work is supervised: approvals, nudges, and follow-ups can happen from the phone while the actual task keeps grinding elsewhere. That makes the agent feel less like a feature and more like a persistent operational surface.",
+      "why": "",
+      "try": "",
+      "url": "https://daily.therundown.ai",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "daily",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "daily",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Aadit Sheth: David Silver's $1",
+      "deck": "David Silver's $1.1B story is bigger than a fundraise: it signals a renewed belief that models can improve by generating their own training signal instead of just absorbing more human text. If that thesis wins, the next wave of AI systems will be built around experience loops, not only bigger datasets.",
+      "why": "",
+      "try": "",
+      "url": "https://neatprompts.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "neatprompts",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "neatprompts",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Alex Banks: The Sam Altman UBI reversal note matters because it is a snapsho",
+      "deck": "The Sam Altman UBI reversal note matters because it is a snapshot of how AI leaders are reframing the social contract as the technology becomes more real. The politics of redistribution, labor, and legitimacy are no longer background theory; they are part of the product environment now.",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Electric B2B: The growth memo is a useful reminder that a launch is no longer",
+      "deck": "The growth memo is a useful reminder that a launch is no longer a single moment in time. The real unit is the sequence — anticipation, release, amplification, and follow-up — and teams that systematize that sequence will keep out-earning teams that only ship assets.",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "electricb2b",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "electricb2b",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "The Neuron: The reverse Turing-test joke lands because it points at a real i",
+      "deck": "The reverse Turing-test joke lands because it points at a real issue: humans are increasingly the unreliable part of the system, not the model. As AI output gets better, confidence, misread context, and social signaling become the failure mode worth designing around.",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.theneuron.ai",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "newsletter",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "newsletter",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "歸藏(guizang.ai): The social-card and skill chatter points to a bigger shift than",
+      "deck": "The social-card and skill chatter points to a bigger shift than a single GitHub trend: people are packaging capabilities that other people can reuse, not just posts that other people can read. That changes distribution because behavior, not prose, becomes the thing that gets copied and shared.",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/op7418",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "op7418",
+        "handle": "op7418",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Google / Arm: The Google and Arm demo also hides a second story: the smaller D",
+      "deck": "The Google and Arm demo also hides a second story: the smaller DiT submodel shows that model compression is now part of the product strategy, not just an optimization trick. The winners will be the teams that can squeeze capability into cheaper, more common devices without destroying quality.",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Pro Human / The Rundown / Electric B2B: The strongest newsletters today do more than summarize what happ",
+      "deck": "The strongest newsletters today do more than summarize what happened; they encode the playbook behind the event. That matters because the advantage is shifting toward sources that can translate noisy headlines into deployable workflow changes.",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "Benchmark your own CPU-first AI path.",
+      "deck": "",
+      "why": "CPU-side AI is now practical enough that waiting for perfect accelerator access is no longer a safe default.",
+      "try": "Timer: 30 分钟.",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 分钟",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "Draft one launch relay for an upcoming ship.",
+      "deck": "",
+      "why": "Distribution is now a sequencing problem, so the launch plan is part of the product work.",
+      "try": "Timer: 20 分钟.",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 分钟",
+        "kind": "task"
+      }
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "date": "2026-05-31",
+  "weekday": "Sunday",
+  "no": 122,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-03T18:21:12.520282+00:00",
+  "promo_headline": "11 signals. 2 moves. One pattern.",
+  "whats_news": [
+    "<b>AI social-card Skill</b>: AI social-card Skill: 歸藏的社交媒体卡片 Skill 冲到 GitHub 本周新建项目榜首",
+    "<b>OpenAI OSS 福利</b>: OpenAI OSS 福利: OpenAI 给开源维护者提供 6 个月 ChatGPT Pro",
+    "<b>xAI multilingual hiring</b>: xAI multilingual hiring: xAI 正在招中文母语者训练 Grok 的语音和多语言能力",
+    "<b>CPU-first AI</b>: CPU-first AI: Google 和 Arm 正把推理性能往 CPU 上推，且已经能在真实设备上看到可用结果",
+    "<b>David Silver bet</b>: David Silver bet: David Silver 的 11 亿美元 self-play 下注重新把“学习循环”推到台前"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今天最大的 pattern 是：AI 的竞争重心正在从“谁的模型更强”转向“谁能把能力放到正确的表面上”。这些表面包括设备、技能、支付、语言和 launch 机制——也就是用户真正接触、调用和分发 AI 的地方。 换句话说，未来一周更值得盯的不是单个 demo，而是哪些团队在把 AI 变成可运营、可分发、可被日常使用的系统。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Today's Top Signal",
+      "headline": "AI social-card Skill: 歸藏的社交媒体卡片 Skill 冲到 GitHub 本周新建项目榜首",
+      "deck": "这说明“可复用的 agent 能力”正在从代码资产变成分发资产，AI 工具开始被当作能帮别人更快出内容的基础设施。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/op7418/status/2060667214077034978",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "op7418",
+        "handle": "op7418",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI OSS 福利: OpenAI 给开源维护者提供 6 个月 ChatGPT Pro",
+      "deck": "这是直接对 builder 发福利，不是抽象口号；它在争夺最会切工具的一批人，也是在加深与开源生态的绑定。",
+      "why": "",
+      "try": "",
+      "url": "https://openai.com/form/codex-for/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "openai",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "openai",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "xAI multilingual hiring: xAI 正在招中文母语者训练 Grok 的语音和多语言能力",
+      "deck": "这把“多语言覆盖”从评测指标变成了明确的人力投入，说明 frontier 模型竞争已经进入语言与口音的运营层。",
+      "why": "",
+      "try": "",
+      "url": "https://job-boards.greenhouse.io/xai/jobs/50901",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "job-boards",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "job-boards",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "CPU-first AI: Google 和 Arm 正把推理性能往 CPU 上推，且已经能在真实设备上看到可用结果",
+      "deck": "如果中小模型和设备侧推理继续改善，AI 部署的瓶颈会从 GPU 供给转向软件封装与产品落地。",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.theprohuman.com/google-arm-cpu-ai-inference",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "newsletter",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "newsletter",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "David Silver bet: David Silver 的 11 亿美元 self-play 下注重新把“学习循环”推到台前",
+      "deck": "这不是更大模型的叙事，而是“模型如何自己变强”的叙事，可能会重排下一阶段研究路线。",
+      "why": "",
+      "try": "",
+      "url": "https://neatprompts.com/david-silver-1.1b-self-play",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "neatprompts",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "neatprompts",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Launch choreography: 内容/增长类 newsletter 再次强调，单次发布很快过气，真正有效的是预热、首发放大、再发布",
+      "deck": "它把分发从一次性动作变成了产品的一部分，和现在很多 AI 产品的 launch 逻辑高度一致。",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.com/5-steps-content-moves-buyers",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "electricb2b",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "electricb2b",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Device-side AI: Google+Arm 的案例还在强化一个判断：AI 正从云端往设备端靠",
+      "deck": "一旦手机和笔记本足够好，产品设计就能把“随时可用”做成默认体验，而不是加分项。",
+      "why": "",
+      "try": "",
+      "url": "https://newsletter.theprohuman.com/google-arm-cpu-ai-inference",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "newsletter",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "newsletter",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Agent SQL + MCP: 有 newsletter 在预告“full SQL + MCP support, no dashboards”",
+      "deck": "这代表 AI 产品正在靠近系统记录本身，dashboard 可能不再是主界面，直接操作才是。",
+      "why": "",
+      "try": "",
+      "url": "https://prohuman.ai/newsletter/agent-sql-mcp",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "prohuman",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "prohuman",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Mobile agent control: Codex 的移动端控制继续把 agent 变成“随身可管”的长期工作流",
+      "deck": "这降低了监督长任务的门槛，也把 AI coding 从桌面工作台推进到手机操作面。",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai/p/openai-codex-mobile-chatgpt",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "therundown",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "therundown",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Skills as marketplace: social-card Skill 的热度说明，open source 正在从“仓库”变成“技能市场”",
+      "deck": "当技能可以被发现、安装、复用、再分发，生态的价值单位就从代码文件变成工作流能力。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/op7418/status/2060667214077034978",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "op7418",
+        "handle": "op7418",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Language coverage as growth: xAI 的招聘信号也说明，多语言能力已经是增长杠杆",
+      "deck": "模型是不是“好用”，越来越取决于它能否自然地覆盖真实用户的语言场景。",
+      "why": "",
+      "try": "",
+      "url": "https://job-boards.greenhouse.io/xai/jobs/50901",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "job-boards",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "job-boards",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "申请 OpenAI 的 OSS maintainer Pro offer.",
+      "deck": "",
+      "why": "这是明确的限时福利，错过就少一个月度级别的 builder 资源",
+      "try": "Timer: 20 分钟.",
+      "url": "https://x.com/op7418/status/2060667214077034978",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 分钟",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "把一个真实支付/预订流程改写成 agent 版本.",
+      "deck": "",
+      "why": "Google 的 agent payment 方向一旦标准化，你就需要知道自己产品里哪些环节会被 agent 接管",
+      "try": "Timer: 30 分钟.",
+      "url": "https://x.com/op7418/status/2060667214077034978",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 分钟",
+        "kind": "task"
+      }
+    }
+  ]
+}

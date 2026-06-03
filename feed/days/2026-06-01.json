@@ -1,0 +1,333 @@
+{
+  "date": "2026-06-01",
+  "weekday": "Monday",
+  "no": 123,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-03T18:21:12.522297+00:00",
+  "promo_headline": "11 signals. 2 moves. One pattern.",
+  "whats_news": [
+    "<b>Google / Arm</b>: Google / Arm: CPU 侧 AI 正在变得实用",
+    "<b>Nous Research</b>: Nous Research: Hermes Agent for Windows 变成平台级信号",
+    "<b>xAI</b>: xAI: 语言覆盖正在变成招聘护城河",
+    "<b>CostHawk</b>: CostHawk: AI 花费追踪开始变成董事会级刚需",
+    "<b>LongCat Avatar</b>: LongCat Avatar: 一张图 + 一段音频就能产出会说话的角色"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今天最大的 pattern 是：AI 正在同时向“更靠近设备”和“更靠近运营”两端收缩。 一边是 CPU 侧推理、手机上的 Codex、原生桌面 agent；另一边是 launch orchestration、预算追踪、可复用技能包。谁能把分发、操作和成本都产品化，谁就更像下一代 AI 基础设施。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Today's Top Signal",
+      "headline": "Google / Arm: CPU 侧 AI 正在变得实用",
+      "deck": "他们把 LiteRT、XNNPACK、KleidiAI 和 SME2 串起来，在普通 CPU 上跑量化后的 Stable Audio 模型，说明 useful inference 正在下沉到设备端，而不是继续只依赖特殊加速器。",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Nous Research: Hermes Agent for Windows 变成平台级信号",
+      "deck": "这类“原生桌面 agent”不是单一功能，而是在把 agent 变成操作环境本身，说明分发入口正在从浏览器标签页转向更持久的 operator layer。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/explore/tabs/news",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "explore",
+        "handle": "explore",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/explore"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "xAI: 语言覆盖正在变成招聘护城河",
+      "deck": "公开招中文 speakers 做 Grok voice，不只是本地化，而是在把多语言能力当作产品竞争力；当模型质量趋同，语音、语气、文化适配就会决定谁更像“本地产品”。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/xai/status/2061300818314404050",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "xai",
+        "handle": "xai",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/xai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "CostHawk: AI 花费追踪开始变成董事会级刚需",
+      "deck": "广告虽然夸张，但它踩中了真实痛点——AI spend 现在需要像财务控制台一样被看见，不然团队很快就会在预算上失控。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/CostHawkAI/status/2057572079801901254",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "CostHawkAI",
+        "handle": "CostHawkAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/CostHawkAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "LongCat Avatar: 一张图 + 一段音频就能产出会说话的角色",
+      "deck": "这个方向把原本需要 agency、摄影和剪辑的流程压缩成可重复的模板，说明 avatar 生产正在从 demo 走向 campaign 级别的工具。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/CopyRebeldia/status/2060765436883722723",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "CopyRebeldia",
+        "handle": "CopyRebeldia",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/CopyRebeldia"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Image prompting 正在变成可定制层",
+      "deck": "drmrzhong 的提示词思路不再是“会不会出图”，而是“能不能按风格、角色、款式去做可复用定制”，这更像产品化的 prompt pack。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/drmrzhong/status/2061260392446480669",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "drmrzhong",
+        "handle": "drmrzhong",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/drmrzhong"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Sam Altman 对 UBI 的态度变化释放出更硬的 AI 政治信号",
+      "deck": "这不是单纯观点反转，而是说明 AI 领袖正在重写自动化的社会叙事，语气从理想到务实的转向会影响政策和公众沟通。",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Launch 现在要按“前-中-后”三段来设计",
+      "deck": "Electric B2B 的核心不是内容技巧，而是把分发拆成序列化动作；这意味着 launch 已经是 orchestration 问题，不只是 copywriting 问题。",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "electricb2b",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "electricb2b",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "AI 正在更靠近普通硬件",
+      "deck": "Google / Arm 的 CPU 叙事说明推理瓶颈正被往下压，普通设备一旦够用，产品团队就不必等完美硬件生态再发。",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "David Silver 的新公司押注“通过玩来学习”",
+      "deck": "这笔 11 亿美元融资在说一件事：下一阶段 AI 可能更依赖自我生成训练信号，而不是继续堆静态语料。",
+      "why": "",
+      "try": "",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "mail",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "mail",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "开源开始被包装成“可安装的行为”",
+      "deck": "现在真正有传播力的，不再只是代码仓库，而是可复用的技能、工作流和行为模块；这会改变开源项目的分发和变现方式。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/op7418/status/2061300818314404050",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "op7418",
+        "handle": "op7418",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/op7418"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "30 分钟跑一个 CPU-first AI 真实 benchmark",
+      "deck": "",
+      "why": "CPU 侧 AI 正在从概念变成可用路径，越早验证越能判断是否该把部分工作流从云端挪到本地",
+      "try": "Timer: 30 分钟.",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 分钟",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "20 分钟写一个 launch relay",
+      "deck": "",
+      "why": "今天最强的增长模式不是“发一篇”，而是“预热—发布—复盘”三段式，先把你自己的一个内容或产品动作串起来",
+      "try": "Timer: 20 分钟.",
+      "url": "https://mail.beehiiv.com",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 分钟",
+        "kind": "task"
+      }
+    }
+  ]
+}
