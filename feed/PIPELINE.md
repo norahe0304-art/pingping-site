@@ -22,9 +22,10 @@ Telegram-ready brief into Hermes cron output. It does not mutate the repo.
 scripts/pingping-site-publisher.py --kind feed
    ├─ parses ~/.hermes/profiles/personal/cron/output/a536f6d6ea3a/YYYY-MM-DD_*.md
    ├─ writes feed/days/YYYY-MM-DD.json
-   └─ updates feed/days/manifest.json
+   ├─ updates feed/days/manifest.json
+   └─ optionally enriches art only when PINGPING_FETCH_ART=1
    │
-   ▼ step 3
+   ▼ optional enrich
 node scripts/fetch-art-images.mjs
    ├─ tokenize each headline → ART_LIFT → Met API query
    ├─ stable hash picks a public-domain masterwork per slot
@@ -49,7 +50,7 @@ feed/index.html
         (every <a href="…" target="_blank"> points to real source)
 ```
 
-Steps 2-4 are stitched into the no-agent publisher and local node scripts. The old v5 prompt patch is legacy; fresh installs should register `scripts/pingping-site-publisher.py --kind feed` at 08:55 ET and `--kind diary` at 09:10 ET.
+Steps 2-4 are stitched into the no-agent publisher and local node scripts. The old v5 prompt patch is legacy; fresh installs should register `scripts/pingping-site-publisher.py --kind feed` at 08:55 ET and `--kind diary` at 09:10 ET. Art fetch is an optional enrich job; the publisher leaves it disabled unless `PINGPING_FETCH_ART=1` is set.
 
 All three scripts are **idempotent**:
 - `fetch-art-images.mjs` skips slots that already have a unique image_url
@@ -85,8 +86,10 @@ the cron prompt directly via SSH.
 ## Daily flow
 
 - **Automatic**: Mac mini cron fires daily ~15:00 UTC → writes JSON →
-  runs `fetch-art-images.mjs` + `diversify-tag-colors.mjs` →
+  runs `diversify-tag-colors.mjs` →
   commits + pushes feed/days/ + feed/art/ → Vercel auto-deploys
+- **Optional art enrich**: run with `PINGPING_FETCH_ART=1` or invoke
+  `node scripts/fetch-art-images.mjs --date YYYY-MM-DD` manually
 - **Backfill a specific date manually**: see Local testing below
 
 ## Local testing

@@ -27,6 +27,7 @@ NODE_CANDIDATES = [
     "/Users/macxiaoxiao/.hermes/node/bin/node",
     "node",
 ]
+ART_FETCH_TIMEOUT = int(os.environ.get("PINGPING_FETCH_ART_TIMEOUT", "45"))
 
 
 def log(msg):
@@ -371,14 +372,30 @@ def find_node():
     return None
 
 
+def enabled(name):
+    return os.environ.get(name, "").strip().lower() in {"1", "true", "yes", "on"}
+
+
 def maybe_run_node_scripts(kind, dates):
     node = find_node()
     if not node:
         log("node not found; skipping optional node scripts")
         return
+    unique_dates = sorted(set(dates))
     if kind in {"feed", "all"}:
-        for d in dates:
-            subprocess.run([node, "scripts/fetch-art-images.mjs", "--date", d.isoformat()], cwd=ROOT, text=True)
+        if enabled("PINGPING_FETCH_ART"):
+            for d in unique_dates:
+                try:
+                    subprocess.run(
+                        [node, "scripts/fetch-art-images.mjs", "--date", d.isoformat()],
+                        cwd=ROOT,
+                        text=True,
+                        timeout=ART_FETCH_TIMEOUT,
+                    )
+                except subprocess.TimeoutExpired:
+                    log(f"optional art fetch timed out for {d}; continuing")
+        else:
+            log("optional art fetch disabled; set PINGPING_FETCH_ART=1 to enable")
         subprocess.run([node, "scripts/diversify-tag-colors.mjs"], cwd=ROOT, text=True)
     if kind in {"diary", "all"}:
         subprocess.run([node, "scripts/build-diary.mjs"], cwd=ROOT, text=True, check=True)

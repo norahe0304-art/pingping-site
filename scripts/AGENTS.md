@@ -9,10 +9,10 @@ backfill-9-issues.mjs: 历史 feed JSON 回填器，生成 2026-05-07 到 2026-0
 build-diary.mjs: diary 聚合器，从 per-day frontmatter source 生成 diary/index.html。
 cron-patches/: Hermes cron prompt patchers，维护 Mac mini 上的 prompt 配置。
 diversify-tag-colors.mjs: feed 色条重排器，保证同日和跨日颜色不相邻重复。
-fetch-art-images.mjs: Met Museum art fetcher，为 feed items 补稳定公共领域图。
+fetch-art-images.mjs: Met Museum art fetcher，可选补稳定公共领域图，不属于发布必需路径。
 make-doodle.mjs: diary artifact SVG/WebP 生成器，按日期和 motif 产生确定性涂鸦。
 pingping-daily.mjs: 本地 RSS/manual feed 生成 fallback，不是 Mac mini 主生产路径。
-pingping-site-publisher.py: no-agent 发布桥，从 Hermes cron output 确定性写入 feed/diary 并 push。
+pingping-site-publisher.py: no-agent 发布桥，从 Hermes cron output 确定性写入 feed/diary 并 push；`PINGPING_FETCH_ART=1` 才启用图片补全。
 
 法则: prompt 只产语义·脚本负责落盘·canonical repo 唯一
 
