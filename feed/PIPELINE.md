@@ -4,22 +4,27 @@ Daily AI-marketing wire. Every cover = one day. Every story = real source URL.
 
 ## Architecture
 
-The daily cron runs on the **Mac mini Hermes** system (job id `a536f6d6ea3a`),
+The daily content cron runs on the **Mac mini Hermes** system (job id `a536f6d6ea3a`),
 NOT on GitHub Actions. Pingping (the AI agent on that machine) is the
-single source of truth for daily feed commits — it has X access and
-runs a long-running prompt that does the curation. GitHub Actions has
-no X access and would only duplicate the work, so there's no Action
-for the feed.
+source of truth for daily curation output. The site mutation is no
+longer prompt-driven: `scripts/pingping-site-publisher.py` is the
+no-agent bridge that reads Hermes cron output, writes feed/diary files,
+commits, and pushes from the canonical repo at `/Users/macxiaoxiao/code/pingping-site`.
 
 ```
-~15:00 UTC daily (Mac mini Hermes cron a536f6d6ea3a)
+~08:30 ET daily (Mac mini Hermes cron a536f6d6ea3a)
    │
    ▼ step 1
-Pingping reads X timeline + newsletter feeds, curates 5 SIGNAL +
-2 MUST-DO items per the cron prompt rules (see TEACH_PINGPING.md).
-Writes feed/days/YYYY-MM-DD.json with every item's image_url = "".
+Pingping reads X timeline + newsletter feeds and writes the Chinese
+Telegram-ready brief into Hermes cron output. It does not mutate the repo.
    │
    ▼ step 2
+scripts/pingping-site-publisher.py --kind feed
+   ├─ parses ~/.hermes/profiles/personal/cron/output/a536f6d6ea3a/YYYY-MM-DD_*.md
+   ├─ writes feed/days/YYYY-MM-DD.json
+   └─ updates feed/days/manifest.json
+   │
+   ▼ step 3
 node scripts/fetch-art-images.mjs
    ├─ tokenize each headline → ART_LIFT → Met API query
    ├─ stable hash picks a public-domain masterwork per slot
@@ -44,9 +49,7 @@ feed/index.html
         (every <a href="…" target="_blank"> points to real source)
 ```
 
-Steps 2-4 are stitched into the cron prompt via the v5 patch
-(`scripts/cron-patches/v5-art-and-colors.py`). Apply v5 + v3 (diary
-doodle) once per fresh Mac mini install; both patchers are idempotent.
+Steps 2-4 are stitched into the no-agent publisher and local node scripts. The old v5 prompt patch is legacy; fresh installs should register `scripts/pingping-site-publisher.py --kind feed` at 08:55 ET and `--kind diary` at 09:10 ET.
 
 All three scripts are **idempotent**:
 - `fetch-art-images.mjs` skips slots that already have a unique image_url
