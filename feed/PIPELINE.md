@@ -50,7 +50,7 @@ feed/index.html
         (every <a href="…" target="_blank"> points to real source)
 ```
 
-Steps 2-4 are stitched into the no-agent publisher and local node scripts. The old v5 prompt patch is legacy; fresh installs should register `scripts/pingping-site-publisher.py --kind feed` at 08:55 ET and `--kind diary` at 09:10 ET. Art fetch is an optional enrich job; the publisher leaves it disabled unless `PINGPING_FETCH_ART=1` is set.
+Steps 2-4 are stitched into the no-agent publisher and local node scripts. The old v5 prompt patch is legacy; Hermes cron registers thin wrappers from `~/.hermes/scripts/`: `pingping_site_publish_feed.sh` at 08:55 ET and `pingping_site_publish_diary.sh` at 09:10 ET. Art fetch is an optional enrich job; the publisher leaves it disabled unless `PINGPING_FETCH_ART=1` is set.
 
 All three scripts are **idempotent**:
 - `fetch-art-images.mjs` skips slots that already have a unique image_url
@@ -88,6 +88,10 @@ the cron prompt directly via SSH.
 - **Automatic**: Mac mini cron fires daily ~15:00 UTC → writes JSON →
   runs `diversify-tag-colors.mjs` →
   commits + pushes feed/days/ + feed/art/ → Vercel auto-deploys
+- **Runtime wrapper**: Hermes no-agent jobs call
+  `~/.hermes/scripts/pingping_site_publish_feed.sh` and
+  `~/.hermes/scripts/pingping_site_publish_diary.sh`; each wrapper fixes
+  `PINGPING_SITE_REPO=/Users/macxiaoxiao/code/pingping-site` before invoking Python
 - **Optional art enrich**: run with `PINGPING_FETCH_ART=1` or invoke
   `node scripts/fetch-art-images.mjs --date YYYY-MM-DD` manually
 - **Backfill a specific date manually**: see Local testing below
