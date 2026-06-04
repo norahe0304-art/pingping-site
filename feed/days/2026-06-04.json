@@ -1,0 +1,91 @@
+{
+  "date": "2026-06-04",
+  "weekday": "Thursday",
+  "no": 126,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-04T12:55:29.830825+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>OpenAI 把 Codex 放进 ChatGPT 手机端</b>: OpenAI 把 Codex 放进 ChatGPT 手机端",
+    "<b>Google 和 Arm 在推端侧 AI 推理</b>: Google 和 Arm 在推端侧 AI 推理",
+    "<b>内容发布正在从“发一篇”变成“做一场事件”</b>: 内容发布正在从“发一篇”变成“做一场事件”"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最值钱的不是“模型能不能跑”，而是“谁能把模型塞进真实工作流里并让人愿意反复用”。手机端管理长任务，就是把代理从实验室往日常操作拉了一步。 端侧推理继续推进，意味着产品竞争会越来越偏向“体验延迟、成本、离线可用性”和“部署门槛”这几个硬指标，而不是只拼模型榜单。 内容和增长正在更像产品发布：不是单点曝光，而是预热、扩散、复投、承接一整套系统。以后只会“写得好”不够，得“发得像事件”。 对 AI 工具和营销工具来说，真正的分水岭是有没有把“用户的下一步动作”接住；接不住，再好的内容和模型也只是看过就忘。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "OpenAI 把 Codex 放进 ChatGPT 手机端",
+      "deck": "AI 编码代理开始从“只能坐在桌面前管”变成“手机上也能随时接手”，这会直接影响开发者工具的产品形态和工作流设计；后续重点看任务确认、权限控制和长任务接力怎么做。",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "therundown",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "therundown",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Google 和 Arm 在推端侧 AI 推理",
+      "deck": "LiteRT、XNNPACK、KleidiAI、SME2 这些组合，说明 CPU 路径正在变得更实用，开发者不一定非等专用加速器才有体验；这对手机、笔记本和边缘设备上的模型部署很关键。",
+      "why": "",
+      "try": "",
+      "url": "https://theprohuman.ai",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "theprohuman",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "theprohuman",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "内容发布正在从“发一篇”变成“做一场事件”",
+      "deck": "这篇讲得很直接——单条内容的自然寿命可能只有几小时，真正有效的是把 LinkedIn、newsletter、合作分发、销售触达和付费放大串成一条链。对增长和营销团队来说，核心不是多发，而是把每次发布设计成可被放大的动作。",
+      "why": "",
+      "try": "",
+      "url": "https://substack.com/@electricb2b",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "substack",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "substack",
+        "kind": "web"
+      }
+    }
+  ]
+}
