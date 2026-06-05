@@ -1,0 +1,333 @@
+{
+  "date": "2026-06-05",
+  "weekday": "Friday",
+  "no": 127,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-05T12:55:58.302998+00:00",
+  "promo_headline": "11 signals. 2 moves. One pattern.",
+  "whats_news": [
+    "<b>Google Flow</b>: Google Flow：Gemini Omni 允许你直接用自然语言改视频",
+    "<b>OpenAI Developers</b>: OpenAI Developers：Codex 正在进入 ChatGPT 手机工作流",
+    "<b>DeepSeek</b>: DeepSeek：V4-Pro 价格变成永久优惠",
+    "<b>Jason Zhu</b>: Jason Zhu：agent memory 正在变成新的成本护城河",
+    "<b>Hyperagent</b>: Hyperagent：把云沙箱卖成默认 agent 工作区"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今天最大的 pattern 是：AI 产品正在同时向“更少摩擦”和“更少成本”两头收敛。前者体现在手机接管、对话式视频编辑、云沙箱；后者体现在更便宜的模型、更实用的 CPU 推理，以及更重要的记忆层。 真正的分水岭不再是“谁模型更大”，而是“谁能把长任务、上下文和审批流做成默认体验”。这周最值得盯的是：agent 工作流会不会从演示变成日常操作系统。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Google Flow：Gemini Omni 允许你直接用自然语言改视频",
+      "deck": "这把视频创作从时间轴操作变成对话式工作流，内容生产门槛会继续下降。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/FlowbyGoogle/status/2058214525393064153",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "FlowbyGoogle",
+        "handle": "FlowbyGoogle",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/FlowbyGoogle"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI Developers：Codex 正在进入 ChatGPT 手机工作流",
+      "deck": "长任务不再只能绑在桌面上，人在路上也能接管、审批、推进，监督成本会明显下降。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/oliverkaneAI/status/2058034715626553802",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "oliverkaneAI",
+        "handle": "oliverkaneAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/oliverkaneAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "DeepSeek：V4-Pro 价格变成永久优惠",
+      "deck": "价格策略会直接改写开发者的模型路由，尤其是在高频调用和成本敏感场景里。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/deepseek_ai/status/2057854261699195173",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "deepseek_ai",
+        "handle": "deepseek_ai",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/deepseek_ai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Jason Zhu：agent memory 正在变成新的成本护城河",
+      "deck": "真正的大痛点不是模型不够强，而是每次开新会话都要从零解释背景；记忆层做顺了，体验和成本会一起变好。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/GoSailGlobal/status/2051942423895712149",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "GoSailGlobal",
+        "handle": "GoSailGlobal",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/GoSailGlobal"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Hyperagent：把云沙箱卖成默认 agent 工作区",
+      "deck": "browser、代码执行、图像生成直接打包进会话环境，说明 agent 基础设施正在产品化，不只是给工程师用。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/hyperagentapp/status/2044086412421517664",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "hyperagentapp",
+        "handle": "hyperagentapp",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/hyperagentapp"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c006",
+      "rank": 6,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "Aron厚玉：AI 生成内容已经跑成一套媒体工厂",
+      "deck": "28 天做到 140 万、日更 100+ 广告，说明内容生产、测试、投放正在合流成一个自动化增长引擎。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/aronhouyu/status/2058044748980740427",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "aronhouyu",
+        "handle": "aronhouyu",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/aronhouyu"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c007",
+      "rank": 7,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Rahul：Claude 记忆工作流在加速",
+      "deck": "现在的竞争不只是能不能做 agent，而是能不能让它持续记住、少浪费上下文。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/sairahul1/status/2055940008926990447",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "sairahul1",
+        "handle": "sairahul1",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/sairahul1"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c008",
+      "rank": 8,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Google DeepMind：CPU 推理正在变得更实用",
+      "deck": "这会把 AI 部署从“必须有顶级 GPU”往“更多设备都能跑”推进一步，分发路径会更宽。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/GoogleDeepMind/status/2057057310975901784",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "GoogleDeepMind",
+        "handle": "GoogleDeepMind",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/GoogleDeepMind"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c009",
+      "rank": 9,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "X 搜索：营销 agent 正在从写文案升级到跑增长循环",
+      "deck": "真正的瓶颈开始从产量转向判断和指标，工具价值会重新定价。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/search?q=Fastlane%20AI%20Tool%20Automates%20Social%20Media%20Marketing%20with%20Claude&src=typed_query",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "search",
+        "handle": "search",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/search"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c010",
+      "rank": 10,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Markets & Models",
+      "headline": "X 搜索：DeepSeek V4-Pro 正在变成成本标尺",
+      "deck": "市场开始按“每个任务的有效成本”而不是单纯跑分来比较模型和 agent loop。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/search?q=DeepSeek%20V4%20Pro&src=typed_query",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "search",
+        "handle": "search",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/search"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c011",
+      "rank": 11,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "X 搜索：独立创始人的争论正在变成真实的扩张问题",
+      "deck": "AI 压缩了小团队产能，但信任、协调和交付节奏会成为新的硬约束。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/search?q=Investor%20Calls%20Out%20Solo%20Founders%2C%20Draws%20400%2B%20Replies&src=typed_query",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "search",
+        "handle": "search",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/search"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c012",
+      "rank": 12,
+      "tag": "PLAYBOOK",
+      "tag_color": "indigo",
+      "kicker": "Today's Must-Do",
+      "headline": "盘点你的 agent 记忆层",
+      "deck": "",
+      "why": "今天的信号已经把 memory 推成了 agent 的核心变量，不先看这层，后面的成本和体验都会被拖住",
+      "try": "Timer: 30 分钟.",
+      "url": "https://x.com/FlowbyGoogle/status/2058214525393064153",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 30 分钟",
+        "kind": "task"
+      }
+    },
+    {
+      "id": "c013",
+      "rank": 13,
+      "tag": "PLAYBOOK",
+      "tag_color": "pink",
+      "kicker": "Today's Must-Do",
+      "headline": "做一个手机优先的长任务接管路径",
+      "deck": "",
+      "why": "Codex 手机化和 Gemini Omni 都指向同一件事——用户要在手机上接管复杂工作，而不是守着桌面",
+      "try": "Timer: 20 分钟.",
+      "url": "https://x.com/FlowbyGoogle/status/2058214525393064153",
+      "image_url": "",
+      "read_time_min": 4,
+      "author": {
+        "name": "PINGPING",
+        "handle": "",
+        "role": "daily editor",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "Must-do · 20 分钟",
+        "kind": "task"
+      }
+    }
+  ]
+}
