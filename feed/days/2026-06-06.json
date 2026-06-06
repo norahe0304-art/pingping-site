@@ -1,0 +1,116 @@
+{
+  "date": "2026-06-06",
+  "weekday": "Saturday",
+  "no": 128,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-06T12:55:29.066224+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>绿的谐波（LeaderDrive）被拿来当做人形机器人供应链里的关键零部件标的</b>: 绿的谐波（LeaderDrive）被拿来当做人形机器人供应链里的关键零部件标的",
+    "<b>Google 和 Arm 在推端侧 CPU 跑 AI 推理</b>: Google 和 Arm 在推端侧 CPU 跑 AI 推理",
+    "<b>OpenAI 把 Codex 放进了 ChatGPT iOS 应用</b>: OpenAI 把 Codex 放进了 ChatGPT iOS 应用",
+    "<b>内容分发正在从“发出去”变成“做成事件”</b>: 内容分发正在从“发出去”变成“做成事件”"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今年最值得盯的，不只是模型能力，而是“模型能力怎么落到设备、代理和分发链路里”。谁能把推理成本、交互门槛和分发摩擦一起压下去，谁就更接近真实收入。 端侧推理和手机里的 Codex，方向其实是一致的：AI 从“一个大模型功能”变成“随时可用的工作流”。这会重新定义产品入口，不只是算力入口。 人形机器人这条线也一样，市场最后会回到最硬的东西：关节、减速器、丝杠、良率和交付。故事可以先涨，订单和产能才决定能不能继续往下走。 内容不是发文，是连续动作。以后更值钱的，可能不是单篇爆款，而是能把一次发布拆成多次触达、多种资产和多轮转化的系统。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "绿的谐波（LeaderDrive）被拿来当做人形机器人供应链里的关键零部件标的",
+      "deck": "这条不是在讲“机器人概念”，而是在讲关节减速器、丝杠、电机这些真正会卡量产的物理瓶颈；如果人形机器人放量，最先受益的往往不是最会讲故事的整机厂，而是认证难、替换难、批量一致性要求高的核心零件供应商。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/aleabitoreddit/status/2063211040989733012",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "aleabitoreddit",
+        "handle": "aleabitoreddit",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/aleabitoreddit"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Google 和 Arm 在推端侧 CPU 跑 AI 推理",
+      "deck": "它把 LiteRT、XNNPACK、KleidiAI 和 Arm SME2 这些底层优化串起来，说明“等专用加速器普及”不是唯一路线；如果 CPU 也能把推理成本打下来，AI 能力下沉到更多设备会更快，开发者和硬件厂商的策略都会变。",
+      "why": "",
+      "try": "",
+      "url": "https://www.theprohuman.ai/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "theprohuman",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "theprohuman",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI 把 Codex 放进了 ChatGPT iOS 应用",
+      "deck": "这不是简单加了个功能，而是把长时间运行的编程代理从桌面搬到手机上管理，用户可以在路上审批、改任务、盯进度；这会直接影响编码代理的使用频率，也会继续加剧和 Anthropic 的工具竞争。",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "therundown",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "therundown",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "内容分发正在从“发出去”变成“做成事件”",
+      "deck": "那篇 newsletter 说得很直白，单篇内容在噪音里只有几个小时可见度，真正有效的是发布前预热、发布时联动放大、发布后重新拉起；这对做增长、做 B2B 内容、做产品发布都很实用。",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "electricb2b",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "electricb2b",
+        "kind": "web"
+      }
+    }
+  ]
+}
