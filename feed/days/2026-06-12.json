@@ -1,0 +1,116 @@
+{
+  "date": "2026-06-12",
+  "weekday": "Friday",
+  "no": 134,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-12T12:55:08.777912+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Google 和 Arm 把推理继续往设备端推</b>: Google 和 Arm 把推理继续往设备端推",
+    "<b>OpenAI 把 Codex 做进手机端</b>: OpenAI 把 Codex 做进手机端",
+    "<b>内容分发正在从“发一篇”变成“打一仗”</b>: 内容分发正在从“发一篇”变成“打一仗”",
+    "<b>代理正在往“真工作台”靠拢</b>: 代理正在往“真工作台”靠拢"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这两天最清楚的方向是：AI 产品在同时压低两件事，算力成本和操作摩擦。谁先把这两件事一起压下去，谁就更接近规模化收入。 手机端接管长任务、设备端推理、代理直连系统，拼的都不是“模型多强”，而是“能不能进工作流、能不能少一步”。 增长和内容分发也在变成系统工程，不再是单篇爆款逻辑，而是把一次发布拆成预热、放大、承接和再传播。 真正值得盯的不是某条消息本身，而是它背后有没有持续可复制的动作链。能复用，才会变成护城河。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Google 和 Arm 把推理继续往设备端推",
+      "deck": "LiteRT、XNNPACK、KleidiAI、SME2 这套组合，说明很多场景不必死等大 GPU，CPU 也能把体验和成本往下压。对手机、笔记本、边缘设备上的产品落地很关键。",
+      "why": "",
+      "try": "",
+      "url": "https://www.theprohuman.ai/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "theprohuman",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "theprohuman",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI 把 Codex 做进手机端",
+      "deck": "长任务不再只能守在电脑前盯着，人可以在路上审批、接手、改任务；这会直接改变编码代理和开发者工具的使用习惯，也会继续拉高 Anthropic 和 OpenAI 的工具竞争强度。",
+      "why": "",
+      "try": "",
+      "url": "https://daily.therundown.ai",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "daily",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "daily",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "内容分发正在从“发一篇”变成“打一仗”",
+      "deck": "单条内容在噪音里只有很短的可见窗口，真正有效的是预热、发布、联动扩散、后续再拉起。对增长、营销、产品发布来说，核心不再是写得多，而是发得像事件。",
+      "why": "",
+      "try": "",
+      "url": "https://electricb2b.substack.com/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "electricb2b",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "electricb2b",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "代理正在往“真工作台”靠拢",
+      "deck": "有 newsletter 直接把带 SQL 和 MCP 的代理当成省钱的数据库工作区来讲，这说明大家开始接受：代理不只是聊天，而是能接真实系统、直接干活的入口。",
+      "why": "",
+      "try": "",
+      "url": "https://prohuman.ai/newsletter/agent-sql-mcp",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "prohuman",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "prohuman",
+        "kind": "web"
+      }
+    }
+  ]
+}
