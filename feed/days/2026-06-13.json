@@ -1,0 +1,141 @@
+{
+  "date": "2026-06-13",
+  "weekday": "Saturday",
+  "no": 135,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-13T12:55:49.461316+00:00",
+  "promo_headline": "5 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>OpenAI 把 Codex 放进 ChatGPT 手机端，开发者能在手机上继续</b>: OpenAI 把 Codex 放进 ChatGPT 手机端，开发者能在手机上继续审批、查看和推进长任务",
+    "<b>Google 和 Arm 在 CPU 上跑 AI 推理，结合 LiteRT、XN</b>: Google 和 Arm 在 CPU 上跑 AI 推理，结合 LiteRT、XNNPACK、KleidiAI 和 SME2，把生成时间从 14 秒压到 6.6 秒",
+    "<b>Anthropic 公开说，AI 的推进速度已经超过了政策系统的反应能力，同时在</b>: Anthropic 公开说，AI 的推进速度已经超过了政策系统的反应能力，同时在做更多公共项目和监管沟通",
+    "<b>内容分发正在从“发一篇文章”变成“做一场事件”</b>: 内容分发正在从“发一篇文章”变成“做一场事件”：先预热，再多渠道放大，再二次包装重发",
+    "<b>MiniMax M3 开了开放权重，主打编码、代理能力和更长上下文</b>: MiniMax M3 开了开放权重，主打编码、代理能力和更长上下文"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今天最清楚的一条线是：AI 产品的重心在从“模型发布”转向“任务持续交付”。手机端接管、长任务托管、跨设备续跑，都会变成体验分水岭。 推理成本不只是云端优化问题，CPU 端侧路线一旦成立，很多产品会更敢做高频、低价、嵌入式场景。 内容和增长也在变：单篇内容的价值越来越短，真正有用的是把一个观点拆成预热、爆发、回收、复投四段。 未来一段时间，最值得盯的不是“谁参数更大”，而是“谁把分发、合规、端侧、代理工作流一起打通”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "OpenAI 把 Codex 放进 ChatGPT 手机端，开发者能在手机上继续审批、查看和推进长任务",
+      "deck": "这说明 agent 正从“桌面工作流”往“随时可接管”演进，产品竞争不只拼模型，也拼任务接力体验。",
+      "why": "",
+      "try": "",
+      "url": "https://daily.therundown.ai/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "daily",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "daily",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Google 和 Arm 在 CPU 上跑 AI 推理，结合 LiteRT、XNNPACK、KleidiAI 和 SME2，把生成时间从 14 秒压到 6.6 秒",
+      "deck": "端侧部署不一定等专用加速器成熟，CPU 路线会直接影响推理成本、设备覆盖和商业化速度。",
+      "why": "",
+      "try": "",
+      "url": "https://www.theprohuman.ai/",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "theprohuman",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "theprohuman",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Anthropic 公开说，AI 的推进速度已经超过了政策系统的反应能力，同时在做更多公共项目和监管沟通",
+      "deck": "这类表态通常意味着模型公司开始把“合规、政策、公共叙事”当成产品竞争的一部分，不只是技术问题。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/AnthropicAI/status/2064783418844762489",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "AnthropicAI",
+        "handle": "AnthropicAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/AnthropicAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "内容分发正在从“发一篇文章”变成“做一场事件”：先预热，再多渠道放大，再二次包装重发",
+      "deck": "对增长和内容团队来说，单次发布的寿命太短了，真正有效的是把同一个主题拆成连续触达链路。",
+      "why": "",
+      "try": "",
+      "url": "https://substack.com/@electricb2b",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "substack",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "substack",
+        "kind": "web"
+      }
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "MiniMax M3 开了开放权重，主打编码、代理能力和更长上下文",
+      "deck": "开源权重竞争已经不只是“能不能用”，而是“谁能把代理、长上下文和性价比一起做稳”。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/MiniMax_AI/status/2065645689582006333",
+      "image_url": "",
+      "read_time_min": 5,
+      "author": {
+        "name": "MiniMax_AI",
+        "handle": "MiniMax_AI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/MiniMax_AI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      }
+    }
+  ]
+}
