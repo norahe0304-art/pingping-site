@@ -28,7 +28,7 @@
       "why": "",
       "try": "",
       "url": "https://daily.therundown.ai/",
-      "image_url": "",
+      "image_url": "./art/met-544320.jpg",
       "read_time_min": 5,
       "author": {
         "name": "daily",
@@ -39,7 +39,8 @@
       "source": {
         "label": "daily",
         "kind": "web"
-      }
+      },
+      "image_alt": "Stela of the Steward Mentuwoser — Unknown (ca. 1944 B.C.)"
     },
     {
       "id": "c002",
@@ -52,7 +53,7 @@
       "why": "",
       "try": "",
       "url": "https://www.theprohuman.ai/",
-      "image_url": "",
+      "image_url": "./art/met-437202.jpg",
       "read_time_min": 5,
       "author": {
         "name": "theprohuman",
@@ -63,7 +64,8 @@
       "source": {
         "label": "theprohuman",
         "kind": "web"
-      }
+      },
+      "image_alt": "Christ Bearing the Cross — North Netherlandish (Bruges) Painter (undated)"
     },
     {
       "id": "c003",
@@ -76,7 +78,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/AnthropicAI/status/2064783418844762489",
-      "image_url": "",
+      "image_url": "./art/met-436529.jpg",
       "read_time_min": 5,
       "author": {
         "name": "AnthropicAI",
@@ -87,7 +89,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
     },
     {
       "id": "c004",
@@ -100,7 +103,7 @@
       "why": "",
       "try": "",
       "url": "https://substack.com/@electricb2b",
-      "image_url": "",
+      "image_url": "./art/met-436947.jpg",
       "read_time_min": 5,
       "author": {
         "name": "substack",
@@ -111,7 +114,8 @@
       "source": {
         "label": "substack",
         "kind": "web"
-      }
+      },
+      "image_alt": "Boating — Edouard Manet (1874)"
     },
     {
       "id": "c005",
@@ -124,7 +128,7 @@
       "why": "",
       "try": "",
       "url": "https://x.com/MiniMax_AI/status/2065645689582006333",
-      "image_url": "",
+      "image_url": "./art/met-436803.jpg",
       "read_time_min": 5,
       "author": {
         "name": "MiniMax_AI",
@@ -135,7 +139,8 @@
       "source": {
         "label": "X · post",
         "kind": "x"
-      }
+      },
+      "image_alt": "The Adoration of the Magi — Joos van Wassenhove (1472–74)"
     }
   ]
 }
