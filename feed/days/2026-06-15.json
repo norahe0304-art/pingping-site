@@ -1,0 +1,94 @@
+{
+  "date": "2026-06-15",
+  "weekday": "Monday",
+  "no": 137,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-15T12:55:02.280256+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Google AI 五月更新</b>: Google AI 五月更新",
+    "<b>《SpaceX 的 IPO 对 OpenAI 和 Anthropic 意味着什么</b>: 《SpaceX 的 IPO 对 OpenAI 和 Anthropic 意味着什么》",
+    "<b>数据中心需求推高天然气电站成本</b>: 数据中心需求推高天然气电站成本"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这轮 AI 竞争，表面看是模型能力，底层其实是“算力 + 电力 + 分发”三件事一起比。谁能把成本压下去，谁才有资格把产品铺开。 对产品和增长来说，未来更值钱的不是“会回答”，而是“能嵌进用户日常流程”。搜索、文档、广告、社媒分发、客服和协作工具会继续被 AI 吃进去。 如果一家公司今天还在靠单点功能讲故事，明天很容易被平台型产品覆盖。真正能守住的位置，是工作流入口、数据入口和分发入口。 观察 AI 公司时，别只看模型发布，更要看它有没有把推理成本、能源成本和获客成本一起打下来。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Google AI 五月更新",
+      "deck": "这类官方更新通常能看出产品节奏和主线方向，重点是搜索、工作流和开发者工具怎么继续被 Gemini 绑在一起。",
+      "why": "",
+      "try": "",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/",
+      "image_url": "./art/met-436043.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "blog",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "blog",
+        "kind": "web"
+      },
+      "image_alt": "Friedrich III (1463–1525), the Wise, Elector of Saxony — Lucas Cranach the Elder and Workshop (1533)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "《SpaceX 的 IPO 对 OpenAI 和 Anthropic 意味着什么》",
+      "deck": "资本市场对大模型公司的定价，越来越绕不开算力、基础设施和长期现金流，AI 公司不只是卖模型，更是在拼资本密度。",
+      "why": "",
+      "try": "",
+      "url": "https://www.nytimes.com/2026/06/12/technology/spacex-ipo-openai-anthropic.html",
+      "image_url": "./art/met-459028.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "nytimes",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "nytimes",
+        "kind": "web"
+      },
+      "image_alt": "Portrait of Alvise Contarini(?); (verso) A Tethered Roebuck — Jacometto (Jacometto Veneziano) (ca. 1485–95)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "数据中心需求推高天然气电站成本",
+      "deck": "这是 AI 扩张的底层约束之一，推理和训练不是纯软件问题，电力、机房和能源价格会直接影响模型部署成本和产品毛利。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/",
+      "image_url": "./art/met-436838.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "The Fortune-Teller — Georges de La Tour (probably 1630s)"
+    }
+  ]
+}
