@@ -1,0 +1,146 @@
+{
+  "date": "2026-06-17",
+  "weekday": "Wednesday",
+  "no": 139,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-17T12:55:32.936984+00:00",
+  "promo_headline": "5 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>State Farm 的销售团队 AI 计划引发强烈反弹</b>: State Farm 的销售团队 AI 计划引发强烈反弹",
+    "<b>Tenet Security 发布，专门给“失控的 AI 代理”上锁</b>: Tenet Security 发布，专门给“失控的 AI 代理”上锁",
+    "<b>BCG 讨论</b>: BCG 讨论：AI 代理需要“身份”，不只是“指令”",
+    "<b>Qualcomm 认为 AI 代理会替代传统应用</b>: Qualcomm 认为 AI 代理会替代传统应用",
+    "<b>Kore.ai 调查显示，72% 企业认为 AI 代理带来了失控风险和新的运营负</b>: Kore.ai 调查显示，72% 企业认为 AI 代理带来了失控风险和新的运营负担"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "代理不是下一代功能模块，而是下一代“执行入口”。谁控制任务分发，谁就控制用户心智和预算入口。 企业真正愿意付费的，不是“会做事的 AI”，而是“不会乱做事的 AI”。安全、审计、身份和回滚会先于炫技成为标配。 未来的增长不只看拉新，还看“代理完成率”。如果代理不能稳定帮用户把一件事闭环，留存和转化都会很差。 产品团队要开始重新定义转化漏斗：从“访问—点击—使用”变成“发起任务—代理执行—结果验证”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "State Farm 的销售团队 AI 计划引发强烈反弹",
+      "deck": "这类“用 AI 先替代人、再优化流程”的动作，最容易在一线组织里炸锅；对产品和增长团队来说，关键不是把 AI 塞进流程，而是先处理利益分配和可解释性。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTDBDNVZPOWtzeS13Q1drYzBQVExrLVN0MWNqdXI2UzVzVzFHMi15aGZRa2VsQUpsZVlxY1R0eUZidVBDczRuUXhzS19PQWp2bXdjY0hVbklENU84QjU0TTdEUU9LSXhfeG81VkxkZXRNSy1HanRGMDJtUW96UHRuSFNBV05YSXJHRjdnbGxrZ3hjNXZXdFk5anltbllFNWJpMG5YRmRsWHRkcjJIVkZ6bg?oc=5",
+      "image_url": "./art/met-436105.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Tenet Security 发布，专门给“失控的 AI 代理”上锁",
+      "deck": "代理开始真正进企业后，安全不再只是权限问题，而是身份、边界、审计和回滚能力的问题；谁先把“代理治理”做成标准件，谁就更容易吃下企业预算。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObm1IV3AyckVxbUd2dk9ubEFfd1drZWVLNUUzS2FoSHlkdnhROHRqMkRjSnB1RmxUUVlUY3BYUDBPRWpIMFFOcTJONV9lWVJVRnA1a2lzSjdlTmxndEpKWTJ2WmtjSHExWUxMem5BeUxBNGVKckhGQXdkQ2laVnZVYXdZRXhrZzA1SFdyb1NwU1VMV0doZlNnUl9mbkJsSm5wR3c?oc=5",
+      "image_url": "./art/met-437508.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "Self-Portrait — Salvator Rosa (ca. 1647)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "BCG 讨论：AI 代理需要“身份”，不只是“指令”",
+      "deck": "这说明代理时代的核心竞争点正在从提示词，转向身份体系、授权链路和责任归属；对做平台、做开发者工具、做企业软件的人都很关键。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWEpyNmRVOTVKSUlOWXEyQl83NnRISDRiQ0ZyVUt5cEZzclR6SUw5cldRdG11djdUUFV0WE5pYV9SSVk5VThxNzNSZTVnNkNWdnFGQ1NPa25PRWlqSnZtcEJ2YWtLOGFrVmhSOVBpa2p3Z3NvMWhKTGV6SnZrYkpOSjRNeTQ5eU1qVlAzc0RicF9uLVNk?oc=5",
+      "image_url": "./art/met-824771.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "Marie Antoinette in a Park — Elisabeth Louise Vigée Le Brun (ca. 1780–81)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Qualcomm 认为 AI 代理会替代传统应用",
+      "deck": "如果入口从“点开一个 App”变成“交给代理完成任务”，流量分发、产品包装和增长漏斗都会重写；以后拼的不只是功能，而是代理能不能稳定帮用户把事办完。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQW5tMTlZT3g4RnpLOE1sQ0RxU2Jyc3B6UDlqS0pYQkdxckJabV8yblZuNkpLU1dYRkZQeTY0YWFsZVdyREJuS3AtX2VQdWRJVENhdXpCQzY5Z0lNZHNNOFRTaGhwdEw4bHozaVdESUYtdk9kSUNYQVhKSW1OVkkyNmhmRjFIUWtSMDdVbkFxU25PSjlnMlNhc2hiOTF1Vzl2Nllz?oc=5",
+      "image_url": "./art/met-626692.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Kore.ai 调查显示，72% 企业认为 AI 代理带来了失控风险和新的运营负担",
+      "deck": "企业正在从“想不想用 AI”转到“怎么管住 AI”；这对卖给企业的产品很重要，真正的卖点会从能力演示，转向稳定性、可观测性和合规。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQRjAyUlQ0SjNBcHU3YVZ4SE1NQzhndXl6Nks3OEJpX0NWc3lTTlZ1eFUtTDlrZkRHcUNNSzE5MmlidVVGWGxrVlZvT1V4c3J6MEc3dGxtSDFEalJoR1cwc3VwaHNlUmlXbHhDQ0RWdGJxR0hwRER3OHVvRDdTZkZfOGVXYVpSdEdDTHVVQVZKZGpWOEw2V2RCXzhOZjg4OFdITVp3RG13bUhNVm5pQ3RwbmMxY25iWnQtdVRDZGRfU09KS29qYWV4NXNXVDFCT1VhWGhud2hzUHVfS01Ca3g4b2o4MHdGWXNVTFB3dEl4Z0pUQWtiaGJsdGEwUUdKdU5DVG56OEdzbw?oc=5",
+      "image_url": "./art/met-816189.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "”Abiding nowhere, the awakened mind arises” — Musō Soseki (early to mid-14th century)"
+    }
+  ]
+}
