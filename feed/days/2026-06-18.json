@@ -1,0 +1,120 @@
+{
+  "date": "2026-06-18",
+  "weekday": "Thursday",
+  "no": 140,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-18T12:55:25.259698+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>AI 口号正在失灵</b>: AI 口号正在失灵",
+    "<b>社交媒体算法要进入“可控时代”</b>: 社交媒体算法要进入“可控时代”",
+    "<b>面向营销人的 AI 代理还在继续冒出来</b>: 面向营销人的 AI 代理还在继续冒出来",
+    "<b>AI 正在把内容生产链条往前推</b>: AI 正在把内容生产链条往前推"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最危险的营销动作，是把“AI”当卖点本身。用户越来越敏感，真正能留住人的只有更快、更准、更省事。 社交平台一旦把算法控制权交回用户，内容增长会从“讨好平台”转向“服务偏好”。这会重塑选题、投放和社区运营。 AI 代理在营销里最有价值的地方，不是写文案，而是把“发现机会—生成资产—投放—复盘”串起来。谁先把闭环做顺，谁就能拿到复利。 未来的增长工具会更像操作系统，而不是插件。入口不一定更大，但会更深。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "AI 口号正在失灵",
+      "deck": "TechCrunch 的调查提到，六成美国消费者看到品牌文案里写“AI”会反感。这说明现在不是“把 AI 挂嘴上”就能加分，产品和营销都要回到真实效率、结果和体验。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/06/16/sixty-percent-of-u-s-consumers-say-ai-in-brand-messaging-is-a-turnoff-survey-finds/",
+      "image_url": "./art/met-437878.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "社交媒体算法要进入“可控时代”",
+      "deck": "TechCrunch 说下一代社媒可能由用户自己控制算法，这对内容分发和增长策略是大事。以后拼的不只是推荐系统，还包括让用户愿不愿意主动调参、订阅和留下来。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/06/17/social-medias-next-evolution-user-controlled-algorithms/",
+      "image_url": "./art/met-438779.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "A Peasant Family — Antoine Le Nain (ca. 1640–48)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "面向营销人的 AI 代理还在继续冒出来",
+      "deck": "TechCrunch 报道 Kana 再度出手融资，目标是给营销人员做灵活 AI 代理；同时 Nectar Social 也拿到 3000 万美元，说明“营销操作系统”仍然是资本愿意押的方向。对做增长工具的人来说，机会在把代理嵌进工作流，而不是单点生成内容。 ；https://techcrunch.com/2026/05/16/marketing-operating-system-nectar-social-raises-30m-series-a-in-round-led-by-menlo/",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/02/18/kana-emerges-from-stealth-with-15m-to-build-flexible-ai-agents-for-marketers/",
+      "image_url": "./art/met-436099.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "The Nativity with Donors and Saints Jerome and Leonard — Gerard David (ca. 1510–15)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "AI 正在把内容生产链条往前推",
+      "deck": "Webflow 收购 AI 内容生成平台 Vidoso，说明建站、内容、营销不再是分开的工具箱，而是在合并成一条“生成—分发—转化”链路。对产品团队来说，最值钱的不是单一功能，而是离结果更近的工作台。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/03/12/webflow-buys-ai-content-generation-platform-vidoso-to-bolster-its-marketing-suite/",
+      "image_url": "./art/met-436572.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "Christ Healing the Blind — El Greco (Domenikos Theotokopoulos) (ca. 1570)"
+    }
+  ]
+}
