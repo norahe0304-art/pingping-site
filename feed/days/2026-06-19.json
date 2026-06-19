@@ -1,0 +1,120 @@
+{
+  "date": "2026-06-19",
+  "weekday": "Friday",
+  "no": 141,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-19T12:55:42.270573+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>谷歌把医疗 AI 往“长期管理”推进了一步</b>: 谷歌把医疗 AI 往“长期管理”推进了一步",
+    "<b>Hugging Face 这篇“超过 LoRA 的微调方法”值得盯</b>: Hugging Face 这篇“超过 LoRA 的微调方法”值得盯",
+    "<b>Hugging Face 在做“工具使用型代理”基准</b>: Hugging Face 在做“工具使用型代理”基准",
+    "<b>谷歌把“医疗 AI”研究继续往自然期刊级别推进</b>: 谷歌把“医疗 AI”研究继续往自然期刊级别推进"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这几条都在说明一件事：AI 竞争焦点在往“结果可验证”迁移，光会生成内容已经不够，必须能完成任务、接工具、进流程。 对增长和营销来说，最有价值的不是再做一个“更聪明的聊天框”，而是把 AI 放进用户原本就会重复的动作里，替掉搜索、整理、判断、跟进这些耗时环节。 开源侧继续卷微调和代理评测，意味着中小团队更容易把模型能力商品化；真正的壁垒会更多落在数据、工作流和分发，而不是单点模型能力。 如果你在做产品，今天最该追的不是“模型又强了多少”，而是“它到底能替用户省掉哪一步”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "谷歌把医疗 AI 往“长期管理”推进了一步",
+      "deck": "这不只是演示能力，而是在看 AI 能不能持续跟踪病情、辅助日常管理；对做产品的人来说，核心不是更会聊天，而是能不能嵌进高频、低容错的工作流。",
+      "why": "",
+      "try": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+      "image_url": "./art/met-451725.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "blog",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "blog",
+        "kind": "web"
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Hugging Face 这篇“超过 LoRA 的微调方法”值得盯",
+      "deck": "说明开源微调还在继续卷，单纯低成本不够，效果、稳定性和可控性会一起被抬高；对模型部署和开发者工具来说，谁能把训练、评测、上线链路做顺，会更有优势。",
+      "why": "",
+      "try": "",
+      "url": "https://huggingface.co/blog/peft-beyond-lora",
+      "image_url": "./art/met-436529.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "huggingface",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "huggingface",
+        "kind": "web"
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Hugging Face 在做“工具使用型代理”基准",
+      "deck": "这类评测比单看对话更接近真实产品，重点已经从“会不会答”转到“会不会用工具、会不会完成任务”；对 agent 产品和搜索型产品都很关键。",
+      "why": "",
+      "try": "",
+      "url": "https://huggingface.co/blog/is-it-agentic-enough",
+      "image_url": "./art/met-435651.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "huggingface",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "huggingface",
+        "kind": "web"
+      },
+      "image_alt": "The Lamentation — Ambrosius Benson (ca. 1520–25)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "谷歌把“医疗 AI”研究继续往自然期刊级别推进",
+      "deck": "大厂现在更在意的是把 AI 放进明确场景里验证，而不是只讲通用能力；这对行业的信号是，真正值钱的还是垂直闭环，不是泛泛的模型参数。",
+      "why": "",
+      "try": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+      "image_url": "./art/met-437878.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "blog",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "blog",
+        "kind": "web"
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
+    }
+  ]
+}
