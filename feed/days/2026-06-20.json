@@ -1,0 +1,120 @@
+{
+  "date": "2026-06-20",
+  "weekday": "Saturday",
+  "no": 142,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-20T12:55:11.918684+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>OpenAI 继续把“对齐”往长任务场景推进</b>: OpenAI 继续把“对齐”往长任务场景推进",
+    "<b>Anthropic 披露了 Project Fetch 新阶段</b>: Anthropic 披露了 Project Fetch 新阶段：让 Claude 编程控制机器狗",
+    "<b>xAI 把 Grok 插进 Word，还上线了更像真人的语音</b>: xAI 把 Grok 插进 Word，还上线了更像真人的语音",
+    "<b>Google 的 AMIE 医疗研究更新，继续强调“AI 能不能帮人管理长期健康</b>: Google 的 AMIE 医疗研究更新，继续强调“AI 能不能帮人管理长期健康”"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最值得盯的，不是“模型又涨了多少分”，而是它能不能在长链路任务里持续稳定执行。对产品来说，这比单次回答更接近真实价值。 分发正在变成护城河的一部分：把 AI 塞进 Word、浏览器、工作流和协作工具里，比单独做一个新入口更容易形成日常使用习惯。 “能做”已经不稀奇，“能安全地做、可控地做、可追责地做”才是企业买单的门槛。 早期 agent 竞争会很像基础设施竞争：谁先把调用成本、失败恢复、权限边界和任务编排做顺，谁就更容易吃到增长。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "OpenAI 继续把“对齐”往长任务场景推进",
+      "deck": "它不只是模型变聪明，而是在解决模型做更久、更复杂事情时还能保持稳定、安全的行为，这会直接影响 agent、自动化工作流和企业部署。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/OpenAI/status/2067722688165232654",
+      "image_url": "./art/met-437173.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI",
+        "handle": "OpenAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/OpenAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Don Andrés de Andrade y la Cal — Bartolomé Estebán Murillo (ca. 1665–72)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Anthropic 披露了 Project Fetch 新阶段：让 Claude 编程控制机器狗",
+      "deck": "这说明 agent 已经从“写代码”开始往“调外部系统、接硬件动作”走了，未来产品形态会更像可执行的操作层，而不只是聊天层。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/AnthropicAI/status/2067651699486200091",
+      "image_url": "./art/met-437508.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "AnthropicAI",
+        "handle": "AnthropicAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/AnthropicAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Self-Portrait — Salvator Rosa (ca. 1647)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "xAI 把 Grok 插进 Word，还上线了更像真人的语音",
+      "deck": "这类分发路径很关键，AI 不一定先赢在独立应用，而是先赢在你每天本来就在用的生产力软件里。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/xai/status/2067711154986852669",
+      "image_url": "./art/met-436529.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "xai",
+        "handle": "xai",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/xai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Google 的 AMIE 医疗研究更新，继续强调“AI 能不能帮人管理长期健康”",
+      "deck": "这类内容虽然不是消费级热点，但对模型推理、可靠性和真实世界任务边界很重要，往往会反哺更严肃的 agent 设计。",
+      "why": "",
+      "try": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+      "image_url": "./art/met-436043.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "blog",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "blog",
+        "kind": "web"
+      },
+      "image_alt": "Friedrich III (1463–1525), the Wise, Elector of Saxony — Lucas Cranach the Elder and Workshop (1533)"
+    }
+  ]
+}
