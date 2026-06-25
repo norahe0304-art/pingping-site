@@ -1,0 +1,94 @@
+{
+  "date": "2026-06-25",
+  "weekday": "Thursday",
+  "no": 147,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-25T12:55:06.958781+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Google 推进 AMIE 医疗研究，从“会诊断”走向“会管理”</b>: Google 推进 AMIE 医疗研究，从“会诊断”走向“会管理”",
+    "<b>Semrush 盯上 AI 搜索与可见性，直接把“技术 SEO”改写成“AI 时</b>: Semrush 盯上 AI 搜索与可见性，直接把“技术 SEO”改写成“AI 时代的网站健康清单”",
+    "<b>TechCrunch 报道 Converge Bio 融资 2500 万美元</b>: TechCrunch 报道 Converge Bio 融资 2500 万美元"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最像“新流量入口”的，不是更大的投放预算，而是能否被搜索、被模型、被推荐系统稳定读到。内容分发的核心开始从“写得多”转向“结构对、语义清、更新快”。 医疗、法务、金融这类高风险场景，模型价值会从“生成答案”迁移到“持续执行流程”。谁能把模型和人工责任切开、把日志和复盘做扎实，谁就更容易做成真产品。 AI 工具市场会越来越像基础设施市场：单点功能很快卷平，剩下的竞争是工作流占位、数据沉淀和切换成本。 对增长来说，未来最值得押的不是“内容更会写”，而是“内容更容易被系统检索、引用和复用”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Google 推进 AMIE 医疗研究，从“会诊断”走向“会管理”",
+      "deck": "这不是单点问答能力，而是把模型放进长期病程管理里，意味着医疗场景开始考验持续推理、随访和责任边界；对产品侧的启发是，真正值钱的不是回答，而是把模型嵌进流程。",
+      "why": "",
+      "try": "",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+      "image_url": "./art/met-435807.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "blog",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "blog",
+        "kind": "web"
+      },
+      "image_alt": "The Smokers — Adriaen Brouwer (ca. 1636)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Semrush 盯上 AI 搜索与可见性，直接把“技术 SEO”改写成“AI 时代的网站健康清单”",
+      "deck": "搜索入口正在变，品牌要同时面对传统搜索和模型检索，内容、结构化数据、抓取稳定性都会变成增长基础设施，不是纯运营活。",
+      "why": "",
+      "try": "",
+      "url": "https://www.semrush.com/blog/technical-seo-checklist/",
+      "image_url": "./art/met-435651.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "semrush",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "semrush",
+        "kind": "web"
+      },
+      "image_alt": "The Lamentation — Ambrosius Benson (ca. 1520–25)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "TechCrunch 报道 Converge Bio 融资 2500 万美元",
+      "deck": "资本继续往 AI 药物发现和高算力科研工具上堆，说明“垂直行业 + 模型能力 + 真实数据”的组合仍然能拿到钱；但后续会更看重是否能把实验、验证、商业化真正接起来。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/01/13/ai-drug-discovery-startup-converge-bio-pulls-in-25m-from-bessemer-and-execs-from-meta-openai-and-wiz/",
+      "image_url": "./art/met-626692.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
+    }
+  ]
+}
