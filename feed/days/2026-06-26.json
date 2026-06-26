@@ -1,0 +1,120 @@
+{
+  "date": "2026-06-26",
+  "weekday": "Friday",
+  "no": 148,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-26T12:55:56.475288+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>OpenAI 说“代理正在改变工作方式”</b>: OpenAI 说“代理正在改变工作方式”",
+    "<b>Claude Tag 上线</b>: Claude Tag 上线",
+    "<b>xAI 把 SuperGrok 和 X 订阅接进 T3code</b>: xAI 把 SuperGrok 和 X 订阅接进 T3code",
+    "<b>Google AI 发布 Gemini 3.5 Live Translate</b>: Google AI 发布 Gemini 3.5 Live Translate"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这几条放在一起看，方向很清楚：大厂都在把 AI 从“回答问题”推进到“嵌入工作流”。真正的壁垒不在模型本身，而在谁先占住高频入口。 对增长和营销来说，未来最值钱的不是“更聪明的模型”，而是“更低摩擦的分发”。Slack、X、浏览器、语音入口，都会比独立 App 更容易形成日活。 企业侧会继续偏好“能协作、能接权限、能进上下文”的产品。只做聊天框的工具，会越来越难证明价值。 如果你在看产品机会，优先找“代理能直接替人省时间”的场景，而不是泛泛的生成内容。省时间、可验证、能嵌流程，才最容易付费。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "OpenAI 说“代理正在改变工作方式”",
+      "deck": "这不是单个功能升级，而是把 Codex 变成公司内部的工作层；对产品团队来说，重点不再只是“能不能自动化”，而是“能不能直接接管流程”。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/OpenAI/status/2070196105745518913",
+      "image_url": "./art/met-590874.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "OpenAI",
+        "handle": "OpenAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/OpenAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Tomb Chapel of Raemkai — Unknown (ca. 2446–2389 B.C.)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Claude Tag 上线",
+      "deck": "Anthropic 正在把 Claude 往“团队成员”方向推，直接进入 Slack 协作场景；这会明显降低 AI 被使用的门槛，也更适合企业内的日常知识工作分发。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/claudeai/status/2069468693017268244",
+      "image_url": "./art/met-437173.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "claudeai",
+        "handle": "claudeai",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/claudeai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Don Andrés de Andrade y la Cal — Bartolomé Estebán Murillo (ca. 1665–72)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "xAI 把 SuperGrok 和 X 订阅接进 T3code",
+      "deck": "这是把订阅、工作台、社媒生态绑在一起，减少用户切换成本；对增长来说，最强的不是模型参数，而是使用入口和留存路径。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/xai/status/2070195830192320600",
+      "image_url": "./art/met-39901.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "xai",
+        "handle": "xai",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/xai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Night-Shining White — Han Gan (ca. 750)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Google AI 发布 Gemini 3.5 Live Translate",
+      "deck": "实时语音翻译一旦稳定，最先受影响的是客服、出海销售、跨语种内容分发；它更像基础设施升级，不只是一个炫技演示。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/GoogleAI/status/2064366504112505266",
+      "image_url": "./art/met-436572.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "GoogleAI",
+        "handle": "GoogleAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/GoogleAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Christ Healing the Blind — El Greco (Domenikos Theotokopoulos) (ca. 1570)"
+    }
+  ]
+}
