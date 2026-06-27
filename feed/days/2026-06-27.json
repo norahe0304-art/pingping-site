@@ -1,0 +1,120 @@
+{
+  "date": "2026-06-27",
+  "weekday": "Saturday",
+  "no": 149,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-27T12:55:13.619465+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>PloyAI 出来讲的是“让网站自己干活”的全栈营销平台</b>: PloyAI 出来讲的是“让网站自己干活”的全栈营销平台",
+    "<b>谷歌这边的口径很明确</b>: 谷歌这边的口径很明确：好的 SEO 也是好的 GEO",
+    "<b>AI SDR 继续往“低成本外包销售”方向卷</b>: AI SDR 继续往“低成本外包销售”方向卷",
+    "<b>这条 AI 广告创意内容在讲“怎么做 AI 版视频素材”</b>: 这条 AI 广告创意内容在讲“怎么做 AI 版视频素材”"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在营销工具最值钱的，不是“能不能写”，而是能不能直接接到转化链路里。 AI 搜索会把内容分成两类：能被系统稳定引用的，和只会刷量的。后者会越来越没用。 AI SDR 和 AI 创意会先吃掉执行层，再倒逼团队把策略、定位和数据看得更清楚。 真正的护城河会从“工具本身”转向“数据反馈速度 + 工作流整合 + 分发渠道控制”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "PloyAI 出来讲的是“让网站自己干活”的全栈营销平台",
+      "deck": "它把内容、转化、自动化放到一层里卖，说明营销工具正在从“辅助写作”往“直接替你获客”走，后面拼的是闭环效果，不是单点功能。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/brryant/status/2072582451182600192",
+      "image_url": "./art/met-453385.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "brryant",
+        "handle": "brryant",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/brryant"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Anthology of Persian Poetry in Oblong Format (Safina) — Sultan Muhammad Nur (dated 905 AH/1499–1500 CE)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "谷歌这边的口径很明确：好的 SEO 也是好的 GEO",
+      "deck": "AI 搜索时代，真正有效的不是给机器硬喂关键词，而是继续做对人有用、结构清楚、可信度高的内容；这会直接影响品牌在 AI 答案里的可见度。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/glenngabe/status/2069095457863750093",
+      "image_url": "./art/met-438821.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "glenngabe",
+        "handle": "glenngabe",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/glenngabe"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "AI SDR 继续往“低成本外包销售”方向卷",
+      "deck": "从找线索、写外联到约会议，越来越多团队开始把冷邮件和跟进交给 AI，这对小团队和早期创业公司是降本增效，对传统外包销售是压力。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/polsia/status/2062202931630534975",
+      "image_url": "./art/met-435621.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "polsia",
+        "handle": "polsia",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/polsia"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "这条 AI 广告创意内容在讲“怎么做 AI 版视频素材”",
+      "deck": "说明创意生产正在被流程化，未来比拼的不只是素材产量，而是谁能更快把测试、迭代、投放数据闭环起来。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Lorenzo_mads/status/2072600507199160320",
+      "image_url": "./art/met-435651.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Lorenzo_mads",
+        "handle": "Lorenzo_mads",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/Lorenzo_mads"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Lamentation — Ambrosius Benson (ca. 1520–25)"
+    }
+  ]
+}
