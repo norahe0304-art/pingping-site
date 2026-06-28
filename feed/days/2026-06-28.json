@@ -1,0 +1,94 @@
+{
+  "date": "2026-06-28",
+  "weekday": "Sunday",
+  "no": 150,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-28T12:55:58.491562+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Google 继续把「好 SEO」和「好 GEO」绑在一起</b>: Google 继续把「好 SEO」和「好 GEO」绑在一起",
+    "<b>AI SDR 已经从“能跑通 demo”进入“能不能长期活着”的阶段</b>: AI SDR 已经从“能跑通 demo”进入“能不能长期活着”的阶段",
+    "<b>SaaStr 公开说他们已经部署 20+ 个 AI 代理，发了 6 万封 AI </b>: SaaStr 公开说他们已经部署 20+ 个 AI 代理，发了 6 万封 AI SDR 邮件，管道和收入里有 50%+ 来自 AI 销售代理"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最值钱的不是“会不会做一个代理”，而是“代理能不能在真实环境里持续工作”。 AI 搜索和 AI 获客都在往同一件事收敛：谁能把信息、数据、分发和转化串成闭环，谁就更容易拿到增长。 对产品和营销来说，下一步不是再堆功能，而是把最容易丢链路的地方先补牢：数据、投递、反馈、归因。 早期用 AI 拉量，后期一定会被稳定性和可控性筛选。真正能活下来的，会是那些把自动化做成运营体系的团队。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Google 继续把「好 SEO」和「好 GEO」绑在一起",
+      "deck": "重点不是把内容写得像机器喂出来的，而是把人真正关心的问题讲清楚；这意味着 AI 搜索时代，内容质量、结构和可信度还是底层资产。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/glenngabe/status/2069095457863750093",
+      "image_url": "./art/met-438821.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "glenngabe",
+        "handle": "glenngabe",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/glenngabe"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "AI SDR 已经从“能跑通 demo”进入“能不能长期活着”的阶段",
+      "deck": "真正的门槛不在写邮件，而在投递率、数据质量和渠道变化；这对做自动化获客的人来说，买现成工具往往比自己拼装更稳。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/getaisdr/status/2044115662323482809",
+      "image_url": "./art/met-544320.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "getaisdr",
+        "handle": "getaisdr",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/getaisdr"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Stela of the Steward Mentuwoser — Unknown (ca. 1944 B.C.)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "SaaStr 公开说他们已经部署 20+ 个 AI 代理，发了 6 万封 AI SDR 邮件，管道和收入里有 50%+ 来自 AI 销售代理",
+      "deck": "这不是概念层的“AI 提效”，而是把获客、跟进、转化当成可规模化的系统在跑。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/jasonlk/status/2025669317443101164",
+      "image_url": "./art/met-39901.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "jasonlk",
+        "handle": "jasonlk",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/jasonlk"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Night-Shining White — Han Gan (ca. 750)"
+    }
+  ]
+}
