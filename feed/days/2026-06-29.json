@@ -1,0 +1,120 @@
+{
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "no": 151,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-29T12:55:39.083045+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>OpenAI 自研芯片瞄准推理成本砍半</b>: OpenAI 自研芯片瞄准推理成本砍半",
+    "<b>Z.ai 推出面向编码代理的 GLM-5.2</b>: Z.ai 推出面向编码代理的 GLM-5.2",
+    "<b>Meta 新智能眼镜发布，广告增长仍是核心引擎</b>: Meta 新智能眼镜发布，广告增长仍是核心引擎",
+    "<b>广告行业在坎城重新强调“短期销售”和“长期增长”的平衡</b>: 广告行业在坎城重新强调“短期销售”和“长期增长”的平衡"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这几条放在一起看，结论很明确：AI 产品竞争已经从“谁模型更大”转到“谁的单位推理成本更低、交付链路更短、产品更好卖”。 代理型产品会继续吃掉一部分传统开发者工具市场，但真正值钱的不是“能不能写代码”，而是“能不能稳定、省钱、可控地写完一整段工作流”。 增长和广告这边，未来更像“内容分发系统”而不是“投放系统”。能把创意生产、渠道分发、转化归因打通的团队，会比只会堆预算的团队跑得更久。 硬件和模型的新闻都在提醒一件事：入口在变，分发没变。谁掌握用户注意力，谁就有机会把模型能力变成收入。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "OpenAI 自研芯片瞄准推理成本砍半",
+      "deck": "如果“训练模型”继续卷不出差异，真正的战场会转到推理成本和算力议价权。自研芯片一旦落地，产品定价、毛利结构、以及大模型创业公司的成本护城河都会被重写。",
+      "why": "",
+      "try": "",
+      "url": "https://www.techtimes.com/articles/319012/20260624/openais-first-custom-ai-chip-targets-50-cheaper-inference-jalapeno-unveiled.htm",
+      "image_url": "./art/met-437868.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techtimes",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techtimes",
+        "kind": "web"
+      },
+      "image_alt": "Don Gaspar de Guzmán (1587–1645), Count-Duke of Olivares — Juan Bautista Martínez del Mazo (ca. 1636 or later)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Z.ai 推出面向编码代理的 GLM-5.2",
+      "deck": "长上下文、工具调用和编码代理，正在从“模型能力”变成“开发者体验”的核心卖点。对做代码助手、自动化工作流、企业内部代理的团队来说，模型选择开始更像选基础设施。",
+      "why": "",
+      "try": "",
+      "url": "https://www.developer-tech.com/news/z-ai-glm-5-2-long-context-coding-agents/",
+      "image_url": "./art/met-436658.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "developer-tech",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "developer-tech",
+        "kind": "web"
+      },
+      "image_alt": "Hermann von Wedigh III (died 1560) — Hans Holbein the Younger (1532)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Meta 新智能眼镜发布，广告增长仍是核心引擎",
+      "deck": "硬件消息表面热闹，真正关键是 Meta 依然靠广告增长吃饭，任何新终端最终都要回到分发效率和广告转化。对做内容、增长、社媒投放的人来说，这类产品的意义在于它会不会变成新的注意力入口。",
+      "why": "",
+      "try": "",
+      "url": "https://finance.yahoo.com/technology/articles/meta-platforms-just-unveiled-smart-133002449.html",
+      "image_url": "./art/met-435848.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "finance",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "finance",
+        "kind": "web"
+      },
+      "image_alt": "The Birth of the Virgin — Fra Carnevale (Bartolomeo di Giovanni Corradini) (1467)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "广告行业在坎城重新强调“短期销售”和“长期增长”的平衡",
+      "deck": "这说明预算逻辑正在从单纯追求点击，转向更重视品牌积累和复购效率。对内容分发、创意投放和增长团队来说，接下来拼的不是谁更会买量，而是谁更能把创意、数据和转化链路串起来。",
+      "why": "",
+      "try": "",
+      "url": "https://www.adweek.com/brand-marketing/finding-a-balance-between-short-term-sales-and-long-term-growth/",
+      "image_url": "./art/met-459027.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "adweek",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "adweek",
+        "kind": "web"
+      },
+      "image_alt": "Portrait of a Woman, Possibly a Nun of San Secondo; (verso) Scene in Grisaille — Jacometto (Jacometto Veneziano) (ca. 1485–95)"
+    }
+  ]
+}
