@@ -1,0 +1,94 @@
+{
+  "date": "2026-06-30",
+  "weekday": "Tuesday",
+  "no": 152,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-06-30T12:55:41.620884+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>X 推出托管式 MCP，AI 直接接入实时平台数据</b>: X 推出托管式 MCP，AI 直接接入实时平台数据",
+    "<b>美团开源 LongCat-2.0，主打 1.6T 参数、1 百万上下文和智能体代</b>: 美团开源 LongCat-2.0，主打 1.6T 参数、1 百万上下文和智能体代码场景",
+    "<b>“12 条智能体原则”和“自动审问式技能”继续升温</b>: “12 条智能体原则”和“自动审问式技能”继续升温"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这轮最值钱的不是模型本身，而是“数据入口 + 标准接口 + 行动闭环”。谁能把实时信息喂给模型，谁就更接近新的分发层。 大模型竞争正在从“能不能答”转到“能不能稳定干活”。长上下文、工具调用、停止条件、记忆结构，都会直接影响产品毛利和交付质量。 现在做产品，别只盯模型分数。更该盯的是：这条能力能不能嵌进工作流，能不能减少人工判断，能不能形成可复用链路。 对增长和内容团队来说，未来的核心岗位可能不是“会写提示词的人”，而是“会设计智能体流程的人”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "X 推出托管式 MCP，AI 直接接入实时平台数据",
+      "deck": "这不是又一个“接个 API”新闻，而是把 X 的实时信息流包装成模型可直接消费的标准接口。对做搜索、舆情、社媒增长、内容分发的产品来说，信息获取门槛会明显下降，关键变成“谁先把检索、筛选、行动链路接起来”。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/XDevelopers/status/2071752389183647758",
+      "image_url": "./art/met-437878.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "XDevelopers",
+        "handle": "XDevelopers",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/XDevelopers"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "美团开源 LongCat-2.0，主打 1.6T 参数、1 百万上下文和智能体代码场景",
+      "deck": "它的信号不是“参数更大”，而是把训练、推理、长上下文和智能体工作流绑在一起，直接瞄准能落地的开发者场景。对于产品和成本判断，重点是大模型开始更明确地按“任务型能力”分化，不再只是通用聊天。",
+      "why": "",
+      "try": "",
+      "url": "https://www.reuters.com/world/china/chinas-meituan-says-new-ai-model-trained-domestic-chips-2026-06-30/",
+      "image_url": "./art/met-626692.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "reuters",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "reuters",
+        "kind": "web"
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "“12 条智能体原则”和“自动审问式技能”继续升温",
+      "deck": "社区开始从写提示词转向搭系统，核心是记忆、子代理拆分、停止条件、验收标准。这个方向对内部提效和产品形态都很重要，说明真正有价值的不是单轮对话，而是可重复、可收敛、可交付的任务流。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Jolyne_AI/status/2071534156937568537",
+      "image_url": "./art/met-437261.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Jolyne_AI",
+        "handle": "Jolyne_AI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/Jolyne_AI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
+    }
+  ]
+}
