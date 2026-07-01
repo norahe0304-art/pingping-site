@@ -1,0 +1,120 @@
+{
+  "date": "2026-07-01",
+  "weekday": "Wednesday",
+  "no": 153,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-01T12:55:38.218099+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Bloome</b>: Bloome：把多个 AI agent 放进同一对话里协作",
+    "<b>ABM 的核心正在从“线索”转向“账户”</b>: ABM 的核心正在从“线索”转向“账户”",
+    "<b>Anthropic 的 Sonnet 5 上线，同时 Fable 5 和 Myt</b>: Anthropic 的 Sonnet 5 上线，同时 Fable 5 和 Mythos 5 解除出口限制",
+    "<b>人形机器人被拿来类比 LLM 格局</b>: 人形机器人被拿来类比 LLM 格局"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这波信息里最一致的信号是：AI 产品竞争正在从“模型能力”转向“组织能力”，谁能把多个工具、多个角色、多个渠道编排成闭环，谁更容易拿到结果。 增长方法也在变，ABM 这类玩法说明 B2B 不再只看获客量，而是看账户层面的触达、转化和复购链路。 对产品来说，agent 协作和账户编排本质上是同一件事：把分散的智能动作变成可重复的流程。 真正该验证的不是概念，而是有没有稳定的留存、付费和交付效率提升。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Bloome：把多个 AI agent 放进同一对话里协作",
+      "deck": "它不是再做一个聊天框，而是在做“agent 组织层”，如果真能把起草、质疑、补漏放进同一线程，产品价值会比单点问答更高。",
+      "why": "",
+      "try": "",
+      "url": "https://theprohuman.mail.beehiiv.com",
+      "image_url": "./art/met-40080.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "theprohuman",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "theprohuman",
+        "kind": "web"
+      },
+      "image_alt": "Fragrant Snow at Broken Bridge — Wang Mian (14th century)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "ABM 的核心正在从“线索”转向“账户”",
+      "deck": "这篇把销售和营销的单位统一成 named account，再用广告、邮件、LinkedIn、Clay 串成流水线，说明 B2B 增长越来越像一套编排系统，而不是单渠道投放。",
+      "why": "",
+      "try": "",
+      "url": "https://www.linkedin.com",
+      "image_url": "./art/met-453385.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "linkedin",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "linkedin",
+        "kind": "web"
+      },
+      "image_alt": "Anthology of Persian Poetry in Oblong Format (Safina) — Sultan Muhammad Nur (dated 905 AH/1499–1500 CE)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Anthropic 的 Sonnet 5 上线，同时 Fable 5 和 Mythos 5 解除出口限制",
+      "deck": "模型迭代还在继续，但真正影响市场的，不只是单个模型升级，而是更强模型重新回到可用状态后，会不会改变开发者、产品和分发策略。",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai",
+      "image_url": "./art/met-435844.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "therundown",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "therundown",
+        "kind": "web"
+      },
+      "image_alt": "The Musicians — Caravaggio (Michelangelo Merisi) (1597)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "人形机器人被拿来类比 LLM 格局",
+      "deck": "这条不是在讲梗，而是在提醒机器人商业化很可能也会分层，真正要盯的是谁先拿到企业订单、量产能力和数据闭环，而不是谁先把视频做得最炫。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/aleabitoreddit/status/2072275805330362648",
+      "image_url": "./art/met-437585.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "aleabitoreddit",
+        "handle": "aleabitoreddit",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/aleabitoreddit"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Market by the Seashore — Salomon van Ruysdael (1637)"
+    }
+  ]
+}
