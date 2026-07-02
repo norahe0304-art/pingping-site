@@ -1,0 +1,68 @@
+{
+  "date": "2026-07-02",
+  "weekday": "Thursday",
+  "no": 154,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-02T12:55:14.893529+00:00",
+  "promo_headline": "2 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>SpaceX 与 Reflection AI 签下超大算力合作</b>: SpaceX 与 Reflection AI 签下超大算力合作",
+    "<b>Anthropic 推出 Claude Science，主打科研工作流而不是新模</b>: Anthropic 推出 Claude Science，主打科研工作流而不是新模型"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在 AI 赛道最值钱的，越来越不是“谁模型分数高一点”，而是谁能把算力、分发、工作流绑成闭环。 垂直产品的机会在收口：别再讲大而全，先把一个高频任务做成“打开就能干活”的工作台。 增长上，内容分发和产品体验正在合并；能直接缩短用户从看到到用上的路径，才有真实转化。 以后判断一条 AI 新闻，重点看两件事：它是不是在降低交付摩擦，或者是在抬高竞争门槛。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "SpaceX 与 Reflection AI 签下超大算力合作",
+      "deck": "这不是单纯买 GPU，而是把“算力获取能力”变成 AI 公司的核心护城河；后面拼的不只是模型，更是供给、资本和交付速度。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/",
+      "image_url": "./art/met-436529.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Anthropic 推出 Claude Science，主打科研工作流而不是新模型",
+      "deck": "方向很明确——用户要的不是更会聊天的模型，而是能把数据库、管线、工具串起来的工作台；这对垂直产品和 agent 产品都很直接。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/",
+      "image_url": "./art/met-39895.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "The Classic of Filial Piety — Li Gonglin (ca. 1085)"
+    }
+  ]
+}
