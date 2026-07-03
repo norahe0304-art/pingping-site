@@ -1,0 +1,94 @@
+{
+  "date": "2026-07-03",
+  "weekday": "Friday",
+  "no": 155,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-03T12:55:16.348104+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>YC 继续把“AI 助手”当成单独赛道</b>: YC 继续把“AI 助手”当成单独赛道",
+    "<b>Patronus AI 融资 5000 万美元，做的是“让 AI 先接受压力测试</b>: Patronus AI 融资 5000 万美元，做的是“让 AI 先接受压力测试”的基础设施",
+    "<b>Chrome 开始把面向 agent 的开发能力往浏览器里推</b>: Chrome 开始把面向 agent 的开发能力往浏览器里推"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在的机会不在“再做一个聊天窗口”，而在“把模型塞进具体业务动作里”，谁能缩短从意图到结果的路径，谁就更接近收入。 agent 真正落地后，可靠性会比聪明更重要；测试、监控、回放、权限控制，会像今天的日志和埋点一样基础。 浏览器、搜索、社媒增长这些入口正在重新被工具化，未来的产品优势很可能来自“能不能稳定地替用户完成操作”，而不是“能不能回答问题”。 对增长和营销来说，内容分发会越来越像“半自动运营系统”：素材生成、投放测试、受众细分、反馈回收都可以被 agent 化，但前提是有清晰指标和约束。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "YC 继续把“AI 助手”当成单独赛道",
+      "deck": "这说明市场不再只看“有没有接入模型”，而是看谁能把模型做成真正可交付的产品、流程和结果。对早期团队来说，最值钱的是把一个高频场景做窄、做深、做出可复用工作流。",
+      "why": "",
+      "try": "",
+      "url": "https://www.ycombinator.com/companies/industry/ai-assistant",
+      "image_url": "./art/met-436529.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "ycombinator",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "ycombinator",
+        "kind": "web"
+      },
+      "image_alt": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911) — Vincent van Gogh (1888–89)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Patronus AI 融资 5000 万美元，做的是“让 AI 先接受压力测试”的基础设施",
+      "deck": "当 agent 开始进入真实业务，评估、回放、对抗测试会从“附加功能”变成刚需；谁能把可靠性做成标准件，谁就更容易吃到企业预算。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
+      "image_url": "./art/met-438821.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Chrome 开始把面向 agent 的开发能力往浏览器里推",
+      "deck": "这会继续拉低自动化、抓取、测试、辅助操作的门槛，产品侧的竞争不再只是“能不能做”，而是“谁能更快把浏览器里的行为变成可控、可观测、可复现的产品能力”。",
+      "why": "",
+      "try": "",
+      "url": "https://developer.chrome.com/docs/devtools/agents/get-started",
+      "image_url": "./art/met-436607.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "developer",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "developer",
+        "kind": "web"
+      },
+      "image_alt": "An Allegory — Domenico Guidobono (1710–20)"
+    }
+  ]
+}
