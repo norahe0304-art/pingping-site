@@ -1,0 +1,120 @@
+{
+  "date": "2026-07-04",
+  "weekday": "Saturday",
+  "no": 156,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-04T12:55:04.643319+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>AI 搜索不是新 SEO，而是「旧 SEO + 额外 10%」</b>: AI 搜索不是新 SEO，而是「旧 SEO + 额外 10%」",
+    "<b>Claude Sonnet 5 正式推出</b>: Claude Sonnet 5 正式推出",
+    "<b>Claude Science 上线，主打科学研究工作台</b>: Claude Science 上线，主打科学研究工作台",
+    "<b>AI 工具清单继续刷屏，但真正有用的是能落地到流程的那一类</b>: AI 工具清单继续刷屏，但真正有用的是能落地到流程的那一类"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今天最明确的信号是：模型能力继续进步，但增长机会越来越在“包装成工作流”而不是“单点模型能力”。 AI 搜索和内容分发会继续吃掉一部分传统 SEO 预算，接下来值得押注的是结构化内容、可引用素材和可复用答案资产。 智能体产品的竞争点会从演示效果转向稳定性、权限边界、审计和成本控制，谁能把这些做成默认配置，谁更容易进企业。 以后做营销，不只是投放和写文案，而是把内容变成能被模型检索、总结、引用、转化的“机器友好资产”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "AI 搜索不是新 SEO，而是「旧 SEO + 额外 10%」",
+      "deck": "这条判断很实用，说明现在做内容、外链、技术基础仍然是底盘，但如果目标是被 AI 搜索引用，还得补上结构化表达、可抓取性和答案密度。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/jakezward/status/2056371886364250466",
+      "image_url": "./art/met-39901.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "jakezward",
+        "handle": "jakezward",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/jakezward"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Night-Shining White — Han Gan (ca. 750)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Claude Sonnet 5 正式推出",
+      "deck": "Anthropic 把重点直接放在编码、智能体和专业工作场景，说明模型竞争已经从“谁更会聊天”转向“谁更能稳定交付生产力”。对产品团队来说，这会继续抬高智能体、代码工具和工作流产品的门槛。",
+      "why": "",
+      "try": "",
+      "url": "https://www.anthropic.com/news",
+      "image_url": "./art/met-437508.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "anthropic",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "anthropic",
+        "kind": "web"
+      },
+      "image_alt": "Self-Portrait — Salvator Rosa (ca. 1647)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Claude Science 上线，主打科学研究工作台",
+      "deck": "这类产品不是单纯卖模型，而是把模型、工具包、算力和可审计产物打包成工作环境，说明垂直场景会越来越像“带流程的应用”，而不是一个聊天框。",
+      "why": "",
+      "try": "",
+      "url": "https://www.anthropic.com/news",
+      "image_url": "./art/met-437878.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "anthropic",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "anthropic",
+        "kind": "web"
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "AI 工具清单继续刷屏，但真正有用的是能落地到流程的那一类",
+      "deck": "从 Claude、Perplexity、V0 到 Replit，热点已经很清楚——用户愿意为“少一步操作、快一点产出”付费，不是为“更聪明的回答”付费。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/David_TornAI/status/2060948402754764906",
+      "image_url": "./art/met-435991.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "David_TornAI",
+        "handle": "David_TornAI",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/David_TornAI"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "A Woman Reading — Camille Corot (1869 and 1870)"
+    }
+  ]
+}
