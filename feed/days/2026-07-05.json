@@ -1,0 +1,120 @@
+{
+  "date": "2026-07-05",
+  "weekday": "Sunday",
+  "no": 157,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-05T12:55:22.354928+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>AI 搜索和 GEO 正在从“概念”变成“服务包”</b>: AI 搜索和 GEO 正在从“概念”变成“服务包”",
+    "<b>AI SDR 的重点不再是“能不能发邮件”，而是“能不能持续跑”</b>: AI SDR 的重点不再是“能不能发邮件”，而是“能不能持续跑”",
+    "<b>AI 广告创意测试正在把“编辑能力”推到前台</b>: AI 广告创意测试正在把“编辑能力”推到前台",
+    "<b>GEO 已经开始被机构当成独立商业叙事来卖</b>: GEO 已经开始被机构当成独立商业叙事来卖"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "未来一段时间，内容团队的核心指标会从“发了多少”转向“被谁引用、在哪个答案里出现”。 AI SDR 和 AI 广告都在走同一条路：先解决自动化，再补稳定性和可控性，最后才是规模化。 真正值钱的不是单点模型能力，而是把模型接进分发、销售、投放、复盘这条链路的系统能力。 对增长团队来说，接下来最该盯的不是新工具列表，而是哪些入口开始稳定替代传统搜索和人工执行。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "AI 搜索和 GEO 正在从“概念”变成“服务包”",
+      "deck": "Search Engine Land 已经把 AI SEO 单独归档，很多机构也开始把 GEO、LLM citations、AI search optimization 直接打包进服务里，说明流量入口正在从传统搜索往答案框迁移。",
+      "why": "",
+      "try": "",
+      "url": "https://searchengineland.com/library/ai-seo",
+      "image_url": "./art/met-437261.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "searchengineland",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "searchengineland",
+        "kind": "web"
+      },
+      "image_alt": "The Penitence of Saint Jerome — Joachim Patinir (ca. 1515)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "AI SDR 的重点不再是“能不能发邮件”，而是“能不能持续跑”",
+      "deck": "AiSDR 讨论里反复强调，真正难的是在送达率、数据源和渠道变化下长期稳定工作；SaaStr 也提到，AI 销售代理已经开始承担可观的线索和收入贡献。对产品和增长来说，这意味着销售自动化的门槛正从功能演示转向运营能力。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/getaisdr/status/2044115662323482809",
+      "image_url": "./art/met-824771.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "getaisdr",
+        "handle": "getaisdr",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/getaisdr"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Marie Antoinette in a Park — Elisabeth Louise Vigée Le Brun (ca. 1780–81)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "AI 广告创意测试正在把“编辑能力”推到前台",
+      "deck": "X 上明显在招能做 AI ads、VSL、UGC 的视频剪辑，且要求适应高频 Meta 和 TikTok 创意测试环境。说明 AI 广告的竞争点不只是生成素材，而是谁能更快把创意迭代成可放大的投放系统。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/zeigyte/status/2069759565026021740",
+      "image_url": "./art/met-438821.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "zeigyte",
+        "handle": "zeigyte",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/zeigyte"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "GEO 已经开始被机构当成独立商业叙事来卖",
+      "deck": "不少 PR / SEO 机构直接把“被 AI 生成答案引用”作为卖点，这对内容分发的影响很直接：品牌不只要排名，还要成为模型会引用的来源。",
+      "why": "",
+      "try": "",
+      "url": "https://www.morningstar.com/news/pr-newswire/20260624la91421/csp-agency-launches-the-human-first-geo-framework-advancing-the-field-of-generative-engine-optimization",
+      "image_url": "./art/met-39901.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "morningstar",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "morningstar",
+        "kind": "web"
+      },
+      "image_alt": "Night-Shining White — Han Gan (ca. 750)"
+    }
+  ]
+}
