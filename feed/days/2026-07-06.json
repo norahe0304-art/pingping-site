@@ -1,0 +1,120 @@
+{
+  "date": "2026-07-06",
+  "weekday": "Monday",
+  "no": 158,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-06T12:55:19.878228+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>腾讯 Hy3 开源发布</b>: 腾讯 Hy3 开源发布",
+    "<b>Claude Code 疑似会话串号传闻</b>: Claude Code 疑似会话串号传闻",
+    "<b>英伟达之外，AI 供应链继续往上游吃利润</b>: 英伟达之外，AI 供应链继续往上游吃利润",
+    "<b>Anthropic 继续往“更便宜地跑 agent”方向压</b>: Anthropic 继续往“更便宜地跑 agent”方向压"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最值钱的不是“会写”，而是“能稳定把任务做完、还不把成本打爆”。模型越强，越像基础设施，越要算每次任务的边际成本。 agent 产品的下一轮分化，不在演示效果，而在权限、隔离、审计、失败恢复这四件事。谁能把这些做成默认能力，谁更可能进企业。 内容和增长工具会继续向“工作流化”演进，不再是单点生成，而是从抓信号、写内容、发分发、看反馈一条链路打通。 AI 供应链的机会还在上游：存储、机柜、网络、散热、数据中心和推理优化，都会比单纯讲“模型故事”更接近真钱。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "腾讯 Hy3 开源发布",
+      "deck": "295B/A21B MoE、256K 上下文，已经在腾讯系产品里跑出更高成功率和更低成本，说明大模型竞争正在从“参数大小”转向“真实业务吞吐”和“单位任务成本”。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/shao__meng/status/2074100035823055056",
+      "image_url": "./art/met-437873.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "shao__meng",
+        "handle": "shao__meng",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/shao__meng"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Philip IV (1605–1665), King of Spain — Velázquez (Diego Rodríguez de Silva y Velázquez) (probably 1624)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Claude Code 疑似会话串号传闻",
+      "deck": "如果后续被确认，这会直接影响多租户隔离、上下文压缩和生产环境接入方式；对 agent 产品来说，安全和上下文边界会比“会不会干活”更优先。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Vincent_AINotes/status/2074101508548051131",
+      "image_url": "./art/met-435621.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Vincent_AINotes",
+        "handle": "Vincent_AINotes",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/Vincent_AINotes"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "英伟达之外，AI 供应链继续往上游吃利润",
+      "deck": "路透提到 SK Hynix 要做 280 亿美元美国上市、Csquare 估值最高 41.8 亿美元，说明 AI 需求正在继续把资金往存储、数据中心和算力基础设施拉。",
+      "why": "",
+      "try": "",
+      "url": "https://www.reuters.com/technology/",
+      "image_url": "./art/met-437508.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "reuters",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "reuters",
+        "kind": "web"
+      },
+      "image_alt": "Self-Portrait — Salvator Rosa (ca. 1647)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "Anthropic 继续往“更便宜地跑 agent”方向压",
+      "deck": "TechCrunch 这边在追踪 Claude Sonnet 5、Claude Code 与企业侧限制变化，说明模型能力之外，成本、权限和组织接入方式正在成为产品竞争核心。",
+      "why": "",
+      "try": "",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "image_url": "./art/met-437422.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "techcrunch",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "techcrunch",
+        "kind": "web"
+      },
+      "image_alt": "Charity — Guido Reni (ca. 1630)"
+    }
+  ]
+}
