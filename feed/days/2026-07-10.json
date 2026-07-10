@@ -1,0 +1,120 @@
+{
+  "date": "2026-07-10",
+  "weekday": "Friday",
+  "no": 162,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-10T12:55:04.467296+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>GPT-5.6</b>: GPT-5.6",
+    "<b>用很慢的电脑跑起 GLM 5.2</b>: 用很慢的电脑跑起 GLM 5.2",
+    "<b>欧盟委员会认定 Instagram 和 Facebook 的成瘾式设计违反数字服</b>: 欧盟委员会认定 Instagram 和 Facebook 的成瘾式设计违反数字服务法",
+    "<b>欧盟议会通过 Chat Control 1.0</b>: 欧盟议会通过 Chat Control 1.0"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最值钱的不是“又发了一个更大的模型”，而是模型能否把单位任务成本压到足够低，让产品敢于把 AI 放进高频流程里。 监管正在把社交产品的增长逻辑往回拽：以前靠停留时长和刺激转化，现在要同时解释算法、成瘾设计和用户保护。 本地化、小模型、端侧推理会继续抬头，因为它们同时解决了成本、隐私和可控性三个问题。 真正的产品机会不在模型新闻本身，而在“模型能力变化后，哪些工作流可以重写”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "GPT-5.6",
+      "deck": "这类大模型发布的核心，不只是“更聪明”，而是推理质量和成本曲线继续往下压。对产品来说，真正有价值的是把复杂任务从“演示能力”变成“可稳定交付”。",
+      "why": "",
+      "try": "",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "image_url": "./art/met-435651.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "openai",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "openai",
+        "kind": "web"
+      },
+      "image_alt": "The Lamentation — Ambrosius Benson (ca. 1520–25)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "用很慢的电脑跑起 GLM 5.2",
+      "deck": "本地部署和低配可用，说明模型不只是往上卷参数，也在往下卷门槛。对增长和分发来说，能跑在更便宜的硬件上，意味着更容易进入长尾场景。",
+      "why": "",
+      "try": "",
+      "url": "https://github.com/JustVugg/colibri",
+      "image_url": "./art/met-435621.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "github",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "github",
+        "kind": "web"
+      },
+      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "欧盟委员会认定 Instagram 和 Facebook 的成瘾式设计违反数字服务法",
+      "deck": "这条对社交产品和广告产品都很直接，意味着推荐、留存、成瘾机制会继续面临监管压力。做增长不能只看指标，还要看合规边界。",
+      "why": "",
+      "try": "",
+      "url": "https://ec.europa.eu/commission/presscorner/home/en",
+      "image_url": "./art/met-626692.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "ec",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "ec",
+        "kind": "web"
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "欧盟议会通过 Chat Control 1.0",
+      "deck": "这是对隐私、内容审查和平台责任的再加压，后续会影响消息产品、社媒和端侧加密叙事。对产品经理来说，安全、合规、默认设置会越来越像核心功能而不是附加项。",
+      "why": "",
+      "try": "",
+      "url": "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/",
+      "image_url": "./art/met-435848.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "patrick-breyer",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "patrick-breyer",
+        "kind": "web"
+      },
+      "image_alt": "The Birth of the Virgin — Fra Carnevale (Bartolomeo di Giovanni Corradini) (1467)"
+    }
+  ]
+}
