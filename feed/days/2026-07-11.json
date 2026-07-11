@@ -1,0 +1,94 @@
+{
+  "date": "2026-07-11",
+  "weekday": "Saturday",
+  "no": 163,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-11T12:55:31.381279+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Meta 把 AI 编码再往“低成本生产工具”推了一步</b>: Meta 把 AI 编码再往“低成本生产工具”推了一步",
+    "<b>Google 给数字广告加了 AI 透明度标识</b>: Google 给数字广告加了 AI 透明度标识",
+    "<b>Character.AI 把短剧做成交互式体验</b>: Character.AI 把短剧做成交互式体验"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这期最重要的信号不是“又有新功能”，而是 AI 正在往生产系统里渗透：写代码、做广告、做内容体验。 真正的分水岭不在模型多强，而在谁能把模型接进工作流、审核、分发和结算这些环节。 广告和内容分发会先被重写，因为这两个场景最吃“规模化 + 可控 + 可追踪”。 接下来要盯的不是单点产品演示，而是谁先把“AI 成本下降”转成“业务流程变快、变便宜、变可复制”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Meta 把 AI 编码再往“低成本生产工具”推了一步",
+      "deck": "这说明 AI 编码不再只拼能力，还开始拼成本和分发，下一轮竞争会更像基础设施战。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/Meta",
+      "image_url": "./art/met-437216.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "Meta",
+        "handle": "Meta",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/Meta"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Fifteen Mysteries and the Virgin of the Rosary — Netherlandish (Brussels) Painter (ca. 1515–20)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Google 给数字广告加了 AI 透明度标识",
+      "deck": "广告行业正在把“是否由 AI 参与创作”变成基础规则，这会影响素材审核、归因和品牌方采购流程。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/google",
+      "image_url": "./art/met-436885.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "google",
+        "handle": "google",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/google"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Scene from a Novella — Liberale da Verona (undated)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Character.AI 把短剧做成交互式体验",
+      "deck": "AI 正从“生成内容”走向“让内容可互动”，这会把娱乐产品的留存和付费逻辑改掉。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/character_ai",
+      "image_url": "./art/met-590874.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "character_ai",
+        "handle": "character_ai",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/character_ai"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Tomb Chapel of Raemkai — Unknown (ca. 2446–2389 B.C.)"
+    }
+  ]
+}
