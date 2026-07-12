@@ -1,0 +1,146 @@
+{
+  "date": "2026-07-12",
+  "weekday": "Sunday",
+  "no": 164,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-12T12:55:20.841744+00:00",
+  "promo_headline": "5 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Todos 正式上线</b>: Todos 正式上线",
+    "<b>Grok 4.5 在 X 上持续投放，重点强调大代码库与长任务</b>: Grok 4.5 在 X 上持续投放，重点强调大代码库与长任务",
+    "<b>GPT-5.6 的官方提示词指南再次被翻译传播</b>: GPT-5.6 的官方提示词指南再次被翻译传播",
+    "<b>教育优惠 Skill 这条很有意思</b>: 教育优惠 Skill 这条很有意思",
+    "<b>Hacker News 上开始出现“用 AI 做营销操作系统”和“给电商邮件写作</b>: Hacker News 上开始出现“用 AI 做营销操作系统”和“给电商邮件写作自动化”的 Show HN"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "这波信号很一致：AI 产品竞争正在从“模型能力展示”转到“能不能直接接管工作流”。 对增长和营销来说，最值钱的不是生成内容，而是把内容分发、实验、转化和复盘串成自动闭环。 Agent 产品如果只卖“智能”，很快会同质化；真正能留下来的，是默认就能完成具体任务的垂直流程。 未来的产品卖点会越来越像“把一个岗位拆成 10 个可自动执行的动作”，而不是“这是一个万能助手”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Todos 正式上线",
+      "deck": "这是一个给小团队和 Agent 用的全端产品工作台，主打“一分钟组队、机器和 key 直接开干”。这类工具的核心不是再造一个协作软件，而是把“人盯着 AI 干活”的流程产品化。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/supezen/status/",
+      "image_url": "./art/met-438821.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "supezen",
+        "handle": "supezen",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/supezen"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Ia Orana Maria (Hail Mary) — Paul Gauguin (1891)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Grok 4.5 在 X 上持续投放，重点强调大代码库与长任务",
+      "deck": "它在讲的不是“更聪明”，而是“更适合真实工程场景”。对比点很明确：谁更能扛多仓库、长链路、复杂工具调用，谁更接近企业级落地。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/grok",
+      "image_url": "./art/met-436607.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "grok",
+        "handle": "grok",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/grok"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "An Allegory — Domenico Guidobono (1710–20)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "GPT-5.6 的官方提示词指南再次被翻译传播",
+      "deck": "模型能力继续提升，但真正拉开差距的，还是提示词、工作流和任务拆解。对产品来说，接口能力之外，更重要的是把最佳实践封装进默认体验。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/RealYDT/status/",
+      "image_url": "./art/met-888663.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "RealYDT",
+        "handle": "RealYDT",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/RealYDT"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Handscroll of Ten Homoerotic (Nanshoku) Scenes — Miyagawa Chōshun 宮川長春 (early 18th century)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "教育优惠 Skill 这条很有意思",
+      "deck": "它说明 agent 不只是“回答问题”，还能接管低频但高价值的执行型需求，比如比价、资格判断、申请流程。这类小技能最容易形成分发和复用。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/dingyi/status/",
+      "image_url": "./art/met-824771.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "dingyi",
+        "handle": "dingyi",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/dingyi"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "Marie Antoinette in a Park — Elisabeth Louise Vigée Le Brun (ca. 1780–81)"
+    },
+    {
+      "id": "c005",
+      "rank": 5,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Hacker News 上开始出现“用 AI 做营销操作系统”和“给电商邮件写作自动化”的 Show HN",
+      "deck": "增长工具的下一轮竞争，不是单点文案生成，而是把线索、内容、发送、反馈做成闭环。谁先把结果指标接上，谁就更容易卖单。",
+      "why": "",
+      "try": "",
+      "url": "https://news.ycombinator.com/",
+      "image_url": "./art/met-437873.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "Philip IV (1605–1665), King of Spain — Velázquez (Diego Rodríguez de Silva y Velázquez) (probably 1624)"
+    }
+  ]
+}
