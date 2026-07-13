@@ -1,0 +1,94 @@
+{
+  "date": "2026-07-13",
+  "weekday": "Monday",
+  "no": 165,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-13T12:55:39.611879+00:00",
+  "promo_headline": "3 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>Apple 起诉 OpenAI 和 io 团队，指控对方在挖走 400 多名员工</b>: Apple 起诉 OpenAI 和 io 团队，指控对方在挖走 400 多名员工时带走了硬件机密",
+    "<b>Supabase 的 supernote 项目因 7 天未活动被自动暂停</b>: Supabase 的 supernote 项目因 7 天未活动被自动暂停",
+    "<b>Prime Intellect 完成 1.3 亿美元 A 轮融资，并称自己在约 </b>: Prime Intellect 完成 1.3 亿美元 A 轮融资，并称自己在约 9 个月内把年化收入做到 1 亿美元以上"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今年最值钱的，不一定是更大的模型，而是更可控的训练、后训练和部署链路。 OpenAI 相关硬件如果被迫重做，说明“模型公司做硬件”开始进入更现实的合规与供应链博弈。 基础设施类公司现在拼的不是概念，而是谁能更快把收入跑起来、把客户锁进工作流。 对产品和增长来说，AI 不是“加个功能”，而是重新决定成本结构、交付速度和护城河。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "Apple 起诉 OpenAI 和 io 团队，指控对方在挖走 400 多名员工时带走了硬件机密",
+      "deck": "这不是单纯的人才争夺，而是把 OpenAI 的硬件路线直接拉进了法律风险，后续产品节奏可能被拖慢。",
+      "why": "",
+      "try": "",
+      "url": "https://www.therundown.ai/",
+      "image_url": "./art/met-435621.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "therundown",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "therundown",
+        "kind": "web"
+      },
+      "image_alt": "Joan of Arc — Jules Bastien-Lepage (1879)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Supabase 的 supernote 项目因 7 天未活动被自动暂停",
+      "deck": "如果这是你正在用的基础设施，恢复窗口只有 90 天，最好尽快确认是否需要续用，避免项目状态影响联调和发布。",
+      "why": "",
+      "try": "",
+      "url": "https://supabase.com/",
+      "image_url": "./art/met-451725.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "supabase",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "supabase",
+        "kind": "web"
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "Prime Intellect 完成 1.3 亿美元 A 轮融资，并称自己在约 9 个月内把年化收入做到 1 亿美元以上",
+      "deck": "后训练基础设施正在从“模型之外的配套”变成独立赛道，谁能掌控后训练，谁就更接近 AI 成本和性能的主导权。",
+      "why": "",
+      "try": "",
+      "url": "https://venturestreet.substack.com/",
+      "image_url": "./art/met-626692.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "venturestreet",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "venturestreet",
+        "kind": "web"
+      },
+      "image_alt": "The Jabach Family — Charles Le Brun (ca. 1660)"
+    }
+  ]
+}
