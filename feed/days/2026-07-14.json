@@ -1,0 +1,120 @@
+{
+  "date": "2026-07-14",
+  "weekday": "Tuesday",
+  "no": 166,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-14T12:55:31.263287+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>代理式营销开始从“概念”变成“预算项”</b>: 代理式营销开始从“概念”变成“预算项”",
+    "<b>Meta 的广告系统正在更像“黑盒增长引擎”</b>: Meta 的广告系统正在更像“黑盒增长引擎”",
+    "<b>推理成本继续往下压，代理应用才会真正起量</b>: 推理成本继续往下压，代理应用才会真正起量",
+    "<b>社媒增长正在被“预测”和“自动化”接管</b>: 社媒增长正在被“预测”和“自动化”接管"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "现在最值钱的不是“会写提示词”，而是把代理接到真实业务闭环里：目标、素材、预算、反馈、复盘，最好能自动跑一圈。 广告和社媒的门槛会继续下降，但头部差距会更大；因为低门槛会让更多人入场，最后拼的是数据资产、创意密度和转化链路。 推理成本下降后，AI 产品的竞争会从“单次回答质量”转向“持续运行是否划算”，尤其是长链路代理、批量内容生产和自动投放。 对增长团队来说，未来最重要的能力可能不是“做更多内容”，而是“让系统知道什么内容该做、什么时候做、投给谁、何时停”。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "代理式营销开始从“概念”变成“预算项”",
+      "deck": "Sett 拿到 3000 万美元融资，核心是用 AI 代理自动化游戏营销；这说明营销自动化正在从规则驱动，往“能自己拆解目标并执行”的方向走，最先落地的会是投放、素材迭代和活动编排。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBHR0dqdW9ySk5ZbXJhM2FLNmQ5YnhxVGlSeUNaRGgxZzdLRFBwM3FjSy1uaUdHUTJXdTZESXhjeThsVVpnMXhGVTdHcHluQmZtb2xwcl83cXhINnQyTzBlSGpKMXZlMzlP?oc=5",
+      "image_url": "./art/met-838076.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "Virgin and Child Enthroned — Bohemian Painter (ca. 1345–50)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Meta 的广告系统正在更像“黑盒增长引擎”",
+      "deck": "Meta 的 AI 代理被报道可直接运行整套广告活动，这会压缩中小团队的投放门槛，但也会把差异化从“会不会投”转到“素材、数据和产品转化链路是否足够强”。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQR1J3bTFRcnpMeF8zTHhGZ1B5UkpnWG9Vd251YjZaZnhfYy1wMC16ajVxTFpsRTAxa05nSzVwNUZla2NFeWRNSmR2Y0VKVG1NTnF0VE1rbmhVOEVJZWhPaGNiTF8xNXVwTlp4Qk80RUJtUWVFSHdwOW9yM3dBR1BoSUd2dmpXYm5VYWlwM2ZrWGNlbXY0MWQ4amZOMVNPUQ?oc=5",
+      "image_url": "./art/met-436105.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "The Death of Socrates — Jacques Louis David (1787)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "推理成本继续往下压，代理应用才会真正起量",
+      "deck": "NVIDIA 和 LangChain 相关的新代理蓝图、以及“推理成本下降 10 倍”的讨论，说明行业正在把注意力从“模型多强”转向“长期运行成本多低”。这对做产品的人更重要，因为成本一降，才有资格把代理塞进高频流程。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE55UmZmclAwdUt5M1BqaUs1RkdoaGZsRXplWWFmc3JWYTZzNXJFb2RHZFhkb2RaZm0tTF9raW4zclJ4RmFQdFFGdC1rc2h6MXF6OVEzNDBXZzNyNU0zYkxkdWplTjFzU3NvNkVlc0xXQXJKZVk?oc=5",
+      "image_url": "./art/met-437868.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "Don Gaspar de Guzmán (1587–1645), Count-Duke of Olivares — Juan Bautista Martínez del Mazo (ca. 1636 or later)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "社媒增长正在被“预测”和“自动化”接管",
+      "deck": "有产品开始专门做社媒增长预测和变现，说明增长团队未来不只是看数据面板，而是让工具直接给出内容节奏、平台选择和分发策略。",
+      "why": "",
+      "try": "",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNYjN6UktOQmV1cHZtNV96aG5paHRKSFJwelYwcTk0WTZFWW15VnI0RnRWdEJNSHQzRFduRmYybmZGVnZpSVc0RjJUMDI4Nlh0VERPM21OZk1UalRpSG1qOWtROWJhdUVHanJmUFctWVlNTVoxN013bmpGTTJrLWdiN3J5cmNYNlkwYW1EZkstT3RmekpvX0NFS1FOWk1DSjlwUUYyOU1fOFZyY3BmaGt5WHQxVHh4MzVrV05fS3dFenRvSjRNQnp1cjlzZjh4ZWFoRTJRZkhad0ZId2w4YUZvQ21rSFkwMG8?oc=5",
+      "image_url": "./art/met-437202.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "news",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "news",
+        "kind": "web"
+      },
+      "image_alt": "Christ Bearing the Cross — North Netherlandish (Bruges) Painter (undated)"
+    }
+  ]
+}
