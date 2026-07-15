@@ -1,0 +1,120 @@
+{
+  "date": "2026-07-15",
+  "weekday": "Wednesday",
+  "no": 167,
+  "edition": "Nora's Early Brief",
+  "generated_at": "2026-07-15T12:55:27.571759+00:00",
+  "promo_headline": "4 signals. 0 moves. One pattern.",
+  "whats_news": [
+    "<b>谷歌 DeepMind 公开推动“AI 监管员”机制</b>: 谷歌 DeepMind 公开推动“AI 监管员”机制",
+    "<b>Claude for Marketing 开始把“看品牌”变成“做营销”</b>: Claude for Marketing 开始把“看品牌”变成“做营销”",
+    "<b>现在更值钱的不是“省 AI 成本”，而是把 AI 成本和产出绑在一起</b>: 现在更值钱的不是“省 AI 成本”，而是把 AI 成本和产出绑在一起",
+    "<b>OpenAI 的下一代硬件可能是“无屏 AI 音箱”</b>: OpenAI 的下一代硬件可能是“无屏 AI 音箱”"
+  ],
+  "digest": {
+    "title": "Today in AI operations",
+    "body": "今年最重要的变化，不是模型又强了一点，而是“模型怎么被管、怎么被卖、怎么被装进工作流”开始变成主战场。 营销正在被拆成两层：一层是内容投放，另一层是 AI 搜索和对话里的品牌可见性。后者会越来越像新 SEO。 真正的 AI 成本管理，不是砍预算，而是把预算分配给最能放大产出的岗位和流程。 未来的产品入口会更碎：聊天框、语音、工作台、设备同时存在，赢的人通常不是最会讲模型故事的人，而是最先把场景占住的人。"
+  },
+  "items": [
+    {
+      "id": "c001",
+      "rank": 1,
+      "tag": "SIGNAL",
+      "tag_color": "amber",
+      "kicker": "Today's Top Signal",
+      "headline": "谷歌 DeepMind 公开推动“AI 监管员”机制",
+      "deck": "这不是抽象的安全讨论，而是把前沿模型上线前审查、能力分级、发布前测试，直接拉进了制度设计层面。对做模型、agent、企业部署的人来说，合规会越来越像产品流程的一部分。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/demishassabis/status/2076957440109625718",
+      "image_url": "./art/met-435702.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "demishassabis",
+        "handle": "demishassabis",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/demishassabis"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "The Horse Fair — Rosa Bonheur (1852–55)"
+    },
+    {
+      "id": "c002",
+      "rank": 2,
+      "tag": "SIGNAL",
+      "tag_color": "pink",
+      "kicker": "Markets & Models",
+      "headline": "Claude for Marketing 开始把“看品牌”变成“做营销”",
+      "deck": "它不只是监测 AI 回答里怎么提到你，而是从对话里判断品牌可见度、定位问题并给出修复方向。对增长团队的意义很直接：营销不再只是内容生产，而是围绕品牌在 AI 时代的可见性做闭环。",
+      "why": "",
+      "try": "",
+      "url": "https://x.com/i/status/2077045664471749039",
+      "image_url": "./art/met-437878.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "i",
+        "handle": "i",
+        "role": "source",
+        "avatar_url": "https://unavatar.io/x/i"
+      },
+      "source": {
+        "label": "X · post",
+        "kind": "x"
+      },
+      "image_alt": "A Maid Asleep — Johannes Vermeer (ca. 1656–57)"
+    },
+    {
+      "id": "c003",
+      "rank": 3,
+      "tag": "SIGNAL",
+      "tag_color": "cyan",
+      "kicker": "Markets & Models",
+      "headline": "现在更值钱的不是“省 AI 成本”，而是把 AI 成本和产出绑在一起",
+      "deck": "这封邮件的核心观点很狠——别把 AI 当 IT 开销压死，而要按人、团队、部门设 token 预算，用“人均营收”而不是“座位成本”来衡量效果。对老板和增长负责人来说，这意味着 AI 预算会越来越像业务投放。",
+      "why": "",
+      "try": "",
+      "url": "https://gaiinsights.substack.com/p/stop-trying-to-minimize-your-ai-spend",
+      "image_url": "./art/met-451725.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "gaiinsights",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "gaiinsights",
+        "kind": "web"
+      },
+      "image_alt": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds) — Habiballah of Sava (ca. 1600)"
+    },
+    {
+      "id": "c004",
+      "rank": 4,
+      "tag": "SIGNAL",
+      "tag_color": "indigo",
+      "kicker": "Markets & Models",
+      "headline": "OpenAI 的下一代硬件可能是“无屏 AI 音箱”",
+      "deck": "如果这个方向坐实，AI 的入口就不再只是聊天框，而是伴随式、语音优先、带环境感知的个人设备。对产品和分发的启发是：未来的 AI 竞争不只在模型能力，还在谁先占住日常场景。",
+      "why": "",
+      "try": "",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion",
+      "image_url": "./art/met-437585.jpg",
+      "read_time_min": 5,
+      "author": {
+        "name": "bloomberg",
+        "handle": "",
+        "role": "source",
+        "avatar_url": ""
+      },
+      "source": {
+        "label": "bloomberg",
+        "kind": "web"
+      },
+      "image_alt": "Market by the Seashore — Salomon van Ruysdael (1637)"
+    }
+  ]
+}
